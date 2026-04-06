@@ -38,7 +38,10 @@ const AnimeFrame = ({ pv, trope, storyline, storylineJP, primaryLang }) => {
       </div>
       
       {showStory && (
-        <div className="absolute inset-0 bg-black/95 z-40 animate-in fade-in zoom-in duration-300">
+        <div 
+          className="absolute inset-0 bg-black/95 z-40 animate-in fade-in zoom-in duration-300"
+          onClick={(e) => { if(e.target === e.currentTarget) setShowStory(false); }}
+        >
            <div className="absolute top-4 left-4 right-4 flex justify-between items-center z-50 text-white">
               <div className="flex items-center gap-3">
                 <div className="bg-yellow-300 p-2 border-2 border-black"><BookOpen className="text-black" size={20} /></div>
@@ -49,13 +52,16 @@ const AnimeFrame = ({ pv, trope, storyline, storylineJP, primaryLang }) => {
                 <button onClick={() => setShowStory(false)} className="text-white hover:text-red-500 transition-colors bg-white/10 rounded-full p-1"><X size={24} /></button>
               </div>
            </div>
-           <div className="h-full overflow-y-auto pt-20 pb-8 px-8 md:px-16 space-y-12 scroll-smooth text-white">
-              <div ref={primaryLang === 'EN' ? enSectionRef : jpSectionRef} className="min-h-[50%] flex flex-col justify-center text-left">
+           <div 
+             className="h-full overflow-y-auto pt-20 pb-8 px-8 md:px-16 space-y-12 scroll-smooth text-white"
+             onClick={(e) => { if(e.target === e.currentTarget) setShowStory(false); }}
+           >
+              <div ref={primaryLang === 'EN' ? enSectionRef : jpSectionRef} className="min-h-[50%] flex flex-col justify-center text-left" onClick={(e) => e.stopPropagation()}>
                 <div className="flex items-center gap-4 mb-2"><span className="bg-white text-black px-2 py-0.5 text-[10px] font-black uppercase">{primaryLang}</span></div>
                 <p className="text-white text-xl md:text-2xl leading-relaxed italic border-l-4 border-white/20 pl-6 font-medium">{primaryLang === 'EN' ? storyline : storylineJP}</p>
                 <div className="mt-4 flex flex-col items-center animate-bounce text-white/30"><ArrowDown size={20} /></div>
               </div>
-              <div ref={primaryLang === 'EN' ? jpSectionRef : enSectionRef} className="min-h-[50%] flex flex-col justify-center border-t border-white/10 pt-8 text-left">
+              <div ref={primaryLang === 'EN' ? jpSectionRef : enSectionRef} className="min-h-[50%] flex flex-col justify-center border-t border-white/10 pt-8 text-left" onClick={(e) => e.stopPropagation()}>
                 <div className="flex items-center gap-4 mb-2"><span className="bg-blue-600 text-white px-2 py-0.5 text-[10px] font-black uppercase">{primaryLang === 'EN' ? 'JP' : 'EN'}</span></div>
                 <p className="text-white text-xl md:text-2xl font-bold leading-relaxed pl-6">{primaryLang === 'EN' ? storylineJP : storyline}</p>
               </div>
@@ -73,17 +79,45 @@ const AnimeFrame = ({ pv, trope, storyline, storylineJP, primaryLang }) => {
 const PVQuiz = ({ isOpen, onClose, pv, quiz, onCorrectAnswer }) => {
   const [selectedOption, setSelectedOption] = useState(null);
   const [isCorrect, setIsCorrect] = useState(null);
+  const [shuffledOptions, setShuffledOptions] = useState([]);
+
+  useEffect(() => { 
+    if (isOpen && quiz) { 
+      // 選択肢のテキストと「元々のインデックス」をペアにして配列化
+      const optionsWithIndex = quiz.options.map((text, originalIndex) => ({ text, originalIndex }));
+      // フィッシャー–イェーツのアルゴリズムで配列をシャッフル
+      for (let i = optionsWithIndex.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [optionsWithIndex[i], optionsWithIndex[j]] = [optionsWithIndex[j], optionsWithIndex[i]];
+      }
+      setShuffledOptions(optionsWithIndex);
+      setSelectedOption(null); 
+      setIsCorrect(null); 
+    } else {
+      setSelectedOption(null);
+      setIsCorrect(null);
+      setShuffledOptions([]);
+    }
+  }, [isOpen, quiz]);
+
   const handleCheck = (index) => { 
     setSelectedOption(index); 
-    const correct = index === quiz.correctIndex; 
+    // シャッフル後の選択肢が持つ「元々のインデックス」と正解を照合
+    const correct = shuffledOptions[index].originalIndex === quiz.correctIndex; 
     setIsCorrect(correct); 
     if (correct) onCorrectAnswer(); 
   };
-  useEffect(() => { if (!isOpen) { setSelectedOption(null); setIsCorrect(null); } }, [isOpen]);
+
   if (!isOpen) return null;
   return (
-    <div className="fixed inset-0 z-[110] bg-black/90 backdrop-blur-md flex items-center justify-center p-4 animate-in fade-in duration-300">
-      <div className="bg-white border-4 border-black w-full max-w-lg rounded-[2.5rem] overflow-hidden shadow-[16px_16px_0_0_rgba(255,255,255,0.1)] text-black">
+    <div 
+      className="fixed inset-0 z-[110] bg-black/90 backdrop-blur-md flex items-center justify-center p-4 animate-in fade-in duration-300"
+      onClick={onClose}
+    >
+      <div 
+        className="bg-white border-4 border-black w-full max-w-lg rounded-[2.5rem] overflow-hidden shadow-[16px_16px_0_0_rgba(255,255,255,0.1)] text-black"
+        onClick={(e) => e.stopPropagation()}
+      >
         <div className="bg-rose-500 text-white p-6 flex justify-between items-center border-b-4 border-black text-left">
           <div className="flex items-center gap-3 text-white"><AlertCircle size={24} /><h2 className="text-2xl font-black italic uppercase tracking-tighter">Check Your Vibes</h2></div>
           <button onClick={onClose} className="text-white"><X size={32} /></button>
@@ -91,9 +125,9 @@ const PVQuiz = ({ isOpen, onClose, pv, quiz, onCorrectAnswer }) => {
         <div className="p-8">
           <div className="mb-6"><span className="text-[10px] font-black uppercase bg-black text-white px-2 py-1 rounded mb-2 inline-block tracking-widest text-center">Question</span><p className="text-xl font-bold text-black leading-snug text-left">{quiz.question}</p></div>
           <div className="space-y-3">
-            {quiz.options.map((option, idx) => (
+            {shuffledOptions.map((option, idx) => (
               <button key={idx} disabled={selectedOption !== null} onClick={() => handleCheck(idx)} className={`w-full p-4 rounded-2xl border-4 border-black text-left font-black transition-all flex items-center justify-between ${selectedOption === null ? 'hover:translate-x-2 hover:bg-gray-50 text-black' : selectedOption === idx ? (isCorrect ? 'bg-green-400 text-black' : 'bg-red-400 text-white') : 'bg-white opacity-50'}`}>
-                <span>{option}</span>{selectedOption === idx && (isCorrect ? <CheckCircle2 size={20} /> : <X size={20} />)}
+                <span>{option.text}</span>{selectedOption === idx && (isCorrect ? <CheckCircle2 size={20} /> : <X size={20} />)}
               </button>
             ))}
           </div>
@@ -112,8 +146,14 @@ const PVQuiz = ({ isOpen, onClose, pv, quiz, onCorrectAnswer }) => {
 const PVExplanation = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
   return (
-    <div className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 animate-in fade-in duration-200 text-black">
-      <div className="bg-white border-4 border-black w-full max-w-2xl rounded-3xl overflow-hidden shadow-[16px_16px_0_0_rgba(0,0,0,1)]">
+    <div 
+      className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 animate-in fade-in duration-200 text-black"
+      onClick={onClose}
+    >
+      <div 
+        className="bg-white border-4 border-black w-full max-w-2xl rounded-3xl overflow-hidden shadow-[16px_16px_0_0_rgba(0,0,0,1)]"
+        onClick={(e) => e.stopPropagation()}
+      >
         <div className="bg-black text-white p-6 flex justify-between items-center"><div className="flex items-center gap-3 text-white"><Info className="text-yellow-300" size={24} /><h2 className="text-2xl font-black italic uppercase tracking-tighter">PV (句動詞) とは？</h2></div><button onClick={onClose} className="text-white"><X size={32} /></button></div>
         <div className="p-8 space-y-6 text-left">
           <section className="bg-blue-50 p-6 border-2 border-black rounded-2xl text-black">
@@ -140,6 +180,7 @@ const App = () => {
   const [cefrFilter, setCefrFilter] = useState('ALL');
   const [isEpOpen, setIsEpOpen] = useState(false);
   const [isCefrOpen, setIsCefrOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
 
   const batches = {
     1: [
@@ -557,54 +598,119 @@ const App = () => {
   };
 
   const EPISODES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
-
-  const currentBatchRaw = batches[episode] || batches[1] || [];
-  const filteredData = cefrFilter === 'ALL' ? currentBatchRaw : currentBatchRaw.filter(item => item?.cefr === cefrFilter);
-  const current = filteredData[index] || filteredData[0] || currentBatchRaw[0] || null;
-  const availableLevelsInBatch = ['ALL', ...new Set(currentBatchRaw.map(item => item?.cefr).filter(Boolean))].sort();
-
-  const handleNext = () => { setIsFlipped(false); setIsRevealed(false); setIndex(prev => (prev >= filteredData.length - 1 ? 0 : prev + 1)); };
-  const handlePrev = () => { setIsFlipped(false); setIsRevealed(false); setIndex(prev => (prev <= 0 ? filteredData.length - 1 : prev - 1)); };
   
-  const selectEpisode = (num) => { setEpisode(num); setIndex(0); setCefrFilter('ALL'); setIsRevealed(false); setIsFlipped(false); setIsEpOpen(false); };
-  const handleFilterChange = (level) => { setCefrFilter(level); setIndex(0); setIsRevealed(false); setIsFlipped(false); setIsCefrOpen(false); };
-  const markAsCorrect = () => { setCorrectlyAnswered(prev => new Set(prev).add(`${episode}-${index}`)); };
 
-  if (!current) {
-    return <div className="min-h-screen bg-[#FAFAFA] flex items-center justify-center p-8 text-xl font-bold">データを読み込んでいます...</div>;
+  // 🌟 検索エンジンロジック 🌟
+  const allDataWithEp = Object.entries(batches).flatMap(([ep, items]) => 
+    items.map(item => ({ ...item, epNum: ep }))
+  );
+
+  let displayData = [];
+  
+  if (searchQuery.trim() !== '') {
+    const query = searchQuery.toLowerCase();
+    displayData = allDataWithEp.filter(item => 
+      item.pv.toLowerCase().includes(query) ||
+      (item.meaning && item.meaning.toLowerCase().includes(query)) ||
+      (item.meaningJP && item.meaningJP.includes(query)) ||
+      (item.trope && item.trope.toLowerCase().includes(query)) ||
+      (item.storyline && item.storyline.toLowerCase().includes(query)) ||
+      (item.storylineJP && item.storylineJP.includes(query))
+    );
+  } else {
+    const currentBatchRaw = batches[episode] || batches[1] || [];
+    displayData = cefrFilter === 'ALL' ? currentBatchRaw : currentBatchRaw.filter(item => item?.cefr === cefrFilter);
   }
 
-  const CurrentIcon = current.icon || Sparkles;
+  const current = displayData[index] || displayData[0] || null;
+  const availableLevelsInBatch = ['ALL', ...new Set((searchQuery ? allDataWithEp : (batches[episode] || [])).map(item => item?.cefr).filter(Boolean))].sort();
+
+  const handleNext = () => { setIsFlipped(false); setIsRevealed(false); setIndex(prev => (prev >= displayData.length - 1 ? 0 : prev + 1)); };
+  const handlePrev = () => { setIsFlipped(false); setIsRevealed(false); setIndex(prev => (prev <= 0 ? displayData.length - 1 : prev - 1)); };
+  
+  // 🌟 NEW: PCの矢印キー（左右）で前後に移動できるようにする
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      // 検索バーなどの入力フォームにフォーカスしている時は、誤作動を防ぐため無効にする
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+      
+      if (e.key === 'ArrowRight') {
+        setIsFlipped(false);
+        setIsRevealed(false);
+        setIndex(prev => (prev >= displayData.length - 1 ? 0 : prev + 1));
+      } else if (e.key === 'ArrowLeft') {
+        setIsFlipped(false);
+        setIsRevealed(false);
+        setIndex(prev => (prev <= 0 ? displayData.length - 1 : prev - 1));
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [displayData.length]);
+  
+  const selectEpisode = (num) => { 
+    setEpisode(num); 
+    setSearchQuery('');
+    setIndex(0); 
+    setCefrFilter('ALL'); 
+    setIsRevealed(false); 
+    setIsFlipped(false); 
+    setIsEpOpen(false); 
+  };
+  
+  const handleFilterChange = (level) => { setCefrFilter(level); setIndex(0); setIsRevealed(false); setIsFlipped(false); setIsCefrOpen(false); };
+  
+  const markAsCorrect = () => { 
+    if(current) setCorrectlyAnswered(prev => new Set(prev).add(`${current.pv}-${current.trope}`)); 
+  };
+
+  const isCurrentCorrect = current ? correctlyAnswered.has(`${current.pv}-${current.trope}`) : false;
+  const CurrentIcon = current ? (current.icon || Sparkles) : Search;
 
   return (
     <div className="min-h-screen bg-[#FAFAFA] text-[#1A1A1A] p-4 md:p-8 font-sans selection:bg-yellow-300 overflow-x-hidden">
       <div className="max-w-5xl mx-auto h-full flex flex-col">
-        <header className="mb-8 flex flex-col lg:flex-row lg:items-center justify-between gap-6 shrink-0">
+        <header className="mb-8 flex flex-col lg:flex-row lg:items-end justify-between gap-6 shrink-0">
           <div className="flex-1">
             <div className="flex items-center gap-3 mb-2 relative font-bold">
               <div className="relative">
                 <button onClick={() => setIsEpOpen(!isEpOpen)} className="bg-black text-white px-4 py-1.5 rounded-lg flex items-center gap-3 hover:bg-blue-600 transition-all shadow-[4px_4px_0_0_rgba(0,0,0,1)] active:translate-y-1 font-bold text-xs">
-                  <Play size={14} fill="currentColor" /><span className="uppercase tracking-widest text-white">EPISODE {episode < 10 ? `0${episode}` : episode}</span><ChevronDown size={14} className={`transition-transform text-white ${isEpOpen ? 'rotate-180' : ''}`} />
+                  <Play size={14} fill="currentColor" />
+                  <span className="uppercase tracking-widest text-white">
+                    {searchQuery ? (current ? `FOUND IN EP ${current.epNum}` : 'SEARCHING') : `EPISODE ${episode < 10 ? `0${episode}` : episode}`}
+                  </span>
+                  <ChevronDown size={14} className={`transition-transform text-white ${isEpOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {isEpOpen && (
                   <div className="absolute top-full mt-2 left-0 z-[120] bg-white border-4 border-black rounded-xl shadow-[6px_6px_0_0_rgba(0,0,0,1)] p-1 min-w-[140px] animate-in slide-in-from-top-2 text-black max-h-64 overflow-y-auto">
-                    {EPISODES.map(n => (<button key={n} onClick={() => selectEpisode(n)} className={`w-full text-left px-4 py-2 text-[10px] font-black uppercase hover:bg-yellow-300 rounded-lg transition-colors border-b last:border-b-0 border-black/5 ${episode === n ? 'bg-yellow-100' : ''}`}>Episode {n < 10 ? `0${n}` : n}</button>))}
+                    {EPISODES.map(n => (<button key={n} onClick={() => selectEpisode(n)} className={`w-full text-left px-4 py-2 text-[10px] font-black uppercase hover:bg-yellow-300 rounded-lg transition-colors border-b last:border-b-0 border-black/5 ${episode === n && !searchQuery ? 'bg-yellow-100' : ''}`}>Episode {n < 10 ? `0${n}` : n}</button>))}
                   </div>
                 )}
               </div>
               <span className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-400 truncate max-w-[200px]">
-                {episode === 1 ? 'BASICS' : episode === 2 ? 'SOCIALS' : episode === 3 ? 'B-SERIES 1' : episode === 4 ? 'B-SERIES 2' : episode === 5 ? 'TRENDS 1' : episode === 6 ? 'TRENDS 2' : episode === 7 ? 'TRENDS 3' : episode <= 10 ? 'B-SERIES 4' : episode <= 12 ? 'C-SERIES 1' : episode <= 14 ? 'C-SERIES 2' : 'D-SERIES'}
+                {searchQuery ? 'GLOBAL SEARCH MODE' : (episode === 1 ? 'BASICS' : episode === 2 ? 'SOCIALS' : episode === 3 ? 'B-SERIES 1' : episode === 4 ? 'B-SERIES 2' : episode === 5 ? 'TRENDS 1' : episode === 6 ? 'TRENDS 2' : episode === 7 ? 'TRENDS 3' : episode <= 10 ? 'B-SERIES 4' : episode <= 12 ? 'C-SERIES 1' : episode <= 14 ? 'C-SERIES 2' : episode <= 18 ? 'C-SERIES 3' : 'Z-SERIES FINALE')}
               </span>
             </div>
+            
             <div className="flex flex-wrap items-center gap-4">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-black italic tracking-tighter uppercase leading-none text-left text-black">Story <span className="text-blue-600">PV</span> Guide</h1>
               <button onClick={() => setShowExplanation(true)} className="group flex items-center gap-2 bg-white border-2 border-black px-3 py-1 rounded-full shadow-[4px_4px_0_0_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all"><HelpCircle size={16} className="text-blue-600 group-hover:rotate-12 transition-transform" /><span className="text-[10px] font-black uppercase tracking-widest leading-none">What is PV?</span></button>
             </div>
-            <div className="mt-4 flex items-center gap-3 relative text-black font-bold">
-              <div className="flex items-center gap-2 mr-1"><Filter size={14} className="text-gray-400" /><span className="text-[10px] font-black uppercase text-gray-400 font-bold">Filter Level:</span></div>
+            
+            {/* 🌟 フィルターセクション */}
+            <div className="mt-5 flex flex-wrap items-center gap-3 relative text-black font-bold">
+              {/* CEFR フィルター */}
+              <div className="flex items-center gap-2 mr-1">
+                 <Filter size={14} className="text-gray-400" />
+                 <span className="text-[10px] font-black uppercase text-gray-400 font-bold hidden sm:inline">Filter Level:</span>
+              </div>
               <div className="relative">
-                <button onClick={() => setIsCefrOpen(!isCefrOpen)} className={`px-4 py-1.5 rounded-md border-2 border-black font-black text-[10px] uppercase transition-all shadow-[2px_2px_0_0_rgba(0,0,0,1)] flex items-center gap-2 ${cefrFilter !== 'ALL' ? 'bg-blue-600 text-white' : 'bg-white text-black hover:bg-gray-100'}`}>{cefrFilter === 'ALL' ? 'SELECT LEVEL' : `LEVEL: ${cefrFilter}`}<ChevronDown size={14} className={`transition-transform ${isCefrOpen ? 'rotate-180' : ''}`} /></button>
-                {isCefrOpen && (
+                <button onClick={() => setIsCefrOpen(!isCefrOpen)} disabled={!!searchQuery} className={`px-4 py-1.5 rounded-lg border-2 border-black font-black text-[10px] uppercase transition-all shadow-[2px_2px_0_0_rgba(0,0,0,1)] flex items-center gap-2 ${searchQuery ? 'bg-gray-200 text-gray-400 border-gray-300 shadow-none cursor-not-allowed' : (cefrFilter !== 'ALL' ? 'bg-blue-600 text-white' : 'bg-white text-black hover:bg-yellow-300')}`}>
+                   {cefrFilter === 'ALL' ? 'SELECT LEVEL' : `LEVEL: ${cefrFilter}`}
+                   <ChevronDown size={14} className={`transition-transform ${isCefrOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {isCefrOpen && !searchQuery && (
                   <div className="absolute top-full mt-2 left-0 z-[120] bg-white border-4 border-black rounded-xl shadow-[6px_6px_0_0_rgba(0,0,0,1)] p-1 min-w-[120px] animate-in slide-in-from-top-2 text-black text-left">
                     {availableLevelsInBatch.map((level) => (<button key={level} onClick={() => handleFilterChange(level)} className={`w-full text-left px-4 py-2 text-[10px] font-black uppercase hover:bg-yellow-300 rounded-lg transition-colors border-b last:border-b-0 border-black/5 ${cefrFilter === level ? 'bg-yellow-100' : ''}`}>{level === 'ALL' ? 'ALL LEVELS' : `Level ${level}`}</button>))}
                   </div>
@@ -612,98 +718,143 @@ const App = () => {
               </div>
             </div>
           </div>
-          <div className="flex-1 max-w-md w-full bg-white border-4 border-black p-4 rounded-3xl shadow-[8px_8px_0_0_rgba(0,0,0,1)] relative overflow-hidden group">
-            <div className="flex items-center gap-3 mb-2 text-left text-black font-bold uppercase"><div className={`p-1 rounded-md border border-black ${promptLang === 'EN' ? 'bg-white text-black' : 'bg-blue-600 text-white'}`}><Languages size={14} /></div><span className="text-[10px] tracking-widest text-gray-400 font-bold">{promptLang === 'EN' ? 'Concept' : '意味のヒント'}</span></div>
-            <p className="text-xl font-black italic text-gray-800 leading-tight text-left min-h-[3rem]">{promptLang === 'EN' ? current.meaning : current.meaningJP}</p>
+
+          <div className="flex-1 max-w-md w-full flex flex-col gap-4 mt-4 lg:mt-0">
+            {/* 🌟 内容サーチエンジン (Search Bar) - Conceptの上に移動 */}
+            <div className="w-full relative">
+               <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
+                 <Search size={14} className="text-gray-400" />
+               </div>
+               <input
+                 type="text"
+                 placeholder="SEARCH PV, MEANING, OR TROPE..."
+                 value={searchQuery}
+                 onChange={(e) => {
+                   setSearchQuery(e.target.value);
+                   setIndex(0);
+                   setIsRevealed(false);
+                   setIsFlipped(false);
+                 }}
+                 className="w-full pl-9 pr-8 py-1.5 rounded-lg border-2 border-black font-black text-[10px] md:text-[11px] uppercase transition-all shadow-[2px_2px_0_0_rgba(0,0,0,1)] focus:outline-none focus:bg-yellow-50 focus:translate-y-[2px] focus:translate-x-[2px] focus:shadow-none placeholder-gray-400"
+               />
+               {searchQuery && (
+                 <button onClick={() => {setSearchQuery(''); setIndex(0);}} className="absolute inset-y-0 right-3 flex items-center">
+                   <X size={14} className="text-gray-400 hover:text-red-500 transition-colors" />
+                 </button>
+               )}
+            </div>
+
+            {current && (
+              <div className="w-full bg-white border-4 border-black p-4 rounded-3xl shadow-[8px_8px_0_0_rgba(0,0,0,1)] relative overflow-hidden group">
+                <div className="flex items-center gap-3 mb-2 text-left text-black font-bold uppercase"><div className={`p-1 rounded-md border border-black ${promptLang === 'EN' ? 'bg-white text-black' : 'bg-blue-600 text-white'}`}><Languages size={14} /></div><span className="text-[10px] tracking-widest text-gray-400 font-bold">{promptLang === 'EN' ? 'Concept' : '意味のヒント'}</span></div>
+                <p className="text-xl font-black italic text-gray-800 leading-tight text-left min-h-[3rem]">{promptLang === 'EN' ? current.meaning : current.meaningJP}</p>
+              </div>
+            )}
           </div>
+
           <div className="flex flex-col items-end gap-2 shrink-0">
              <div className="flex items-center gap-1 bg-black p-1 rounded-full border-2 border-black font-bold text-white">
                 <button onClick={() => setPromptLang('EN')} className={`px-3 py-0.5 rounded-full text-[9px] font-black uppercase transition-all ${promptLang === 'EN' ? 'bg-white text-black' : 'text-gray-500 hover:text-white'}`}>EN</button>
                 <button onClick={() => setPromptLang('JP')} className={`px-3 py-0.5 rounded-full text-[9px] font-black uppercase transition-all ${promptLang === 'JP' ? 'bg-blue-600 text-white' : 'text-gray-500 hover:text-white'}`}>JP</button>
              </div>
-             <div className="flex gap-2 text-black">
-                <button onClick={handlePrev} className="w-12 h-12 border-2 border-black rounded-full flex items-center justify-center bg-white shadow-[4px_4px_0_0_rgba(0,0,0,1)] hover:bg-black hover:text-white transition-all"><ChevronLeft size={24} /></button>
-                <button onClick={handleNext} className="w-12 h-12 border-2 border-black rounded-full flex items-center justify-center bg-white shadow-[4px_4px_0_0_rgba(0,0,0,1)] hover:bg-black hover:text-white transition-all"><ChevronRight size={24} /></button>
-             </div>
+             {current && (
+               <div className="flex gap-2 text-black">
+                  <button onClick={handlePrev} className="w-12 h-12 border-2 border-black rounded-full flex items-center justify-center bg-white shadow-[4px_4px_0_0_rgba(0,0,0,1)] hover:bg-black hover:text-white transition-all"><ChevronLeft size={24} /></button>
+                  <button onClick={handleNext} className="w-12 h-12 border-2 border-black rounded-full flex items-center justify-center bg-white shadow-[4px_4px_0_0_rgba(0,0,0,1)] hover:bg-black hover:text-white transition-all"><ChevronRight size={24} /></button>
+               </div>
+             )}
           </div>
         </header>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start flex-1 overflow-visible">
-          <div className="lg:col-span-2">
-            <AnimeFrame pv={current.pv} trope={current.trope} storyline={current.storyline} storylineJP={current.storylineJP} primaryLang={promptLang} />
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4 text-black">
-              <div className="bg-yellow-300 p-6 rounded-2xl border-2 border-black shadow-[6px_6px_0_0_rgba(0,0,0,1)] flex flex-col h-44 overflow-y-auto text-black text-left">
-                 <div className="flex items-center gap-2 mb-3"><Lightbulb size={14} className="text-black/60" /><h3 className="text-[10px] font-black uppercase text-black/60 tracking-widest leading-none font-bold">Context Vibes</h3></div>
-                 <div className="space-y-2">{current.vibes.map((vibe, i) => (<div key={i} className="flex gap-2 items-start text-black font-bold uppercase text-[11px] leading-tight italic tracking-tight"><div className="w-1.5 h-1.5 rounded-full bg-black mt-1.5 shrink-0"></div><p>{vibe}</p></div>))}</div>
-              </div>
-              <div onClick={() => setIsFlipped(!isFlipped)} className="relative h-44 w-full cursor-pointer perspective-1000 group">
-                <div className={`relative w-full h-full transition-all duration-500 transform-style-3d ${isFlipped ? 'rotate-y-180' : ''}`}>
-                  <div className={`absolute inset-0 p-6 rounded-2xl border-2 border-black shadow-[6px_6px_0_0_rgba(0,0,0,1)] backface-hidden flex flex-col justify-center text-left ${promptLang === 'EN' ? 'bg-white text-black' : 'bg-blue-50 border-blue-500 text-blue-900'}`}>
-                    <div className="flex justify-between items-start mb-2"><h3 className={`text-[10px] font-black uppercase tracking-widest leading-none ${promptLang === 'EN' ? 'text-gray-400' : 'text-blue-400'}`}>{promptLang === 'EN' ? 'Concept (EN)' : 'コンセプト (JP)'}</h3><RefreshCw size={12} className="text-gray-300 group-hover:rotate-180 transition-transform duration-500" /></div>
-                    <p className={`text-2xl font-black italic leading-snug`}>{promptLang === 'EN' ? current.meaning : current.meaningJP}</p>
+          {!current ? (
+            <div className="lg:col-span-3 bg-white border-4 border-black rounded-[2.5rem] p-16 text-center shadow-[12px_12px_0_0_rgba(0,0,0,1)] flex flex-col items-center justify-center min-h-[50vh]">
+               <Search size={64} className="text-gray-300 mb-6" />
+               <h2 className="text-3xl font-black italic uppercase tracking-tighter text-black mb-4">No Matches Found!</h2>
+               <p className="font-bold text-gray-500 max-w-md mx-auto">We couldn't find any PV matching "<span className="text-blue-600">{searchQuery}</span>". Try searching for a different meaning or English phrase!</p>
+               <button onClick={() => setSearchQuery('')} className="mt-8 bg-black text-white px-8 py-3 rounded-full font-black text-xs uppercase tracking-widest hover:bg-yellow-300 hover:text-black transition-all shadow-[4px_4px_0_0_rgba(255,255,255,0.2)]">Clear Search</button>
+            </div>
+          ) : (
+            <>
+              <div className="lg:col-span-2">
+                <AnimeFrame pv={current.pv} trope={current.trope} storyline={current.storyline} storylineJP={current.storylineJP} primaryLang={promptLang} />
+                <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4 text-black">
+                  <div className="bg-yellow-300 p-6 rounded-2xl border-2 border-black shadow-[6px_6px_0_0_rgba(0,0,0,1)] flex flex-col h-44 overflow-y-auto text-black text-left">
+                     <div className="flex items-center gap-2 mb-3"><Lightbulb size={14} className="text-black/60" /><h3 className="text-[10px] font-black uppercase text-black/60 tracking-widest leading-none font-bold">Context Vibes</h3></div>
+                     <div className="space-y-2">{current.vibes.map((vibe, i) => (<div key={i} className="flex gap-2 items-start text-black font-bold uppercase text-[11px] leading-tight italic tracking-tight"><div className="w-1.5 h-1.5 rounded-full bg-black mt-1.5 shrink-0"></div><p>{vibe}</p></div>))}</div>
                   </div>
-                  <div className={`absolute inset-0 p-6 rounded-2xl border-2 border-black shadow-[6px_6px_0_0_rgba(0,0,0,1)] rotate-y-180 backface-hidden flex flex-col justify-center text-left ${promptLang === 'EN' ? 'bg-blue-50 border-blue-500 text-blue-900' : 'bg-white text-black'}`}>
-                    <div className="flex justify-between items-start mb-2"><h3 className={`text-[10px] font-black uppercase tracking-widest leading-none ${promptLang === 'EN' ? 'text-blue-400' : 'text-gray-400'}`}>{promptLang === 'EN' ? '訳 (JP)' : 'Answer (EN)'}</h3><RefreshCw size={12} className="text-blue-300" /></div>
-                    <div className="transform-none"><p className={`text-2xl font-black italic leading-snug`}>{promptLang === 'EN' ? current.meaningJP : current.meaning}</p></div>
+                  <div onClick={() => setIsFlipped(!isFlipped)} className="relative h-44 w-full cursor-pointer perspective-1000 group">
+                    <div className={`relative w-full h-full transition-all duration-500 transform-style-3d ${isFlipped ? 'rotate-y-180' : ''}`}>
+                      <div className={`absolute inset-0 p-6 rounded-2xl border-2 border-black shadow-[6px_6px_0_0_rgba(0,0,0,1)] backface-hidden flex flex-col justify-center text-left ${promptLang === 'EN' ? 'bg-white text-black' : 'bg-blue-50 border-blue-500 text-blue-900'}`}>
+                        <div className="flex justify-between items-start mb-2"><h3 className={`text-[10px] font-black uppercase tracking-widest leading-none ${promptLang === 'EN' ? 'text-gray-400' : 'text-blue-400'}`}>{promptLang === 'EN' ? 'Concept (EN)' : 'コンセプト (JP)'}</h3><RefreshCw size={12} className="text-gray-300 group-hover:rotate-180 transition-transform duration-500" /></div>
+                        <p className={`text-2xl font-black italic leading-snug`}>{promptLang === 'EN' ? current.meaning : current.meaningJP}</p>
+                      </div>
+                      <div className={`absolute inset-0 p-6 rounded-2xl border-2 border-black shadow-[6px_6px_0_0_rgba(0,0,0,1)] rotate-y-180 backface-hidden flex flex-col justify-center text-left ${promptLang === 'EN' ? 'bg-blue-50 border-blue-500 text-blue-900' : 'bg-white text-black'}`}>
+                        <div className="flex justify-between items-start mb-2"><h3 className={`text-[10px] font-black uppercase tracking-widest leading-none ${promptLang === 'EN' ? 'text-blue-400' : 'text-gray-400'}`}>{promptLang === 'EN' ? '訳 (JP)' : 'Answer (EN)'}</h3><RefreshCw size={12} className="text-blue-300" /></div>
+                        <div className="transform-none"><p className={`text-2xl font-black italic leading-snug`}>{promptLang === 'EN' ? current.meaningJP : current.meaning}</p></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
 
-          <div className="space-y-6 text-white font-bold">
-            <div className="bg-black text-white p-8 rounded-[2rem] relative overflow-hidden min-h-[440px] flex flex-col border-4 border-black">
-               <div className="absolute top-0 right-0 p-4 opacity-20 text-white pointer-events-none"><CurrentIcon size={120} /></div>
-               <div className="relative z-10 flex-1 flex flex-col text-left">
-                 <div className="w-10 h-1 bg-white mb-6"></div>
-                 <div className="mb-4">
-                   <p className="text-xs font-bold text-gray-400 mb-2 uppercase tracking-widest">Target Phrasal Verb</p>
-                   {isRevealed ? (
-                     <button onClick={() => setIsRevealed(false)} className="group w-full text-left text-white">
-                       <h2 className="text-3xl md:text-4xl lg:text-5xl font-black italic mb-2 leading-none uppercase tracking-tighter text-yellow-300 animate-in fade-in slide-in-from-left-4">{current.pv}</h2>
-                       <span className="text-[9px] uppercase font-black opacity-30 flex items-center gap-1"><EyeOff size={10} /> Hide</span>
-                     </button>
-                   ) : (
-                     <button onClick={() => setIsRevealed(true)} className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 p-4 rounded-2xl border-2 border-dashed border-white/30 w-full text-left transition-all text-white">
-                       <div className="bg-white/20 p-2 rounded-lg group-hover:bg-yellow-300 group-hover:text-black transition-colors"><Eye size={24} /></div>
-                       <div><span className="block text-2xl font-black tracking-tighter italic opacity-50">? ? ? ? ?</span><span className="text-[10px] uppercase font-black opacity-40 tracking-tighter font-bold">Reveal Answer</span></div>
-                     </button>
-                   )}
-                 </div>
-                 <p className="text-xs font-bold text-gray-400 mb-4 mt-auto uppercase tracking-widest border-t border-white/10 pt-4 text-left">Example Sentence</p>
-                 {isRevealed ? (
-                   <div className="bg-white/10 p-4 rounded-xl border-l-4 border-yellow-300 italic text-sm md:text-base leading-relaxed animate-in fade-in slide-in-from-bottom-2 text-white font-bold">"{current.example}"</div>
-                 ) : (
-                   <div className="bg-white/5 p-4 rounded-xl border-2 border-dashed border-white/10 flex flex-col items-center justify-center gap-2 min-h-[80px]">
-                      <Lock size={16} className="text-white/20" /><span className="text-[10px] font-black uppercase opacity-20 tracking-widest italic text-center font-bold">Hidden until revealed</span>
+              <div className="space-y-6 text-white font-bold">
+                <div className="bg-black text-white p-8 rounded-[2rem] relative overflow-hidden min-h-[440px] flex flex-col border-4 border-black">
+                   <div className="absolute top-0 right-0 p-4 opacity-20 text-white pointer-events-none"><CurrentIcon size={120} /></div>
+                   <div className="relative z-10 flex-1 flex flex-col text-left">
+                     <div className="w-10 h-1 bg-white mb-6"></div>
+                     <div className="mb-4">
+                       <p className="text-xs font-bold text-gray-400 mb-2 uppercase tracking-widest">Target Phrasal Verb</p>
+                       {isRevealed ? (
+                         <button onClick={() => setIsRevealed(false)} className="group w-full text-left text-white">
+                           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black italic mb-2 leading-none uppercase tracking-tighter text-yellow-300 animate-in fade-in slide-in-from-left-4">{current.pv}</h2>
+                           <span className="text-[9px] uppercase font-black opacity-30 flex items-center gap-1"><EyeOff size={10} /> Hide</span>
+                         </button>
+                       ) : (
+                         <button onClick={() => setIsRevealed(true)} className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 p-4 rounded-2xl border-2 border-dashed border-white/30 w-full text-left transition-all text-white">
+                           <div className="bg-white/20 p-2 rounded-lg group-hover:bg-yellow-300 group-hover:text-black transition-colors"><Eye size={24} /></div>
+                           <div><span className="block text-2xl font-black tracking-tighter italic opacity-50">? ? ? ? ?</span><span className="text-[10px] uppercase font-black opacity-40 tracking-tighter font-bold">Reveal Answer</span></div>
+                         </button>
+                       )}
+                     </div>
+                     <p className="text-xs font-bold text-gray-400 mb-4 mt-auto uppercase tracking-widest border-t border-white/10 pt-4 text-left">Example Sentence</p>
+                     {isRevealed ? (
+                       <div className="bg-white/10 p-4 rounded-xl border-l-4 border-yellow-300 italic text-sm md:text-base leading-relaxed animate-in fade-in slide-in-from-bottom-2 text-white font-bold">"{current.example}"</div>
+                     ) : (
+                       <div className="bg-white/5 p-4 rounded-xl border-2 border-dashed border-white/10 flex flex-col items-center justify-center gap-2 min-h-[80px]">
+                          <Lock size={16} className="text-white/20" /><span className="text-[10px] font-black uppercase opacity-20 tracking-widest italic text-center font-bold">Hidden until revealed</span>
+                       </div>
+                     )}
                    </div>
-                 )}
-               </div>
-            </div>
+                </div>
 
-            <div className="flex flex-wrap gap-3">
-               <button onClick={() => setShowQuiz(true)} className="group bg-white px-4 py-2 rounded-full border-2 border-black font-black text-[10px] uppercase tracking-widest flex items-center gap-2 shadow-[4px_4px_0_0_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all text-black">
-                  <Heart size={12} fill={correctlyAnswered.has(`${episode}-${index}`) ? "#FF69B4" : "white"} color={correctlyAnswered.has(`${episode}-${index}`) ? "#FF69B4" : "black"} className="transition-all duration-300" /> 
-                  <span className={correctlyAnswered.has(`${episode}-${index}`) ? "text-pink-500 font-bold" : "text-black font-bold"}>{correctlyAnswered.has(`${episode}-${index}`) ? "Challenge Clear!" : "Try Mini Quiz"}</span>
-               </button>
-               <div className="bg-white px-4 py-2 rounded-full border-2 border-black font-black text-[10px] uppercase tracking-widest flex items-center gap-2 text-black text-left font-bold"><Award size={12} className="text-blue-600" /> CEFR {current.cefr}</div>
-               <div className="bg-black text-white px-4 py-2 rounded-full border-2 border-black font-black text-[10px] uppercase tracking-widest">{index + 1} / {filteredData.length}</div>
-            </div>
-          </div>
+                <div className="flex flex-wrap gap-3">
+                   <button onClick={() => setShowQuiz(true)} className="group bg-white px-4 py-2 rounded-full border-2 border-black font-black text-[10px] uppercase tracking-widest flex items-center gap-2 shadow-[4px_4px_0_0_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all text-black">
+                      <Heart size={12} fill={isCurrentCorrect ? "#FF69B4" : "white"} color={isCurrentCorrect ? "#FF69B4" : "black"} className="transition-all duration-300" /> 
+                      <span className={isCurrentCorrect ? "text-pink-500 font-bold" : "text-black font-bold"}>{isCurrentCorrect ? "Challenge Clear!" : "Try Mini Quiz"}</span>
+                   </button>
+                   <div className="bg-white px-4 py-2 rounded-full border-2 border-black font-black text-[10px] uppercase tracking-widest flex items-center gap-2 text-black text-left font-bold"><Award size={12} className="text-blue-600" /> CEFR {current.cefr}</div>
+                   <div className="bg-black text-white px-4 py-2 rounded-full border-2 border-black font-black text-[10px] uppercase tracking-widest">{index + 1} / {displayData.length}</div>
+                </div>
+              </div>
+            </>
+          )}
         </div>
 
         <div className="mt-8 py-4 shrink-0">
-          <div className="flex justify-center gap-2 mb-2 flex-wrap max-w-full overflow-hidden">
-            {filteredData.map((_, i) => (
-              <button key={i} onClick={() => { setIndex(i); setIsFlipped(false); setIsRevealed(false); }} className={`h-2 mb-2 transition-all rounded-full border border-black ${i === index ? 'w-12 bg-black' : 'w-2 bg-gray-300'}`} />
-            ))}
-          </div>
-          <p className="text-[10px] font-black uppercase tracking-[0.5em] text-gray-300 italic text-center font-bold">Total Phrasal Verbs: {Object.values(batches).flat().length} // Maki's Classroom Edition</p>
+          {displayData.length > 0 && (
+            <div className="flex justify-center gap-2 mb-2 flex-wrap max-w-full overflow-hidden">
+              {displayData.map((_, i) => (
+                <button key={i} onClick={() => { setIndex(i); setIsFlipped(false); setIsRevealed(false); }} className={`h-2 mb-2 transition-all rounded-full border border-black ${i === index ? 'w-12 bg-black' : 'w-2 bg-gray-300'}`} />
+              ))}
+            </div>
+          )}
+          <p className="text-[10px] font-black uppercase tracking-[0.5em] text-gray-300 italic text-center font-bold">Total Phrasal Verbs: {allDataWithEp.length} // Maki's Classroom Edition</p>
         </div>
       </div>
 
       <PVExplanation isOpen={showExplanation} onClose={() => setShowExplanation(false)} />
-      <PVQuiz isOpen={showQuiz} onClose={() => setShowQuiz(false)} pv={current.pv} quiz={current.quiz} onCorrectAnswer={markAsCorrect} />
+      {current && <PVQuiz isOpen={showQuiz} onClose={() => setShowQuiz(false)} pv={current.pv} quiz={current.quiz} onCorrectAnswer={markAsCorrect} />}
       
       <style dangerouslySetInnerHTML={{ __html: `.perspective-1000 { perspective: 1000px; } .transform-style-3d { transform-style: preserve-3d; } .backface-hidden { backface-visibility: hidden; -webkit-backface-visibility: hidden; } .rotate-y-180 { transform: rotateY(180deg); }` }} />
     </div>
