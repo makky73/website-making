@@ -600,7 +600,7 @@ const App = () => {
   const EPISODES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
   
 
-  // 🌟 検索エンジンロジック 🌟
+ // 🌟 検索エンジンロジック 🌟
   const allDataWithEp = Object.entries(batches).flatMap(([ep, items]) => 
     items.map(item => ({ ...item, epNum: ep }))
   );
@@ -608,15 +608,27 @@ const App = () => {
   let displayData = [];
   
   if (searchQuery.trim() !== '') {
-    const query = searchQuery.toLowerCase();
-    displayData = allDataWithEp.filter(item => 
-      item.pv.toLowerCase().includes(query) ||
-      (item.meaning && item.meaning.toLowerCase().includes(query)) ||
-      (item.meaningJP && item.meaningJP.includes(query)) ||
-      (item.trope && item.trope.toLowerCase().includes(query)) ||
-      (item.storyline && item.storyline.toLowerCase().includes(query)) ||
-      (item.storylineJP && item.storylineJP.includes(query))
-    );
+    // キーワードをスペースで区切って配列化（複数キーワードのAND検索に対応）
+    const searchTerms = searchQuery.toLowerCase().trim().split(/\s+/);
+    
+    displayData = allDataWithEp.filter(item => {
+      // 入力されたすべてのキーワードが含まれているか判定
+      return searchTerms.every(term => {
+        // "up", "in", "on" などの短い単語が、他の単語の一部（例: "upon", "find"）として誤ヒットするのを防ぐ
+        const isShortWord = term.length <= 3 && /^[a-z]+$/.test(term);
+        
+        const matchPV = isShortWord 
+          ? new RegExp(`\\b${term}\\b`, 'i').test(item.pv) // 単語として完全に一致するか
+          : item.pv.toLowerCase().includes(term);          // 部分一致するか
+          
+        const matchMeaning = item.meaning?.toLowerCase().includes(term);
+        const matchMeaningJP = item.meaningJP?.includes(term);
+        const matchTrope = item.trope?.toLowerCase().includes(term);
+        
+        // 精度を上げるため、検索対象から長文のストーリー（storyline）を除外し、PV・意味・Tropeのみに絞る
+        return matchPV || matchMeaning || matchMeaningJP || matchTrope;
+      });
+    });
   } else {
     const currentBatchRaw = batches[episode] || batches[1] || [];
     displayData = cefrFilter === 'ALL' ? currentBatchRaw : currentBatchRaw.filter(item => item?.cefr === cefrFilter);
