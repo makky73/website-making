@@ -621,12 +621,8 @@ const App = () => {
           ? new RegExp(`\\b${term}\\b`, 'i').test(item.pv) // 単語として完全に一致するか
           : item.pv.toLowerCase().includes(term);          // 部分一致するか
           
-        const matchMeaning = item.meaning?.toLowerCase().includes(term);
-        const matchMeaningJP = item.meaningJP?.includes(term);
-        const matchTrope = item.trope?.toLowerCase().includes(term);
-        
-        // 精度を上げるため、検索対象から長文のストーリー（storyline）を除外し、PV・意味・Tropeのみに絞る
-        return matchPV || matchMeaning || matchMeaningJP || matchTrope;
+        // 精度を上げるため、検索対象から長文のストーリーや意味を除外し、PV名のみに絞る
+        return matchPV;
       });
     });
   } else {
@@ -739,7 +735,7 @@ const App = () => {
                </div>
                <input
                  type="text"
-                 placeholder="SEARCH PV, MEANING, OR TROPE..."
+                 placeholder="SEARCH PV..."
                  value={searchQuery}
                  onChange={(e) => {
                    setSearchQuery(e.target.value);
@@ -783,7 +779,7 @@ const App = () => {
             <div className="lg:col-span-3 bg-white border-4 border-black rounded-[2.5rem] p-16 text-center shadow-[12px_12px_0_0_rgba(0,0,0,1)] flex flex-col items-center justify-center min-h-[50vh]">
                <Search size={64} className="text-gray-300 mb-6" />
                <h2 className="text-3xl font-black italic uppercase tracking-tighter text-black mb-4">No Matches Found!</h2>
-               <p className="font-bold text-gray-500 max-w-md mx-auto">We couldn't find any PV matching "<span className="text-blue-600">{searchQuery}</span>". Try searching for a different meaning or English phrase!</p>
+               <p className="font-bold text-gray-500 max-w-md mx-auto">We couldn't find any PV matching "<span className="text-blue-600">{searchQuery}</span>". Try searching for a different PV!</p>
                <button onClick={() => setSearchQuery('')} className="mt-8 bg-black text-white px-8 py-3 rounded-full font-black text-xs uppercase tracking-widest hover:bg-yellow-300 hover:text-black transition-all shadow-[4px_4px_0_0_rgba(255,255,255,0.2)]">Clear Search</button>
             </div>
           ) : (
