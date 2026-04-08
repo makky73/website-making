@@ -1245,7 +1245,7 @@ const App = () => {
       { pv: "Get away with", trope: "The Smooth Criminal", cefr: "B2", icon: Ghost, meaning: "To totally not get caught, criticised or completely punished for doing something totally wrong.", meaningJP: "（悪事などを）やってのける、罰を逃れる", example: "The utterly brazen, entirely fearless thieves got away with two incredibly priceless Picassos, which were never, ever found.", vibes: ["Getting off scot-free", "Lying successfully", "Breaking the rules"], storyline: "Leo entirely totally forgot to write the massive, highly crucial 50-page final essay. In absolute pure terror and panic, he confidently submitted a highly corrupted, totally unreadable file. Incredibly, the completely utterly exhausted professor didn't thoroughly check, and Leo fully got away with his extremely brazen lie.", storylineJP: "レオは巨大で極めて重要な50ページの最終エッセイを書くのを完全に全く忘れていた。絶対的な純粋な恐怖とパニックの中、彼は非常に破損した完全に読めないファイルを自信満々に提出した。信じられないことに、完全に全く疲れ切った教授は徹底的に確認せず、レオは彼の極めて厚かましい嘘を完全に見事にやってのけた（罰を逃れた）。", quiz: { question: "I totally cannot believe he actually miraculously managed to ___ entirely cheating on the massive test.", options: ["get away with", "get back at", "give in to"], correctIndex: 0, explanation: "to escape punishment for doing wrong." } }
 
     ]
-    ]
+  };
 
   };  const EPISODES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24,25];
 
