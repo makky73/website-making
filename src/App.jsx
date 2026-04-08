@@ -59,12 +59,14 @@ const AnimeFrame = ({ pv, trope, storyline, storylineJP, primaryLang }) => {
            >
               <div ref={primaryLang === 'EN' ? enSectionRef : jpSectionRef} className="flex flex-col justify-center text-left" onClick={(e) => e.stopPropagation()}>
                 <div className="flex items-center gap-2 mb-2"><span className="bg-white text-black px-2 py-0.5 text-[9px] font-black uppercase rounded-sm">{primaryLang}</span></div>
-                <p className="text-white text-sm md:text-base lg:text-lg leading-relaxed italic border-l-4 border-white/20 pl-4 font-medium">{primaryLang === 'EN' ? storyline : storylineJP}</p>
+                {/* 🌟 Storyの文字サイズを大きく (text-lg md:text-xl lg:text-2xl) */}
+                <p className="text-white text-lg md:text-xl lg:text-2xl leading-relaxed italic border-l-4 border-white/20 pl-4 font-medium">{primaryLang === 'EN' ? storyline : storylineJP}</p>
                 <div className="mt-4 flex flex-col items-center animate-bounce text-white/30"><ArrowDown size={18} /></div>
               </div>
               <div ref={primaryLang === 'EN' ? jpSectionRef : enSectionRef} className="flex flex-col justify-center border-t border-white/10 pt-6 text-left" onClick={(e) => e.stopPropagation()}>
                 <div className="flex items-center gap-2 mb-2"><span className="bg-blue-600 text-white px-2 py-0.5 text-[9px] font-black uppercase rounded-sm">{primaryLang === 'EN' ? 'JP' : 'EN'}</span></div>
-                <p className="text-white text-sm md:text-base lg:text-lg font-bold leading-relaxed pl-4">{primaryLang === 'EN' ? storylineJP : storyline}</p>
+                {/* 🌟 Translationの文字サイズを大きく (text-lg md:text-xl lg:text-2xl) */}
+                <p className="text-white text-lg md:text-xl lg:text-2xl font-bold leading-relaxed pl-4">{primaryLang === 'EN' ? storylineJP : storyline}</p>
               </div>
            </div>
         </div>
@@ -1258,7 +1260,7 @@ const App = () => {
 
 const EPISODES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24,25];
 
-  const allDataWithEp = Object.entries(batches).flatMap(([ep, items]) => 
+ const allDataWithEp = Object.entries(batches).flatMap(([ep, items]) => 
     items.map(item => ({ ...item, epNum: ep }))
   );
 
@@ -1439,7 +1441,8 @@ const EPISODES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 flex-1 min-h-[12rem]">
                   <div className="bg-yellow-300 p-5 md:p-6 rounded-3xl border-4 border-black shadow-[6px_6px_0_0_rgba(0,0,0,1)] flex flex-col overflow-y-auto text-black text-left h-full">
                      <div className="flex items-center gap-2 mb-3"><Lightbulb size={16} className="text-black/60" /><h3 className="text-[12px] font-black uppercase text-black/60 tracking-widest leading-none font-bold">Context Vibes</h3></div>
-                     <div className="space-y-2">{current.vibes.map((vibe, i) => (<div key={i} className="flex gap-2 items-start text-black font-bold uppercase text-xs md:text-sm leading-tight italic tracking-tight"><div className="w-2 h-2 rounded-full bg-black mt-1 shrink-0"></div><p>{vibe}</p></div>))}</div>
+                     {/* 🌟 Vibesの文字サイズを大きく (text-base md:text-lg lg:text-xl) */}
+                     <div className="space-y-3">{current.vibes.map((vibe, i) => (<div key={i} className="flex gap-3 items-start text-black font-black uppercase text-base md:text-lg lg:text-xl leading-tight italic tracking-tight"><div className="w-2 h-2 rounded-full bg-black mt-2 shrink-0"></div><p>{vibe}</p></div>))}</div>
                   </div>
                   <div onClick={() => setIsFlipped(!isFlipped)} className="relative w-full cursor-pointer perspective-1000 group h-full" style={{ perspective: '1000px' }}>
                     <div 
@@ -1453,7 +1456,6 @@ const EPISODES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
                         <div className="flex justify-between items-start mb-3"><h3 className={`text-xs font-black uppercase tracking-widest leading-none ${promptLang === 'EN' ? 'text-gray-400' : 'text-blue-400'}`}>{promptLang === 'EN' ? 'Concept (EN)' : 'コンセプト (JP)'}</h3><RefreshCw size={14} className="text-gray-300 group-hover:rotate-180 transition-transform duration-500" /></div>
                         <p className={`text-lg md:text-xl lg:text-2xl font-black italic leading-tight line-clamp-3`}>{promptLang === 'EN' ? current.meaning : current.meaningJP}</p>
                       </div>
-
                       <div 
                         className={`absolute inset-0 p-5 md:p-6 rounded-3xl border-4 border-black shadow-[6px_6px_0_0_rgba(0,0,0,1)] flex flex-col justify-center text-left ${promptLang === 'EN' ? 'bg-blue-50 border-blue-500 text-blue-900' : 'bg-white text-black'}`}
                         style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
@@ -1462,7 +1464,7 @@ const EPISODES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
                         <div className="transform-none"><p className={`text-lg md:text-xl lg:text-2xl font-black italic leading-tight line-clamp-3`}>{promptLang === 'EN' ? current.meaningJP : current.meaning}</p></div>
                       </div>
                     </div>
-                  </div>                  
+                  </div>
                 </div>
               </div>
 
@@ -1488,7 +1490,8 @@ const EPISODES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
                      <div className="mt-auto shrink-0">
                        <p className="text-xs font-bold text-gray-400 mb-3 uppercase tracking-widest border-t border-white/10 pt-4 text-left">Example Sentence</p>
                        {isRevealed ? (
-                         <div className="bg-white/10 p-4 rounded-xl border-l-4 border-yellow-300 italic text-sm leading-relaxed animate-in fade-in slide-in-from-bottom-2 text-white font-bold">"{current.example}"</div>
+                         // 🌟 Example Sentenceの文字サイズを大きく (text-lg md:text-xl lg:text-2xl)
+                         <div className="bg-white/10 p-4 rounded-xl border-l-4 border-yellow-300 italic text-lg md:text-xl lg:text-2xl leading-relaxed animate-in fade-in slide-in-from-bottom-2 text-white font-bold">"{current.example}"</div>
                        ) : (
                          <div className="bg-white/5 p-4 rounded-xl border-2 border-dashed border-white/10 flex flex-col items-center justify-center gap-2 min-h-[80px]">
                             <Lock size={16} className="text-white/20" /><span className="text-xs font-black uppercase opacity-20 tracking-widest italic text-center font-bold">Hidden until revealed</span>
