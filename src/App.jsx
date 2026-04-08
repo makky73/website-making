@@ -9,7 +9,8 @@ import {
   AlertTriangle, Flame, Activity, Wind, Music, Camera, Sparkles,
   Hammer, Book, Calendar, UserPlus, XCircle, TrendingDown, GitBranch,
   Key, Clock, Sun, Users, HardHat, Footprints, Thermometer, Droplets,
-  Radio, Mic2, CloudOff, Smile, Ghost, Smartphone, Star, Package, TrendingUp
+  Radio, Mic2, CloudOff, Smile, Ghost, Smartphone, Star, Package, TrendingUp, 
+  Settings, PenTool
 } from 'lucide-react';
 
 const AnimeFrame = ({ pv, trope, storyline, storylineJP, primaryLang }) => {
