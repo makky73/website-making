@@ -1441,25 +1441,25 @@ const EPISODES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
                      <div className="flex items-center gap-2 mb-3"><Lightbulb size={16} className="text-black/60" /><h3 className="text-[12px] font-black uppercase text-black/60 tracking-widest leading-none font-bold">Context Vibes</h3></div>
                      <div className="space-y-2">{current.vibes.map((vibe, i) => (<div key={i} className="flex gap-2 items-start text-black font-bold uppercase text-xs md:text-sm leading-tight italic tracking-tight"><div className="w-2 h-2 rounded-full bg-black mt-1 shrink-0"></div><p>{vibe}</p></div>))}</div>
                   </div>
-                  <div onClick={() => setIsFlipped(!isFlipped)} className="relative w-full cursor-pointer group h-full" style={{ perspective: '1000px' }}>
+                  <div onClick={() => setIsFlipped(!isFlipped)} className="relative w-full cursor-pointer perspective-1000 group h-full" style={{ perspective: '1000px' }}>
                     <div 
                       className="relative w-full h-full transition-transform duration-500" 
                       style={{ transformStyle: 'preserve-3d', transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)' }}
                     >
                       <div 
-                        className={`absolute inset-0 p-5 md:p-6 rounded-3xl border-4 border-black shadow-[6px_6px_0_0_rgba(0,0,0,1)] flex flex-col justify-center text-left ${promptLang === 'EN' ? 'bg-blue-50 border-blue-500 text-blue-900' : 'bg-white text-black'}`}
+                        className={`absolute inset-0 p-5 md:p-6 rounded-3xl border-4 border-black shadow-[6px_6px_0_0_rgba(0,0,0,1)] flex flex-col justify-center text-left ${promptLang === 'EN' ? 'bg-white text-black' : 'bg-blue-50 border-blue-500 text-blue-900'}`}
                         style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
                       >
-                        <div className="flex justify-between items-start mb-3"><h3 className={`text-xs font-black uppercase tracking-widest leading-none ${promptLang === 'EN' ? 'text-blue-400' : 'text-gray-400'}`}>{promptLang === 'EN' ? '訳 (JP)' : 'Meaning (EN)'}</h3><RefreshCw size={14} className="text-gray-300 group-hover:rotate-180 transition-transform duration-500" /></div>
-                        <p className={`text-lg md:text-xl lg:text-2xl font-black italic leading-tight line-clamp-3`}>{promptLang === 'EN' ? current.meaningJP : current.meaning}</p>
+                        <div className="flex justify-between items-start mb-3"><h3 className={`text-xs font-black uppercase tracking-widest leading-none ${promptLang === 'EN' ? 'text-gray-400' : 'text-blue-400'}`}>{promptLang === 'EN' ? 'Concept (EN)' : 'コンセプト (JP)'}</h3><RefreshCw size={14} className="text-gray-300 group-hover:rotate-180 transition-transform duration-500" /></div>
+                        <p className={`text-lg md:text-xl lg:text-2xl font-black italic leading-tight line-clamp-3`}>{promptLang === 'EN' ? current.meaning : current.meaningJP}</p>
                       </div>
 
                       <div 
-                        className={`absolute inset-0 p-5 md:p-6 rounded-3xl border-4 border-black shadow-[6px_6px_0_0_rgba(0,0,0,1)] flex flex-col justify-center text-left ${promptLang === 'EN' ? 'bg-white text-black' : 'bg-blue-50 border-blue-500 text-blue-900'}`}
+                        className={`absolute inset-0 p-5 md:p-6 rounded-3xl border-4 border-black shadow-[6px_6px_0_0_rgba(0,0,0,1)] flex flex-col justify-center text-left ${promptLang === 'EN' ? 'bg-blue-50 border-blue-500 text-blue-900' : 'bg-white text-black'}`}
                         style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
                       >
-                        <div className="flex justify-between items-start mb-3"><h3 className={`text-xs font-black uppercase tracking-widest leading-none ${promptLang === 'EN' ? 'text-gray-400' : 'text-blue-400'}`}>{promptLang === 'EN' ? 'Concept (EN)' : 'コンセプト (JP)'}</h3><RefreshCw size={14} className="text-blue-300" /></div>
-                        <p className={`text-lg md:text-xl lg:text-2xl font-black italic leading-tight line-clamp-3`}>{promptLang === 'EN' ? current.meaning : current.meaningJP}</p>
+                        <div className="flex justify-between items-start mb-3"><h3 className={`text-xs font-black uppercase tracking-widest leading-none ${promptLang === 'EN' ? 'text-blue-400' : 'text-gray-400'}`}>{promptLang === 'EN' ? '訳 (JP)' : 'Meaning (EN)'}</h3><RefreshCw size={14} className="text-blue-300" /></div>
+                        <div className="transform-none"><p className={`text-lg md:text-xl lg:text-2xl font-black italic leading-tight line-clamp-3`}>{promptLang === 'EN' ? current.meaningJP : current.meaning}</p></div>
                       </div>
                     </div>
                   </div>                  
