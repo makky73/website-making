@@ -1462,7 +1462,7 @@ const EPISODES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
                         <p className={`text-lg md:text-xl lg:text-2xl font-black italic leading-tight line-clamp-3`}>{promptLang === 'EN' ? current.meaning : current.meaningJP}</p>
                       </div>
                     </div>
-                  </div>                  >
+                  </div>                  
                 </div>
               </div>
 
