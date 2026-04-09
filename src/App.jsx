@@ -196,35 +196,163 @@ const App = () => {
   };
   const batches = {
     1: [
-
-      { pv: "Abide by", trope: "The Dojo Rules", cefr: "C1", icon: Shield, meaning: "To follow or accept a rule, a decision, or an agreement.", meaningJP: "規則や決定を遵守する、従う", example: "If you want to stay in this apartment, you have to abide by the rules.", vibes: ["Following strict honor codes", "Respecting the law without question", "Agreeing to tough terms"], storyline: "Sato joined the elite Kendo club. The captain handed him a wooden sword. 'In this dojo, we abide by ancient honor codes. Break them, and you're out.'", storylineJP: "佐藤は強豪の剣道部に入部した。主将は木刀を渡し、「この道場では古来の名誉の掟に従うのだ。破れば即退部だぞ」と警告した。", quiz: { question: "In a professional tournament, players must ___ the referee's final decision.", options: ["abide by", "act on", "add up"], correctIndex: 0, explanation: "to obey a rule." } },
-
-      { pv: "Account for", trope: "The Mystery Detective", cefr: "B2", icon: Search, meaning: "To explain the reason for something or where you were.", meaningJP: "理由を説明する、～の根拠となる", example: "Can you account for why you're home two hours late?", vibes: ["Questioning a suspect's whereabouts", "Explaining missing budget items", "Finding reasons for scientific results"], storyline: "The Detective slammed his hand on the table. 'Your phone's GPS shows you were at the mall! How do you account for this huge gap in your story?!'", storylineJP: "刑事は机をバンと叩いた。「スマホのGPSではショッピングモールにいたことになっている！この話の矛盾をどう説明するつもりだ？！」", quiz: { question: "The manager asked the accountant to ___ the missing $500.", options: ["account for", "abide by", "agree with"], correctIndex: 0, explanation: "to explain why." } },
-
-      { pv: "Ache for", trope: "The Slice of Life Longing", cefr: "C1", icon: Heart, meaning: "To have a very strong feeling of wanting someone or something.", meaningJP: "～を切望する、～したくてたまらない", example: "After a long day of hiking, I am really aching for a hot shower.", vibes: ["Desperate food cravings", "Missing a distant best friend", "Deep homesickness during travel"], storyline: "After three grueling weeks of survival training in the mountains, Haru stared weakly at a blurry photo of ramen. 'I am literally aching for real food,' he whispered.", storylineJP: "山での過酷なサバイバル訓練が3週間続き、ハルはラーメンの写真を力なく見つめていた。「マジで本物の温かい食べ物が恋しくてたまらない...」と彼はつぶやいた。", quiz: { question: "After living in the city for a year, she was ___ the quiet of the countryside.", options: ["adding up", "aching for", "acting on"], correctIndex: 1, explanation: "to want something very much." } },
-
-      { pv: "Act on", trope: "The Tactical Operation", cefr: "B2", icon: Zap, meaning: "To take action according to information, advice, or a signal.", meaningJP: "情報や助言に基づいて行動する、作用する", example: "The manager decided to act on the customer's complaint.", vibes: ["Responding to anonymous tips", "Following a doctor's serious advice", "Executing military tactics"], storyline: "The hacker intercepted an encrypted signal from the enemy base. 'Commander! We need to act on this intel immediately before they move their troops!'", storylineJP: "ハッカーは敵基地からの暗号化された信号を傍受した。「指令官！敵が部隊を動かす前に、直ちにこの情報に基づいて行動を起こす必要があります！」", quiz: { question: "The police had to ___ the anonymous tip to prevent the crime.", options: ["act on", "allow for", "angle for"], correctIndex: 0, explanation: "to take action based on info." } },
-
-      { pv: "Act out", trope: "The Drama Club", cefr: "B2", icon: Play, meaning: "To express feelings by performing actions or bad behavior.", meaningJP: "感情を態度で示す、実演する", example: "Don't just tell me the story; act it out so I can see!", vibes: ["Dramatic stage performances", "Toddler tantrums in a store", "Expressing intense anger physically"], storyline: "During the national theater competition, Aoi didn't just read her lines. She had to completely act out a scene of absolute, devastating heartbreak.", storylineJP: "全国演劇大会で、アオイはただセリフを読むだけではなかった。彼女は絶対的で破壊的な失恋のシーンを全身で表現（実演）しなければならなかった。", quiz: { question: "The child was ___ his frustration because he couldn't have the toy.", options: ["acting out", "agreeing with", "aching for"], correctIndex: 0, explanation: "to express feelings through behavior." } },
-
-      { pv: "Act up", trope: "The Mecha Malfunction", cefr: "B2", icon: Cpu, meaning: "To behave badly or to malfunction and not work properly.", meaningJP: "機械が不調になる、わがままを言う", example: "My car has been acting up lately; I think the battery is dying.", vibes: ["Glitchy technology and bugs", "Kids misbehaving in public", "Old sports injuries flaring up"], storyline: "Right in the middle of the boss battle, the giant robot's left arm started glitching wildly. 'Sir! The main power core is acting up again!' the pilot screamed.", storylineJP: "ボス戦の真っ只中、巨大ロボットの左腕が激しく誤作動し始めた。「閣下！メインの動力コアがまた不調です！」パイロットが叫んだ。", quiz: { question: "I need to take my laptop to the shop because the keyboard is ___.", options: ["acting up", "adding on", "aiming at"], correctIndex: 0, explanation: "to malfunction." } },
-
-      { pv: "Add on", trope: "The RPG Stat Boost", cefr: "B1", icon: PlusSquare, meaning: "To add something extra to a total amount or existing thing.", meaningJP: "合計に何かを追加する、合算する", example: "Don't forget to add on the shipping cost before you pay.", vibes: ["Calculating tax and tips", "Equipping gaming stat bonuses", "Adding features to a basic plan"], storyline: "After defeating the dungeon boss, Rin carefully collected the glowing gems. 'If we add on these rare artifacts, our power will be unstoppable!'", storylineJP: "ダンジョンのボスを倒した後、リンは光る宝石を慎重に集めた。「このレアな遺物を合算すれば、私たちの力は無敵になるわ！」", quiz: { question: "Small daily expenses can ___ a lot of money by the end of the year.", options: ["add on", "abide by", "act on"], correctIndex: 0, explanation: "to add to a total." } },
-
-      { pv: "Add up", trope: "The Logic Check", cefr: "B2", icon: Calculator, meaning: "To seem reasonable and logical, or the calculation is correct.", meaningJP: "つじつまが合う、計算が合う", example: "His story just doesn't add up. His car was seen at the mall!", vibes: ["Questioning suspicious excuses", "Checking complex bill math", "Making sure evidence fits the crime"], storyline: "Ren narrowed his eyes at the muddy evidence on the floor. 'The suspect claims he was alone all night... but there are two sets of footprints. This just doesn't add up.'", storylineJP: "レンは床に残された泥だらけの証拠に目を細めた。「容疑者は一晩中一人だったと主張しているが...ここには二組の足跡がある。これではどうもつじつまが合わない。」", quiz: { question: "The detective felt something was wrong because the witness's story didn't ___.", options: ["add up", "act up", "allow for"], correctIndex: 0, explanation: "to seem logical." } },
-
-      { pv: "Agree with", trope: "The Spicy Ramen Fail", cefr: "A2", icon: Coffee, meaning: "To suit one's health or stomach (often about food or climate).", meaningJP: "（体質・胃腸・気候などが）合う、一致する", example: "I love spicy food, but it doesn't always agree with me.", vibes: ["Dealing with food sensitivity", "How climate affects health", "The results of a specific diet"], storyline: "Koji bravely took on the 'Hell-Level Spicy Ramen' challenge. Ten minutes later, he was sweating in deep regret. 'I love the taste, but this definitely does not agree with me...'", storylineJP: "コウジは勇敢にも「地獄級激辛ラーメン」に挑んだ。10分後、彼は汗だくになり後悔していた。「味は最高なんだが、これは間違いなく俺の胃には合わないな...」", quiz: { question: "I should stop drinking so much soda; it doesn't ___ my stomach.", options: ["agree with", "account for", "abide by"], correctIndex: 0, explanation: "to suit your health." } },
-
-      { pv: "Aim at", trope: "The Sniper Focus", cefr: "B1", icon: Target, meaning: "To point something at a target or intend to achieve a specific goal.", meaningJP: "標的を狙う、目標とする", example: "I'm aiming at finishing this huge project by Friday.", vibes: ["Setting ambitious career goals", "Focusing on a marketing target audience", "Physical camera or weapon focus"], storyline: "The young archer's hands trembled. The master placed a steady hand on her shoulder. 'Don't just look at the entire target,' he instructed. 'Aim at the very center.'", storylineJP: "若い弓使いの手は震えていた。師匠は彼女の肩に静かに手を置いた。「的全体をただ見るのではない」と彼は指導した。「ど真ん中だけを狙え。」", quiz: { question: "The new advertising campaign is ___ young professionals.", options: ["aimed at", "acting on", "aching for"], correctIndex: 0, explanation: "to target something." } },
-
-      { pv: "Allow for", trope: "The Strategy Map", cefr: "B2", icon: Map, meaning: "To include something in your calculations or plans, especially extra time.", meaningJP: "～を考慮に入れる、余裕を見る", example: "We need to allow for heavy traffic, so let's leave early.", vibes: ["Adding GPS traffic buffers", "Padding a party budget", "Building in a performance error margin"], storyline: "The General pointed grimly to the snowy mountain pass on the map. 'A massive blizzard is approaching. We must allow for at least three extra days of travel.'", storylineJP: "将軍は地図上の雪に覆われた山道を険しい表情で指差した。「巨大な吹雪が接近している。軍を生き延びさせたいなら、少なくとも3日分の余計な移動時間を考慮に入れておく必要がある。」", quiz: { question: "When you travel, always ___ the time it takes to get through security.", options: ["allow for", "add up", "abide by"], correctIndex: 0, explanation: "to consider something in a plan." } },
-
-      { pv: "Allow of", trope: "The Strict Gatekeeper", cefr: "C1", icon: XOctagon, meaning: "To permit or make something possible (used in formal contexts).", meaningJP: "～を可能にする、～の余地がある", example: "The urgent situation doesn't allow of any further delay.", vibes: ["Zero tolerance rules", "Absolute deadlines", "Immediate crisis action"], storyline: "The King's Guard blocked the bridge with drawn swords. 'The peace treaty is absolute,' the captain stated coldly. 'It does not allow of any exceptions.'", storylineJP: "国王の近衛兵たちが剣を抜いて橋を封鎖した。「平和条約は絶対だ」と隊長は冷酷に言い放った。「いかなる例外の余地も（許可も）ない。」", quiz: { question: "The strict terms of the contract do not ___ any modification.", options: ["allow of", "act up", "ache for"], correctIndex: 0, explanation: "to make possible." } },
-
-      { pv: "Angle for", trope: "The Secret Quest", cefr: "C1", icon: Fish, meaning: "To try to get something you want by hinting indirectly.", meaningJP: "遠回しに狙う、手に入れようと画策する", example: "I think he's angling for a promotion by staying late every day.", vibes: ["Hinting for expensive gifts", "Searching for exclusive party invites", "Fishing for compliments"], storyline: "Yumi kept pacing around the armory, loudly praising the captain's legendary new sword. 'She's not just being nice,' the rogue whispered. 'She's angling for a chance to borrow it.'", storylineJP: "ユミは武器庫をうろうろしながら、主将の新しい剣がどれほど素晴らしいかを大声で話し続けていた。「ただ褒めてるだけじゃないぞ」と盗賊がささやいた。「彼女はあれを借りるチャンスを遠回しに狙ってるんだ。」", quiz: { question: "She kept mentioning the concert, clearly ___ an invitation.", options: ["angling for", "adding up", "acting out"], correctIndex: 0, explanation: "to hint for something." } }
-
+      { 
+        pv: "Abide by", trope: "The Dojo Rules", cefr: "C1", icon: Shield, 
+        meaning: "To follow or accept a rule, a decision, or an agreement.", 
+        meaningJP: "規則や決定を遵守する、従う", 
+        example: "If you want to stay in this apartment, you have to abide by the rules.", 
+        exampleJP: "このアパートに住み続けたいなら、規則に従わなければならない。",
+        vibes: ["Following strict honor codes", "Respecting the law without question", "Agreeing to tough terms"], 
+        vibesJP: ["厳格な名誉の掟に従う", "無条件で法を重んじる", "厳しい条件に同意する"],
+        storyline: "Sato joined the elite Kendo club. The captain handed him a wooden sword. 'In this dojo, we abide by ancient honor codes. Break them, and you're out.'", 
+        storylineJP: "佐藤は強豪の剣道部に入部した。主将は木刀を渡し、「この道場では古来の名誉の掟に従うのだ。破れば即退部だぞ」と警告した。", 
+        quiz: { question: "In a professional tournament, players must ___ the referee's final decision.", options: ["abide by", "act on", "add up"], correctIndex: 0, explanation: "to obey a rule." } 
+      },
+      { 
+        pv: "Account for", trope: "The Mystery Detective", cefr: "B2", icon: Search, 
+        meaning: "To explain the reason for something or where you were.", 
+        meaningJP: "理由を説明する、～の根拠となる", 
+        example: "Can you account for why you're home two hours late?", 
+        exampleJP: "なぜ2時間も帰りが遅くなったのか説明できる？",
+        vibes: ["Questioning a suspect's whereabouts", "Explaining missing budget items", "Finding reasons for scientific results"], 
+        vibesJP: ["容疑者の所在を問いただす", "使途不明金を説明する", "科学的結果の理由を見つける"],
+        storyline: "The Detective slammed his hand on the table. 'Your phone's GPS shows you were at the mall! How do you account for this huge gap in your story?!'", 
+        storylineJP: "刑事は机をバンと叩いた。「スマホのGPSではショッピングモールにいたことになっている！この話の矛盾をどう説明するつもりだ？！」", 
+        quiz: { question: "The manager asked the accountant to ___ the missing $500.", options: ["account for", "abide by", "agree with"], correctIndex: 0, explanation: "to explain why." } 
+      },
+      { 
+        pv: "Ache for", trope: "The Slice of Life Longing", cefr: "C1", icon: Heart, 
+        meaning: "To have a very strong feeling of wanting someone or something.", 
+        meaningJP: "～を切望する、～したくてたまらない", 
+        example: "After a long day of hiking, I am really aching for a hot shower.", 
+        exampleJP: "長いハイキングの1日の後、熱いシャワーが本当に恋しくてたまらない。",
+        vibes: ["Desperate food cravings", "Missing a distant best friend", "Deep homesickness during travel"], 
+        vibesJP: ["無性に食べたくなる", "遠くの親友を恋しく思う", "旅行中の深いホームシック"],
+        storyline: "After three grueling weeks of survival training in the mountains, Haru stared weakly at a blurry photo of ramen. 'I am literally aching for real food,' he whispered.", 
+        storylineJP: "山での過酷なサバイバル訓練が3週間続き、ハルはラーメンの写真を力なく見つめていた。「マジで本物の温かい食べ物が恋しくてたまらない...」と彼はつぶやいた。", 
+        quiz: { question: "After living in the city for a year, she was ___ the quiet of the countryside.", options: ["adding up", "aching for", "acting on"], correctIndex: 1, explanation: "to want something very much." } 
+      },
+      { 
+        pv: "Act on", trope: "The Tactical Operation", cefr: "B2", icon: Zap, 
+        meaning: "To take action according to information, advice, or a signal.", 
+        meaningJP: "情報や助言に基づいて行動する、作用する", 
+        example: "The manager decided to act on the customer's complaint.", 
+        exampleJP: "マネージャーは顧客のクレームに基づいて行動することを決定した。",
+        vibes: ["Responding to anonymous tips", "Following a doctor's serious advice", "Executing military tactics"], 
+        vibesJP: ["匿名のタレコミに対応する", "医師の深刻な忠告に従う", "軍事戦術を実行する"],
+        storyline: "The hacker intercepted an encrypted signal from the enemy base. 'Commander! We need to act on this intel immediately before they move their troops!'", 
+        storylineJP: "ハッカーは敵基地からの暗号化された信号を傍受した。「指令官！敵が部隊を動かす前に、直ちにこの情報に基づいて行動を起こす必要があります！」", 
+        quiz: { question: "The police had to ___ the anonymous tip to prevent the crime.", options: ["act on", "allow for", "angle for"], correctIndex: 0, explanation: "to take action based on info." } 
+      },
+      { 
+        pv: "Act out", trope: "The Drama Club", cefr: "B2", icon: Play, 
+        meaning: "To express feelings by performing actions or bad behavior.", 
+        meaningJP: "感情を態度で示す、実演する", 
+        example: "Don't just tell me the story; act it out so I can see!", 
+        exampleJP: "ただ話すだけでなく、私に見えるように実演して！",
+        vibes: ["Dramatic stage performances", "Toddler tantrums in a store", "Expressing intense anger physically"], 
+        vibesJP: ["ドラマチックな舞台パフォーマンス", "店での幼児のかんしゃく", "激しい怒りを体で表現する"],
+        storyline: "During the national theater competition, Aoi didn't just read her lines. She had to completely act out a scene of absolute, devastating heartbreak.", 
+        storylineJP: "全国演劇大会で、アオイはただセリフを読むだけではなかった。彼女は絶対的で破壊的な失恋のシーンを全身で表現（実演）しなければならなかった。", 
+        quiz: { question: "The child was ___ his frustration because he couldn't have the toy.", options: ["acting out", "agreeing with", "aching for"], correctIndex: 0, explanation: "to express feelings through behavior." } 
+      },
+      { 
+        pv: "Act up", trope: "The Mecha Malfunction", cefr: "B2", icon: Cpu, 
+        meaning: "To behave badly or to malfunction and not work properly.", 
+        meaningJP: "機械が不調になる、わがままを言う", 
+        example: "My car has been acting up lately; I think the battery is dying.", 
+        exampleJP: "最近車の調子が悪くて、バッテリーが切れかかっているんだと思う。",
+        vibes: ["Glitchy technology and bugs", "Kids misbehaving in public", "Old sports injuries flaring up"], 
+        vibesJP: ["バグだらけのテクノロジー", "公共の場で暴れる子供", "古いスポーツの怪我が再発する"],
+        storyline: "Right in the middle of the boss battle, the giant robot's left arm started glitching wildly. 'Sir! The main power core is acting up again!' the pilot screamed.", 
+        storylineJP: "ボス戦の真っ只中、巨大ロボットの左腕が激しく誤作動し始めた。「閣下！メインの動力コアがまた不調です！」パイロットが叫んだ。", 
+        quiz: { question: "I need to take my laptop to the shop because the keyboard is ___.", options: ["acting up", "adding on", "aiming at"], correctIndex: 0, explanation: "to malfunction." } 
+      },
+      { 
+        pv: "Add on", trope: "The RPG Stat Boost", cefr: "B1", icon: PlusSquare, 
+        meaning: "To add something extra to a total amount or existing thing.", 
+        meaningJP: "合計に何かを追加する、合算する", 
+        example: "Don't forget to add on the shipping cost before you pay.", 
+        exampleJP: "支払う前に送料を追加するのを忘れないで。",
+        vibes: ["Calculating tax and tips", "Equipping gaming stat bonuses", "Adding features to a basic plan"], 
+        vibesJP: ["税金やチップを計算する", "ゲームのステータスボーナスを装備する", "基本プランに機能を追加する"],
+        storyline: "After defeating the dungeon boss, Rin carefully collected the glowing gems. 'If we add on these rare artifacts, our power will be unstoppable!'", 
+        storylineJP: "ダンジョンのボスを倒した後、リンは光る宝石を慎重に集めた。「このレアな遺物を合算すれば、私たちの力は無敵になるわ！」", 
+        quiz: { question: "Small daily expenses can ___ a lot of money by the end of the year.", options: ["add on", "abide by", "act on"], correctIndex: 0, explanation: "to add to a total." } 
+      },
+      { 
+        pv: "Add up", trope: "The Logic Check", cefr: "B2", icon: Calculator, 
+        meaning: "To seem reasonable and logical, or the calculation is correct.", 
+        meaningJP: "つじつまが合う、計算が合う", 
+        example: "His story just doesn't add up. His car was seen at the mall!", 
+        exampleJP: "彼の話はどうもつじつまが合わない。彼の車はモールで目撃されているんだ！",
+        vibes: ["Questioning suspicious excuses", "Checking complex bill math", "Making sure evidence fits the crime"], 
+        vibesJP: ["怪しい言い訳を疑う", "複雑な請求書の計算を確認する", "証拠が犯罪と一致するか確かめる"],
+        storyline: "Ren narrowed his eyes at the muddy evidence on the floor. 'The suspect claims he was alone all night... but there are two sets of footprints. This just doesn't add up.'", 
+        storylineJP: "レンは床に残された泥だらけの証拠に目を細めた。「容疑者は一晩中一人だったと主張しているが...ここには二組の足跡がある。これではどうもつじつまが合わない。」", 
+        quiz: { question: "The detective felt something was wrong because the witness's story didn't ___.", options: ["add up", "act up", "allow for"], correctIndex: 0, explanation: "to seem logical." } 
+      },
+      { 
+        pv: "Agree with", trope: "The Spicy Ramen Fail", cefr: "A2", icon: Coffee, 
+        meaning: "To suit one's health or stomach (often about food or climate).", 
+        meaningJP: "（体質・胃腸・気候などが）合う、一致する", 
+        example: "I love spicy food, but it doesn't always agree with me.", 
+        exampleJP: "辛い食べ物は大好きだけど、いつも胃に合うとは限らない。",
+        vibes: ["Dealing with food sensitivity", "How climate affects health", "The results of a specific diet"], 
+        vibesJP: ["食物過敏症に対処する", "気候が健康に与える影響", "特定の食事療法の効果"],
+        storyline: "Koji bravely took on the 'Hell-Level Spicy Ramen' challenge. Ten minutes later, he was sweating in deep regret. 'I love the taste, but this definitely does not agree with me...'", 
+        storylineJP: "コウジは勇敢にも「地獄級激辛ラーメン」に挑んだ。10分後、彼は汗だくになり後悔していた。「味は最高なんだが、これは間違いなく俺の胃には合わないな...」", 
+        quiz: { question: "I should stop drinking so much soda; it doesn't ___ my stomach.", options: ["agree with", "account for", "abide by"], correctIndex: 0, explanation: "to suit your health." } 
+      },
+      { 
+        pv: "Aim at", trope: "The Sniper Focus", cefr: "B1", icon: Target, 
+        meaning: "To point something at a target or intend to achieve a specific goal.", 
+        meaningJP: "標的を狙う、目標とする", 
+        example: "I'm aiming at finishing this huge project by Friday.", 
+        exampleJP: "金曜日までにこの巨大なプロジェクトを終わらせることを目標にしている。",
+        vibes: ["Setting ambitious career goals", "Focusing on a marketing target audience", "Physical camera or weapon focus"], 
+        vibesJP: ["野心的なキャリア目標を設定する", "マーケティングのターゲット層に集中する", "カメラや武器の物理的な照準"],
+        storyline: "The young archer's hands trembled. The master placed a steady hand on her shoulder. 'Don't just look at the entire target,' he instructed. 'Aim at the very center.'", 
+        storylineJP: "若い弓使いの手は震えていた。師匠は彼女の肩に静かに手を置いた。「的全体をただ見るのではない」と彼は指導した。「ど真ん中だけを狙え。」", 
+        quiz: { question: "The new advertising campaign is ___ young professionals.", options: ["aimed at", "acting on", "aching for"], correctIndex: 0, explanation: "to target something." } 
+      },
+      { 
+        pv: "Allow for", trope: "The Strategy Map", cefr: "B2", icon: Map, 
+        meaning: "To include something in your calculations or plans, especially extra time.", 
+        meaningJP: "～を考慮に入れる、余裕を見る", 
+        example: "We need to allow for heavy traffic, so let's leave early.", 
+        exampleJP: "渋滞を考慮に入れる必要があるので、早く出発しよう。",
+        vibes: ["Adding GPS traffic buffers", "Padding a party budget", "Building in a performance error margin"], 
+        vibesJP: ["GPSの交通渋滞の余裕を持たせる", "パーティーの予算に余裕を持たせる", "パフォーマンスの誤差の範囲を組み込む"],
+        storyline: "The General pointed grimly to the snowy mountain pass on the map. 'A massive blizzard is approaching. We must allow for at least three extra days of travel.'", 
+        storylineJP: "将軍は地図上の雪に覆われた山道を険しい表情で指差した。「巨大な吹雪が接近している。軍を生き延びさせたいなら、少なくとも3日分の余計な移動時間を考慮に入れておく必要がある。」", 
+        quiz: { question: "When you travel, always ___ the time it takes to get through security.", options: ["allow for", "add up", "abide by"], correctIndex: 0, explanation: "to consider something in a plan." } 
+      },
+      { 
+        pv: "Allow of", trope: "The Strict Gatekeeper", cefr: "C1", icon: XOctagon, 
+        meaning: "To permit or make something possible (used in formal contexts).", 
+        meaningJP: "～を可能にする、～の余地がある", 
+        example: "The urgent situation doesn't allow of any further delay.", 
+        exampleJP: "この緊急事態はこれ以上の遅れを許さない。",
+        vibes: ["Zero tolerance rules", "Absolute deadlines", "Immediate crisis action"], 
+        vibesJP: ["一切の妥協を許さないルール", "絶対的な締め切り", "即座の危機対応"],
+        storyline: "The King's Guard blocked the bridge with drawn swords. 'The peace treaty is absolute,' the captain stated coldly. 'It does not allow of any exceptions.'", 
+        storylineJP: "国王の近衛兵たちが剣を抜いて橋を封鎖した。「平和条約は絶対だ」と隊長は冷酷に言い放った。「いかなる例外の余地も（許可も）ない。」", 
+        quiz: { question: "The strict terms of the contract do not ___ any modification.", options: ["allow of", "act up", "ache for"], correctIndex: 0, explanation: "to make possible." } 
+      },
+      { 
+        pv: "Angle for", trope: "The Secret Quest", cefr: "C1", icon: Fish, 
+        meaning: "To try to get something you want by hinting indirectly.", 
+        meaningJP: "遠回しに狙う、手に入れようと画策する", 
+        example: "I think he's angling for a promotion by staying late every day.", 
+        exampleJP: "彼は毎日遅くまで残ることで昇進を遠回しに狙っていると思う。",
+        vibes: ["Hinting for expensive gifts", "Searching for exclusive party invites", "Fishing for compliments"], 
+        vibesJP: ["高価な贈り物をほのめかす", "限定パーティーの招待を探る", "お世辞を遠回しに要求する"],
+        storyline: "Yumi kept pacing around the armory, loudly praising the captain's legendary new sword. 'She's not just being nice,' the rogue whispered. 'She's angling for a chance to borrow it.'", 
+        storylineJP: "ユミは武器庫をうろうろしながら、主将の新しい剣がどれほど素晴らしいかを大声で話し続けていた。「ただ褒めてるだけじゃないぞ」と盗賊がささやいた。「彼女はあれを借りるチャンスを遠回しに狙ってるんだ。」", 
+        quiz: { question: "She kept mentioning the concert, clearly ___ an invitation.", options: ["angling for", "adding up", "acting out"], correctIndex: 0, explanation: "to hint for something." } 
+      }
     ],
-
     2: [
 
       { pv: "Answer back", trope: "The Family Scolding", cefr: "B2", icon: Angry, meaning: "To reply rudely to someone in authority, like a parent or teacher.", meaningJP: "（親や目上に）口答えをする、反抗的な返事をする", example: "I'm your mother! Don't answer back when I'm trying to help you.", vibes: ["A rebellious teen getting scolded", "Classroom disrespect", "Getting defensive with a strict boss"], storyline: "Leo was tired of his mother's endless advice about his future. When he finally snapped and answered back, the entire room went completely silent in shock.", storylineJP: "レオは将来についての母親の終わりのない小言にうんざりしていた。彼がついにキレて口答えをした瞬間、部屋中がショックで完全に静まり返った。", quiz: { question: "It's highly disrespectful to ___ when a teacher corrects your mistake.", options: ["answer back", "ask in", "back out"], correctIndex: 0, explanation: "to reply rudely." } },
