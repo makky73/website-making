@@ -165,7 +165,7 @@ const App = () => {
   const [isEpOpen, setIsEpOpen] = useState(false);
   const [isCefrOpen, setIsCefrOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-};
+  
   const batches = {
     1: [
       { 
