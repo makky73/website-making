@@ -6591,7 +6591,7 @@ const EPISODE_LIST = Array.from({ length: 26 }, (_, i) => i + 1);
   } else {
     const currentBatchRaw = batches[episode] || batches[1] || [];
     displayData = cefrFilter === 'ALL' ? currentBatchRaw : currentBatchRaw.filter(item => item?.cefr === cefrFilter);
-  }
+  };
 
   const current = displayData[index] || displayData[0] || null;
   const availableLevelsInBatch = ['ALL', ...new Set((searchQuery ? allDataWithEp : (batches[episode] || [])).map(item => item?.cefr).filter(Boolean))].sort();
