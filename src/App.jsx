@@ -6349,7 +6349,15 @@ const App = () => {
 
 const EPISODES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24,25];
 
-const allDataWithEp = Object.entries(batches).flatMap(([ep, items]) => 
+useEffect(() => {
+    setIsFlipped(false);
+    setIsVibesFlipped(false);
+    setIsExampleFlipped(false);
+  }, [promptLang]);
+
+  const EPISODES = Array.from({ length: 25 }, (_, i) => i + 1);
+
+  const allDataWithEp = Object.entries(batches).flatMap(([ep, items]) => 
     items.map(item => ({ ...item, epNum: ep }))
   );
 
@@ -6357,15 +6365,12 @@ const allDataWithEp = Object.entries(batches).flatMap(([ep, items]) =>
   
   if (searchQuery.trim() !== '') {
     const searchTerms = searchQuery.toLowerCase().trim().split(/\s+/);
-    
     displayData = allDataWithEp.filter(item => {
       return searchTerms.every(term => {
         const isShortWord = term.length <= 3 && /^[a-z]+$/.test(term);
-        
         const matchPV = isShortWord 
           ? new RegExp(`\\b${term}\\b`, 'i').test(item.pv) 
           : item.pv.toLowerCase().includes(term);          
-          
         return matchPV;
       });
     });
@@ -6377,22 +6382,15 @@ const allDataWithEp = Object.entries(batches).flatMap(([ep, items]) =>
   const current = displayData[index] || displayData[0] || null;
   const availableLevelsInBatch = ['ALL', ...new Set((searchQuery ? allDataWithEp : (batches[episode] || [])).map(item => item?.cefr).filter(Boolean))].sort();
 
-  const handleNext = () => { resetCards(); setIndex(prev => (prev >= displayData.length - 1 ? 0 : prev + 1)); };
-  const handlePrev = () => { resetCards(); setIndex(prev => (prev <= 0 ? displayData.length - 1 : prev - 1)); };
+  const handleNext = () => { setIsRevealed(false); setIndex(prev => (prev >= displayData.length - 1 ? 0 : prev + 1)); };
+  const handlePrev = () => { setIsRevealed(false); setIndex(prev => (prev <= 0 ? displayData.length - 1 : prev - 1)); };
   
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
-      
-      if (e.key === 'ArrowRight') {
-        resetCards();
-        setIndex(prev => (prev >= displayData.length - 1 ? 0 : prev + 1));
-      } else if (e.key === 'ArrowLeft') {
-        resetCards();
-        setIndex(prev => (prev <= 0 ? displayData.length - 1 : prev - 1));
-      }
+      if (e.key === 'ArrowRight') handleNext();
+      else if (e.key === 'ArrowLeft') handlePrev();
     };
-
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [displayData.length]);
@@ -6402,11 +6400,11 @@ const allDataWithEp = Object.entries(batches).flatMap(([ep, items]) =>
     setSearchQuery('');
     setIndex(0); 
     setCefrFilter('ALL'); 
-    resetCards();
+    setIsRevealed(false); 
     setIsEpOpen(false); 
   };
   
-  const handleFilterChange = (level) => { setCefrFilter(level); setIndex(0); resetCards(); setIsCefrOpen(false); };
+  const handleFilterChange = (level) => { setCefrFilter(level); setIndex(0); setIsRevealed(false); setIsCefrOpen(false); };
   
   const markAsCorrect = () => { 
     if(current) setCorrectlyAnswered(prev => new Set(prev).add(`${current.pv}-${current.trope}`)); 
@@ -6436,7 +6434,7 @@ const allDataWithEp = Object.entries(batches).flatMap(([ep, items]) =>
                 )}
               </div>
               <span className="text-xs font-black uppercase tracking-[0.3em] text-gray-400 truncate max-w-[200px]">
-                {searchQuery ? 'GLOBAL SEARCH MODE' : (episode === 1 ? 'BASICS' : episode === 2 ? 'SOCIALS' : episode === 3 ? 'B-SERIES 1' : episode === 4 ? 'B-SERIES 2' : episode === 5 ? 'TRENDS 1' : episode === 6 ? 'TRENDS 2' : episode === 7 ? 'TRENDS 3' : episode <= 10 ? 'B-SERIES 4' : episode <= 12 ? 'C-SERIES 1' : episode <= 14 ? 'C-SERIES 2' : episode <= 18 ? 'C-SERIES 3' : 'Z-SERIES FINALE')}
+                {searchQuery ? 'GLOBAL SEARCH MODE' : 'SERIES PROGRESS'}
               </span>
             </div>
             
@@ -6473,11 +6471,7 @@ const allDataWithEp = Object.entries(batches).flatMap(([ep, items]) =>
                  type="text"
                  placeholder="SEARCH PV..."
                  value={searchQuery}
-                 onChange={(e) => {
-                   setSearchQuery(e.target.value);
-                   setIndex(0);
-                   resetCards();
-                 }}
+                 onChange={(e) => { setSearchQuery(e.target.value); setIndex(0); setIsRevealed(false); }}
                  className="w-full pl-11 pr-8 py-2.5 rounded-xl border-2 border-black font-black text-sm uppercase transition-all shadow-[4px_4px_0_0_rgba(0,0,0,1)] focus:outline-none focus:bg-yellow-50 focus:translate-y-[2px] focus:translate-x-[2px] focus:shadow-[2px_2px_0_0_rgba(0,0,0,1)] placeholder-gray-400"
                />
                {searchQuery && (
@@ -6514,8 +6508,8 @@ const allDataWithEp = Object.entries(batches).flatMap(([ep, items]) =>
             <div className="lg:col-span-12 bg-white border-4 border-black rounded-[2.5rem] p-16 text-center shadow-[12px_12px_0_0_rgba(0,0,0,1)] flex flex-col items-center justify-center h-full min-h-[50vh]">
                <Search size={64} className="text-gray-300 mb-6" />
                <h2 className="text-3xl font-black italic uppercase tracking-tighter text-black mb-4">No Matches Found!</h2>
-               <p className="font-bold text-gray-500 max-w-md mx-auto text-lg">We couldn't find any PV matching "<span className="text-blue-600">{searchQuery}</span>". Try searching for a different PV!</p>
-               <button onClick={() => setSearchQuery('')} className="mt-8 bg-black text-white px-8 py-3 rounded-full font-black text-sm uppercase tracking-widest hover:bg-yellow-300 hover:text-black transition-all shadow-[4px_4px_0_0_rgba(255,255,255,0.2)]">Clear Search</button>
+               <p className="font-bold text-gray-500 max-w-md mx-auto text-lg">Try searching for a different PV!</p>
+               <button onClick={() => setSearchQuery('')} className="mt-8 bg-black text-white px-8 py-3 rounded-full font-black text-sm uppercase tracking-widest hover:bg-yellow-300 hover:text-black transition-all">Clear Search</button>
             </div>
           ) : (
             <>
@@ -6525,66 +6519,102 @@ const allDataWithEp = Object.entries(batches).flatMap(([ep, items]) =>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 flex-1 min-h-[12rem]">
                   
-                  {/* 🌟 左側：Context Vibes のフリップカード */}
+                  {/* Context Vibes Flip Card */}
                   <div onClick={() => setIsVibesFlipped(!isVibesFlipped)} className="relative w-full cursor-pointer perspective-1000 group h-full" style={{ perspective: '1000px' }}>
-                    <div className="relative w-full h-full transition-transform duration-500" style={{ transformStyle: 'preserve-3d', transform: isVibesFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)' }}>
-                      
-                      {/* 表面 (EN) */}
-                      <div className={`absolute inset-0 p-5 md:p-6 rounded-3xl border-4 border-black shadow-[6px_6px_0_0_rgba(0,0,0,1)] flex flex-col overflow-y-auto text-left bg-yellow-300 text-black`} style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}>
-                         <div className="flex justify-between items-center mb-3">
-                           <div className="flex items-center gap-2"><Lightbulb size={16} className="text-black/60" /><h3 className="text-[12px] font-black uppercase text-black/60 tracking-widest leading-none">Context Vibes (EN)</h3></div>
-                           <RefreshCw size={14} className="text-black/40 group-hover:rotate-180 transition-transform duration-500" />
-                         </div>
-                         <div className="space-y-3 mt-2">
-                           {current.vibes.map((vibe, i) => (
-                             <div key={i} className="flex gap-3 items-start font-black uppercase text-lg md:text-xl lg:text-2xl leading-tight italic tracking-tight">
-                               <div className="w-2.5 h-2.5 rounded-full bg-black mt-2.5 shrink-0"></div><p>{vibe}</p>
-                             </div>
-                           ))}
-                         </div>
+                    <div 
+                      className="relative w-full h-full transition-transform duration-500" 
+                      style={{ transformStyle: 'preserve-3d', transform: isVibesFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)' }}
+                    >
+                      {/* 表面（常に現在の言語設定に従う） */}
+                      <div 
+                        className={`absolute inset-0 p-5 md:p-6 rounded-3xl border-4 border-black shadow-[6px_6px_0_0_rgba(0,0,0,1)] flex flex-col overflow-y-auto text-black text-left h-full ${promptLang === 'EN' ? 'bg-yellow-300' : 'bg-orange-100'}`}
+                        style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
+                      >
+                        <div className="flex items-center justify-between mb-3">
+                          <div className="flex items-center gap-2">
+                            <Lightbulb size={16} className={promptLang === 'EN' ? 'text-black/60' : 'text-orange-600'} />
+                            <h3 className={`text-[12px] font-black uppercase tracking-widest leading-none font-bold ${promptLang === 'EN' ? 'text-black/60' : 'text-orange-600'}`}>
+                              {promptLang === 'EN' ? 'Context Vibes' : 'Vibes (JP)'}
+                            </h3>
+                          </div>
+                          <RefreshCw size={14} className="text-black/40 group-hover:rotate-180 transition-transform duration-500" />
+                        </div>
+                        <div className="space-y-3">
+                          {(promptLang === 'EN' ? current.vibes : (current.vibesJP || [])).map((vibe, i) => (
+                            <div key={i} className={`flex gap-3 items-start font-black uppercase text-lg md:text-xl lg:text-2xl leading-tight italic tracking-tight ${promptLang === 'EN' ? 'text-black' : 'text-orange-900'}`}>
+                              <div className={`w-2 h-2 rounded-full mt-2 shrink-0 ${promptLang === 'EN' ? 'bg-black' : 'bg-orange-900'}`}></div>
+                              <p>{vibe}</p>
+                            </div>
+                          ))}
+                        </div>
                       </div>
-
-                      {/* 裏面 (JP) */}
-                      <div className={`absolute inset-0 p-5 md:p-6 rounded-3xl border-4 border-black shadow-[6px_6px_0_0_rgba(0,0,0,1)] flex flex-col overflow-y-auto text-left bg-blue-600 text-white`} style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}>
-                         <div className="flex justify-between items-center mb-3">
-                           <div className="flex items-center gap-2"><Lightbulb size={16} className="text-white/60" /><h3 className="text-[12px] font-black uppercase text-white/60 tracking-widest leading-none">Context Vibes (JP)</h3></div>
-                           <RefreshCw size={14} className="text-white/40" />
-                         </div>
-                         <div className="space-y-3 mt-2">
-                           {current.vibesJP ? current.vibesJP.map((vibe, i) => (
-                             <div key={i} className="flex gap-3 items-start font-black uppercase text-lg md:text-xl lg:text-2xl leading-tight italic tracking-tight">
-                               <div className="w-2.5 h-2.5 rounded-full bg-white mt-2.5 shrink-0"></div><p>{vibe}</p>
-                             </div>
-                           )) : (
-                             <p className="text-lg md:text-xl font-bold italic opacity-80 mt-4">日本語訳は準備中です...</p>
-                           )}
-                         </div>
+                      {/* 裏面（常に反対の言語を表示） */}
+                      <div 
+                        className={`absolute inset-0 p-5 md:p-6 rounded-3xl border-4 border-black shadow-[6px_6px_0_0_rgba(0,0,0,1)] flex flex-col overflow-y-auto text-black text-left h-full ${promptLang === 'EN' ? 'bg-orange-100' : 'bg-yellow-300'}`}
+                        style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
+                      >
+                        <div className="flex items-center justify-between mb-3">
+                          <div className="flex items-center gap-2">
+                            <Lightbulb size={16} className={promptLang === 'EN' ? 'text-orange-600' : 'text-black/60'} />
+                            <h3 className={`text-[12px] font-black uppercase tracking-widest leading-none font-bold ${promptLang === 'EN' ? 'text-orange-600' : 'text-black/60'}`}>
+                              {promptLang === 'EN' ? 'Vibes (JP)' : 'Context Vibes'}
+                            </h3>
+                          </div>
+                          <RefreshCw size={14} className="text-orange-400 group-hover:rotate-180 transition-transform duration-500" />
+                        </div>
+                        <div className="space-y-3">
+                          {(promptLang === 'EN' ? (current.vibesJP || []) : current.vibes).map((vibe, i) => (
+                            <div key={i} className={`flex gap-3 items-start font-black uppercase text-lg md:text-xl lg:text-2xl leading-tight italic tracking-tight ${promptLang === 'EN' ? 'text-orange-900' : 'text-black'}`}>
+                              <div className={`w-2 h-2 rounded-full mt-2 shrink-0 ${promptLang === 'EN' ? 'bg-orange-900' : 'bg-black'}`}></div>
+                              <p>{vibe}</p>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>
-
-                  {/* 中央：Concept のフリップカード (変更なし) */}
+                  
+                  {/* Concept Flip Card */}
                   <div onClick={() => setIsFlipped(!isFlipped)} className="relative w-full cursor-pointer perspective-1000 group h-full" style={{ perspective: '1000px' }}>
                     <div 
                       className="relative w-full h-full transition-transform duration-500" 
                       style={{ transformStyle: 'preserve-3d', transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)' }}
                     >
+                      {/* 表面（常に現在の言語設定に従う） */}
                       <div 
                         className={`absolute inset-0 p-5 md:p-6 rounded-3xl border-4 border-black shadow-[6px_6px_0_0_rgba(0,0,0,1)] flex flex-col justify-center text-left ${promptLang === 'EN' ? 'bg-white text-black' : 'bg-blue-50 border-blue-500 text-blue-900'}`}
                         style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
                       >
-                        <div className="flex justify-between items-start mb-3"><h3 className={`text-xs font-black uppercase tracking-widest leading-none ${promptLang === 'EN' ? 'text-gray-400' : 'text-blue-400'}`}>{promptLang === 'EN' ? 'Concept (EN)' : 'コンセプト (JP)'}</h3><RefreshCw size={14} className="text-gray-300 group-hover:rotate-180 transition-transform duration-500" /></div>
-                        <p className={`text-lg md:text-xl lg:text-2xl font-black italic leading-tight line-clamp-3`}>{promptLang === 'EN' ? current.meaning : current.meaningJP}</p>
+                        <div className="flex justify-between items-start mb-3">
+                          <h3 className={`text-xs font-black uppercase tracking-widest leading-none ${promptLang === 'EN' ? 'text-gray-400' : 'text-blue-400'}`}>
+                            {promptLang === 'EN' ? 'Meaning (EN)' : 'コンセプト (JP)'}
+                          </h3>
+                          <RefreshCw size={14} className="text-gray-300 group-hover:rotate-180 transition-transform duration-500" />
+                        </div>
+                        <p className={`text-lg md:text-xl lg:text-2xl font-black italic leading-tight line-clamp-3`}>
+                          {promptLang === 'EN' ? current.meaning : current.meaningJP}
+                        </p>
                       </div>
+                      {/* 裏面（常に反対の言語を表示） */}
                       <div 
                         className={`absolute inset-0 p-5 md:p-6 rounded-3xl border-4 border-black shadow-[6px_6px_0_0_rgba(0,0,0,1)] flex flex-col justify-center text-left ${promptLang === 'EN' ? 'bg-blue-50 border-blue-500 text-blue-900' : 'bg-white text-black'}`}
                         style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
                       >
-                        <div className="flex justify-between items-start mb-3"><h3 className={`text-xs font-black uppercase tracking-widest leading-none ${promptLang === 'EN' ? 'text-blue-400' : 'text-gray-400'}`}>{promptLang === 'EN' ? '訳 (JP)' : 'Meaning (EN)'}</h3><RefreshCw size={14} className="text-blue-300" /></div>
-                        <div className="transform-none"><p className={`text-lg md:text-xl lg:text-2xl font-black italic leading-tight line-clamp-3`}>{promptLang === 'EN' ? current.meaningJP : current.meaning}</p></div>
+                        <div className="flex justify-between items-start mb-3">
+                          <h3 className={`text-xs font-black uppercase tracking-widest leading-none ${promptLang === 'EN' ? 'text-blue-400' : 'text-gray-400'}`}>
+                            {promptLang === 'EN' ? '訳 (JP)' : 'Meaning (EN)'}
+                          </h3>
+                          <RefreshCw size={14} className="text-blue-300" />
+                        </div>
+                        <div className="transform-none">
+                          <p className={`text-lg md:text-xl lg:text-2xl font-black italic leading-tight line-clamp-3`}>
+                            {promptLang === 'EN' ? current.meaningJP : current.meaning}
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
+
                 </div>
               </div>
 
@@ -6597,7 +6627,6 @@ const allDataWithEp = Object.entries(batches).flatMap(([ep, items]) =>
                        <p className="text-xs font-bold text-gray-400 mb-2 uppercase tracking-widest">Target Phrasal Verb</p>
                        {isRevealed ? (
                          <button onClick={() => setIsRevealed(false)} className="group w-full text-left text-white">
-                           {/* 🌟 Target PV の文字サイズも拡大 */}
                            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black italic mb-2 leading-none uppercase tracking-tighter text-yellow-300 animate-in fade-in slide-in-from-left-4">{current.pv}</h2>
                            <span className="text-[10px] uppercase font-black opacity-30 flex items-center gap-1"><EyeOff size={12} /> Hide</span>
                          </button>
@@ -6608,36 +6637,38 @@ const allDataWithEp = Object.entries(batches).flatMap(([ep, items]) =>
                          </button>
                        )}
                      </div>
+                     
                      <div className="mt-auto shrink-0">
-                        {/* 🌟 Example Sentence のフリップカード */}
-                        <div onClick={() => setIsExampleFlipped(!isExampleFlipped)} className="relative perspective-1000 group cursor-pointer" style={{ perspective: '1000px' }}>
-                          <div className="flex justify-between items-center mb-3 border-t border-white/10 pt-4">
-                            <p className="text-xs font-bold text-gray-400 uppercase tracking-widest text-left">Example Sentence</p>
-                            {isRevealed && <RefreshCw size={14} className="text-gray-500 group-hover:rotate-180 transition-transform duration-500" />}
-                          </div>
-                          {isRevealed ? (
-                            <div className="relative w-full transition-transform duration-500" style={{ transformStyle: 'preserve-3d', transform: isExampleFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)' }}>
-                              
-                              {/* 表面 (EN) */}
-                              <div className="w-full bg-white/10 p-4 md:p-5 rounded-xl border-l-4 border-yellow-300" style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}>
-                                {/* 🌟 Example文字サイズを拡大 */}
-                                <p className="text-lg md:text-xl lg:text-2xl italic text-white font-black leading-snug text-left">"{current.example}"</p>
-                              </div>
-                              
-                              {/* 裏面 (JP) */}
-                              <div className="absolute top-0 left-0 w-full h-full bg-blue-900/80 p-4 md:p-5 rounded-xl border-l-4 border-blue-400 flex items-center" style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}>
-                                <p className="text-lg md:text-xl lg:text-2xl italic text-white font-black leading-snug text-left w-full">
-                                  {current.exampleJP ? `"${current.exampleJP}"` : '日本語訳は準備中です...'}
-                                </p>
-                              </div>
-                              
-                            </div>
-                          ) : (
-                            <div className="bg-white/5 p-4 rounded-xl border-2 border-dashed border-white/10 flex flex-col items-center justify-center gap-2 min-h-[80px]">
-                               <Lock size={16} className="text-white/20" /><span className="text-xs font-black uppercase opacity-20 tracking-widest italic text-center font-bold">Hidden until revealed</span>
-                            </div>
-                          )}
-                        </div>
+                       <p className="text-xs font-bold text-gray-400 mb-3 uppercase tracking-widest border-t border-white/10 pt-4 text-left">Example Sentence</p>
+                       {isRevealed ? (
+                         <div onClick={() => setIsExampleFlipped(!isExampleFlipped)} className="relative w-full cursor-pointer perspective-1000 group" style={{ perspective: '1000px' }}>
+                           <div 
+                             className="relative w-full transition-transform duration-500 animate-in fade-in slide-in-from-bottom-2" 
+                             style={{ transformStyle: 'preserve-3d', transform: isExampleFlipped ? 'rotateX(180deg)' : 'rotateX(0deg)' }}
+                           >
+                             {/* 表面（常に現在の言語設定に従う） */}
+                             <div 
+                               className="bg-white/10 p-4 rounded-xl border-l-4 border-yellow-300 italic text-lg md:text-xl lg:text-2xl leading-relaxed text-white font-bold flex justify-between items-start gap-4"
+                               style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
+                             >
+                               <span>"{promptLang === 'EN' ? current.example : current.exampleJP}"</span>
+                               <RefreshCw size={16} className="text-white/30 shrink-0 mt-1 group-hover:rotate-180 transition-transform duration-500" />
+                             </div>
+                             {/* 裏面（常に反対の言語を表示） */}
+                             <div 
+                               className="absolute inset-0 bg-blue-900/40 p-4 rounded-xl border-l-4 border-blue-400 italic text-lg md:text-xl lg:text-2xl leading-relaxed text-white font-bold flex justify-between items-start gap-4"
+                               style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', transform: 'rotateX(180deg)' }}
+                             >
+                               <span>"{promptLang === 'EN' ? current.exampleJP : current.example}"</span>
+                               <RefreshCw size={16} className="text-blue-300/50 shrink-0 mt-1 group-hover:rotate-180 transition-transform duration-500" />
+                             </div>
+                           </div>
+                         </div>
+                       ) : (
+                         <div className="bg-white/5 p-4 rounded-xl border-2 border-dashed border-white/10 flex flex-col items-center justify-center gap-2 min-h-[80px]">
+                            <Lock size={16} className="text-white/20" /><span className="text-xs font-black uppercase opacity-20 tracking-widest italic text-center font-bold">Hidden until revealed</span>
+                         </div>
+                       )}
                      </div>
                    </div>
                 </div>
@@ -6661,7 +6692,7 @@ const allDataWithEp = Object.entries(batches).flatMap(([ep, items]) =>
           {displayData.length > 0 && (
             <div className="flex justify-center gap-2 mb-3 flex-wrap max-w-full overflow-hidden">
               {displayData.map((_, i) => (
-                <button key={i} onClick={() => { setIndex(i); resetCards(); }} className={`h-2 transition-all rounded-full border border-black ${i === index ? 'w-12 bg-black' : 'w-2 bg-gray-300'}`} />
+                <button key={i} onClick={() => { setIndex(i); setIsRevealed(false); }} className={`h-2 transition-all rounded-full border border-black ${i === index ? 'w-12 bg-black' : 'w-2 bg-gray-300'}`} />
               ))}
             </div>
           )}
