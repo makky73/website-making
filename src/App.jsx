@@ -59,14 +59,14 @@ const AnimeFrame = ({ pv, trope, storyline, storylineJP, primaryLang }) => {
            >
               <div ref={primaryLang === 'EN' ? enSectionRef : jpSectionRef} className="flex flex-col justify-center text-left" onClick={(e) => e.stopPropagation()}>
                 <div className="flex items-center gap-2 mb-2"><span className="bg-white text-black px-2 py-0.5 text-[9px] font-black uppercase rounded-sm">{primaryLang}</span></div>
-                {/* 🌟 Storyの文字サイズを大きく (text-lg md:text-xl lg:text-2xl) */}
-                <p className="text-white text-lg md:text-xl lg:text-2xl leading-relaxed italic border-l-4 border-white/20 pl-4 font-medium">{primaryLang === 'EN' ? storyline : storylineJP}</p>
+                {/* 🌟 Storyの文字サイズをConcept並み（text-lg md:text-xl lg:text-2xl）に拡大 */}
+                <p className="text-lg md:text-xl lg:text-2xl leading-relaxed italic border-l-4 border-white/20 pl-4 font-medium">{primaryLang === 'EN' ? storyline : storylineJP}</p>
                 <div className="mt-4 flex flex-col items-center animate-bounce text-white/30"><ArrowDown size={18} /></div>
               </div>
               <div ref={primaryLang === 'EN' ? jpSectionRef : enSectionRef} className="flex flex-col justify-center border-t border-white/10 pt-6 text-left" onClick={(e) => e.stopPropagation()}>
                 <div className="flex items-center gap-2 mb-2"><span className="bg-blue-600 text-white px-2 py-0.5 text-[9px] font-black uppercase rounded-sm">{primaryLang === 'EN' ? 'JP' : 'EN'}</span></div>
-                {/* 🌟 Translationの文字サイズを大きく (text-lg md:text-xl lg:text-2xl) */}
-                <p className="text-white text-lg md:text-xl lg:text-2xl font-bold leading-relaxed pl-4">{primaryLang === 'EN' ? storylineJP : storyline}</p>
+                {/* 🌟 こちらのStoryの文字サイズも拡大 */}
+                <p className="text-lg md:text-xl lg:text-2xl font-bold leading-relaxed pl-4">{primaryLang === 'EN' ? storylineJP : storyline}</p>
               </div>
            </div>
         </div>
@@ -80,6 +80,7 @@ const AnimeFrame = ({ pv, trope, storyline, storylineJP, primaryLang }) => {
 };
 
 const PVQuiz = ({ isOpen, onClose, pv, quiz, onCorrectAnswer }) => {
+  // 中略：クイズコンポーネント（そのまま変更なし）
   const [selectedOption, setSelectedOption] = useState(null);
   const [isCorrect, setIsCorrect] = useState(null);
   const [shuffledOptions, setShuffledOptions] = useState([]);
@@ -144,6 +145,7 @@ const PVQuiz = ({ isOpen, onClose, pv, quiz, onCorrectAnswer }) => {
 };
 
 const PVExplanation = ({ isOpen, onClose }) => {
+  // 中略：解説コンポーネント（そのまま変更なし）
   if (!isOpen) return null;
   return (
     <div 
@@ -182,6 +184,16 @@ const App = () => {
   const [isCefrOpen, setIsCefrOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   
+  // 🌟 Vibes と Example のフリップ状態を管理するStateを追加
+  const [isVibesFlipped, setIsVibesFlipped] = useState(false);
+  const [isExampleFlipped, setIsExampleFlipped] = useState(false);
+
+  const resetCards = () => {
+    setIsFlipped(false);
+    setIsRevealed(false);
+    setIsVibesFlipped(false);
+    setIsExampleFlipped(false);
+  };
   const batches = {
     1: [
 
@@ -1260,7 +1272,7 @@ const App = () => {
 
 const EPISODES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24,25];
 
- const allDataWithEp = Object.entries(batches).flatMap(([ep, items]) => 
+const allDataWithEp = Object.entries(batches).flatMap(([ep, items]) => 
     items.map(item => ({ ...item, epNum: ep }))
   );
 
@@ -1288,20 +1300,18 @@ const EPISODES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
   const current = displayData[index] || displayData[0] || null;
   const availableLevelsInBatch = ['ALL', ...new Set((searchQuery ? allDataWithEp : (batches[episode] || [])).map(item => item?.cefr).filter(Boolean))].sort();
 
-  const handleNext = () => { setIsFlipped(false); setIsRevealed(false); setIndex(prev => (prev >= displayData.length - 1 ? 0 : prev + 1)); };
-  const handlePrev = () => { setIsFlipped(false); setIsRevealed(false); setIndex(prev => (prev <= 0 ? displayData.length - 1 : prev - 1)); };
+  const handleNext = () => { resetCards(); setIndex(prev => (prev >= displayData.length - 1 ? 0 : prev + 1)); };
+  const handlePrev = () => { resetCards(); setIndex(prev => (prev <= 0 ? displayData.length - 1 : prev - 1)); };
   
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
       
       if (e.key === 'ArrowRight') {
-        setIsFlipped(false);
-        setIsRevealed(false);
+        resetCards();
         setIndex(prev => (prev >= displayData.length - 1 ? 0 : prev + 1));
       } else if (e.key === 'ArrowLeft') {
-        setIsFlipped(false);
-        setIsRevealed(false);
+        resetCards();
         setIndex(prev => (prev <= 0 ? displayData.length - 1 : prev - 1));
       }
     };
@@ -1315,12 +1325,11 @@ const EPISODES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
     setSearchQuery('');
     setIndex(0); 
     setCefrFilter('ALL'); 
-    setIsRevealed(false); 
-    setIsFlipped(false); 
+    resetCards();
     setIsEpOpen(false); 
   };
   
-  const handleFilterChange = (level) => { setCefrFilter(level); setIndex(0); setIsRevealed(false); setIsFlipped(false); setIsCefrOpen(false); };
+  const handleFilterChange = (level) => { setCefrFilter(level); setIndex(0); resetCards(); setIsCefrOpen(false); };
   
   const markAsCorrect = () => { 
     if(current) setCorrectlyAnswered(prev => new Set(prev).add(`${current.pv}-${current.trope}`)); 
@@ -1390,8 +1399,7 @@ const EPISODES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
                  onChange={(e) => {
                    setSearchQuery(e.target.value);
                    setIndex(0);
-                   setIsRevealed(false);
-                   setIsFlipped(false);
+                   resetCards();
                  }}
                  className="w-full pl-11 pr-8 py-2.5 rounded-xl border-2 border-black font-black text-sm uppercase transition-all shadow-[4px_4px_0_0_rgba(0,0,0,1)] focus:outline-none focus:bg-yellow-50 focus:translate-y-[2px] focus:translate-x-[2px] focus:shadow-[2px_2px_0_0_rgba(0,0,0,1)] placeholder-gray-400"
                />
@@ -1439,11 +1447,46 @@ const EPISODES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
                    <AnimeFrame pv={current.pv} trope={current.trope} storyline={current.storyline} storylineJP={current.storylineJP} primaryLang={promptLang} />
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 flex-1 min-h-[12rem]">
-                  <div className="bg-yellow-300 p-5 md:p-6 rounded-3xl border-4 border-black shadow-[6px_6px_0_0_rgba(0,0,0,1)] flex flex-col overflow-y-auto text-black text-left h-full">
-                     <div className="flex items-center gap-2 mb-3"><Lightbulb size={16} className="text-black/60" /><h3 className="text-[12px] font-black uppercase text-black/60 tracking-widest leading-none font-bold">Context Vibes</h3></div>
-                     {/* 🌟 Vibesの文字サイズを大きく (text-base md:text-lg lg:text-xl) */}
-                     <div className="space-y-3">{current.vibes.map((vibe, i) => (<div key={i} className="flex gap-3 items-start text-black font-black uppercase text-base md:text-lg lg:text-xl leading-tight italic tracking-tight"><div className="w-2 h-2 rounded-full bg-black mt-2 shrink-0"></div><p>{vibe}</p></div>))}</div>
+                  
+                  {/* 🌟 左側：Context Vibes のフリップカード */}
+                  <div onClick={() => setIsVibesFlipped(!isVibesFlipped)} className="relative w-full cursor-pointer perspective-1000 group h-full" style={{ perspective: '1000px' }}>
+                    <div className="relative w-full h-full transition-transform duration-500" style={{ transformStyle: 'preserve-3d', transform: isVibesFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)' }}>
+                      
+                      {/* 表面 (EN) */}
+                      <div className={`absolute inset-0 p-5 md:p-6 rounded-3xl border-4 border-black shadow-[6px_6px_0_0_rgba(0,0,0,1)] flex flex-col overflow-y-auto text-left bg-yellow-300 text-black`} style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}>
+                         <div className="flex justify-between items-center mb-3">
+                           <div className="flex items-center gap-2"><Lightbulb size={16} className="text-black/60" /><h3 className="text-[12px] font-black uppercase text-black/60 tracking-widest leading-none">Context Vibes (EN)</h3></div>
+                           <RefreshCw size={14} className="text-black/40 group-hover:rotate-180 transition-transform duration-500" />
+                         </div>
+                         <div className="space-y-3 mt-2">
+                           {current.vibes.map((vibe, i) => (
+                             <div key={i} className="flex gap-3 items-start font-black uppercase text-lg md:text-xl lg:text-2xl leading-tight italic tracking-tight">
+                               <div className="w-2.5 h-2.5 rounded-full bg-black mt-2.5 shrink-0"></div><p>{vibe}</p>
+                             </div>
+                           ))}
+                         </div>
+                      </div>
+
+                      {/* 裏面 (JP) */}
+                      <div className={`absolute inset-0 p-5 md:p-6 rounded-3xl border-4 border-black shadow-[6px_6px_0_0_rgba(0,0,0,1)] flex flex-col overflow-y-auto text-left bg-blue-600 text-white`} style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}>
+                         <div className="flex justify-between items-center mb-3">
+                           <div className="flex items-center gap-2"><Lightbulb size={16} className="text-white/60" /><h3 className="text-[12px] font-black uppercase text-white/60 tracking-widest leading-none">Context Vibes (JP)</h3></div>
+                           <RefreshCw size={14} className="text-white/40" />
+                         </div>
+                         <div className="space-y-3 mt-2">
+                           {current.vibesJP ? current.vibesJP.map((vibe, i) => (
+                             <div key={i} className="flex gap-3 items-start font-black uppercase text-lg md:text-xl lg:text-2xl leading-tight italic tracking-tight">
+                               <div className="w-2.5 h-2.5 rounded-full bg-white mt-2.5 shrink-0"></div><p>{vibe}</p>
+                             </div>
+                           )) : (
+                             <p className="text-lg md:text-xl font-bold italic opacity-80 mt-4">日本語訳は準備中です...</p>
+                           )}
+                         </div>
+                      </div>
+                    </div>
                   </div>
+
+                  {/* 中央：Concept のフリップカード (変更なし) */}
                   <div onClick={() => setIsFlipped(!isFlipped)} className="relative w-full cursor-pointer perspective-1000 group h-full" style={{ perspective: '1000px' }}>
                     <div 
                       className="relative w-full h-full transition-transform duration-500" 
@@ -1477,7 +1520,8 @@ const EPISODES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
                        <p className="text-xs font-bold text-gray-400 mb-2 uppercase tracking-widest">Target Phrasal Verb</p>
                        {isRevealed ? (
                          <button onClick={() => setIsRevealed(false)} className="group w-full text-left text-white">
-                           <h2 className="text-2xl md:text-3xl font-black italic mb-2 leading-none uppercase tracking-tighter text-yellow-300 animate-in fade-in slide-in-from-left-4">{current.pv}</h2>
+                           {/* 🌟 Target PV の文字サイズも拡大 */}
+                           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black italic mb-2 leading-none uppercase tracking-tighter text-yellow-300 animate-in fade-in slide-in-from-left-4">{current.pv}</h2>
                            <span className="text-[10px] uppercase font-black opacity-30 flex items-center gap-1"><EyeOff size={12} /> Hide</span>
                          </button>
                        ) : (
@@ -1488,15 +1532,35 @@ const EPISODES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
                        )}
                      </div>
                      <div className="mt-auto shrink-0">
-                       <p className="text-xs font-bold text-gray-400 mb-3 uppercase tracking-widest border-t border-white/10 pt-4 text-left">Example Sentence</p>
-                       {isRevealed ? (
-                         // 🌟 Example Sentenceの文字サイズを大きく (text-lg md:text-xl lg:text-2xl)
-                         <div className="bg-white/10 p-4 rounded-xl border-l-4 border-yellow-300 italic text-lg md:text-xl lg:text-2xl leading-relaxed animate-in fade-in slide-in-from-bottom-2 text-white font-bold">"{current.example}"</div>
-                       ) : (
-                         <div className="bg-white/5 p-4 rounded-xl border-2 border-dashed border-white/10 flex flex-col items-center justify-center gap-2 min-h-[80px]">
-                            <Lock size={16} className="text-white/20" /><span className="text-xs font-black uppercase opacity-20 tracking-widest italic text-center font-bold">Hidden until revealed</span>
-                         </div>
-                       )}
+                        {/* 🌟 Example Sentence のフリップカード */}
+                        <div onClick={() => setIsExampleFlipped(!isExampleFlipped)} className="relative perspective-1000 group cursor-pointer" style={{ perspective: '1000px' }}>
+                          <div className="flex justify-between items-center mb-3 border-t border-white/10 pt-4">
+                            <p className="text-xs font-bold text-gray-400 uppercase tracking-widest text-left">Example Sentence</p>
+                            {isRevealed && <RefreshCw size={14} className="text-gray-500 group-hover:rotate-180 transition-transform duration-500" />}
+                          </div>
+                          {isRevealed ? (
+                            <div className="relative w-full transition-transform duration-500" style={{ transformStyle: 'preserve-3d', transform: isExampleFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)' }}>
+                              
+                              {/* 表面 (EN) */}
+                              <div className="w-full bg-white/10 p-4 md:p-5 rounded-xl border-l-4 border-yellow-300" style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}>
+                                {/* 🌟 Example文字サイズを拡大 */}
+                                <p className="text-lg md:text-xl lg:text-2xl italic text-white font-black leading-snug text-left">"{current.example}"</p>
+                              </div>
+                              
+                              {/* 裏面 (JP) */}
+                              <div className="absolute top-0 left-0 w-full h-full bg-blue-900/80 p-4 md:p-5 rounded-xl border-l-4 border-blue-400 flex items-center" style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}>
+                                <p className="text-lg md:text-xl lg:text-2xl italic text-white font-black leading-snug text-left w-full">
+                                  {current.exampleJP ? `"${current.exampleJP}"` : '日本語訳は準備中です...'}
+                                </p>
+                              </div>
+                              
+                            </div>
+                          ) : (
+                            <div className="bg-white/5 p-4 rounded-xl border-2 border-dashed border-white/10 flex flex-col items-center justify-center gap-2 min-h-[80px]">
+                               <Lock size={16} className="text-white/20" /><span className="text-xs font-black uppercase opacity-20 tracking-widest italic text-center font-bold">Hidden until revealed</span>
+                            </div>
+                          )}
+                        </div>
                      </div>
                    </div>
                 </div>
@@ -1520,7 +1584,7 @@ const EPISODES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
           {displayData.length > 0 && (
             <div className="flex justify-center gap-2 mb-3 flex-wrap max-w-full overflow-hidden">
               {displayData.map((_, i) => (
-                <button key={i} onClick={() => { setIndex(i); setIsFlipped(false); setIsRevealed(false); }} className={`h-2 transition-all rounded-full border border-black ${i === index ? 'w-12 bg-black' : 'w-2 bg-gray-300'}`} />
+                <button key={i} onClick={() => { setIndex(i); resetCards(); }} className={`h-2 transition-all rounded-full border border-black ${i === index ? 'w-12 bg-black' : 'w-2 bg-gray-300'}`} />
               ))}
             </div>
           )}
