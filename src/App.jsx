@@ -6452,7 +6452,7 @@ const App = () => {
         quiz: { question: "Enough small talk—let's ___ business and discuss the contract.", options: ["get down to", "get ahead of", "get around to"], correctIndex: 0, explanation: "to start doing something seriously." } 
       },
       { 
-        pv: "Get in", trope: "The Arrival / Election", cefr: "A2", icon: CheckCircle, 
+        pv: "Get in", trope: "The Arrival / Election", cefr: "A2", icon: CheckCircle2, 
         meaning: "To arrive at a place, or to be elected/accepted into a university.", 
         meaningJP: "到着する、当選する、入学を許可される", 
         example: "Her plane gets in at 2am, so we'll have to pick her up very early.", 
