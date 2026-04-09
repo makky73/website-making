@@ -354,435 +354,2079 @@ const App = () => {
       }
     ],
     2: [
-
-      { pv: "Answer back", trope: "The Family Scolding", cefr: "B2", icon: Angry, meaning: "To reply rudely to someone in authority, like a parent or teacher.", meaningJP: "（親や目上に）口答えをする、反抗的な返事をする", example: "I'm your mother! Don't answer back when I'm trying to help you.", vibes: ["A rebellious teen getting scolded", "Classroom disrespect", "Getting defensive with a strict boss"], storyline: "Leo was tired of his mother's endless advice about his future. When he finally snapped and answered back, the entire room went completely silent in shock.", storylineJP: "レオは将来についての母親の終わりのない小言にうんざりしていた。彼がついにキレて口答えをした瞬間、部屋中がショックで完全に静まり返った。", quiz: { question: "It's highly disrespectful to ___ when a teacher corrects your mistake.", options: ["answer back", "ask in", "back out"], correctIndex: 0, explanation: "to reply rudely." } },
-
-      { pv: "Answer for", trope: "The Kitchen Disaster", cefr: "B2", icon: User, meaning: "To be held responsible for a mistake or something bad that happened.", meaningJP: "（不始末などの）責任を取る", example: "You'll have to answer for the massive mess you made in the kitchen.", vibes: ["Cleaning up after a wild party", "Facing the music for a failed project", "Roommate disputes over chores"], storyline: "The living room was an absolute wreck, with the antique vase shattered on the floor. 'Someone is going to have to answer for this disaster when Mom gets home,' Ken muttered.", storylineJP: "リビングは完全に荒れ果て、アンティークの花瓶が粉々に散らばっていた。「お母さんが帰ってきたら、誰かがこの大惨事の責任を取らなきゃいけないぞ」とケンは呟いた。", quiz: { question: "The project manager will have to ___ the huge financial loss.", options: ["answer for", "ask after", "back off"], correctIndex: 0, explanation: "to be responsible." } },
-
-      { pv: "Answer for", trope: "The Office Delegate", cefr: "B2", icon: MessageCircle, meaning: "To speak on behalf of someone else or guarantee their actions.", meaningJP: "～の代理で答える、保証する", example: "I can't answer for my boss, but I'm sure he'll approve your vacation request.", vibes: ["Assuring nervous colleagues", "Acting as a proxy in a meeting", "Vouching for a friend's character"], storyline: "The client was furious about the delay. 'I can't answer for the factory's mistakes,' Kaito said smoothly, 'but I can promise our team will fix this tonight.'", storylineJP: "顧客は納期の遅れに激怒していた。「工場のミスの責任を私が代理で負う（答える）ことはできませんが、私たちのチームが今夜中に解決することはお約束します」と海斗は言った。", quiz: { question: "I can't ___ her honesty; I barely know her personally.", options: ["answer for", "ask around", "back away"], correctIndex: 0, explanation: "to speak on behalf of someone." } },
-
-      { pv: "Argue down", trope: "The Debate Master", cefr: "C1", icon: MessageCircle, meaning: "To defeat someone in a debate or logical argument using facts.", meaningJP: "（議論で）論破する、言い負かす", example: "She tried to defend her flawed choice, but he quickly argued her down.", vibes: ["Winning points in a debate club", "Logical disputes at work", "Proving someone completely wrong"], storyline: "In the final round of the debate, Sora didn't just disagree; he used flawless logic to argue his opponent down until they had absolutely nothing left to say.", storylineJP: "ディベートの最終ラウンドで、ソラはただ反対するだけでなく、完璧な論理を使って相手に反論の余地が全くなくなるまで見事に論破した。", quiz: { question: "She ___ her rival by presenting undisputable scientific data.", options: ["argued down", "ask after", "back down"], correctIndex: 0, explanation: "to beat in a debate." } },
-
-      { pv: "Argue down", trope: "The Flea Market", cefr: "C1", icon: DollarSign, meaning: "To persuade someone to drop the price of an item.", meaningJP: "（交渉して）値切る、値段を下げさせる", example: "The used car was listed at $5,000, but I managed to argue him down to $4,500.", vibes: ["Haggling at local markets", "Buying a used car", "Tough business negotiations"], storyline: "The antique merchant demanded 200 gold coins for the mysterious map. Hina smiled, pointed out a small tear, and skillfully argued him down to a mere 150 gold.", storylineJP: "骨董商は謎めいた地図に対して200ゴールドを要求した。ヒナは微笑み、小さな破れを指摘して、巧みな交渉でわずか150ゴールドまで値切ることに成功した。", quiz: { question: "I managed to ___ the street vendor ___ to a much more reasonable $10.", options: ["argue / down", "ask / out", "back / into"], correctIndex: 0, explanation: "to lower price." } },
-
-      { pv: "Argue down", trope: "The Boardroom Rejection", cefr: "C1", icon: Database, meaning: "To persuade a group of people not to accept a proposal or plan.", meaningJP: "（提案などを）説得して否決させる、退けさせる", example: "The conservative board members tried to argue down the innovative new budget.", vibes: ["Rejecting risky business plans", "Tense formal meetings", "Political debates over policy"], storyline: "The young CEO proposed a highly risky expansion into VR. However, the veteran CFO stood up and systematically argued the plan down, citing a severe lack of funds.", storylineJP: "若きCEOはVRへの非常にリスキーな事業拡大を提案した。しかし、ベテランのCFOが立ち上がり、当面の資金不足を理由に、その計画を理路整然と説得して退けさせた。", quiz: { question: "The committee ___ the expensive expansion plan after a long meeting.", options: ["argued down", "asked in", "back away"], correctIndex: 0, explanation: "to persuade against a plan." } },
-
-      { pv: "Argue out", trope: "The Partners' Conflict", cefr: "B2", icon: User, meaning: "To find a solution to a problem by discussing it thoroughly.", meaningJP: "徹底的に議論して解決する、とことん話し合う", example: "We really need to argue our differences out before we sign this contract.", vibes: ["Resolving deep conflicts", "Fixing a failing relationship", "Long team planning sessions"], storyline: "The two lead developers disagreed on every feature. They locked themselves in a room, spent all night arguing it out, and finally emerged at dawn with a perfect compromise.", storylineJP: "二人のリード開発者はすべての機能において意見が対立していた。彼らは会議室にこもり、一晩中徹底的に議論し尽くし、夜明けにようやく完璧な妥協点を見出して出てきた。", quiz: { question: "Instead of fighting, we need to sit down and ___ this problem.", options: ["argue out", "act out", "add on"], correctIndex: 0, explanation: "to solve by discussion." } },
-
-      { pv: "Ask about", trope: "The Family Catch-up", cefr: "A1", icon: Home, meaning: "To enquire about how someone is doing or what is happening.", meaningJP: "（近況などを）尋ねる、聞いてくる", example: "My grandmother always asks about your family whenever I call her.", vibes: ["Passing on messages from relatives", "Polite social enquiry", "Showing gentle care"], storyline: "Sato's cheerful aunt called from the countryside. 'She always asks about your school life,' his mom smiled, handing him the phone.", storylineJP: "佐藤の陽気な叔母が田舎から電話をかけてきた。「あの人、いつもあなたの学校生活について聞いてくるのよ」と母は微笑み、彼に受話器を渡した。", quiz: { question: "How is your sister doing? Everyone at the party was ___ her.", options: ["asking about", "arguing down", "acting on"], correctIndex: 0, explanation: "to enquire about wellbeing." } },
-
-      { pv: "Ask after", trope: "The Old Friend's Concern", cefr: "B1", icon: User, meaning: "To explicitly enquire about someone's health or life, showing care.", meaningJP: "（人の）安否を尋ねる、気遣う", example: "I ran into Sarah today at the cafe, and she kindly asked after you.", vibes: ["Seeking health updates", "Thinking of someone far away", "Reconnecting with old friends"], storyline: "While shopping, Hina bumped into her old elementary school teacher. The teacher smiled warmly and immediately asked after Hina's older brother, who had been hospitalized.", storylineJP: "買い物をしている時、ヒナは昔の小学校の先生にばったり会った。先生は温かく微笑み、すぐに昨年入院していたヒナの兄の安否を気遣って尋ねた。", quiz: { question: "He thoughtfully ___ your father's recovery from surgery.", options: ["asked after", "added up", "abided by"], correctIndex: 0, explanation: "to enquire about health." } },
-
-      { pv: "Ask around", trope: "The Neighborhood Search", cefr: "A2", icon: Search, meaning: "To ask several different people for information or help.", meaningJP: "（情報を求めて）あちこち尋ね回る、聞き込みをする", example: "I don't know who owns this stray dog, but I'll ask around the neighborhood.", vibes: ["Finding lost items", "Getting local restaurant advice", "A mini detective search"], storyline: "Sora realized his locker keys were missing right before the big game. Panicking, he spent twenty minutes asking around the gym until a junior member found them.", storylineJP: "大事な試合の直前、ソラはロッカーの鍵がないことに気づいた。パニックになりながら体育館中で聞き込みをして回り、20分後、ついに後輩が見つけてくれた。", quiz: { question: "I don't have a charger, but I'll ___ the office for a spare one.", options: ["ask around", "argue out", "act up"], correctIndex: 0, explanation: "to ask multiple people." } },
-
-      { pv: "Ask around", trope: "The Casual Party Planner", cefr: "A2", icon: Home, meaning: "To invite someone to come to your home or a specific place.", meaningJP: "（自分の家などに）招待する", example: "Since we just moved in, we should ask the new neighbors around for dinner.", vibes: ["Organizing a social gathering", "Inviting people to a home dinner", "Being a friendly host"], storyline: "The huge team project was finally completed. Feeling relieved, Leo decided to ask around the entire design team to his place for a spontaneous victory pizza party.", storylineJP: "巨大なチームプロジェクトがようやく無事に完了した。安堵したレオは、思いつきのピザパーティのために、デザインチーム全員を自宅に招待することにした。", quiz: { question: "We should ___ the new transfer students ___ for some coffee.", options: ["ask / around", "back / up", "answer / back"], correctIndex: 0, explanation: "to invite to a home." } },
-
-      { pv: "Ask for", trope: "The Foolish Provocation", cefr: "A2", icon: AlertTriangle, meaning: "To behave in a way that is guaranteed to provoke a negative reaction or trouble.", meaningJP: "（自業自得で）災いを招く、自らトラブルを求める", example: "If you drive that fast on an icy road, you're literally asking for trouble.", vibes: ["Warning someone of risky behavior", "Facing inevitable consequences", "Instant karma"], storyline: "Leo kept ignoring the bright red warning signs and revved his engine near the cliff edge. 'Seriously, you're asking for a massive accident,' his friend yelled.", storylineJP: "レオは真っ赤な警告標識を無視し続け、崖のそばでエンジンを吹かした。「マジで、お前自ら大事故を招こうとしてるぞ」と友人は恐怖で叫んだ。", quiz: { question: "Ignoring all the safety rules on a construction site is just ___ trouble.", options: ["asking for", "adding on", "aiming at"], correctIndex: 0, explanation: "to provoke trouble." } },
-
-      { pv: "Ask for", trope: "The Service Request", cefr: "A1", icon: ShoppingCart, meaning: "To request to have or be given something.", meaningJP: "（何かを）頼む、要求する", example: "I asked for a quiet window seat, but the flight was already completely full.", vibes: ["Making airport or hotel requests", "Ordering at a fancy restaurant", "Seeking help from customer service"], storyline: "Rin walked up to the electronics store counter. The gadget was broken, so she politely but firmly asked for a full cash refund.", storylineJP: "リンは家電量販店のカウンターに歩み寄った。ガジェットが壊れていたため、彼女は礼儀正しく、しかしきっぱりと全額現金での返金を頼んだ。", quiz: { question: "Feeling dizzy, he immediately ___ a large glass of water.", options: ["asked for", "argued out", "acted on"], correctIndex: 0, explanation: "to request something." } },
-
-      { pv: "Ask in", trope: "The Warm Hospitality", cefr: "A2", icon: Home, meaning: "To invite someone to enter your house, especially from the cold or rain.", meaningJP: "（家の中へ）招き入れる", example: "It's freezing outside! Please, don't leave him on the porch—ask him in immediately.", vibes: ["Welcoming guests", "Escaping bad weather", "Showing basic hospitality"], storyline: "A sudden, freezing rainstorm hit just as the delivery man arrived. Seeing him shivering, Grandpa immediately told Sora to ask the courier in for a hot cup of tea.", storylineJP: "配達員が到着した瞬間、凍えるような暴風雨が襲った。彼が震えているのを見て、祖父はすぐにソラに、配達員を温かいお茶のために中へ招き入れるよう言った。", quiz: { question: "Don't leave the poor guests out in the cold, ___!", options: ["ask them in", "back off", "act out"], correctIndex: 0, explanation: "to invite inside." } },
-
-      { pv: "Ask out", trope: "The Romantic Move", cefr: "B1", icon: Heart, meaning: "To invite someone for a romantic date.", meaningJP: "（デートに）誘う", example: "He’s been incredibly nervous all day because he’s finally going to ask her out.", vibes: ["Teenage romance", "Gathering courage", "First dates"], storyline: "The school cultural festival was ending, and fireworks lit up the night sky. With red cheeks, Kaito finally found the courage to approach his crush and ask her out.", storylineJP: "学園祭が終わりを迎え、花火が夜空を照らした。頬を赤らめ、海斗はついに勇気を振り絞って片思いの相手に近づき、デートに彼女を誘った。", quiz: { question: "After months of crushing on her, he finally ___ her ___.", options: ["asked / out", "backed / up", "added / on"], correctIndex: 0, explanation: "to invite on a date." } },
-
-      { pv: "Ask over", trope: "The Casual Get-Together", cefr: "B1", icon: Home, meaning: "To invite someone to your home for a casual visit.", meaningJP: "（自分の家に）招待する、呼び寄せる", example: "Since the weather is nice, let's ask the neighbors over for a quick backyard BBQ.", vibes: ["Neighborhood socializing", "Casual weekend plans", "Friendly invites"], storyline: "The big soccer match was broadcasting live on TV. Kaito bought a ton of snacks and decided to ask over all his closest friends to watch the intense game together.", storylineJP: "サッカーの大一番がテレビで生中継される。海斗は大量のスナックを買い込み、親友たちを家に呼んで（招待して）、一緒に白熱の試合を見ることに決めた。", quiz: { question: "We should definitely ___ them ___ for some drinks this weekend.", options: ["ask / over", "argue / down", "act / up"], correctIndex: 0, explanation: "to invite to your home." } },
-
-      { pv: "Auction off", trope: "The Estate Sale", cefr: "C2", icon: Gavel, meaning: "To sell something to the highest bidder at an auction, often to clear space.", meaningJP: "（競売で）売り払う", example: "They had to auction off all their expensive old furniture before moving overseas.", vibes: ["Moving to a new country", "Clearance sales", "Liquidating assets rapidly"], storyline: "The famous, century-old antique shop sadly had to close its doors forever. To clear the massive inventory quickly, the owner auctioned off everything to the highest bidders.", storylineJP: "1世紀の歴史を持つ有名な骨董品店が、永遠に店を閉めることになった。膨大な在庫を素早く片付けるため、オーナーはすべての品を最高入札者に競売で売り払った。", quiz: { question: "The bankrupt company's remaining property was entirely ___.", options: ["auctioned off", "asked around", "added up"], correctIndex: 0, explanation: "to sell at an auction." } },
-
-      { pv: "Back away", trope: "The Scary Encounter", cefr: "B1", icon: AlertTriangle, meaning: "To retreat or move backwards slowly from something frightening or dangerous.", meaningJP: "（恐怖などでゆっくり）後ずさりする", example: "The stray cat hissed aggressively, so I slowly backed away to avoid getting scratched.", vibes: ["Facing sudden fear", "Avoiding physical danger", "Cautious retreat"], storyline: "Deep in the dark forest, a massive wolf suddenly appeared on the path. Sora's heart pounded, but he knew better than to run. Keeping eye contact, he just backed away slowly.", storylineJP: "暗い森の奥深く、突然巨大な狼が道に現れた。ソラの心臓は激しく鳴ったが、彼は走って逃げてはいけないと分かっていた。目を合わせたまま、彼はただゆっくりと後ずさりした。", quiz: { question: "When the unpredictable fire flared up, the crowd instinctively ___.", options: ["backed away", "asked after", "acted out"], correctIndex: 0, explanation: "to move backwards from fear." } },
-
-      { pv: "Back down", trope: "The Stubborn Pride", cefr: "B2", icon: Undo2, meaning: "To retract a position, admit you were wrong, or yield in a conflict.", meaningJP: "（主張を）撤回する、引き下がる、屈服する", example: "He realized halfway through that his facts were wrong, but he was too proud to back down.", vibes: ["Stubborn arguments", "Protecting one's pride", "Refusing to admit mistakes"], storyline: "During the bitter argument about the foul play, neither Sora nor Leo would back down, standing nose-to-nose until the head coach finally arrived to separate them.", storylineJP: "反則プレイを巡る激しい口論の中、コーチが引き離しに来るまで、ソラもレオも鼻がくっつくほどの距離で睨み合い、一歩も引こうとしなかった（撤回しなかった）。", quiz: { question: "After a massive public backlash, the corporation finally ___ and changed the policy.", options: ["backed down", "asked in", "added on"], correctIndex: 0, explanation: "to withdraw a claim or yield." } },
-
-      { pv: "Back into", trope: "The Tight Parking Spot", cefr: "B1", icon: Map, meaning: "To park or move a vehicle in reverse gear into a specific space.", meaningJP: "（車を）バックで入れる", example: "It’s a really tight and busy space, so you should definitely back into the parking spot.", vibes: ["Driving lessons", "Maneuvering in tight spaces", "Parking advice"], storyline: "Sato was nervously learning to drive in the city. 'Always back into the garage,' his dad guided him calmly. 'It makes leaving in an emergency so much easier later.'", storylineJP: "佐藤は混雑した街での運転練習に緊張していた。「常にバックで車庫に入れなさい」と父が冷静に指導した。「後で緊急時に出るのがずっと楽になるんだぞ。」", quiz: { question: "I wasn't looking at the rearview mirror and accidentally ___ a brick wall.", options: ["backed into", "asked for", "acted upon"], correctIndex: 0, explanation: "to enter a space in reverse." } },
-
-      { pv: "Back off", trope: "The Boundary Enforcer", cefr: "B2", icon: Lock, meaning: "To retreat, give someone space, or stop bothering them aggressively.", meaningJP: "（干渉を）やめる、身を引く、下がる", example: "I was feeling overwhelmed, so I firmly told him to back off and give me some space to think.", vibes: ["Setting strict personal boundaries", "Dealing with pushy people", "Tense verbal confrontations"], storyline: "As soon as the idol stepped out of the van, aggressive reporters swarmed her. 'Back off right now!' her massive bodyguard shouted, physically pushing the crowd away.", storylineJP: "アイドルがバンから降りた途端、攻撃的な記者たちが彼女に群がった。「今すぐ下がれ！」と彼女の巨大なボディガードが叫び、物理的に群衆を押し返して彼女のスペースを確保した。", quiz: { question: "Seeing the tension escalate, the police told the angry protesters to ___.", options: ["back off", "ask after", "add up to"], correctIndex: 0, explanation: "to move away or stop bothering." } },
-
-      { pv: "Back out", trope: "The Last-Minute Cancel", cefr: "B2", icon: Undo2, meaning: "To fail to keep a promise, agreement, or commitment.", meaningJP: "（約束や契約を）取り消す、手を引く", example: "We had a solid business deal, but he backed out at the absolute last minute.", vibes: ["Canceled plans and frustration", "Broken business promises", "Flaky behavior"], storyline: "The school band was totally ready for the biggest show of the year. But the lead singer, terrified of the massive crowd, backed out the night before, leaving everyone in a panic.", storylineJP: "スクールバンドは今年最大のライブに向けて完全に準備が整っていた。しかし、大群衆に怯えたボーカルが前夜になって手を引いてしまい、残されたメンバーはパニックに陥った。", quiz: { question: "You've already signed the papers; you can't just ___ of the contract now.", options: ["back out", "ask in", "act up"], correctIndex: 0, explanation: "to withdraw from a commitment." } },
-
-      { pv: "Back out of", trope: "The Dangerous Driveway", cefr: "B1", icon: AlertTriangle, meaning: "To exit a place (like a driveway or garage) in a vehicle using reverse gear.", meaningJP: "（車を）バックで出す", example: "Be extremely careful when you back out of the driveway; little kids are playing nearby.", vibes: ["Driving safety warnings", "Reversing out of home driveways", "Cautious vehicle movement"], storyline: "The alleyway was incredibly narrow and lined with fragile flower pots. Hina checked all her mirrors obsessively, slowly and carefully backing out of the tight space.", storylineJP: "その路地は信じられないほど狭く、壊れやすい植木鉢が並んでいた。ヒナはすべての鏡を執拗に確認し、何のダメージも与えずにその狭いスペースからゆっくりと慎重に車をバックで出した。", quiz: { question: "She shifted into reverse and slowly ___ the dark parking garage.", options: ["backed out of", "asked after", "added up"], correctIndex: 0, explanation: "to exit a space in reverse." } },
-
-      { pv: "Back up", trope: "The Cloud Save Crisis", cefr: "B1", icon: Cloud, meaning: "To make a secure digital copy of information or files.", meaningJP: "（データの）控えを取る、バックアップする", example: "You'll lose your entire 20-page essay if you don't back up your files to the cloud right now!", vibes: ["Tech advice and warnings", "Data safety protocols", "Preventing computer disasters"], storyline: "Right in the middle of writing his final thesis, Sora's old laptop suddenly died completely. 'Oh thank god... Good thing I backed up everything to the external drive yesterday,' he sighed.", storylineJP: "卒業論文を執筆している真っ最中に、ソラの古いノートPCが突然完全に沈黙した。「ああ、神様ありがとう...昨日すべてを外付けドライブにバックアップしておいて（控えを取っておいて）本当に良かった」と彼は安堵のため息をついた。", quiz: { question: "Before installing the new operating system, make sure you ___ your important work.", options: ["back up", "ask about", "act on"], correctIndex: 0, explanation: "to copy data for safety." } },
-
-      { pv: "Back up", trope: "The Boardroom Support", cefr: "B2", icon: Shield, meaning: "To support someone or defend their statement with evidence.", meaningJP: "（人を）支援する、（話を）裏付ける", example: "I really appreciate you backing me up when the CEO questioned my controversial data.", vibes: ["Co-worker loyalty and support", "Providing proof in an argument", "Defending a friend in public"], storyline: "Leo made a bold proposal during the board meeting. When the strict managers started to doubt him, Mika stood up and backed him up with solid, undeniable research data.", storylineJP: "役員会議で、レオは大胆な提案をした。厳しいマネージャーたちが彼を疑い始めたとき、ミカが立ち上がり、確実で否定できない調査データで彼を裏付け（援護し）、見事に形勢を逆転させた。", quiz: { question: "If the police ask questions, will you ___ my story about where I was?", options: ["back up", "ask around", "act out"], correctIndex: 0, explanation: "to support someone's statement." } },
-
-      { pv: "Bag out", trope: "The Unfair Online Critic", cefr: "C1", icon: Angry, meaning: "To criticize someone or something harshly and unfairly.", meaningJP: "（不当に）酷評する、けなす", example: "It's seriously not fair to bag out his hard work just because you have a personal grudge against him.", vibes: ["Defending creative work", "Dealing with negative online reviews", "Calling out social bullying"], storyline: "Before the highly anticipated new movie even released a full trailer, anonymous trolls on the internet started to mercilessly bag it out. Hina boldly stood up on social media to defend it.", storylineJP: "期待の新作映画のフルトレーラーが公開される前から、ネット上の匿名の荒らし（トロール）たちは容赦なくそれを酷評し始めた。ヒナはそれを守るためにSNSで勇敢に立ち上がった。", quiz: { question: "You should really stop ___ the new restaurant; the food was actually quite good.", options: ["bagging out", "asking for", "adding on"], correctIndex: 0, explanation: "to criticize harshly." } },
-
-      { pv: "Bail out", trope: "The Startup Rescue", cefr: "B2", icon: DollarSign, meaning: "To rescue someone or an organization from a difficult situation, usually with money.", meaningJP: "（窮地から）救い出す、財政援助する", example: "My parents had to bail me out when I stupidly ran out of money halfway through my Europe trip.", vibes: ["Receiving vital financial help", "Rescuing friends from emergencies", "Government or business bailouts"], storyline: "The innovative tech startup was rapidly bleeding cash. Just days before they had to declare bankruptcy, a mysterious new angel investor swooped in and bailed them out with a million-dollar check.", storylineJP: "そのテック系スタートアップは急速に資金を失っていた。自己破産を宣言するわずか数日前、謎の新たなエンジェル投資家が舞い降り、100万ドルの小切手で彼らを救済した（救い出した）。", quiz: { question: "During the massive economic crisis, the government successfully ___ the failing central bank.", options: ["bailed out", "asked over", "backed into"], correctIndex: 0, explanation: "to rescue from difficulty." } },
-
-      { pv: "Bail out of", trope: "The Weekend Legal Crisis", cefr: "B2", icon: Gavel, meaning: "To pay a legal sum of money to release someone from jail until their trial.", meaningJP: "保釈金を払って（牢屋から）出す", example: "After the wild misunderstanding at the club, he had to bail his foolish brother out of jail.", vibes: ["Dealing with legal crises", "Family members causing deep trouble", "Late nights at police stations"], storyline: "The peaceful protest suddenly turned into a chaotic riot. By Monday morning, exhausted lawyers were working around the clock to bail dozens of innocent students out of the city jail.", storylineJP: "平和的な抗議活動は、突然カオスな暴動へと発展した。月曜の朝までに、疲れ果てた弁護士たちは、何十人もの無実の学生たちを拘置所から保釈させるために24時間体制で働いていた。", quiz: { question: "He desperately needed $5,000 in cash to be safely ___ the local jail.", options: ["bailed out of", "asked into", "added up to"], correctIndex: 0, explanation: "to pay for someone's release." } },
-
-      { pv: "Bail out on", trope: "The Critical Team Betrayal", cefr: "B2", icon: LogOut, meaning: "To stop supporting someone or to leave them in a difficult situation suddenly.", meaningJP: "（土壇場で）見捨てる、逃げ出す", example: "I literally can't believe she bailed out on us right before the most important presentation of the year!", vibes: ["Extreme team frustration", "Quitting under pressure", "Flaky friends betraying trust"], storyline: "The crucial design project was only halfway done. To everyone's absolute shock, the arrogant team leader bailed out on them to take a sudden luxury vacation, leaving them to fail.", storylineJP: "極めて重要なデザインプロジェクトはまだ半分しか終わっていなかった。全員が絶対にショックを受けたことに、傲慢なチームリーダーは突然の豪華な休暇を取るために彼らを見捨てて逃げ出し、彼らを失敗の危機に陥れた。", quiz: { question: "Please don't ___ me now; I desperately need your help to finish this on time!", options: ["bail out on", "ask for", "back into"], correctIndex: 0, explanation: "to abandon someone in need." } },
-
-      { pv: "Bail up", trope: "The Overly Chatty Neighbor", cefr: "C1", icon: MessageCircle, meaning: "To talk to someone and delay them, often when they are clearly in a hurry.", meaningJP: "（人を）引き止めて長々と話す、足止めする", example: "I'm so sorry I'm late; the talkative neighbor bailed me up for an hour chatting about her new garden.", vibes: ["Causing someone to be late", "Enduring unwanted, endless talk", "Social delays you can't escape"], storyline: "Sora was sprinting down the hallway, desperate not to be late for his final exam. Suddenly, the lonely history teacher stepped out and bailed him up with a twenty-minute story about a lost book.", storylineJP: "ソラは期末試験に遅れまいと必死に廊下を全速力で走っていた。突然、寂しがり屋の歴史の先生が現れ、紛失した本についての20分に及ぶ長話で彼を引き止め（足止めし）た。", quiz: { question: "I tried to leave quietly, but he ___ me in the corridor to complain about the constant noise.", options: ["bailed up", "backed down", "added up"], correctIndex: 0, explanation: "to delay someone with talk." } },
-
-      { pv: "Ball up", trope: "The Schedule Mess", cefr: "C1", icon: HelpCircle, meaning: "To confuse someone completely or to mess a situation up badly.", meaningJP: "（人を）混乱させる、状況をめちゃくちゃにする", example: "The constant, unexplained changes to the new schedule have completely balled me up; I don't know where to go.", vibes: ["Total mental confusion", "Dealing with overly complex systems", "Making frustrating mistakes"], storyline: "The tournament organizers kept shifting the match times without warning. The endless rule changes completely balled up the young players, leading to total chaos and missed games.", storylineJP: "大会の主催者は予告なしに試合時間を何度も変更した。終わりのないルールの変更が若い選手たちを完全に混乱させ、大混乱を招き、いくつかのチームが重要な試合をすっぽかす事態となった。", quiz: { question: "All these shifting numbers and weird formulas are starting to really ___ me ___.", options: ["ball / up", "ask / after", "act / on"], correctIndex: 0, explanation: "to confuse or mess up." } },
-
-      { pv: "Balls up", trope: "The Exam Regret", cefr: "C2", icon: Trash2, meaning: "To spoil or ruin an opportunity or plan through a massive, stupid mistake.", meaningJP: "（せっかくの機会を）台無しにする、大失敗する", example: "I really ballsed up my chances of getting that dream job by arriving thirty minutes late.", vibes: ["Deep personal failure", "Ruined long-term plans", "Intense regret over an error"], storyline: "Sora had studied endlessly for the vital entrance exam. But on the big day, he accidentally turned off his alarm. By sleeping in, he absolutely ballsed up his presentation and had to wait a full year to try again.", storylineJP: "ソラは極めて重要な入学試験に向けて果てしなく勉強していた。しかし大一番の日、彼は誤ってアラームを消してしまった。寝坊したことでプレゼンを完全に台無しにしてしまい、再挑戦のために丸1年待つ羽目になった。", quiz: { question: "I'm so sorry, I totally ___ the surprise party plan by texting him the location.", options: ["ballsed up", "asked around", "backed away"], correctIndex: 0, explanation: "to ruin or spoil completely." } },
-
-      { pv: "Bang about", trope: "The Noisy Upstairs Neighbors", cefr: "B1", icon: Volume2, meaning: "To move around a place making a lot of loud, disruptive noise.", meaningJP: "（物を動かしたりして）どたばた騒ぐ、音を立てる", example: "For heaven's sake, stop banging about upstairs! I'm trying to study for a test!", vibes: ["Yelling at noisy siblings", "Dealing with severe sleep disruption", "Heavy, careless footsteps"], storyline: "It was 3 AM, and Kaito had a massive headache. Yet, the inconsiderate new neighbors in the apartment above him were banging about, seemingly moving heavy wooden furniture across the floor.", storylineJP: "深夜3時、海斗はひどい頭痛を抱えていた。それなのに、上の階の無神経な新しい住人たちは、まるで重い木製の家具を床で引きずっているかのように、どたばたと騒ぎ（音を立てて）続けていた。", quiz: { question: "The hyperactive kids were ___ in the kitchen, knocking over pots and pans.", options: ["banging about", "asking in", "adding on"], correctIndex: 0, explanation: "to make noise while moving." } },
-
-      { pv: "Bang on", trope: "The Obsessive Monologue", cefr: "B2", icon: MessageCircle, meaning: "To talk at great, annoying length about a single, specific topic.", meaningJP: "（～について）うんざりするほどだらだらとしゃべり続ける", example: "He spent the entire romantic dinner just banging on about the specs of his stupid new car.", vibes: ["Boring a captive audience", "Being overly talkative about a niche topic", "An annoying monologue"], storyline: "The train ride was four hours long. Unfortunately for Kaito, Mika spent the entire trip endlessly banging on about the intricate lore of her favorite new anime, until Kaito was completely exhausted.", storylineJP: "電車の旅は4時間にも及んだ。海斗にとって不運なことに、ミカは道中ずっとお気に入りの新作アニメの複雑な設定について果てしなくだらだらとしゃべり続け、海斗は完全に疲れ果ててしまった。", quiz: { question: "I wish she'd stop; she's always ___ about how smart her cat is.", options: ["banging on", "backing out", "asking after"], correctIndex: 0, explanation: "to talk at length annoyingly." } },
-
-      { pv: "Bang up", trope: "The Parking Lot Crash", cefr: "B1", icon: AlertTriangle, meaning: "To damage something badly, especially a vehicle, through a collision or rough use.", meaningJP: "（車などを）ひどくぶつける、傷つける", example: "She wasn't paying attention and banged her new car up pretty badly in the supermarket parking lot.", vibes: ["Dealing with minor car accidents", "Physical damage to property", "Careless crashes"], storyline: "The mountain trail was incredibly slick from the rain. During a sharp turn, Sora lost control and slid. The expensive racing bike was seriously banged up, but Sora luckily walked away unhurt.", storylineJP: "山道は雨で信じられないほど滑りやすくなっていた。急カーブでソラはコントロールを失いスリップした。高価なレーシングバイクはひどくボロボロになった（傷んだ）が、ソラは幸いにも無傷で歩いて帰れた。", quiz: { question: "He fell off his skateboard and completely ___ his knee on the rough concrete.", options: ["banged up", "asked for", "added up to"], correctIndex: 0, explanation: "to damage or injure badly." } },
-
-      { pv: "Bank on", trope: "The High-Stakes Reliance", cefr: "B2", icon: Shield, meaning: "To count on or rely heavily on someone or something happening as planned.", meaningJP: "～を（強く）当てにする、頼りにする", example: "The project is huge; I'm really banking on your expert help to finish this report on time.", vibes: ["Heavy reliance on a coworker", "Stressing over strict deadlines", "Placing deep trust in someone"], storyline: "The outdoor spring wedding had taken a full year to plan perfectly. The anxious bride looked at the cloudy sky. 'We're really banking on the weather clearing up by noon,' she whispered.", storylineJP: "屋外での春の結婚式は、完璧に計画するのに丸1年かかった。不安げな花嫁は曇り空を見上げた。「正午までに天気が回復することを、本当に切に願っている（当てにしている）わ」と彼女は囁いた。", quiz: { question: "Given his terrible track record, I certainly wouldn't ___ him arriving here on time.", options: ["bank on", "ask around", "back into"], correctIndex: 0, explanation: "to rely heavily upon." } },
-
-      { pv: "Bargain for", trope: "The Unexpectedly Huge Crowd", cefr: "C1", icon: AlertTriangle, meaning: "To expect or be prepared for a specific (usually intense) situation to happen.", meaningJP: "（事態などを）予期する、覚悟する", example: "We planned a small event; we certainly didn't bargain for such a massive, chaotic crowd.", vibes: ["Facing intense, surprise situations", "Underestimating a major challenge", "Realizing things are out of control"], storyline: "Haru thought the math final would be a breeze since he studied for a whole hour. But as he looked at the complex formulas on the first page, he sweated. The test was far harder than he had bargained for.", storylineJP: "ハルは丸1時間も勉強したのだから、数学の期末試験は楽勝だと思っていた。しかし1ページ目の複雑な数式を見た瞬間、彼は冷や汗をかいた。そのテストは、彼が予期していた（覚悟していた）よりも遥かに難しかったのだ。", quiz: { question: "Repairing this old, rotting house is proving to be far more expensive than we ___.", options: ["bargained for", "asked after", "added up"], correctIndex: 0, explanation: "to expect or prepare for." } },
-
-      { pv: "Barge in", trope: "The Sibling's Total Lack of Privacy", cefr: "B2", icon: Lock, meaning: "To enter a room or conversation rudely or abruptly without knocking or asking.", meaningJP: "ずかずかと割り込む、無作法に入り込む", example: "Please learn to knock! Don't just arbitrarily barge into my room while I'm trying to dress.", vibes: ["Dealing with annoying sibling privacy issues", "Rude interruptions in a meeting", "A general lack of personal boundaries"], storyline: "Leo was in the middle of a highly sensitive, secret video call with his project team. Suddenly, the door flew open and his oblivious little sister barged in, loudly demanding help with her math homework.", storylineJP: "レオはプロジェクトチームとの非常に機密性の高い秘密のビデオ通話の真っ最中だった。突然ドアが勢いよく開き、無神経な妹がずかずかと割り込んできて、大声で算数の宿題を手伝うよう要求した。", quiz: { question: "It's incredibly rude how he always ___ on our private conversations without even a polite knock.", options: ["barges in", "backs off", "asks out"], correctIndex: 0, explanation: "to enter or interrupt rudely." } }
-
+      { 
+        pv: "Answer back", trope: "The Family Scolding", cefr: "B2", icon: Angry, 
+        meaning: "To reply rudely to someone in authority, like a parent or teacher.", 
+        meaningJP: "（親や目上に）口答えをする、反抗的な返事をする", 
+        example: "I'm your mother! Don't answer back when I'm trying to help you.", 
+        exampleJP: "私はあなたの母親よ！助けようとしている時に口答えしないで。",
+        vibes: ["A rebellious teen getting scolded", "Classroom disrespect", "Getting defensive with a strict boss"], 
+        vibesJP: ["反抗的な10代が叱られる", "教室での無礼な態度", "厳しい上司に対してムキになる"],
+        storyline: "Leo was tired of his mother's endless advice about his future. When he finally snapped and answered back, the entire room went completely silent in shock.", 
+        storylineJP: "レオは将来についての母親の終わりのない小言にうんざりしていた。彼がついにキレて口答えをした瞬間、部屋中がショックで完全に静まり返った。", 
+        quiz: { question: "It's highly disrespectful to ___ when a teacher corrects your mistake.", options: ["answer back", "ask in", "back out"], correctIndex: 0, explanation: "to reply rudely." } 
+      },
+      { 
+        pv: "Answer for", trope: "The Kitchen Disaster", cefr: "B2", icon: User, 
+        meaning: "To be held responsible for a mistake or something bad that happened.", 
+        meaningJP: "（不始末などの）責任を取る", 
+        example: "You'll have to answer for the massive mess you made in the kitchen.", 
+        exampleJP: "あなたがキッチンで作ったこの大惨事の責任は取ってもらうからね。",
+        vibes: ["Cleaning up after a wild party", "Facing the music for a failed project", "Roommate disputes over chores"], 
+        vibesJP: ["どんちゃん騒ぎの後の片付け", "失敗したプロジェクトの報いを受ける", "家事を巡るルームメイトの揉め事"],
+        storyline: "The living room was an absolute wreck, with the antique vase shattered on the floor. 'Someone is going to have to answer for this disaster when Mom gets home,' Ken muttered.", 
+        storylineJP: "リビングは完全に荒れ果て、アンティークの花瓶が粉々に散らばっていた。「お母さんが帰ってきたら、誰かがこの大惨事の責任を取らなきゃいけないぞ」とケンは呟いた。", 
+        quiz: { question: "The project manager will have to ___ the huge financial loss.", options: ["answer for", "ask after", "back off"], correctIndex: 0, explanation: "to be responsible." } 
+      },
+      { 
+        pv: "Answer for", trope: "The Office Delegate", cefr: "B2", icon: MessageCircle, 
+        meaning: "To speak on behalf of someone else or guarantee their actions.", 
+        meaningJP: "～の代理で答える、保証する", 
+        example: "I can't answer for my boss, but I'm sure he'll approve your vacation request.", 
+        exampleJP: "上司の代理で答えることはできないけど、君の休暇申請は承認してくれると思うよ。",
+        vibes: ["Assuring nervous colleagues", "Acting as a proxy in a meeting", "Vouching for a friend's character"], 
+        vibesJP: ["緊張する同僚を安心させる", "会議で代理人を務める", "友人の人柄を保証する"],
+        storyline: "The client was furious about the delay. 'I can't answer for the factory's mistakes,' Kaito said smoothly, 'but I can promise our team will fix this tonight.'", 
+        storylineJP: "顧客は納期の遅れに激怒していた。「工場のミスの責任を私が代理で負う（答える）ことはできませんが、私たちのチームが今夜中に解決することはお約束します」と海斗は言った。", 
+        quiz: { question: "I can't ___ her honesty; I barely know her personally.", options: ["answer for", "ask around", "back away"], correctIndex: 0, explanation: "to speak on behalf of someone." } 
+      },
+      { 
+        pv: "Argue down", trope: "The Debate Master", cefr: "C1", icon: MessageCircle, 
+        meaning: "To defeat someone in a debate or logical argument using facts.", 
+        meaningJP: "（議論で）論破する、言い負かす", 
+        example: "She tried to defend her flawed choice, but he quickly argued her down.", 
+        exampleJP: "彼女は欠陥のある選択を正当化しようとしたが、彼はすぐに彼女を論破した。",
+        vibes: ["Winning points in a debate club", "Logical disputes at work", "Proving someone completely wrong"], 
+        vibesJP: ["ディベート部でポイントを稼ぐ", "職場での論理的な対立", "相手が完全に間違っていると証明する"],
+        storyline: "In the final round of the debate, Sora didn't just disagree; he used flawless logic to argue his opponent down until they had absolutely nothing left to say.", 
+        storylineJP: "ディベートの最終ラウンドで、ソラはただ反対するだけでなく、完璧な論理を使って相手に反論の余地が全くなくなるまで見事に論破した。", 
+        quiz: { question: "She ___ her rival by presenting undisputable scientific data.", options: ["argued down", "ask after", "back down"], correctIndex: 0, explanation: "to beat in a debate." } 
+      },
+      { 
+        pv: "Argue down", trope: "The Flea Market", cefr: "C1", icon: DollarSign, 
+        meaning: "To persuade someone to drop the price of an item.", 
+        meaningJP: "（交渉して）値切る、値段を下げさせる", 
+        example: "The used car was listed at $5,000, but I managed to argue him down to $4,500.", 
+        exampleJP: "その中古車は5,000ドルで出品されていたが、私は交渉して彼に4,500ドルまで値下げさせた。",
+        vibes: ["Haggling at local markets", "Buying a used car", "Tough business negotiations"], 
+        vibesJP: ["地元の市場で値切る", "中古車を買う", "タフなビジネス交渉"],
+        storyline: "The antique merchant demanded 200 gold coins for the mysterious map. Hina smiled, pointed out a small tear, and skillfully argued him down to a mere 150 gold.", 
+        storylineJP: "骨董商は謎めいた地図に対して200ゴールドを要求した。ヒナは微笑み、小さな破れを指摘して、巧みな交渉でわずか150ゴールドまで値切ることに成功した。", 
+        quiz: { question: "I managed to ___ the street vendor ___ to a much more reasonable $10.", options: ["argue / down", "ask / out", "back / into"], correctIndex: 0, explanation: "to lower price." } 
+      },
+      { 
+        pv: "Argue down", trope: "The Boardroom Rejection", cefr: "C1", icon: Database, 
+        meaning: "To persuade a group of people not to accept a proposal or plan.", 
+        meaningJP: "（提案などを）説得して否決させる、退けさせる", 
+        example: "The conservative board members tried to argue down the innovative new budget.", 
+        exampleJP: "保守的な取締役たちは、革新的な新予算案を説得して否決させようとした。",
+        vibes: ["Rejecting risky business plans", "Tense formal meetings", "Political debates over policy"], 
+        vibesJP: ["リスクの高い事業計画を拒否する", "緊張感のある公式会議", "政策を巡る政治的議論"],
+        storyline: "The young CEO proposed a highly risky expansion into VR. However, the veteran CFO stood up and systematically argued the plan down, citing a severe lack of funds.", 
+        storylineJP: "若きCEOはVRへの非常にリスキーな事業拡大を提案した。しかし、ベテランのCFOが立ち上がり、当面の資金不足を理由に、その計画を理路整然と説得して退けさせた。", 
+        quiz: { question: "The committee ___ the expensive expansion plan after a long meeting.", options: ["argued down", "asked in", "back away"], correctIndex: 0, explanation: "to persuade against a plan." } 
+      },
+      { 
+        pv: "Argue out", trope: "The Partners' Conflict", cefr: "B2", icon: User, 
+        meaning: "To find a solution to a problem by discussing it thoroughly.", 
+        meaningJP: "徹底的に議論して解決する、とことん話し合う", 
+        example: "We really need to argue our differences out before we sign this contract.", 
+        exampleJP: "この契約にサインする前に、お互いの相違点をとことん話し合う必要がある。",
+        vibes: ["Resolving deep conflicts", "Fixing a failing relationship", "Long team planning sessions"], 
+        vibesJP: ["深い対立を解決する", "壊れかけた関係を修復する", "長時間のチーム計画会議"],
+        storyline: "The two lead developers disagreed on every feature. They locked themselves in a room, spent all night arguing it out, and finally emerged at dawn with a perfect compromise.", 
+        storylineJP: "二人のリード開発者はすべての機能において意見が対立していた。彼らは会議室にこもり、一晩中徹底的に議論し尽くし、夜明けにようやく完璧な妥協点を見出して出てきた。", 
+        quiz: { question: "Instead of fighting, we need to sit down and ___ this problem.", options: ["argue out", "act out", "add on"], correctIndex: 0, explanation: "to solve by discussion." } 
+      },
+      { 
+        pv: "Ask about", trope: "The Family Catch-up", cefr: "A1", icon: Home, 
+        meaning: "To enquire about how someone is doing or what is happening.", 
+        meaningJP: "（近況などを）尋ねる、聞いてくる", 
+        example: "My grandmother always asks about your family whenever I call her.", 
+        exampleJP: "私が電話するたびに、おばあちゃんはいつもあなたの家族の近況を聞いてくるよ。",
+        vibes: ["Passing on messages from relatives", "Polite social enquiry", "Showing gentle care"], 
+        vibesJP: ["親戚からの伝言を伝える", "礼儀正しい社交的な問いかけ", "優しい気遣いを示す"],
+        storyline: "Sato's cheerful aunt called from the countryside. 'She always asks about your school life,' his mom smiled, handing him the phone.", 
+        storylineJP: "佐藤の陽気な叔母が田舎から電話をかけてきた。「あの人、いつもあなたの学校生活について聞いてくるのよ」と母は微笑み、彼に受話器を渡した。", 
+        quiz: { question: "How is your sister doing? Everyone at the party was ___ her.", options: ["asking about", "arguing down", "acting on"], correctIndex: 0, explanation: "to enquire about wellbeing." } 
+      },
+      { 
+        pv: "Ask after", trope: "The Old Friend's Concern", cefr: "B1", icon: User, 
+        meaning: "To explicitly enquire about someone's health or life, showing care.", 
+        meaningJP: "（人の）安否を尋ねる、気遣う", 
+        example: "I ran into Sarah today at the cafe, and she kindly asked after you.", 
+        exampleJP: "今日カフェでサラにばったり会ったんだけど、親切にあなたの安否を気遣っていたよ。",
+        vibes: ["Seeking health updates", "Thinking of someone far away", "Reconnecting with old friends"], 
+        vibesJP: ["健康状態のアップデートを求める", "遠く離れた人を想う", "旧友との再会"],
+        storyline: "While shopping, Hina bumped into her old elementary school teacher. The teacher smiled warmly and immediately asked after Hina's older brother, who had been hospitalized.", 
+        storylineJP: "買い物をしている時、ヒナは昔の小学校の先生にばったり会った。先生は温かく微笑み、すぐに昨年入院していたヒナの兄の安否を気遣って尋ねた。", 
+        quiz: { question: "He thoughtfully ___ your father's recovery from surgery.", options: ["asked after", "added up", "abided by"], correctIndex: 0, explanation: "to enquire about health." } 
+      },
+      { 
+        pv: "Ask around", trope: "The Neighborhood Search", cefr: "A2", icon: Search, 
+        meaning: "To ask several different people for information or help.", 
+        meaningJP: "（情報を求めて）あちこち尋ね回る、聞き込みをする", 
+        example: "I don't know who owns this stray dog, but I'll ask around the neighborhood.", 
+        exampleJP: "この迷い犬の飼い主は分からないけど、近所で聞き込みをしてみるよ。",
+        vibes: ["Finding lost items", "Getting local restaurant advice", "A mini detective search"], 
+        vibesJP: ["探し物を見つける", "地元のレストランのアドバイスをもらう", "ちょっとした探偵ごっこ"],
+        storyline: "Sora realized his locker keys were missing right before the big game. Panicking, he spent twenty minutes asking around the gym until a junior member found them.", 
+        storylineJP: "大事な試合の直前、ソラはロッカーの鍵がないことに気づいた。パニックになりながら体育館中で聞き込みをして回り、20分後、ついに後輩が見つけてくれた。", 
+        quiz: { question: "I don't have a charger, but I'll ___ the office for a spare one.", options: ["ask around", "argue out", "act up"], correctIndex: 0, explanation: "to ask multiple people." } 
+      },
+      { 
+        pv: "Ask around", trope: "The Casual Party Planner", cefr: "A2", icon: Home, 
+        meaning: "To invite someone to come to your home or a specific place.", 
+        meaningJP: "（自分の家などに）招待する", 
+        example: "Since we just moved in, we should ask the new neighbors around for dinner.", 
+        exampleJP: "引っ越してきたばかりだから、新しいご近所さんを夕食に招待すべきだね。",
+        vibes: ["Organizing a social gathering", "Inviting people to a home dinner", "Being a friendly host"], 
+        vibesJP: ["社交的な集まりを企画する", "家でのディナーに人を招く", "フレンドリーなホストになる"],
+        storyline: "The huge team project was finally completed. Feeling relieved, Leo decided to ask around the entire design team to his place for a spontaneous victory pizza party.", 
+        storylineJP: "巨大なチームプロジェクトがようやく無事に完了した。安堵したレオは、思いつきのピザパーティのために、デザインチーム全員を自宅に招待することにした。", 
+        quiz: { question: "We should ___ the new transfer students ___ for some coffee.", options: ["ask / around", "back / up", "answer / back"], correctIndex: 0, explanation: "to invite to a home." } 
+      },
+      { 
+        pv: "Ask for", trope: "The Foolish Provocation", cefr: "A2", icon: AlertTriangle, 
+        meaning: "To behave in a way that is guaranteed to provoke a negative reaction or trouble.", 
+        meaningJP: "（自業自得で）災いを招く、自らトラブルを求める", 
+        example: "If you drive that fast on an icy road, you're literally asking for trouble.", 
+        exampleJP: "凍った道でそんなにスピードを出したら、文字通り自らトラブルを求めているようなものだぞ。",
+        vibes: ["Warning someone of risky behavior", "Facing inevitable consequences", "Instant karma"], 
+        vibesJP: ["危険な行動を警告する", "避けられない結果に直面する", "インスタント・カルマ（自業自得）"],
+        storyline: "Leo kept ignoring the bright red warning signs and revved his engine near the cliff edge. 'Seriously, you're asking for a massive accident,' his friend yelled.", 
+        storylineJP: "レオは真っ赤な警告標識を無視し続け、崖のそばでエンジンを吹かした。「マジで、お前自ら大事故を招こうとしてるぞ」と友人は恐怖で叫んだ。", 
+        quiz: { question: "Ignoring all the safety rules on a construction site is just ___ trouble.", options: ["asking for", "adding on", "aiming at"], correctIndex: 0, explanation: "to provoke trouble." } 
+      },
+      { 
+        pv: "Ask for", trope: "The Service Request", cefr: "A1", icon: ShoppingCart, 
+        meaning: "To request to have or be given something.", 
+        meaningJP: "（何かを）頼む、要求する", 
+        example: "I asked for a quiet window seat, but the flight was already completely full.", 
+        exampleJP: "静かな窓側の席を頼んだんだけど、フライトはすでに満席だった。",
+        vibes: ["Making airport or hotel requests", "Ordering at a fancy restaurant", "Seeking help from customer service"], 
+        vibesJP: ["空港やホテルで要望を伝える", "高級レストランでの注文", "カスタマーサービスに助けを求める"],
+        storyline: "Rin walked up to the electronics store counter. The gadget was broken, so she politely but firmly asked for a full cash refund.", 
+        storylineJP: "リンは家電量販店のカウンターに歩み寄った。ガジェットが壊れていたため、彼女は礼儀正しく、しかしきっぱりと全額現金での返金を頼んだ。", 
+        quiz: { question: "Feeling dizzy, he immediately ___ a large glass of water.", options: ["asked for", "argued out", "acted on"], correctIndex: 0, explanation: "to request something." } 
+      },
+      { 
+        pv: "Ask in", trope: "The Warm Hospitality", cefr: "A2", icon: Home, 
+        meaning: "To invite someone to enter your house, especially from the cold or rain.", 
+        meaningJP: "（家の中へ）招き入れる", 
+        example: "It's freezing outside! Please, don't leave him on the porch—ask him in immediately.", 
+        exampleJP: "外は凍えるほど寒いよ！彼をポーチに放置しないで、すぐに中へ招き入れて。",
+        vibes: ["Welcoming guests", "Escaping bad weather", "Showing basic hospitality"], 
+        vibesJP: ["ゲストを歓迎する", "悪天候から逃れる", "基本的なおもてなしを示す"],
+        storyline: "A sudden, freezing rainstorm hit just as the delivery man arrived. Seeing him shivering, Grandpa immediately told Sora to ask the courier in for a hot cup of tea.", 
+        storylineJP: "配達員が到着した瞬間、凍えるような暴風雨が襲った。彼が震えているのを見て、祖父はすぐにソラに、配達員を温かいお茶のために中へ招き入れるよう言った。", 
+        quiz: { question: "Don't leave the poor guests out in the cold, ___!", options: ["ask them in", "back off", "act out"], correctIndex: 0, explanation: "to invite inside." } 
+      },
+      { 
+        pv: "Ask out", trope: "The Romantic Move", cefr: "B1", icon: Heart, 
+        meaning: "To invite someone for a romantic date.", 
+        meaningJP: "（デートに）誘う", 
+        example: "He’s been incredibly nervous all day because he’s finally going to ask her out.", 
+        exampleJP: "ついに彼女をデートに誘うつもりなので、彼は一日中信じられないほど緊張している。",
+        vibes: ["Teenage romance", "Gathering courage", "First dates"], 
+        vibesJP: ["10代のロマンス", "勇気を振り絞る", "初めてのデート"],
+        storyline: "The school cultural festival was ending, and fireworks lit up the night sky. With red cheeks, Kaito finally found the courage to approach his crush and ask her out.", 
+        storylineJP: "学園祭が終わりを迎え、花火が夜空を照らした。頬を赤らめ、海斗はついに勇気を振り絞って片思いの相手に近づき、デートに彼女を誘った。", 
+        quiz: { question: "After months of crushing on her, he finally ___ her ___.", options: ["asked / out", "backed / up", "added / on"], correctIndex: 0, explanation: "to invite on a date." } 
+      },
+      { 
+        pv: "Ask over", trope: "The Casual Get-Together", cefr: "B1", icon: Home, 
+        meaning: "To invite someone to your home for a casual visit.", 
+        meaningJP: "（自分の家に）招待する、呼び寄せる", 
+        example: "Since the weather is nice, let's ask the neighbors over for a quick backyard BBQ.", 
+        exampleJP: "天気がいいから、ご近所さんを呼んで裏庭で軽くBBQをしようよ。",
+        vibes: ["Neighborhood socializing", "Casual weekend plans", "Friendly invites"], 
+        vibesJP: ["近所付き合い", "カジュアルな週末の計画", "フレンドリーな招待"],
+        storyline: "The big soccer match was broadcasting live on TV. Kaito bought a ton of snacks and decided to ask over all his closest friends to watch the intense game together.", 
+        storylineJP: "サッカーの大一番がテレビで生中継される。海斗は大量のスナックを買い込み、親友たちを家に呼んで（招待して）、一緒に白熱の試合を見ることに決めた。", 
+        quiz: { question: "We should definitely ___ them ___ for some drinks this weekend.", options: ["ask / over", "argue / down", "act / up"], correctIndex: 0, explanation: "to invite to your home." } 
+      },
+      { 
+        pv: "Auction off", trope: "The Estate Sale", cefr: "C2", icon: Gavel, 
+        meaning: "To sell something to the highest bidder at an auction, often to clear space.", 
+        meaningJP: "（競売で）売り払う", 
+        example: "They had to auction off all their expensive old furniture before moving overseas.", 
+        exampleJP: "彼らは海外に引っ越す前に、高価な古い家具をすべて競売で売り払わなければならなかった。",
+        vibes: ["Moving to a new country", "Clearance sales", "Liquidating assets rapidly"], 
+        vibesJP: ["新しい国への引っ越し", "在庫一掃セール", "資産を迅速に現金化する"],
+        storyline: "The famous, century-old antique shop sadly had to close its doors forever. To clear the massive inventory quickly, the owner auctioned off everything to the highest bidders.", 
+        storylineJP: "1世紀の歴史を持つ有名な骨董品店が、永遠に店を閉めることになった。膨大な在庫を素早く片付けるため、オーナーはすべての品を最高入札者に競売で売り払った。", 
+        quiz: { question: "The bankrupt company's remaining property was entirely ___.", options: ["auctioned off", "asked around", "added up"], correctIndex: 0, explanation: "to sell at an auction." } 
+      },
+      { 
+        pv: "Back away", trope: "The Scary Encounter", cefr: "B1", icon: AlertTriangle, 
+        meaning: "To retreat or move backwards slowly from something frightening or dangerous.", 
+        meaningJP: "（恐怖などでゆっくり）後ずさりする", 
+        example: "The stray cat hissed aggressively, so I slowly backed away to avoid getting scratched.", 
+        exampleJP: "野良猫が威嚇して鳴いたので、引っかかれないように私はゆっくり後ずさりした。",
+        vibes: ["Facing sudden fear", "Avoiding physical danger", "Cautious retreat"], 
+        vibesJP: ["突然の恐怖に直面する", "身体的な危険を避ける", "慎重な後退"],
+        storyline: "Deep in the dark forest, a massive wolf suddenly appeared on the path. Sora's heart pounded, but he knew better than to run. Keeping eye contact, he just backed away slowly.", 
+        storylineJP: "暗い森の奥深く、突然巨大な狼が道に現れた。ソラの心臓は激しく鳴ったが、彼は走って逃げてはいけないと分かっていた。目を合わせたまま、彼はただゆっくりと後ずさりした。", 
+        quiz: { question: "When the unpredictable fire flared up, the crowd instinctively ___.", options: ["backed away", "asked after", "acted out"], correctIndex: 0, explanation: "to move backwards from fear." } 
+      },
+      { 
+        pv: "Back down", trope: "The Stubborn Pride", cefr: "B2", icon: Undo2, 
+        meaning: "To retract a position, admit you were wrong, or yield in a conflict.", 
+        meaningJP: "（主張を）撤回する、引き下がる、屈服する", 
+        example: "He realized halfway through that his facts were wrong, but he was too proud to back down.", 
+        exampleJP: "彼は途中で自分の事実が間違っていることに気づいたが、プライドが高すぎて引き下がれなかった。",
+        vibes: ["Stubborn arguments", "Protecting one's pride", "Refusing to admit mistakes"], 
+        vibesJP: ["頑固な言い争い", "プライドを守る", "間違いを認めるのを拒む"],
+        storyline: "During the bitter argument about the foul play, neither Sora nor Leo would back down, standing nose-to-nose until the head coach finally arrived to separate them.", 
+        storylineJP: "反則プレイを巡る激しい口論の中、コーチが引き離しに来るまで、ソラもレオも鼻がくっつくほどの距離で睨み合い、一歩も引こうとしなかった（撤回しなかった）。", 
+        quiz: { question: "After a massive public backlash, the corporation finally ___ and changed the policy.", options: ["backed down", "asked in", "added on"], correctIndex: 0, explanation: "to withdraw a claim or yield." } 
+      },
+      { 
+        pv: "Back into", trope: "The Tight Parking Spot", cefr: "B1", icon: Map, 
+        meaning: "To park or move a vehicle in reverse gear into a specific space.", 
+        meaningJP: "（車を）バックで入れる", 
+        example: "It’s a really tight and busy space, so you should definitely back into the parking spot.", 
+        exampleJP: "本当に狭くて混雑したスペースだから、絶対にバックで駐車スペースに入れるべきだよ。",
+        vibes: ["Driving lessons", "Maneuvering in tight spaces", "Parking advice"], 
+        vibesJP: ["運転のレッスン", "狭いスペースでの操作", "駐車のアドバイス"],
+        storyline: "Sato was nervously learning to drive in the city. 'Always back into the garage,' his dad guided him calmly. 'It makes leaving in an emergency so much easier later.'", 
+        storylineJP: "佐藤は混雑した街での運転練習に緊張していた。「常にバックで車庫に入れなさい」と父が冷静に指導した。「後で緊急時に出るのがずっと楽になるんだぞ。」", 
+        quiz: { question: "I wasn't looking at the rearview mirror and accidentally ___ a brick wall.", options: ["backed into", "asked for", "acted upon"], correctIndex: 0, explanation: "to enter a space in reverse." } 
+      },
+      { 
+        pv: "Back off", trope: "The Boundary Enforcer", cefr: "B2", icon: Lock, 
+        meaning: "To retreat, give someone space, or stop bothering them aggressively.", 
+        meaningJP: "（干渉を）やめる、身を引く、下がる", 
+        example: "I was feeling overwhelmed, so I firmly told him to back off and give me some space to think.", 
+        exampleJP: "圧倒されていたので、私は彼にきっぱりと干渉をやめて、考える時間をくれるように言った。",
+        vibes: ["Setting strict personal boundaries", "Dealing with pushy people", "Tense verbal confrontations"], 
+        vibesJP: ["厳格な個人的境界線を設定する", "押し付けがましい人に対処する", "緊迫した口頭での対立"],
+        storyline: "As soon as the idol stepped out of the van, aggressive reporters swarmed her. 'Back off right now!' her massive bodyguard shouted, physically pushing the crowd away.", 
+        storylineJP: "アイドルがバンから降りた途端、攻撃的な記者たちが彼女に群がった。「今すぐ下がれ！」と彼女の巨大なボディガードが叫び、物理的に群衆を押し返して彼女のスペースを確保した。", 
+        quiz: { question: "Seeing the tension escalate, the police told the angry protesters to ___.", options: ["back off", "ask after", "add up to"], correctIndex: 0, explanation: "to move away or stop bothering." } 
+      },
+      { 
+        pv: "Back out", trope: "The Last-Minute Cancel", cefr: "B2", icon: Undo2, 
+        meaning: "To fail to keep a promise, agreement, or commitment.", 
+        meaningJP: "（約束や契約を）取り消す、手を引く", 
+        example: "We had a solid business deal, but he backed out at the absolute last minute.", 
+        exampleJP: "確固たる取引だったのに、彼は最後の最後になって手を引いた。",
+        vibes: ["Canceled plans and frustration", "Broken business promises", "Flaky behavior"], 
+        vibesJP: ["キャンセルされた計画と苛立ち", "破られたビジネスの約束", "当てにならない行動"],
+        storyline: "The school band was totally ready for the biggest show of the year. But the lead singer, terrified of the massive crowd, backed out the night before, leaving everyone in a panic.", 
+        storylineJP: "スクールバンドは今年最大のライブに向けて完全に準備が整っていた。しかし、大群衆に怯えたボーカルが前夜になって手を引いてしまい、残されたメンバーはパニックに陥った。", 
+        quiz: { question: "You've already signed the papers; you can't just ___ of the contract now.", options: ["back out", "ask in", "act up"], correctIndex: 0, explanation: "to withdraw from a commitment." } 
+      },
+      { 
+        pv: "Back out of", trope: "The Dangerous Driveway", cefr: "B1", icon: AlertTriangle, 
+        meaning: "To exit a place (like a driveway or garage) in a vehicle using reverse gear.", 
+        meaningJP: "（車を）バックで出す", 
+        example: "Be extremely careful when you back out of the driveway; little kids are playing nearby.", 
+        exampleJP: "私道からバックで車を出す時は細心の注意を払って。近くで小さな子供たちが遊んでいるから。",
+        vibes: ["Driving safety warnings", "Reversing out of home driveways", "Cautious vehicle movement"], 
+        vibesJP: ["運転の安全警告", "自宅の私道からバックで出る", "慎重な車両の動き"],
+        storyline: "The alleyway was incredibly narrow and lined with fragile flower pots. Hina checked all her mirrors obsessively, slowly and carefully backing out of the tight space.", 
+        storylineJP: "その路地は信じられないほど狭く、壊れやすい植木鉢が並んでいた。ヒナはすべての鏡を執拗に確認し、何のダメージも与えずにその狭いスペースからゆっくりと慎重に車をバックで出した。", 
+        quiz: { question: "She shifted into reverse and slowly ___ the dark parking garage.", options: ["backed out of", "asked after", "added up"], correctIndex: 0, explanation: "to exit a space in reverse." } 
+      },
+      { 
+        pv: "Back up", trope: "The Cloud Save Crisis", cefr: "B1", icon: Cloud, 
+        meaning: "To make a secure digital copy of information or files.", 
+        meaningJP: "（データの）控えを取る、バックアップする", 
+        example: "You'll lose your entire 20-page essay if you don't back up your files to the cloud right now!", 
+        exampleJP: "今すぐクラウドにファイルをバックアップ（控えを取る）しないと、20ページのエッセイを丸ごと失うことになるよ！",
+        vibes: ["Tech advice and warnings", "Data safety protocols", "Preventing computer disasters"], 
+        vibesJP: ["テクノロジーのアドバイスと警告", "データの安全プロトコル", "コンピュータの大惨事を防ぐ"],
+        storyline: "Right in the middle of writing his final thesis, Sora's old laptop suddenly died completely. 'Oh thank god... Good thing I backed up everything to the external drive yesterday,' he sighed.", 
+        storylineJP: "卒業論文を執筆している真っ最中に、ソラの古いノートPCが突然完全に沈黙した。「ああ、神様ありがとう...昨日すべてを外付けドライブにバックアップしておいて（控えを取っておいて）本当に良かった」と彼は安堵のため息をついた。", 
+        quiz: { question: "Before installing the new operating system, make sure you ___ your important work.", options: ["back up", "ask about", "act on"], correctIndex: 0, explanation: "to copy data for safety." } 
+      },
+      { 
+        pv: "Back up", trope: "The Boardroom Support", cefr: "B2", icon: Shield, 
+        meaning: "To support someone or defend their statement with evidence.", 
+        meaningJP: "（人を）支援する、（話を）裏付ける", 
+        example: "I really appreciate you backing me up when the CEO questioned my controversial data.", 
+        exampleJP: "CEOが私の物議を醸すデータを疑った時、あなたが私を支持（裏付け）してくれたことに本当に感謝しています。",
+        vibes: ["Co-worker loyalty and support", "Providing proof in an argument", "Defending a friend in public"], 
+        vibesJP: ["同僚の忠誠心とサポート", "議論で証拠を提供する", "公の場で友人を擁護する"],
+        storyline: "Leo made a bold proposal during the board meeting. When the strict managers started to doubt him, Mika stood up and backed him up with solid, undeniable research data.", 
+        storylineJP: "役員会議で、レオは大胆な提案をした。厳しいマネージャーたちが彼を疑い始めたとき、ミカが立ち上がり、確実で否定できない調査データで彼を裏付け（援護し）、見事に形勢を逆転させた。", 
+        quiz: { question: "If the police ask questions, will you ___ my story about where I was?", options: ["back up", "ask around", "act out"], correctIndex: 0, explanation: "to support someone's statement." } 
+      },
+      { 
+        pv: "Bag out", trope: "The Unfair Online Critic", cefr: "C1", icon: Angry, 
+        meaning: "To criticize someone or something harshly and unfairly.", 
+        meaningJP: "（不当に）酷評する、けなす", 
+        example: "It's seriously not fair to bag out his hard work just because you have a personal grudge against him.", 
+        exampleJP: "個人的な恨みがあるからといって、彼の努力を不当に酷評するのは本当にフェアじゃないよ。",
+        vibes: ["Defending creative work", "Dealing with negative online reviews", "Calling out social bullying"], 
+        vibesJP: ["クリエイティブな作品を擁護する", "ネットの否定的なレビューに対処する", "社会的なイジメを非難する"],
+        storyline: "Before the highly anticipated new movie even released a full trailer, anonymous trolls on the internet started to mercilessly bag it out. Hina boldly stood up on social media to defend it.", 
+        storylineJP: "期待の新作映画のフルトレーラーが公開される前から、ネット上の匿名の荒らし（トロール）たちは容赦なくそれを酷評し始めた。ヒナはそれを守るためにSNSで勇敢に立ち上がった。", 
+        quiz: { question: "You should really stop ___ the new restaurant; the food was actually quite good.", options: ["bagging out", "asking for", "adding on"], correctIndex: 0, explanation: "to criticize harshly." } 
+      },
+      { 
+        pv: "Bail out", trope: "The Startup Rescue", cefr: "B2", icon: DollarSign, 
+        meaning: "To rescue someone or an organization from a difficult situation, usually with money.", 
+        meaningJP: "（窮地から）救い出す、財政援助する", 
+        example: "My parents had to bail me out when I stupidly ran out of money halfway through my Europe trip.", 
+        exampleJP: "ヨーロッパ旅行の途中で愚かにもお金が尽きた時、両親は私を財政的に救済しなければならなかった。",
+        vibes: ["Receiving vital financial help", "Rescuing friends from emergencies", "Government or business bailouts"], 
+        vibesJP: ["不可欠な財政援助を受ける", "友人を緊急事態から救う", "政府や企業の救済措置"],
+        storyline: "The innovative tech startup was rapidly bleeding cash. Just days before they had to declare bankruptcy, a mysterious new angel investor swooped in and bailed them out with a million-dollar check.", 
+        storylineJP: "そのテック系スタートアップは急速に資金を失っていた。自己破産を宣言するわずか数日前、謎の新たなエンジェル投資家が舞い降り、100万ドルの小切手で彼らを救済した（救い出した）。", 
+        quiz: { question: "During the massive economic crisis, the government successfully ___ the failing central bank.", options: ["bailed out", "asked over", "backed into"], correctIndex: 0, explanation: "to rescue from difficulty." } 
+      },
+      { 
+        pv: "Bail out of", trope: "The Weekend Legal Crisis", cefr: "B2", icon: Gavel, 
+        meaning: "To pay a legal sum of money to release someone from jail until their trial.", 
+        meaningJP: "保釈金を払って（牢屋から）出す", 
+        example: "After the wild misunderstanding at the club, he had to bail his foolish brother out of jail.", 
+        exampleJP: "クラブでのひどい誤解の後、彼は愚かな弟を保釈金を払って牢屋から出さなければならなかった。",
+        vibes: ["Dealing with legal crises", "Family members causing deep trouble", "Late nights at police stations"], 
+        vibesJP: ["法的危機への対処", "深いトラブルを起こす家族", "警察署での深夜"],
+        storyline: "The peaceful protest suddenly turned into a chaotic riot. By Monday morning, exhausted lawyers were working around the clock to bail dozens of innocent students out of the city jail.", 
+        storylineJP: "平和的な抗議活動は、突然カオスな暴動へと発展した。月曜の朝までに、疲れ果てた弁護士たちは、何十人もの無実の学生たちを拘置所から保釈させるために24時間体制で働いていた。", 
+        quiz: { question: "He desperately needed $5,000 in cash to be safely ___ the local jail.", options: ["bailed out of", "asked into", "added up to"], correctIndex: 0, explanation: "to pay for someone's release." } 
+      },
+      { 
+        pv: "Bail out on", trope: "The Critical Team Betrayal", cefr: "B2", icon: LogOut, 
+        meaning: "To stop supporting someone or to leave them in a difficult situation suddenly.", 
+        meaningJP: "（土壇場で）見捨てる、逃げ出す", 
+        example: "I literally can't believe she bailed out on us right before the most important presentation of the year!", 
+        exampleJP: "今年最も重要なプレゼンの直前に、彼女が私たちを見捨てて逃げ出したなんて文字通り信じられない！",
+        vibes: ["Extreme team frustration", "Quitting under pressure", "Flaky friends betraying trust"], 
+        vibesJP: ["チームの極度のフラストレーション", "プレッシャーで辞める", "当てにならない友人の裏切り"],
+        storyline: "The crucial design project was only halfway done. To everyone's absolute shock, the arrogant team leader bailed out on them to take a sudden luxury vacation, leaving them to fail.", 
+        storylineJP: "極めて重要なデザインプロジェクトはまだ半分しか終わっていなかった。全員が絶対にショックを受けたことに、傲慢なチームリーダーは突然の豪華な休暇を取るために彼らを見捨てて逃げ出し、彼らを失敗の危機に陥れた。", 
+        quiz: { question: "Please don't ___ me now; I desperately need your help to finish this on time!", options: ["bail out on", "ask for", "back into"], correctIndex: 0, explanation: "to abandon someone in need." } 
+      },
+      { 
+        pv: "Bail up", trope: "The Overly Chatty Neighbor", cefr: "C1", icon: MessageCircle, 
+        meaning: "To talk to someone and delay them, often when they are clearly in a hurry.", 
+        meaningJP: "（人を）引き止めて長々と話す、足止めする", 
+        example: "I'm so sorry I'm late; the talkative neighbor bailed me up for an hour chatting about her new garden.", 
+        exampleJP: "遅れて本当にごめん。おしゃべりなご近所さんに新しい庭の話で1時間も引き止められちゃって。",
+        vibes: ["Causing someone to be late", "Enduring unwanted, endless talk", "Social delays you can't escape"], 
+        vibesJP: ["誰かを遅刻させる", "望まない終わりのない話に耐える", "逃れられない社交的な遅れ"],
+        storyline: "Sora was sprinting down the hallway, desperate not to be late for his final exam. Suddenly, the lonely history teacher stepped out and bailed him up with a twenty-minute story about a lost book.", 
+        storylineJP: "ソラは期末試験に遅れまいと必死に廊下を全速力で走っていた。突然、寂しがり屋の歴史の先生が現れ、紛失した本についての20分に及ぶ長話で彼を引き止め（足止めし）た。", 
+        quiz: { question: "I tried to leave quietly, but he ___ me in the corridor to complain about the constant noise.", options: ["bailed up", "backed down", "added up"], correctIndex: 0, explanation: "to delay someone with talk." } 
+      },
+      { 
+        pv: "Ball up", trope: "The Schedule Mess", cefr: "C1", icon: HelpCircle, 
+        meaning: "To confuse someone completely or to mess a situation up badly.", 
+        meaningJP: "（人を）混乱させる、状況をめちゃくちゃにする", 
+        example: "The constant, unexplained changes to the new schedule have completely balled me up; I don't know where to go.", 
+        exampleJP: "新しいスケジュールの絶え間ない説明のない変更が私を完全に混乱させている。どこに行けばいいか分からない。",
+        vibes: ["Total mental confusion", "Dealing with overly complex systems", "Making frustrating mistakes"], 
+        vibesJP: ["完全な精神的混乱", "複雑すぎるシステムへの対処", "イライラするミスをする"],
+        storyline: "The tournament organizers kept shifting the match times without warning. The endless rule changes completely balled up the young players, leading to total chaos and missed games.", 
+        storylineJP: "大会の主催者は予告なしに試合時間を何度も変更した。終わりのないルールの変更が若い選手たちを完全に混乱させ、大混乱を招き、いくつかのチームが重要な試合をすっぽかす事態となった。", 
+        quiz: { question: "All these shifting numbers and weird formulas are starting to really ___ me ___.", options: ["ball / up", "ask / after", "act / on"], correctIndex: 0, explanation: "to confuse or mess up." } 
+      },
+      { 
+        pv: "Balls up", trope: "The Exam Regret", cefr: "C2", icon: Trash2, 
+        meaning: "To spoil or ruin an opportunity or plan through a massive, stupid mistake.", 
+        meaningJP: "（せっかくの機会を）台無しにする、大失敗する", 
+        example: "I really ballsed up my chances of getting that dream job by arriving thirty minutes late.", 
+        exampleJP: "30分も遅刻したせいで、あの夢の仕事に就くチャンスを本当に大失敗で台無しにしてしまった。",
+        vibes: ["Deep personal failure", "Ruined long-term plans", "Intense regret over an error"], 
+        vibesJP: ["深い個人的な失敗", "台無しになった長期計画", "ミスに対する激しい後悔"],
+        storyline: "Sora had studied endlessly for the vital entrance exam. But on the big day, he accidentally turned off his alarm. By sleeping in, he absolutely ballsed up his presentation and had to wait a full year to try again.", 
+        storylineJP: "ソラは極めて重要な入学試験に向けて果てしなく勉強していた。しかし大一番の日、彼は誤ってアラームを消してしまった。寝坊したことでプレゼンを完全に台無しにしてしまい、再挑戦のために丸1年待つ羽目になった。", 
+        quiz: { question: "I'm so sorry, I totally ___ the surprise party plan by texting him the location.", options: ["ballsed up", "asked around", "backed away"], correctIndex: 0, explanation: "to ruin or spoil completely." } 
+      },
+      { 
+        pv: "Bang about", trope: "The Noisy Upstairs Neighbors", cefr: "B1", icon: Volume2, 
+        meaning: "To move around a place making a lot of loud, disruptive noise.", 
+        meaningJP: "（物を動かしたりして）どたばた騒ぐ、音を立てる", 
+        example: "For heaven's sake, stop banging about upstairs! I'm trying to study for a test!", 
+        exampleJP: "お願いだから、上の階でどたばた騒ぐのをやめて！テスト勉強をしようとしてるのよ！",
+        vibes: ["Yelling at noisy siblings", "Dealing with severe sleep disruption", "Heavy, careless footsteps"], 
+        vibesJP: ["うるさい兄弟に怒鳴る", "深刻な睡眠妨害への対処", "重く不注意な足音"],
+        storyline: "It was 3 AM, and Kaito had a massive headache. Yet, the inconsiderate new neighbors in the apartment above him were banging about, seemingly moving heavy wooden furniture across the floor.", 
+        storylineJP: "深夜3時、海斗はひどい頭痛を抱えていた。それなのに、上の階の無神経な新しい住人たちは、まるで重い木製の家具を床で引きずっているかのように、どたばたと騒ぎ（音を立てて）続けていた。", 
+        quiz: { question: "The hyperactive kids were ___ in the kitchen, knocking over pots and pans.", options: ["banging about", "asking in", "adding on"], correctIndex: 0, explanation: "to make noise while moving." } 
+      },
+      { 
+        pv: "Bang on", trope: "The Obsessive Monologue", cefr: "B2", icon: MessageCircle, 
+        meaning: "To talk at great, annoying length about a single, specific topic.", 
+        meaningJP: "（～について）うんざりするほどだらだらとしゃべり続ける", 
+        example: "He spent the entire romantic dinner just banging on about the specs of his stupid new car.", 
+        exampleJP: "彼はロマンチックなディナーの間中ずっと、彼のバカげた新車のスペックについてだらだらとしゃべり続けていた。",
+        vibes: ["Boring a captive audience", "Being overly talkative about a niche topic", "An annoying monologue"], 
+        vibesJP: ["逃げ場のない聴衆を退屈させる", "ニッチな話題でしゃべりすぎる", "鬱陶しい独り言"],
+        storyline: "The train ride was four hours long. Unfortunately for Kaito, Mika spent the entire trip endlessly banging on about the intricate lore of her favorite new anime, until Kaito was completely exhausted.", 
+        storylineJP: "電車の旅は4時間にも及んだ。海斗にとって不運なことに、ミカは道中ずっとお気に入りの新作アニメの複雑な設定について果てしなくだらだらとしゃべり続け、海斗は完全に疲れ果ててしまった。", 
+        quiz: { question: "I wish she'd stop; she's always ___ about how smart her cat is.", options: ["banging on", "backing out", "asking after"], correctIndex: 0, explanation: "to talk at length annoyingly." } 
+      },
+      { 
+        pv: "Bang up", trope: "The Parking Lot Crash", cefr: "B1", icon: AlertTriangle, 
+        meaning: "To damage something badly, especially a vehicle, through a collision or rough use.", 
+        meaningJP: "（車などを）ひどくぶつける、傷つける", 
+        example: "She wasn't paying attention and banged her new car up pretty badly in the supermarket parking lot.", 
+        exampleJP: "彼女は不注意で、スーパーの駐車場で新車をかなりひどくぶつけて傷つけてしまった。",
+        vibes: ["Dealing with minor car accidents", "Physical damage to property", "Careless crashes"], 
+        vibesJP: ["軽い交通事故の処理", "器物損壊", "不注意な衝突"],
+        storyline: "The mountain trail was incredibly slick from the rain. During a sharp turn, Sora lost control and slid. The expensive racing bike was seriously banged up, but Sora luckily walked away unhurt.", 
+        storylineJP: "山道は雨で信じられないほど滑りやすくなっていた。急カーブでソラはコントロールを失いスリップした。高価なレーシングバイクはひどくボロボロになった（傷んだ）が、ソラは幸いにも無傷で歩いて帰れた。", 
+        quiz: { question: "He fell off his skateboard and completely ___ his knee on the rough concrete.", options: ["banged up", "asked for", "added up to"], correctIndex: 0, explanation: "to damage or injure badly." } 
+      },
+      { 
+        pv: "Bank on", trope: "The High-Stakes Reliance", cefr: "B2", icon: Shield, 
+        meaning: "To count on or rely heavily on someone or something happening as planned.", 
+        meaningJP: "～を（強く）当てにする、頼りにする", 
+        example: "The project is huge; I'm really banking on your expert help to finish this report on time.", 
+        exampleJP: "このプロジェクトは巨大だ。時間通りにこのレポートを仕上げるために、君の専門的な助けを本当に当てにしているよ。",
+        vibes: ["Heavy reliance on a coworker", "Stressing over strict deadlines", "Placing deep trust in someone"], 
+        vibesJP: ["同僚への強い依存", "厳しい締め切りへのストレス", "誰かに深い信頼を寄せる"],
+        storyline: "The outdoor spring wedding had taken a full year to plan perfectly. The anxious bride looked at the cloudy sky. 'We're really banking on the weather clearing up by noon,' she whispered.", 
+        storylineJP: "屋外での春の結婚式は、完璧に計画するのに丸1年かかった。不安げな花嫁は曇り空を見上げた。「正午までに天気が回復することを、本当に切に願っている（当てにしている）わ」と彼女は囁いた。", 
+        quiz: { question: "Given his terrible track record, I certainly wouldn't ___ him arriving here on time.", options: ["bank on", "ask around", "back into"], correctIndex: 0, explanation: "to rely heavily upon." } 
+      },
+      { 
+        pv: "Bargain for", trope: "The Unexpectedly Huge Crowd", cefr: "C1", icon: AlertTriangle, 
+        meaning: "To expect or be prepared for a specific (usually intense) situation to happen.", 
+        meaningJP: "（事態などを）予期する、覚悟する", 
+        example: "We planned a small event; we certainly didn't bargain for such a massive, chaotic crowd.", 
+        exampleJP: "私たちは小さなイベントを計画した。こんなにも巨大でカオスな群衆が集まるなんて、絶対に予期していなかった。",
+        vibes: ["Facing intense, surprise situations", "Underestimating a major challenge", "Realizing things are out of control"], 
+        vibesJP: ["激しい予期せぬ状況に直面する", "大きな課題を過小評価する", "物事が制御不能だと気づく"],
+        storyline: "Haru thought the math final would be a breeze since he studied for a whole hour. But as he looked at the complex formulas on the first page, he sweated. The test was far harder than he had bargained for.", 
+        storylineJP: "ハルは丸1時間も勉強したのだから、数学の期末試験は楽勝だと思っていた。しかし1ページ目の複雑な数式を見た瞬間、彼は冷や汗をかいた。そのテストは、彼が予期していた（覚悟していた）よりも遥かに難しかったのだ。", 
+        quiz: { question: "Repairing this old, rotting house is proving to be far more expensive than we ___.", options: ["bargained for", "asked after", "added up"], correctIndex: 0, explanation: "to expect or prepare for." } 
+      },
+      { 
+        pv: "Barge in", trope: "The Sibling's Total Lack of Privacy", cefr: "B2", icon: Lock, 
+        meaning: "To enter a room or conversation rudely or abruptly without knocking or asking.", 
+        meaningJP: "ずかずかと割り込む、無作法に入り込む", 
+        example: "Please learn to knock! Don't just arbitrarily barge into my room while I'm trying to dress.", 
+        exampleJP: "ノックすることくらい覚えてよ！着替えている最中に、勝手に私の部屋にずかずかと割り込んでこないで。",
+        vibes: ["Dealing with annoying sibling privacy issues", "Rude interruptions in a meeting", "A general lack of personal boundaries"], 
+        vibesJP: ["イライラする兄弟のプライバシー問題", "会議中の失礼な割り込み", "全体的なパーソナルスペースの欠如"],
+        storyline: "Leo was in the middle of a highly sensitive, secret video call with his project team. Suddenly, the door flew open and his oblivious little sister barged in, loudly demanding help with her math homework.", 
+        storylineJP: "レオはプロジェクトチームとの非常に機密性の高い秘密のビデオ通話の真っ最中だった。突然ドアが勢いよく開き、無神経な妹がずかずかと割り込んできて、大声で算数の宿題を手伝うよう要求した。", 
+        quiz: { question: "It's incredibly rude how he always ___ on our private conversations without even a polite knock.", options: ["barges in", "backs off", "asks out"], correctIndex: 0, explanation: "to enter or interrupt rudely." } 
+      }
     ],
-
     3: [
-
-      { pv: "Bash about", trope: "The Rough Treatment", cefr: "C1", icon: Hammer, meaning: "To treat something roughly, risking damage.", meaningJP: "手荒に扱う", example: "Don't bash your expensive new laptop about like that!", vibes: ["Caring for gadgets", "Giving stern advice", "Rough physical handling"], storyline: "Sato was furious after losing the match. He carelessly bashed his sports bag about the locker room, completely forgetting his fragile new laptop was inside.", storylineJP: "試合に負けた後、佐藤は激怒していた。彼はロッカールームでスポーツバッグを不注意に手荒に扱い、中に壊れやすい新品のノートPCが入っていることを完全に忘れていた。", quiz: { question: "Please be gentle and don't ___ your fragile toys ___.", options: ["bash / about", "be / after", "be / on"], correctIndex: 0, explanation: "to treat roughly." } },
-
-      { pv: "Bash in", trope: "The Emergency Rescue", cefr: "B2", icon: AlertTriangle, meaning: "To break something by hitting it with great force.", meaningJP: "（叩いて）ぶち壊す、打ち破る", example: "The desperate burglars bashed the heavy oak door in.", vibes: ["Using extreme force", "Emergency rescues", "Significant property damage"], storyline: "Thick, black smoke filled the hallway, and the panicked cat was trapped. With no time for keys, the heroic firefighters used an axe to brutally bash the door in and save the animal.", storylineJP: "濃く黒い煙が廊下に充満し、パニックになった猫が閉じ込められていた。鍵を探す時間はないと判断し、英雄的な消防士たちは斧を使って力任せにドアをぶち破り、動物を救出した。", quiz: { question: "To escape the burning building, they completely ___ the barred window.", options: ["bashed in", "be along", "be down"], correctIndex: 0, explanation: "to break by hitting hard." } },
-
-      { pv: "Bash out", trope: "The Deadline Rush", cefr: "C1", icon: Zap, meaning: "To write or produce something very quickly, often without much care.", meaningJP: "（大急ぎで）一気に書き上げる", example: "I managed to bash the 2,000-word essay out in a panic.", vibes: ["Racing against a tight deadline", "Last-minute exam panic", "Frantic typing"], storyline: "Rin had completely forgotten about the history assignment. Gulping down an energy drink, she miraculously managed to bash out the entire five-page report just minutes before the bell rang.", storylineJP: "リンは歴史の重要な課題のことを完全に忘れていた。エナジードリンクを一気飲みし、彼女は奇跡的にも、チャイムが鳴る数分前に全5ページのレポートを一気に書き上げることに成功した。", quiz: { question: "Working against the clock, she efficiently ___ the apology letter.", options: ["bashed out", "be along", "be in"], correctIndex: 0, explanation: "to write quickly." } },
-
-      { pv: "Bash up", trope: "The Pub Fight", cefr: "B2", icon: Angry, meaning: "To physically damage someone or something very badly.", meaningJP: "（殴って）ボコボコにする、ひどく壊す", example: "He got terribly bashed up in a pointless street fight.", vibes: ["Describing physical injury", "A violent accident", "A rough brawl"], storyline: "The atmosphere after the championship game was incredibly tense. When the rival fans clashed, the losing team's luxury bus got completely bashed up, its windows shattered.", storylineJP: "優勝決定戦の後の雰囲気は信じられないほど緊迫していた。ライバルファン同士が衝突した際、敗れたチームの豪華なバスは完全にボコボコにされ、窓は砕け散った。", quiz: { question: "After rolling down the rocky hill, the remote-control car was totally ___.", options: ["bashed up", "be off", "be cut up"], correctIndex: 0, explanation: "to damage badly." } },
-
-      { pv: "Bawl out", trope: "The Furious Coach", cefr: "C1", icon: Volume2, meaning: "To shout at someone very crossly and loudly as a scolding.", meaningJP: "（激しく）怒鳴りつける、大声で叱る", example: "The strict coach fiercely bawled me out in front of the team.", vibes: ["Severe scolding", "Intimidating authority figures", "Making a terrible mistake"], storyline: "It was the final quarter, and Sora totally missed the easiest pass. Furious, the strict head coach called a timeout and brutally bawled him out in front of the staring crowd.", storylineJP: "最終クォーター、ソラは最も簡単なパスを完全に見逃した。激怒した厳格なヘッドコーチはタイムアウトを取り、静かに見つめる観衆の目の前で彼を容赦なく激しく怒鳴りつけた。", quiz: { question: "For losing the crucial files, the unforgiving boss loudly ___ him ___.", options: ["bawled / out", "bash / in", "be / after"], correctIndex: 0, explanation: "to shout at crossly." } },
-
-      { pv: "Be after", trope: "The Suspicious Motive", cefr: "B1", icon: Search, meaning: "To search for something or try to obtain it, sometimes with a hidden motive.", meaningJP: "探し求める、狙う", example: "Exactly what are you after in my private office?", vibes: ["Hidden ambition", "Deep suspicion", "Chasing a specific goal"], storyline: "The famous art gallery was dark, but a shadow slipped past the lasers. The guards knew exactly what the master thief was after: the legendary, cursed diamond.", storylineJP: "有名な美術館は暗闇に包まれていたが、一つの影がレーザーをすり抜けた。警備員たちは、その大泥棒が何を狙っているのかを正確に把握していた。伝説の呪われたダイヤモンドだ。", quiz: { question: "Given his sudden extreme politeness, I strongly suspect he is ___ my executive job.", options: ["after", "along", "away"], correctIndex: 0, explanation: "to try to get." } },
-
-      { pv: "Be along", trope: "The Reassuring Wait", cefr: "B1", icon: Clock, meaning: "To arrive at a place, usually soon.", meaningJP: "やって来る、到着する", example: "Don't fret; the next express bus should be along very soon.", vibes: ["Anticipating an arrival", "Waiting patiently", "Offering reassuring certainty"], storyline: "The young recruits were shivering in the dark forest, terrified. 'Don't worry, stay calm,' veteran Sora assured them. 'Our heavily armed backup team will be along before sunset.'", storylineJP: "若い新兵たちは暗い森の中で震え、怯えていた。「心配するな、落ち着け」とベテランのソラが請け負った。「重武装の援護部隊が日没前にはやって来るはずだ。」", quiz: { question: "Please take a seat in the waiting room; the head doctor will ___ shortly.", options: ["be along", "be off", "be onto"], correctIndex: 0, explanation: "to arrive soon." } },
-
-      { pv: "Be away", trope: "The Long Business Trip", cefr: "A2", icon: Map, meaning: "To be in another place, typically traveling or not at home.", meaningJP: "不在にする、出かけている", example: "I'll unfortunately be away on business for the next month.", vibes: ["Exciting travel plans", "A temporary absence", "Updating friends on holidays"], storyline: "Summer vacation was finally here, but the friend group would be incomplete. Hina cheerfully announced she would be away studying advanced English in London for two weeks.", storylineJP: "ついに夏休みが来たが、いつものグループは全員揃わなかった。ヒナは、ロンドンで上級英語を学ぶため、丸2週間不在にする（出かける）と明るく発表したのだ。", quiz: { question: "You can't reach the regional manager this week because he is ___ on a tropical holiday.", options: ["away", "in", "on"], correctIndex: 0, explanation: "to be elsewhere." } },
-
-      { pv: "Be cut out for", trope: "The Perfect Fit", cefr: "B2", icon: CheckCircle2, meaning: "To be naturally suitable for a specific job, role, or activity.", meaningJP: "～に向いている、適任である", example: "I honestly don't think I'm cut out for a boring desk job.", vibes: ["Discovering one's true career", "Finding a perfect fit", "Questioning personal aptitude"], storyline: "After a week of trying to organize tedious spreadsheets, Mika threw her pen down. She realized with absolute certainty she wasn't cut out for a quiet life; her soul craved creative adventures.", storylineJP: "退屈なスプレッドシートを1週間整理しようと試みた後、ミカはペンを放り投げた。彼女は自分が静かな生活には向いていないと悟った。彼女の魂は、創造的な冒険を激しく求めていたのだ。", quiz: { question: "Given his extreme shyness, is he really ___ public relations work?", options: ["cut out for", "cut down", "be off"], correctIndex: 0, explanation: "to be suitable." } },
-
-      { pv: "Be cut up", trope: "The Deep Grief", cefr: "C1", icon: Heart, meaning: "To be very emotionally upset or deeply saddened by something.", meaningJP: "ひどく悲しむ、ひどく落ち込む", example: "She was visibly cut up about failing her final exam.", vibes: ["Profound sadness", "Deep, lingering regret", "Emotional pain"], storyline: "It wasn't just a pet; it was his best friend of fifteen years. When the loyal old dog finally passed away, Leo was so completely cut up that he locked himself in his room for three days.", storylineJP: "それはただのペットではなく、15年来の親友だった。その忠実な老犬が息を引き取った時、レオはあまりにもひどく悲しみ、部屋に閉じこもり、3日間一言も話すことができなかった。", quiz: { question: "He was absolutely ___ when he heard the tragic news on the radio.", options: ["cut up", "cut out", "cut in"], correctIndex: 0, explanation: "to be very upset." } },
-
-      { pv: "Be down", trope: "The Quiet Concern", cefr: "B1", icon: Cloud, meaning: "To feel depressed, sad, or lacking in energy.", meaningJP: "落ち込んでいる、元気がない", example: "You've been really down lately. Do you want to talk about it?", vibes: ["Offering gentle support", "A lingering sadness", "Worrying about a friend"], storyline: "The heavy rain wouldn't stop pouring. Staring out the window, Sora was noticeably down because the championship baseball game he had trained months for was permanently canceled.", storylineJP: "重い雨が降り続いていた。窓から外を見つめながら、ソラは明らかに落ち込んでいた。何ヶ月も練習してきた野球の優勝決定戦が、永久に中止になってしまったからだ。", quiz: { question: "Ever since her best friend moved away, I've been feeling a bit ___.", options: ["down", "on", "out"], correctIndex: 0, explanation: "to feel sad." } },
-
-      { pv: "Be down on", trope: "The Unfair Critique", cefr: "C1", icon: XOctagon, meaning: "To be highly critical of someone or hold a negative attitude toward them.", meaningJP: "（人に対して）批判的である、厳しく当たる", example: "I feel like the senior boss is really down on me this month.", vibes: ["Unfair workplace strictness", "Constant negative pressure", "A biased critique"], storyline: "It was a tiny, honest mistake on a minor report. But ever since that one specific error, her perfectionist aunt has been relentlessly down on Mika, criticizing her every single move.", storylineJP: "それは些細で正直なミスだった。しかしその特定のミス以来、完璧主義の叔母はミカに対して容赦なく厳しく当たり、彼女の一挙手一投足を批判し続けている。", quiz: { question: "Why are you so aggressively ___ him just because he made one error?", options: ["down on", "down with", "up on"], correctIndex: 0, explanation: "to be critical." } },
-
-      { pv: "Be down with", trope: "The Winter Sickness", cefr: "B1", icon: Activity, meaning: "To be ill in bed with a specific disease or sickness.", meaningJP: "（病気で）寝込む、かかっている", example: "Poor Kaito is down with a nasty strain of the flu.", vibes: ["Feeling terribly sick", "Reporting a school absence", "Winter health issues"], storyline: "The classroom was half empty and eerily quiet. The teacher announced that Kaito, along with six other students, was down with a severe stomach flu and wouldn't be at the sports festival.", storylineJP: "教室は半分空席で不気味なほど静かだった。先生は、カイトが他の6人の生徒と共にひどい胃腸炎で寝込んでおり、体育祭には参加できないと発表した。", quiz: { question: "Unfortunately, the lead actress is ___ a terrible cold and cannot perform.", options: ["down with", "up with", "on with"], correctIndex: 0, explanation: "to be ill." } },
-
-      { pv: "Be fed up", trope: "The Absolute Limit", cefr: "B1", icon: Angry, meaning: "To be completely annoyed, bored, or frustrated with a continuing situation.", meaningJP: "うんざりしている、愛想が尽きる", example: "I am absolutely fed up with this endless, freezing rain.", vibes: ["Reaching one's absolute limit", "Intense boredom", "Deep, vocal annoyance"], storyline: "The sirens wailed constantly, and the smog was thick. Mika was completely fed up with the noisy, toxic city life and intensely dreamed of building a quiet, solitary wooden house in the woods.", storylineJP: "サイレンが絶えず鳴り響き、スモッグは濃かった。ミカは騒がしく有毒な都会の生活に完全にうんざりし、森の奥深くに静かな木の家を建てることを強烈に夢見ていた。", quiz: { question: "I'm totally ___ with this dead-end, soul-crushing job.", options: ["fed up", "fed in", "fed on"], correctIndex: 0, explanation: "to be annoyed." } },
-
-      { pv: "Be in", trope: "The Home Check", cefr: "A1", icon: Home, meaning: "To be present at one's home or office.", meaningJP: "在宅している、オフィスにいる", example: "Will you actually be in later tonight?", vibes: ["Checking someone's availability", "Planning a quick visit", "Confirming presence"], storyline: "Grandpa was expecting a highly fragile antique package to be delivered right at noon. He firmly told the family to cancel all plans because he had to make absolutely sure to be in.", storylineJP: "祖父は正午きっかりに、非常に壊れやすいアンティークの荷物が届くのを待っていた。彼は、絶対に在宅しているようにしなければならないと言って、家族にすべての予定をキャンセルするよう言った。", quiz: { question: "Excuse me, is the head doctor ___ his office today?", options: ["in", "on", "at"], correctIndex: 0, explanation: "to be present." } },
-
-      { pv: "Be in on", trope: "The Exclusive Secret", cefr: "B2", icon: Key, meaning: "To be involved in a plan or to know a shared secret.", meaningJP: "仲間に加わっている、秘密を知っている", example: "I felt totally left out because I wasn't in on the master plan.", vibes: ["Knowing exclusive secrets", "Being part of an inside group", "Sharing confidential info"], storyline: "When the strict club president was suddenly overthrown, complete chaos erupted. It turned out that only a few highly trusted, core senior members were actually in on the secret plan to replace him.", storylineJP: "厳格な部長が突然引きずり降ろされた時、完全なカオスが巻き起こった。実は、彼を交代させるという秘密の計画に加わっていた（知っていた）のは、ごく少数の中核的な上級生だけだったのだ。", quiz: { question: "Are you sure you are completely ___ the secret surprise arrangement?", options: ["in on", "in at", "in to"], correctIndex: 0, explanation: "to know a secret." } },
-
-      { pv: "Be not on", trope: "The Unacceptable Conduct", cefr: "C1", icon: XCircle, meaning: "To be considered completely unacceptable or unfair behavior.", meaningJP: "（行動が）受け入れられない、許されない", example: "Treating the junior staff like that is simply not on.", vibes: ["Enforcing moral boundaries", "Strict social rules", "A stern, formal warning"], storyline: "The older boys were maliciously picking on shy little Hina. Sora stepped forward, his fists clenched, and told them in a cold, icy tone, 'Talking to people like that is just not on. Apologize right now.'", storylineJP: "年上の少年たちが、内気で小さなヒナを悪意を持ってからかっていた。ソラは拳を握りしめて前に進み出ると、冷たい口調で彼らに言った。「人に対してあんな風に接するのは絶対に許されないことだ。今すぐ謝れ。」", quiz: { question: "Being consistently late for crucial team meetings is completely ___.", options: ["not on", "not in", "not up"], correctIndex: 0, explanation: "to be unacceptable." } },
-
-      { pv: "Be off", trope: "The Spoiled Milk", cefr: "B1", icon: Trash2, meaning: "To have gone bad or become rotten (usually referring to food).", meaningJP: "（食べ物が）腐っている、傷んでいる", example: "Ugh, don't pour that! I'm certain the milk is off.", vibes: ["Disgust in the kitchen", "Warning about bad food", "A sour, ruined smell"], storyline: "The power had been out all weekend in the sweltering heat. When Ken finally opened the fridge, the expensive imported meat was left out and, by Monday morning, it was clearly and dangerously off.", storylineJP: "猛暑の中、週末ずっと停電していた。ケンがようやく冷蔵庫を開けると、高価な輸入肉は放置され、月曜の朝には明らかに危険なほど腐っていた。", quiz: { question: "Don't eat that sushi; the fish smells incredibly ___.", options: ["off", "out", "on"], correctIndex: 0, explanation: "to have gone bad." } },
-
-      { pv: "Be on", trope: "The Functioning Appliance", cefr: "A1", icon: Zap, meaning: "To be functioning, operating, or currently happening.", meaningJP: "稼働している、（行事が）行われている", example: "Check if the electric heater is actually on.", vibes: ["Checking household appliances", "Confirming an event status", "Flowing energy"], storyline: "The old, abandoned mansion at the top of the hill had been empty for a decade. Yet, as the kids walked past at midnight, they shivered; the flickering, yellow lights in the top window were definitely on.", storylineJP: "丘の上にある古く見捨てられた館は、10年間誰も住んでいなかった。しかし、真夜中に子供たちが通り過ぎた時、彼らは身震いした。最上階の窓の、明滅する黄色い明かりは間違いなく点いていた（稼働していた）のだ。", quiz: { question: "Is the main television screen still ___ in the lobby?", options: ["on", "off", "in"], correctIndex: 0, explanation: "to be working." } },
-
-      { pv: "Be on about", trope: "The Confusing Nonsense", cefr: "B2", icon: MessageCircle, meaning: "To talk continuously about something, often in a confusing or boring way.", meaningJP: "（何について）言っているのか、長々と話す", example: "I have absolutely no idea what on earth he is on about.", vibes: ["Listening to pure nonsense", "Questioning a strange logic", "Enduring a confusing talk"], storyline: "Leo rushed into the room, breathless, and started frantically talking about invisible aliens hacking the school Wi-Fi. Mika stared at him blankly, seriously wondering what crazy conspiracy theory he was on about this time.", storylineJP: "レオは息を切らして部屋に駆け込み、見えない宇宙人が学校のWi-Fiをハッキングしていると狂ったように話し始めた。ミカは彼をぽかんと見つめ、今回彼がどんな陰謀論について言っているのかと真顔で不思議に思った。", quiz: { question: "What in the world are you ___ with all these crazy theories?", options: ["on about", "up about", "in about"], correctIndex: 0, explanation: "to talk confusingly." } },
-
-      { pv: "Be onto", trope: "The Detective's Realization", cefr: "B2", icon: Eye, meaning: "To discover a secret truth, hidden plan, or someone's true identity.", meaningJP: "（秘密や正体を）見破る、気づく", example: "You can drop the innocent act. I'm totally onto you.", vibes: ["Exposing a complex lie", "Discovering a hidden truth", "A tense mystery confrontation"], storyline: "The corporate spy thought his charming disguise was flawless and he was perfectly safe. But as he reached for the vault code, the sharp-eyed detective smiled coldly from the shadows. She was already onto his entire operation.", storylineJP: "企業スパイは自分の魅力的な変装は完璧で、完全に安全だと思い込んでいた。だが彼が金庫の暗号に手を伸ばした瞬間、鋭い目を持つ刑事が暗がりから冷たく微笑んだ。彼女はすでに彼の作戦すべての正体を見破っていたのだ。", quiz: { question: "The clever police investigators are finally ___ his complex smuggling scheme.", options: ["onto", "into", "upto"], correctIndex: 0, explanation: "to discover truth." } },
-
-      { pv: "Be out", trope: "The Missed Connection", cefr: "A1", icon: LogOut, meaning: "To be away from one's home or usual place of work.", meaningJP: "外出している、不在である", example: "I'm sorry, but my mom is out running errands right now.", vibes: ["Explaining an absence", "Visiting an empty house", "Taking a phone message"], storyline: "Kaito walked three miles in the rain to deliver the urgent letter to Hina's house. But when he arrived, the windows were dark and silent. Her brother answered the door and sighed, 'Sorry, Hina is out at the movies.'", storylineJP: "海斗は急ぎの手紙をヒナの家に届けるため、雨の中を3マイル歩いた。しかし到着してみると、窓は暗く静まり返っていた。彼女の兄がドアを開け、「ごめん、ヒナは映画で外出してるよ」とため息をついた。", quiz: { question: "I'm very sorry, but the manager is ___ for the afternoon.", options: ["out", "in", "on"], correctIndex: 0, explanation: "to be away." } },
-
-      { pv: "Be out of", trope: "The Empty Pantry", cefr: "A2", icon: ShoppingCart, meaning: "To have no more of a specific item or supply left.", meaningJP: "使い切っている、品切れである", example: "It's a disaster; we're completely out of coffee beans.", vibes: ["Searching a bare kitchen", "Checking depleted store inventory", "Needing an urgent restock"], storyline: "The massive storm hit harder than expected, freezing the roads and cutting off the supply trucks. By day three, panic set in as the small, isolated village realized they were completely out of clean bottled water.", storylineJP: "巨大な嵐は予想以上の猛威を振るい、道路を凍らせ、補給トラックを遮断した。3日目、孤立した小さな村がきれいなボトル入りの水を完全に使い切っている（切らしている）ことに気づき、パニックが広がった。", quiz: { question: "We cannot bake the cake because we are totally ___ sugar.", options: ["out of", "off of", "in of"], correctIndex: 0, explanation: "to have none left." } },
-
-      { pv: "Be snowed under", trope: "The Mountain of Work", cefr: "C1", icon: Wind, meaning: "To have an overwhelming, unmanageable amount of work to do.", meaningJP: "（仕事などに）ひどく追われている、忙殺されている", example: "I'm sorry I haven't called; I've been totally snowed under with endless paperwork.", vibes: ["Feeling crushing stress", "Being extremely busy", "Declining fun social invites"], storyline: "Sora stared longingly out the window at his friends playing soccer in the golden evening light. He desperately wanted to join, but he was completely snowed under with a terrifying mountain of university prep exams.", storylineJP: "ソラは窓の外で、夕暮れの光の中でサッカーをする友人たちを羨ましそうに見つめた。彼も必死に加わりたかったが、恐ろしいほど山積みの大学受験準備に完全に追われて（忙殺されて）いたのだ。", quiz: { question: "I cannot take on any new clients because I'm ___ with unread emails.", options: ["snowed under", "rained under", "blown under"], correctIndex: 0, explanation: "to have too much work." } },
-
-      { pv: "Be taken aback", trope: "The Stunning Revelation", cefr: "C1", icon: Sparkles, meaning: "To be very surprised, shocked, or startled by something unexpected.", meaningJP: "呆気に取られる、ひどく驚く", example: "I was genuinely taken aback when the quietest guy in the room suddenly quit.", vibes: ["Facing an unexpected twist", "Feeling deep shock", "A surprising revelation"], storyline: "For years, the ruthless villain had terrorized the city without mercy. So, when he suddenly dropped his weapon, fell to his knees, and tearfully begged for forgiveness, the brave hero was completely taken aback by the change of heart.", storylineJP: "何年もの間、その冷酷なヴィランは容赦なく街を恐怖に陥れてきた。だからこそ、彼が突然武器を捨て、膝をつき、涙ながらに許しを乞うた時、勇敢なヒーローはその改心に完全に呆気に取られた（驚いた）。", quiz: { question: "She was entirely ___ by the sheer rudeness of his sudden comment.", options: ["taken aback", "taken away", "taken in"], correctIndex: 0, explanation: "to be very surprised." } },
-
-      { pv: "Be taken with", trope: "The Instant Charm", cefr: "C1", icon: Heart, meaning: "To be highly impressed by or deeply attracted to someone or something.", meaningJP: "～を（とても）気に入る、魅了される", example: "I was immediately taken with her brilliant, creative ideas.", vibes: ["Feeling instant charm", "Being deeply impressed", "A strong, sudden liking"], storyline: "The school talent show was usually a bore, full of amateur acts. But when Sora stepped to the mic and sang with a voice like velvet, the entire silent auditorium was instantly taken with his hidden, raw talent.", storylineJP: "学校の特技披露大会はいつもアマチュアの出し物ばかりで退屈だった。しかし、ソラがマイクに向かい、ベルベットのような声で歌い始めた時、静まり返った講堂の全員が、彼の隠された生々しい才能に瞬時に魅了された（気に入った）。", quiz: { question: "He was instantly ___ her natural beauty and sharp wit.", options: ["taken with", "taken off", "taken up"], correctIndex: 0, explanation: "to be impressed." } },
-
-      { pv: "Be up", trope: "The Early Morning Call", cefr: "A1", icon: Sun, meaning: "To be awake and out of bed, ready to start the day.", meaningJP: "起きている", example: "Hey, are you up yet? We need to leave right now!", vibes: ["Bright early mornings", "Waking a sleepy friend", "Preparing for departure"], storyline: "The horizon was barely turning pink, but the loud, energetic knocking on the door wouldn't stop. 'Are you up yet?!' Hina yelled brightly from the hallway. 'Our bullet train leaves in exactly thirty minutes!'", storylineJP: "地平線がわずかにピンク色に染まり始めたばかりだったが、ドアを叩く大きくてエネルギッシュな音は止まらなかった。「もう起きてる？！」ヒナが廊下から明るく叫んだ。「新幹線の出発まで、あとぴったり30分だよ！」", quiz: { question: "Is your lazy brother finally ___ and ready for breakfast?", options: ["up", "down", "on"], correctIndex: 0, explanation: "to be awake." } },
-
-      { pv: "Be up for", trope: "The Spontaneous Plan", cefr: "B1", icon: Play, meaning: "To enthusiastically want to do a specific activity.", meaningJP: "～に乗り気である、～したい気分だ", example: "Are you guys up for a late-night horror movie?", vibes: ["Planning fun activities", "Sending a casual invite", "Being eager and ready"], storyline: "The brutal, five-hour final exams were finally over, and a collective sigh of relief washed over the classroom. 'I'm starving and free,' Kaito announced. 'Who's up for an absolutely massive all-you-can-eat BBQ tonight?'", storylineJP: "過酷な5時間に及ぶ期末試験がついに終わり、教室全体に安堵のため息が広がった。「腹ペコで、しかも自由だ」と海斗が宣言した。「今夜、絶対に信じられないほどでかい食べ放題のBBQに行く気満々のやつ（乗り気のやつ）は誰だ？」", quiz: { question: "After a long week, who's ___ a relaxing game of beach volleyball?", options: ["up for", "up on", "up with"], correctIndex: 0, explanation: "to want to do." } },
-
-      { pv: "Be up to", trope: "The Suspicious Silence", cefr: "B1", icon: HelpCircle, meaning: "To be doing something, especially something secretive or mischievous.", meaningJP: "（何か悪いことや秘密の計画を）企んでいる、している", example: "They are giggling in the corner... What are those kids up to?", vibes: ["Sensing a deep mystery", "Suspecting naughty behavior", "A quiet, secretive plot"], storyline: "The normally chaotic and loud kitchen was incredibly, suspiciously silent. Mom narrowed her eyes and crept toward the door. Knowing her mischievous twins, they were definitely up to something involving the locked cookie jar.", storylineJP: "普段はカオスで騒がしいキッチンが、信じられないほど、そして怪しいほど静かだった。母は目を細め、忍び足でドアに近づいた。いたずら好きな双子の性格からして、彼らは絶対に鍵のかかったクッキーの瓶に関わる何かを企んでいるに違いない。", quiz: { question: "You've been hiding in your room all day; exactly what have you been ___?", options: ["up to", "in to", "on to"], correctIndex: 0, explanation: "to be doing." } }
-
+      { 
+        pv: "Bash about", trope: "The Rough Treatment", cefr: "C1", icon: Hammer, 
+        meaning: "To treat something roughly, risking damage.", 
+        meaningJP: "手荒に扱う", 
+        example: "Don't bash your expensive new laptop about like that!", 
+        exampleJP: "そんな風に高価な新しいノートPCを手荒に扱わないで！",
+        vibes: ["Caring for gadgets", "Giving stern advice", "Rough physical handling"], 
+        vibesJP: ["ガジェットを大切にする", "厳しい忠告をする", "乱暴な物理的扱い"],
+        storyline: "Sato was furious after losing the match. He carelessly bashed his sports bag about the locker room, completely forgetting his fragile new laptop was inside.", 
+        storylineJP: "試合に負けた後、佐藤は激怒していた。彼はロッカールームでスポーツバッグを不注意に手荒に扱い、中に壊れやすい新品のノートPCが入っていることを完全に忘れていた。", 
+        quiz: { question: "Please be gentle and don't ___ your fragile toys ___.", options: ["bash / about", "be / after", "be / on"], correctIndex: 0, explanation: "to treat roughly." } 
+      },
+      { 
+        pv: "Bash in", trope: "The Emergency Rescue", cefr: "B2", icon: AlertTriangle, 
+        meaning: "To break something by hitting it with great force.", 
+        meaningJP: "（叩いて）ぶち壊す、打ち破る", 
+        example: "The desperate burglars bashed the heavy oak door in.", 
+        exampleJP: "必死の空き巣たちは重いオーク材のドアを叩き壊した。",
+        vibes: ["Using extreme force", "Emergency rescues", "Significant property damage"], 
+        vibesJP: ["極端な力を使う", "緊急救助", "重大な器物損壊"],
+        storyline: "Thick, black smoke filled the hallway, and the panicked cat was trapped. With no time for keys, the heroic firefighters used an axe to brutally bash the door in and save the animal.", 
+        storylineJP: "濃く黒い煙が廊下に充満し、パニックになった猫が閉じ込められていた。鍵を探す時間はないと判断し、英雄的な消防士たちは斧を使って力任せにドアをぶち破り、動物を救出した。", 
+        quiz: { question: "To escape the burning building, they completely ___ the barred window.", options: ["bashed in", "be along", "be down"], correctIndex: 0, explanation: "to break by hitting hard." } 
+      },
+      { 
+        pv: "Bash out", trope: "The Deadline Rush", cefr: "C1", icon: Zap, 
+        meaning: "To write or produce something very quickly, often without much care.", 
+        meaningJP: "（大急ぎで）一気に書き上げる", 
+        example: "I managed to bash the 2,000-word essay out in a panic.", 
+        exampleJP: "パニックになりながら、なんとか2000語のエッセイを一気に書き上げた。",
+        vibes: ["Racing against a tight deadline", "Last-minute exam panic", "Frantic typing"], 
+        vibesJP: ["厳しい締め切りとの戦い", "直前の試験パニック", "狂ったようなタイピング"],
+        storyline: "Rin had completely forgotten about the history assignment. Gulping down an energy drink, she miraculously managed to bash out the entire five-page report just minutes before the bell rang.", 
+        storylineJP: "リンは歴史の重要な課題のことを完全に忘れていた。エナジードリンクを一気飲みし、彼女は奇跡的にも、チャイムが鳴る数分前に全5ページのレポートを一気に書き上げることに成功した。", 
+        quiz: { question: "Working against the clock, she efficiently ___ the apology letter.", options: ["bashed out", "be along", "be in"], correctIndex: 0, explanation: "to write quickly." } 
+      },
+      { 
+        pv: "Bash up", trope: "The Pub Fight", cefr: "B2", icon: Angry, 
+        meaning: "To physically damage someone or something very badly.", 
+        meaningJP: "（殴って）ボコボコにする、ひどく壊す", 
+        example: "He got terribly bashed up in a pointless street fight.", 
+        exampleJP: "彼は無意味なストリートファイトでひどくボコボコにされた。",
+        vibes: ["Describing physical injury", "A violent accident", "A rough brawl"], 
+        vibesJP: ["肉体的な怪我の描写", "暴力的な事故", "荒っぽい乱闘"],
+        storyline: "The atmosphere after the championship game was incredibly tense. When the rival fans clashed, the losing team's luxury bus got completely bashed up, its windows shattered.", 
+        storylineJP: "優勝決定戦の後の雰囲気は信じられないほど緊迫していた。ライバルファン同士が衝突した際、敗れたチームの豪華なバスは完全にボコボコにされ、窓は砕け散った。", 
+        quiz: { question: "After rolling down the rocky hill, the remote-control car was totally ___.", options: ["bashed up", "be off", "be cut up"], correctIndex: 0, explanation: "to damage badly." } 
+      },
+      { 
+        pv: "Bawl out", trope: "The Furious Coach", cefr: "C1", icon: Volume2, 
+        meaning: "To shout at someone very crossly and loudly as a scolding.", 
+        meaningJP: "（激しく）怒鳴りつける、大声で叱る", 
+        example: "The strict coach fiercely bawled me out in front of the team.", 
+        exampleJP: "厳しいコーチはチームの前で私を激しく怒鳴りつけた。",
+        vibes: ["Severe scolding", "Intimidating authority figures", "Making a terrible mistake"], 
+        vibesJP: ["ひどいお説教", "威圧的な権威者", "ひどいミスをする"],
+        storyline: "It was the final quarter, and Sora totally missed the easiest pass. Furious, the strict head coach called a timeout and brutally bawled him out in front of the staring crowd.", 
+        storylineJP: "最終クォーター、ソラは最も簡単なパスを完全に見逃した。激怒した厳格なヘッドコーチはタイムアウトを取り、静かに見つめる観衆の目の前で彼を容赦なく激しく怒鳴りつけた。", 
+        quiz: { question: "For losing the crucial files, the unforgiving boss loudly ___ him ___.", options: ["bawled / out", "bash / in", "be / after"], correctIndex: 0, explanation: "to shout at crossly." } 
+      },
+      { 
+        pv: "Be after", trope: "The Suspicious Motive", cefr: "B1", icon: Search, 
+        meaning: "To search for something or try to obtain it, sometimes with a hidden motive.", 
+        meaningJP: "探し求める、狙う", 
+        example: "Exactly what are you after in my private office?", 
+        exampleJP: "私のプライベートなオフィスで、一体何を狙っているんだ？",
+        vibes: ["Hidden ambition", "Deep suspicion", "Chasing a specific goal"], 
+        vibesJP: ["隠された野望", "深い疑念", "特定の目標を追いかける"],
+        storyline: "The famous art gallery was dark, but a shadow slipped past the lasers. The guards knew exactly what the master thief was after: the legendary, cursed diamond.", 
+        storylineJP: "有名な美術館は暗闇に包まれていたが、一つの影がレーザーをすり抜けた。警備員たちは、その大泥棒が何を狙っているのかを正確に把握していた。伝説の呪われたダイヤモンドだ。", 
+        quiz: { question: "Given his sudden extreme politeness, I strongly suspect he is ___ my executive job.", options: ["after", "along", "away"], correctIndex: 0, explanation: "to try to get." } 
+      },
+      { 
+        pv: "Be along", trope: "The Reassuring Wait", cefr: "B1", icon: Clock, 
+        meaning: "To arrive at a place, usually soon.", 
+        meaningJP: "やって来る、到着する", 
+        example: "Don't fret; the next express bus should be along very soon.", 
+        exampleJP: "心配しないで。次の急行バスがもうすぐやって来るはずだよ。",
+        vibes: ["Anticipating an arrival", "Waiting patiently", "Offering reassuring certainty"], 
+        vibesJP: ["到着を予測する", "忍耐強く待つ", "安心できる確実さを提供する"],
+        storyline: "The young recruits were shivering in the dark forest, terrified. 'Don't worry, stay calm,' veteran Sora assured them. 'Our heavily armed backup team will be along before sunset.'", 
+        storylineJP: "若い新兵たちは暗い森の中で震え、怯えていた。「心配するな、落ち着け」とベテランのソラが請け負った。「重武装の援護部隊が日没前にはやって来るはずだ。」", 
+        quiz: { question: "Please take a seat in the waiting room; the head doctor will ___ shortly.", options: ["be along", "be off", "be onto"], correctIndex: 0, explanation: "to arrive soon." } 
+      },
+      { 
+        pv: "Be away", trope: "The Long Business Trip", cefr: "A2", icon: Map, 
+        meaning: "To be in another place, typically traveling or not at home.", 
+        meaningJP: "不在にする、出かけている", 
+        example: "I'll unfortunately be away on business for the next month.", 
+        exampleJP: "残念ながら来月は出張で不在になります。",
+        vibes: ["Exciting travel plans", "A temporary absence", "Updating friends on holidays"], 
+        vibesJP: ["ワクワクする旅行計画", "一時的な不在", "休日の近況報告"],
+        storyline: "Summer vacation was finally here, but the friend group would be incomplete. Hina cheerfully announced she would be away studying advanced English in London for two weeks.", 
+        storylineJP: "ついに夏休みが来たが、いつものグループは全員揃わなかった。ヒナは、ロンドンで上級英語を学ぶため、丸2週間不在にする（出かける）と明るく発表したのだ。", 
+        quiz: { question: "You can't reach the regional manager this week because he is ___ on a tropical holiday.", options: ["away", "in", "on"], correctIndex: 0, explanation: "to be elsewhere." } 
+      },
+      { 
+        pv: "Be cut out for", trope: "The Perfect Fit", cefr: "B2", icon: CheckCircle2, 
+        meaning: "To be naturally suitable for a specific job, role, or activity.", 
+        meaningJP: "～に向いている、適任である", 
+        example: "I honestly don't think I'm cut out for a boring desk job.", 
+        exampleJP: "正直、私は退屈なデスクワークには向いていないと思う。",
+        vibes: ["Discovering one's true career", "Finding a perfect fit", "Questioning personal aptitude"], 
+        vibesJP: ["自分の本当の天職を見つける", "完璧な適任を見つける", "個人の適性に疑問を持つ"],
+        storyline: "After a week of trying to organize tedious spreadsheets, Mika threw her pen down. She realized with absolute certainty she wasn't cut out for a quiet life; her soul craved creative adventures.", 
+        storylineJP: "退屈なスプレッドシートを1週間整理しようと試みた後、ミカはペンを放り投げた。彼女は自分が静かな生活には向いていないと悟った。彼女の魂は、創造的な冒険を激しく求めていたのだ。", 
+        quiz: { question: "Given his extreme shyness, is he really ___ public relations work?", options: ["cut out for", "cut down", "be off"], correctIndex: 0, explanation: "to be suitable." } 
+      },
+      { 
+        pv: "Be cut up", trope: "The Deep Grief", cefr: "C1", icon: Heart, 
+        meaning: "To be very emotionally upset or deeply saddened by something.", 
+        meaningJP: "ひどく悲しむ、ひどく落ち込む", 
+        example: "She was visibly cut up about failing her final exam.", 
+        exampleJP: "彼女は期末試験に落ちて明らかにひどく落ち込んでいた。",
+        vibes: ["Profound sadness", "Deep, lingering regret", "Emotional pain"], 
+        vibesJP: ["深い悲しみ", "深く長く続く後悔", "感情的な痛み"],
+        storyline: "It wasn't just a pet; it was his best friend of fifteen years. When the loyal old dog finally passed away, Leo was so completely cut up that he locked himself in his room for three days.", 
+        storylineJP: "それはただのペットではなく、15年来の親友だった。その忠実な老犬が息を引き取った時、レオはあまりにもひどく悲しみ、部屋に閉じこもり、3日間一言も話すことができなかった。", 
+        quiz: { question: "He was absolutely ___ when he heard the tragic news on the radio.", options: ["cut up", "cut out", "cut in"], correctIndex: 0, explanation: "to be very upset." } 
+      },
+      { 
+        pv: "Be down", trope: "The Quiet Concern", cefr: "B1", icon: Cloud, 
+        meaning: "To feel depressed, sad, or lacking in energy.", 
+        meaningJP: "落ち込んでいる、元気がない", 
+        example: "You've been really down lately. Do you want to talk about it?", 
+        exampleJP: "最近本当に落ち込んでいるね。話してみる？",
+        vibes: ["Offering gentle support", "A lingering sadness", "Worrying about a friend"], 
+        vibesJP: ["優しいサポートを提供する", "長引く悲しみ", "友人を心配する"],
+        storyline: "The heavy rain wouldn't stop pouring. Staring out the window, Sora was noticeably down because the championship baseball game he had trained months for was permanently canceled.", 
+        storylineJP: "重い雨が降り続いていた。窓から外を見つめながら、ソラは明らかに落ち込んでいた。何ヶ月も練習してきた野球の優勝決定戦が、永久に中止になってしまったからだ。", 
+        quiz: { question: "Ever since her best friend moved away, I've been feeling a bit ___.", options: ["down", "on", "out"], correctIndex: 0, explanation: "to feel sad." } 
+      },
+      { 
+        pv: "Be down on", trope: "The Unfair Critique", cefr: "C1", icon: XOctagon, 
+        meaning: "To be highly critical of someone or hold a negative attitude toward them.", 
+        meaningJP: "（人に対して）批判的である、厳しく当たる", 
+        example: "I feel like the senior boss is really down on me this month.", 
+        exampleJP: "今月は上のボスが私に本当に厳しく当たっている気がする。",
+        vibes: ["Unfair workplace strictness", "Constant negative pressure", "A biased critique"], 
+        vibesJP: ["不当な職場の厳しさ", "絶え間ない否定的なプレッシャー", "偏った批判"],
+        storyline: "It was a tiny, honest mistake on a minor report. But ever since that one specific error, her perfectionist aunt has been relentlessly down on Mika, criticizing her every single move.", 
+        storylineJP: "それは些細で正直なミスだった。しかしその特定のミス以来、完璧主義の叔母はミカに対して容赦なく厳しく当たり、彼女の一挙手一投足を批判し続けている。", 
+        quiz: { question: "Why are you so aggressively ___ him just because he made one error?", options: ["down on", "down with", "up on"], correctIndex: 0, explanation: "to be critical." } 
+      },
+      { 
+        pv: "Be down with", trope: "The Winter Sickness", cefr: "B1", icon: Activity, 
+        meaning: "To be ill in bed with a specific disease or sickness.", 
+        meaningJP: "（病気で）寝込む、かかっている", 
+        example: "Poor Kaito is down with a nasty strain of the flu.", 
+        exampleJP: "可哀想に海斗は厄介なインフルエンザで寝込んでいる。",
+        vibes: ["Feeling terribly sick", "Reporting a school absence", "Winter health issues"], 
+        vibesJP: ["ひどく気分が悪い", "学校の欠席を報告する", "冬の健康問題"],
+        storyline: "The classroom was half empty and eerily quiet. The teacher announced that Kaito, along with six other students, was down with a severe stomach flu and wouldn't be at the sports festival.", 
+        storylineJP: "教室は半分空席で不気味なほど静かだった。先生は、カイトが他の6人の生徒と共にひどい胃腸炎で寝込んでおり、体育祭には参加できないと発表した。", 
+        quiz: { question: "Unfortunately, the lead actress is ___ a terrible cold and cannot perform.", options: ["down with", "up with", "on with"], correctIndex: 0, explanation: "to be ill." } 
+      },
+      { 
+        pv: "Be fed up", trope: "The Absolute Limit", cefr: "B1", icon: Angry, 
+        meaning: "To be completely annoyed, bored, or frustrated with a continuing situation.", 
+        meaningJP: "うんざりしている、愛想が尽きる", 
+        example: "I am absolutely fed up with this endless, freezing rain.", 
+        exampleJP: "この終わりのない凍えるような雨には絶対にうんざりだ。",
+        vibes: ["Reaching one's absolute limit", "Intense boredom", "Deep, vocal annoyance"], 
+        vibesJP: ["絶対的な限界に達する", "激しい退屈", "深くて声に出る苛立ち"],
+        storyline: "The sirens wailed constantly, and the smog was thick. Mika was completely fed up with the noisy, toxic city life and intensely dreamed of building a quiet, solitary wooden house in the woods.", 
+        storylineJP: "サイレンが絶えず鳴り響き、スモッグは濃かった。ミカは騒がしく有毒な都会の生活に完全にうんざりし、森の奥深くに静かな木の家を建てることを強烈に夢見ていた。", 
+        quiz: { question: "I'm totally ___ with this dead-end, soul-crushing job.", options: ["fed up", "fed in", "fed on"], correctIndex: 0, explanation: "to be annoyed." } 
+      },
+      { 
+        pv: "Be in", trope: "The Home Check", cefr: "A1", icon: Home, 
+        meaning: "To be present at one's home or office.", 
+        meaningJP: "在宅している、オフィスにいる", 
+        example: "Will you actually be in later tonight?", 
+        exampleJP: "今日の夜遅くには本当に家にいる？",
+        vibes: ["Checking someone's availability", "Planning a quick visit", "Confirming presence"], 
+        vibesJP: ["誰かの予定を確認する", "ちょっとした訪問を計画する", "いるかどうか確認する"],
+        storyline: "Grandpa was expecting a highly fragile antique package to be delivered right at noon. He firmly told the family to cancel all plans because he had to make absolutely sure to be in.", 
+        storylineJP: "祖父は正午きっかりに、非常に壊れやすいアンティークの荷物が届くのを待っていた。彼は、絶対に在宅しているようにしなければならないと言って、家族にすべての予定をキャンセルするよう言った。", 
+        quiz: { question: "Excuse me, is the head doctor ___ his office today?", options: ["in", "on", "at"], correctIndex: 0, explanation: "to be present." } 
+      },
+      { 
+        pv: "Be in on", trope: "The Exclusive Secret", cefr: "B2", icon: Key, 
+        meaning: "To be involved in a plan or to know a shared secret.", 
+        meaningJP: "仲間に加わっている、秘密を知っている", 
+        example: "I felt totally left out because I wasn't in on the master plan.", 
+        exampleJP: "基本計画の秘密を知らされていなかったから、完全に仲間外れにされた気分だった。",
+        vibes: ["Knowing exclusive secrets", "Being part of an inside group", "Sharing confidential info"], 
+        vibesJP: ["独占的な秘密を知っている", "内部グループの一員になる", "機密情報を共有する"],
+        storyline: "When the strict club president was suddenly overthrown, complete chaos erupted. It turned out that only a few highly trusted, core senior members were actually in on the secret plan to replace him.", 
+        storylineJP: "厳格な部長が突然引きずり降ろされた時、完全なカオスが巻き起こった。実は、彼を交代させるという秘密の計画に加わっていた（知っていた）のは、ごく少数の中核的な上級生だけだったのだ。", 
+        quiz: { question: "Are you sure you are completely ___ the secret surprise arrangement?", options: ["in on", "in at", "in to"], correctIndex: 0, explanation: "to know a secret." } 
+      },
+      { 
+        pv: "Be not on", trope: "The Unacceptable Conduct", cefr: "C1", icon: XCircle, 
+        meaning: "To be considered completely unacceptable or unfair behavior.", 
+        meaningJP: "（行動が）受け入れられない、許されない", 
+        example: "Treating the junior staff like that is simply not on.", 
+        exampleJP: "後輩のスタッフをあんな風に扱うなんて、絶対に許されないことだ。",
+        vibes: ["Enforcing moral boundaries", "Strict social rules", "A stern, formal warning"], 
+        vibesJP: ["道徳的な境界線を守らせる", "厳格な社会的ルール", "厳しい公式な警告"],
+        storyline: "The older boys were maliciously picking on shy little Hina. Sora stepped forward, his fists clenched, and told them in a cold, icy tone, 'Talking to people like that is just not on. Apologize right now.'", 
+        storylineJP: "年上の少年たちが、内気で小さなヒナを悪意を持ってからかっていた。ソラは拳を握りしめて前に進み出ると、冷たい口調で彼らに言った。「人に対してあんな風に接するのは絶対に許されないことだ。今すぐ謝れ。」", 
+        quiz: { question: "Being consistently late for crucial team meetings is completely ___.", options: ["not on", "not in", "not up"], correctIndex: 0, explanation: "to be unacceptable." } 
+      },
+      { 
+        pv: "Be off", trope: "The Spoiled Milk", cefr: "B1", icon: Trash2, 
+        meaning: "To have gone bad or become rotten (usually referring to food).", 
+        meaningJP: "（食べ物が）腐っている、傷んでいる", 
+        example: "Ugh, don't pour that! I'm certain the milk is off.", 
+        exampleJP: "うわっ、それ注がないで！その牛乳は絶対に腐ってるよ。",
+        vibes: ["Disgust in the kitchen", "Warning about bad food", "A sour, ruined smell"], 
+        vibesJP: ["キッチンでの嫌悪感", "腐った食べ物の警告", "酸っぱくダメになった匂い"],
+        storyline: "The power had been out all weekend in the sweltering heat. When Ken finally opened the fridge, the expensive imported meat was left out and, by Monday morning, it was clearly and dangerously off.", 
+        storylineJP: "猛暑の中、週末ずっと停電していた。ケンがようやく冷蔵庫を開けると、高価な輸入肉は放置され、月曜の朝には明らかに危険なほど腐っていた。", 
+        quiz: { question: "Don't eat that sushi; the fish smells incredibly ___.", options: ["off", "out", "on"], correctIndex: 0, explanation: "to have gone bad." } 
+      },
+      { 
+        pv: "Be on", trope: "The Functioning Appliance", cefr: "A1", icon: Zap, 
+        meaning: "To be functioning, operating, or currently happening.", 
+        meaningJP: "稼働している、（行事が）行われている", 
+        example: "Check if the electric heater is actually on.", 
+        exampleJP: "電気ヒーターが実際に点いているか確認して。",
+        vibes: ["Checking household appliances", "Confirming an event status", "Flowing energy"], 
+        vibesJP: ["家電をチェックする", "イベントの状況を確認する", "流れるエネルギー"],
+        storyline: "The old, abandoned mansion at the top of the hill had been empty for a decade. Yet, as the kids walked past at midnight, they shivered; the flickering, yellow lights in the top window were definitely on.", 
+        storylineJP: "丘の上にある古く見捨てられた館は、10年間誰も住んでいなかった。しかし、真夜中に子供たちが通り過ぎた時、彼らは身震いした。最上階の窓の、明滅する黄色い明かりは間違いなく点いていた（稼働していた）のだ。", 
+        quiz: { question: "Is the main television screen still ___ in the lobby?", options: ["on", "off", "in"], correctIndex: 0, explanation: "to be working." } 
+      },
+      { 
+        pv: "Be on about", trope: "The Confusing Nonsense", cefr: "B2", icon: MessageCircle, 
+        meaning: "To talk continuously about something, often in a confusing or boring way.", 
+        meaningJP: "（何について）言っているのか、長々と話す", 
+        example: "I have absolutely no idea what on earth he is on about.", 
+        exampleJP: "彼が一体何について言っているのか、私には全く分からない。",
+        vibes: ["Listening to pure nonsense", "Questioning a strange logic", "Enduring a confusing talk"], 
+        vibesJP: ["純粋なナンセンスを聞く", "奇妙な論理を疑う", "混乱する話に耐える"],
+        storyline: "Leo rushed into the room, breathless, and started frantically talking about invisible aliens hacking the school Wi-Fi. Mika stared at him blankly, seriously wondering what crazy conspiracy theory he was on about this time.", 
+        storylineJP: "レオは息を切らして部屋に駆け込み、見えない宇宙人が学校のWi-Fiをハッキングしていると狂ったように話し始めた。ミカは彼をぽかんと見つめ、今回彼がどんな陰謀論について言っているのかと真顔で不思議に思った。", 
+        quiz: { question: "What in the world are you ___ with all these crazy theories?", options: ["on about", "up about", "in about"], correctIndex: 0, explanation: "to talk confusingly." } 
+      }
     ],
-
     4: [
-
-      { pv: "Bear down on", trope: "The Unstoppable Force", cefr: "C1", icon: Clock, meaning: "To move quickly and often threateningly towards someone or something.", meaningJP: "勢いよく迫る、重圧としてのしかかる", example: "The final project deadline is rapidly bearing down on us.", vibes: ["Feeling intense rush and stress", "A physical threat approaching", "The pressure of a strict deadline"], storyline: "The sky turned an eerie shade of green as the wind began to howl fiercely. Through the window, Sora could see the massive, dark hurricane bearing down on their fragile little coastal town with terrifying speed.", storylineJP: "風が激しく吠え始め、空は不気味な緑色に変わった。窓越しに、ソラは巨大で暗いハリケーンが、彼らの脆く小さな海辺の町に向かって恐ろしいスピードで勢いよく迫ってくるのを見た。", quiz: { question: "The massive, out-of-control truck was terrifyingly ___ our small car.", options: ["bearing down on", "backing into", "breaking out"], correctIndex: 0, explanation: "to approach threateningly." } },
-
-      { pv: "Bear out", trope: "The Forensic Evidence", cefr: "C1", icon: Shield, meaning: "To support the truth of something or prove that it is correct.", meaningJP: "（仮説や主張を）裏付ける、証明する", example: "I am confident that the scientific evidence will bear out my wild theory.", vibes: ["A tense criminal investigation", "Providing concrete proof", "A dramatic legal defense"], storyline: "The brilliant detective stood before the skeptical police chief, holding a single, crumpled receipt. 'I know it sounds completely insane,' she said firmly, 'but the DNA evidence from this paper will bear out my entire story.'", storylineJP: "優秀な探偵は、疑い深い警察署長の前に立ち、くしゃくしゃになった一枚のレシートを握りしめていた。「完全に狂っているように聞こえるのは分かっています」と彼女はきっぱりと言った。「ですが、この紙からのDNA鑑定が、私の推理のすべてを裏付けてくれるはずです。」", quiz: { question: "The newly discovered historical facts clearly ___ his controversial claim.", options: ["bear out", "bash in", "be off"], correctIndex: 0, explanation: "to prove true." } },
-
-      { pv: "Bear with", trope: "The Polite Delay", cefr: "B2", icon: Activity, meaning: "To be patient and tolerant with someone during a difficult or slow process.", meaningJP: "（少々お待ちを）辛抱強く付き合う、我慢する", example: "Please bear with me for just a moment while I try to restart this ancient computer.", vibes: ["Enduring a long wait", "Asking for polite patience", "Dealing with technical delays"], storyline: "The grand hotel lobby was packed with angry, tired tourists. The exhausted front desk clerk forced a polite smile as the ancient computer froze. 'Please bear with me for just a moment while the system reboots,' he begged.", storylineJP: "豪華なホテルのロビーは、怒って疲れ果てた観光客でごった返していた。疲れ切ったフロント係は、古いコンピュータがフリーズする中、作り笑いを浮かべた。「システムが再起動するまで、どうかもう少々お待ち（辛抱）ください」と彼は懇願した。", quiz: { question: "If you'll kindly ___ me, I will thoroughly explain the complex rules.", options: ["bear with", "be up", "belt out"], correctIndex: 0, explanation: "to be patient." } },
-
-      { pv: "Beat down", trope: "The Merciless Sun", cefr: "B2", icon: Sun, meaning: "To shine very strongly and hotly down on a place or person.", meaningJP: "（太陽が激しく）照りつける", example: "The midday sun was mercilessly beating down on the weary workers.", vibes: ["A sweltering summer day", "Intense, radiating heat", "Enduring the harsh outdoors"], storyline: "They had been lost in the vast, unforgiving desert for two solid days. The relentless midday sun beat down on the weary travelers, cracking the dry earth beneath their blistered, exhausted feet.", storylineJP: "彼らは広大で容赦のない砂漠で丸2日間迷っていた。無慈悲な真昼の太陽が疲れ果てた旅人たちに激しく照りつけ、水膨れだらけの疲れ切った足元の乾いた大地をひび割れさせていた。", quiz: { question: "The intense, suffocating heat was steadily ___ on the tin roof of the shed.", options: ["beating down", "breaking down", "backing down"], correctIndex: 0, explanation: "to shine strongly." } },
-
-      { pv: "Beat down", trope: "The Master Negotiator", cefr: "C1", icon: DollarSign, meaning: "To skillfully persuade someone to significantly lower the price of something.", meaningJP: "（人を説得して）値を切らせる、大幅に値下げさせる", example: "The seller wanted a fortune, but I managed to beat him down to a fair $1,800.", vibes: ["Intense haggling at a market", "Winning a tough price battle", "Skilled business negotiation"], storyline: "The sleazy car dealer smirked, demanding $2,000 for a rusty, beaten-up truck. But clever Hina crossed her arms, pointed out every single engine flaw, and ruthlessly beat him down to a mere $1,200 in cash.", storylineJP: "胡散臭い車のディーラーはニヤニヤ笑いながら、錆びてボロボロのトラックに2,000ドルを要求した。しかし賢いヒナは腕を組み、エンジンの欠陥を一つ一つ指摘して、容赦なく1,200ドルの現金払いまで大幅に値切らせた。", quiz: { question: "Using clever tactics, I successfully ___ the repair cost ___ by over 20%.", options: ["beat / down", "bash / up", "be / after"], correctIndex: 0, explanation: "to lower price." } },
-
-      { pv: "Beat up", trope: "The Bully's Victim", cefr: "B2", icon: Angry, meaning: "To hurt someone badly by repeatedly hitting or kicking them.", meaningJP: "（激しく）殴る、ボコボコにする", example: "Tragically, he got severely beaten up by a gang of ruthless bullies.", vibes: ["A brutal street fight", "Reporting a violent incident", "Sustaining a serious injury"], storyline: "The lone hero bravely stepped into the dark alley to defend the weak civilian. Though he got badly beaten up in the brutal first round, he wiped the blood from his lip and slowly rose again for the epic finale.", storylineJP: "孤独なヒーローは弱い市民を守るため、勇敢にも暗い路地へと足を踏み入れた。彼は残酷な第一ラウンドでひどくボコボコにされたが、唇の血を拭い、壮大な決戦に向けてゆっくりと再び立ち上がった。", quiz: { question: "The ruthless gang viciously ___ the innocent shopkeeper during the robbery.", options: ["beat up", "belted out", "booked in"], correctIndex: 0, explanation: "to hit repeatedly." } },
-
-      { pv: "Beaver away", trope: "The Hyper-Focused Creator", cefr: "C1", icon: HardHat, meaning: "To work extremely hard and continuously at a specific task.", meaningJP: "（脇目も振らず）精を出して働く、黙々と取り組む", example: "She's been silently beavering away at her messy desk since dawn.", vibes: ["A quiet, focused office environment", "Intense, continuous diligence", "Deep concentration on a project"], storyline: "While her careless friends partied loud into the night, Mika was locked in her messy, paint-splattered studio. She had been beavering away on her masterpiece comic series for 14 straight hours, fueled only by black coffee.", storylineJP: "不注意な友人たちが夜遅くまで騒いでパーティをしている間、ミカは絵の具まみれの散らかったアトリエに閉じこもっていた。彼女はブラックコーヒーだけを頼りに、14時間ぶっ通しで最高傑作の漫画シリーズの制作に黙々と精を出していた。", quiz: { question: "Despite the distractions, he's been diligently ___ at the complex code.", options: ["beavering away", "backing away", "blowing up"], correctIndex: 0, explanation: "to work hard." } },
-
-      { pv: "Bed down", trope: "The Stranded Traveler", cefr: "C1", icon: Home, meaning: "To sleep in a place that is not your own regular bed, often out of necessity.", meaningJP: "（仮の場所で）寝る、寝る準備をする", example: "With all hotels booked, we had to miserably bed down on the cold airport floor.", vibes: ["Dealing with annoying travel trouble", "An emergency camping situation", "Making do with a temporary bed"], storyline: "A sudden, massive avalanche completely blocked the only mountain road home. With no cell service and dropping temperatures, the freezing hikers had no choice but to bed down in a cramped, damp cave for the terrifying night.", storylineJP: "突然の巨大な雪崩が、家へ帰る唯一の山道を完全に塞いだ。携帯の電波もなく気温が下がる中、凍えるハイカーたちは、恐ろしい夜を過ごすために、狭くて湿った洞窟の中で寝る（仮寝する）しかなかった。", quiz: { question: "Exhausted from the hike, we finally ___ for the night in a dusty old barn.", options: ["bedded down", "broke in", "bashed out"], correctIndex: 0, explanation: "to sleep in an odd place." } },
-
-      { pv: "Beef up", trope: "The Security Upgrade", cefr: "C1", icon: Shield, meaning: "To make something substantially stronger, bigger, or more effective.", meaningJP: "（防備や計画を）強化する、補強する", example: "The tech company urgently needs to beef up its flimsy cybersecurity.", vibes: ["A major system upgrade", "Increasing physical safety measures", "Strengthening a team's roster"], storyline: "After the devastating hack that leaked thousands of private emails, the desperate CEO called an emergency meeting. 'We must absolutely beef up our firewall security immediately, no matter the massive cost!' he roared.", storylineJP: "何千通ものプライベートなメールが流出した壊滅的なハッキングの後、絶望したCEOは緊急会議を招集した。「莫大な費用がかかろうとも、我々は直ちにファイアウォールのセキュリティを絶対に強化しなければならない！」と彼は吠えた。", quiz: { question: "To prepare for the championship, the coach decided to strongly ___ the defensive line.", options: ["beef up", "bag out", "be after"], correctIndex: 0, explanation: "to make stronger." } },
-
-      { pv: "Belong to", trope: "The Lost and Found", cefr: "A2", icon: Users, meaning: "To be owned by someone or to be a member of a specific group.", meaningJP: "～に属する、～の所有物である", example: "Excuse me, does this expensive-looking umbrella belong to you?", vibes: ["Finding a lost valuable", "Identifying true ownership", "Returning personal property"], storyline: "While sweeping the empty school gym, honest Sato found a glittering, diamond-studded ring hidden under the bleachers. He spent his entire precious Saturday bravely asking around the wealthy neighborhoods to see who it belonged to.", storylineJP: "誰もいない学校の体育館を掃除している時、正直者の佐藤は観覧席の下に隠れていた、キラキラ光るダイヤをちりばめた指輪を見つけた。彼は誰の持ち物か（誰に属するか）を確認するため、大切な土曜日を丸一日費やして裕福な地域を勇敢に聞き込みして回った。", quiz: { question: "The majestic, ancient castle on the hill actually ___ the mysterious old duke.", options: ["belongs to", "be in on", "be along"], correctIndex: 0, explanation: "to be owned by." } },
-
-      { pv: "Belt out", trope: "The Shower Diva", cefr: "C1", icon: Music, meaning: "To sing a song or play an instrument extremely loudly and with great passion.", meaningJP: "（歌などを）大声で歌う、力いっぱい歌い上げる", example: "She joyfully belts out classic 80s pop songs in the shower every single morning.", vibes: ["A passionate karaoke performance", "Loud, enthusiastic music", "Singing with pure joy"], storyline: "The school talent show was deadly quiet until Hina grabbed the microphone. Closing her eyes, she confidently belted out a soaring, emotional power ballad that sent absolute shivers down everyone's spine and brought the house down.", storylineJP: "学校の特技披露大会は、ヒナがマイクを握るまで死んだように静かだった。目を閉じ、彼女は皆の背筋に絶対的なゾクゾク感を走らせ、会場を総立ちにさせるほどの、高らかで感情的なパワーバラードを自信に満ちて力強く歌い上げた。", quiz: { question: "Standing on the grand stage, the confident tenor proudly ___ the national anthem.", options: ["belted out", "bottomed out", "backed out"], correctIndex: 0, explanation: "to sing loudly." } },
-
-      { pv: "Belt up", trope: "The Angry Demand for Silence", cefr: "C1", icon: XCircle, meaning: "To stop talking immediately and be quiet (used in a rude or aggressive way).", meaningJP: "（乱暴に）黙る、静かにする", example: "I angrily told him to belt up because his constant whining was driving me crazy!", vibes: ["A rude demand to shut up", "An aggressive call for silence", "Stopping an annoying argument"], storyline: "The long family road trip had turned into a nightmare. The two younger brothers were screaming and fighting over a toy in the backseat. Finally, Grandpa slammed the steering wheel and roared, 'Belt up, both of you, right this instant!'", storylineJP: "家族の長いドライブは悪夢と化していた。後部座席で2人の弟がおもちゃを巡って金切り声を上げ、取っ組み合いの喧嘩をしていた。ついに、祖父はハンドルをバンと叩き、「二人とも、今すぐ黙れ（静かにしろ）！」と怒号を轟かせた。", quiz: { question: "I'm trying to concentrate on this complex puzzle, so just ___ and listen to the instructions!", options: ["belt up", "be up", "back off"], correctIndex: 0, explanation: "to be quiet." } },
-
-      { pv: "Belt up", trope: "The Safety Check", cefr: "B1", icon: AlertTriangle, meaning: "To fasten your seatbelt in a car or airplane for safety.", meaningJP: "シートベルトを締める", example: "Alright, everyone belt up! We're about to hit the busy highway.", vibes: ["Enforcing vehicle safety", "Preparing for a long drive", "A responsible driver's command"], storyline: "The engine of the sturdy family minivan roared to life. Before shifting out of park, Dad turned around with a stern look to check the chaotic backseat. 'Alright team, everyone belt up! We are officially ready to hit the road for the beach.'", storylineJP: "頑丈なファミリー向けミニバンのエンジンが轟音とともに目覚めた。パーキングからギアを入れる前、父は厳しい顔つきで振り返り、カオスな後部座席を確認した。「よしみんな、全員シートベルトを締めて！これで正式に海へ向けて出発するぞ。」", quiz: { question: "The strict driving instructor told me to firmly ___ before starting the engine.", options: ["belt up", "bash in", "be along"], correctIndex: 0, explanation: "to fasten seatbelt." } },
-
-      { pv: "Bend down", trope: "The Simple Motion", cefr: "A2", icon: Footprints, meaning: "To move the top part of your body forwards and downwards.", meaningJP: "（腰を）かがめる、しゃがむ", example: "I casually bent down to tie my loose shoelaces.", vibes: ["A basic physical action", "Moving closer to the ground", "Picking something up"], storyline: "Walking along the windy, autumn path to school, Sora noticed a strange, glowing object half-buried in the colorful fallen leaves. He carefully bent down to pick it up, realizing it was a mysterious, ancient silver key.", storylineJP: "風の強い秋の通学路を歩いていると、ソラは色鮮やかな落ち葉の中に半分埋もれた、奇妙に光る物体に気づいた。彼はそれを拾うために慎重に腰をかがめ、それが謎めいた古代の銀の鍵であることに気づいた。", quiz: { question: "The tall, gentle giant slowly ___ to softly kiss the crying child on the forehead.", options: ["bent down", "ballsed up", "be in on"], correctIndex: 0, explanation: "to move body down." } },
-
-      { pv: "Bend over backwards", trope: "The Ultimate Dedication", cefr: "C1", icon: Heart, meaning: "To try extremely hard to help or please someone, often sacrificing one's own comfort.", meaningJP: "（人のために）必死に尽力する、最大限の努力をする", example: "My incredible teacher truly bent over backwards to help me finally graduate.", vibes: ["Offering extraordinary help", "Showing immense dedication", "Exceptional customer service"], storyline: "Mika was struggling terribly with her advanced art portfolio. Seeing her despair, her strict but kind professor stayed late every single evening for a month. He truly bent over backwards to ensure she perfected her technique and passed the final review.", storylineJP: "ミカは上級アートのポートフォリオ制作でひどく苦戦していた。彼女の絶望を見て、厳しくも優しい教授は1ヶ月間、毎日夜遅くまで残ってくれた。彼女が技術を完成させ、最終審査に合格できるよう、彼は本当に必死に尽力して（最大限の努力をして）くれたのだ。", quiz: { question: "The dedicated hotel staff completely ___ to warmly welcome the demanding VIP guests.", options: ["bent over backwards", "beavered away", "bottomed out"], correctIndex: 0, explanation: "to try hard to help." } },
-
-      { pv: "Big up", trope: "The Self-Promoter", cefr: "C2", icon: Volume2, meaning: "To praise or highly advertise someone or something, often in an exaggerated way.", meaningJP: "大げさに褒めちぎる、大いに宣伝する", example: "It's so annoying how he is constantly bigging himself up in every meeting.", vibes: ["Aggressive self-marketing", "Exaggerated boasting", "Building an inflated ego"], storyline: "Leo was decent at coding, but his ego was massive. During the crucial investor pitch, instead of explaining the actual software, he spent twenty minutes arrogantly bigging up his own minor contributions, completely annoying the entire exhausted team.", storylineJP: "レオはコーディングはそこそこできたが、自己顕示欲が巨大だった。重要な投資家へのプレゼンの最中、彼は実際のソフトウェアについて説明する代わりに、自分自身の些細な貢献を20分間も傲慢に大げさに宣伝し続け、疲れ切ったチーム全体を完全に苛立たせた。", quiz: { question: "Please stop endlessly ___ that incredibly boring and predictable TV show.", options: ["bigging up", "bagging out", "bash about"], correctIndex: 0, explanation: "to praise highly." } },
-
-      { pv: "Black out", trope: "The Heat Collapse", cefr: "B2", icon: Thermometer, meaning: "To suddenly lose consciousness, often due to heat, pain, or shock.", meaningJP: "（貧血や暑さなどで）意識を失う、失神する", example: "It was so intensely hot in the crowded room that I nearly blacked out.", vibes: ["A sudden health emergency", "Dangerous summer heat", "Losing all sensation"], storyline: "It was the final, brutal sprint of the summer marathon. The relentless 40-degree heat was suffocating. Just as Sora heroically crossed the white finish line, his vision blurred, his knees buckled, and he completely blacked out on the burning asphalt.", storylineJP: "それは夏の長距離マラソンの、過酷な最後のスプリントだった。容赦ない40度の暑さは息が詰まるほどだった。ソラが英雄的に白いゴールラインを越えた瞬間、彼の視界はぼやけ、膝が折れ、焼けつくアスファルトの上で完全に意識を失った（失神した）。", quiz: { question: "Overwhelmed by the shocking news, the fragile man ___ for a terrifying minute.", options: ["blacked out", "blew up", "backed away"], correctIndex: 0, explanation: "to lose consciousness." } },
-
-      { pv: "Black out", trope: "The Stormy Darkness", cefr: "B2", icon: Zap, meaning: "For lights to completely go out due to a sudden power failure.", meaningJP: "停電する、真っ暗になる", example: "The entire city grid blacked out during the massive winter storm.", vibes: ["A sudden loss of power", "Pitch-black stormy nights", "An electrical infrastructure failure"], storyline: "The raging thunderstorm battered the isolated town. Suddenly, a massive bolt of purple lightning struck the main central power grid. In a split second, the screens died, the hum of machines stopped, and the entire frightened neighborhood blacked out instantly.", storylineJP: "猛威を振るう雷雨が孤立した町を打ち据えていた。突然、巨大な紫色の稲妻が中央の主要な送電網を直撃した。一瞬にして画面は消え、機械の唸り声は止み、怯える近隣一帯は即座に完全に停電し（真っ暗になり）静まり返った。", quiz: { question: "The vulnerable coastal city entirely ___ during the devastating hurricane.", options: ["blacked out", "bashed in", "be after"], correctIndex: 0, explanation: "to have a power failure." } }
-
+      { 
+        pv: "Bear down on", trope: "The Unstoppable Force", cefr: "C1", icon: Clock, 
+        meaning: "To move quickly and often threateningly towards someone or something.", 
+        meaningJP: "勢いよく迫る、重圧としてのしかかる", 
+        example: "The final project deadline is rapidly bearing down on us.", 
+        exampleJP: "最終プロジェクトの締め切りが急速に私たちに重圧としてのしかかっている。",
+        vibes: ["Feeling intense rush and stress", "A physical threat approaching", "The pressure of a strict deadline"], 
+        vibesJP: ["強烈な焦りとストレスを感じる", "物理的な脅威が近づく", "厳しい締め切りのプレッシャー"],
+        storyline: "The sky turned an eerie shade of green as the wind began to howl fiercely. Through the window, Sora could see the massive, dark hurricane bearing down on their fragile little coastal town with terrifying speed.", 
+        storylineJP: "風が激しく吠え始め、空は不気味な緑色に変わった。窓越しに、ソラは巨大で暗いハリケーンが、彼らの脆く小さな海辺の町に向かって恐ろしいスピードで勢いよく迫ってくるのを見た。", 
+        quiz: { question: "The massive, out-of-control truck was terrifyingly ___ our small car.", options: ["bearing down on", "backing into", "breaking out"], correctIndex: 0, explanation: "to approach threateningly." } 
+      },
+      { 
+        pv: "Bear out", trope: "The Forensic Evidence", cefr: "C1", icon: Shield, 
+        meaning: "To support the truth of something or prove that it is correct.", 
+        meaningJP: "（仮説や主張を）裏付ける、証明する", 
+        example: "I am confident that the scientific evidence will bear out my wild theory.", 
+        exampleJP: "科学的証拠が私の突拍子もない理論を裏付けてくれると確信している。",
+        vibes: ["A tense criminal investigation", "Providing concrete proof", "A dramatic legal defense"], 
+        vibesJP: ["緊迫した犯罪捜査", "具体的な証拠を提供する", "ドラマチックな正当防衛"],
+        storyline: "The brilliant detective stood before the skeptical police chief, holding a single, crumpled receipt. 'I know it sounds completely insane,' she said firmly, 'but the DNA evidence from this paper will bear out my entire story.'", 
+        storylineJP: "優秀な探偵は、疑い深い警察署長の前に立ち、くしゃくしゃになった一枚のレシートを握りしめていた。「完全に狂っているように聞こえるのは分かっています」と彼女はきっぱりと言った。「ですが、この紙からのDNA鑑定が、私の推理のすべてを裏付けてくれるはずです。」", 
+        quiz: { question: "The newly discovered historical facts clearly ___ his controversial claim.", options: ["bear out", "bash in", "be off"], correctIndex: 0, explanation: "to prove true." } 
+      },
+      { 
+        pv: "Bear with", trope: "The Polite Delay", cefr: "B2", icon: Activity, 
+        meaning: "To be patient and tolerant with someone during a difficult or slow process.", 
+        meaningJP: "（少々お待ちを）辛抱強く付き合う、我慢する", 
+        example: "Please bear with me for just a moment while I try to restart this ancient computer.", 
+        exampleJP: "この古いコンピュータを再起動させる間、どうか少々お待ち（辛抱して）ください。",
+        vibes: ["Enduring a long wait", "Asking for polite patience", "Dealing with technical delays"], 
+        vibesJP: ["長い待ち時間に耐える", "礼儀正しく忍耐を求める", "技術的な遅延に対処する"],
+        storyline: "The grand hotel lobby was packed with angry, tired tourists. The exhausted front desk clerk forced a polite smile as the ancient computer froze. 'Please bear with me for just a moment while the system reboots,' he begged.", 
+        storylineJP: "豪華なホテルのロビーは、怒って疲れ果てた観光客でごった返していた。疲れ切ったフロント係は、古いコンピュータがフリーズする中、作り笑いを浮かべた。「システムが再起動するまで、どうかもう少々お待ち（辛抱）ください」と彼は懇願した。", 
+        quiz: { question: "If you'll kindly ___ me, I will thoroughly explain the complex rules.", options: ["bear with", "be up", "belt out"], correctIndex: 0, explanation: "to be patient." } 
+      },
+      { 
+        pv: "Beat down", trope: "The Merciless Sun", cefr: "B2", icon: Sun, 
+        meaning: "To shine very strongly and hotly down on a place or person.", 
+        meaningJP: "（太陽が激しく）照りつける", 
+        example: "The midday sun was mercilessly beating down on the weary workers.", 
+        exampleJP: "真昼の太陽が無慈悲にも疲れ果てた労働者たちに激しく照りつけていた。",
+        vibes: ["A sweltering summer day", "Intense, radiating heat", "Enduring the harsh outdoors"], 
+        vibesJP: ["うだるような夏の日", "強烈に放射される熱", "過酷な屋外に耐える"],
+        storyline: "They had been lost in the vast, unforgiving desert for two solid days. The relentless midday sun beat down on the weary travelers, cracking the dry earth beneath their blistered, exhausted feet.", 
+        storylineJP: "彼らは広大で容赦のない砂漠で丸2日間迷っていた。無慈悲な真昼の太陽が疲れ果てた旅人たちに激しく照りつけ、水膨れだらけの疲れ切った足元の乾いた大地をひび割れさせていた。", 
+        quiz: { question: "The intense, suffocating heat was steadily ___ on the tin roof of the shed.", options: ["beating down", "breaking down", "backing down"], correctIndex: 0, explanation: "to shine strongly." } 
+      },
+      { 
+        pv: "Beat down", trope: "The Master Negotiator", cefr: "C1", icon: DollarSign, 
+        meaning: "To skillfully persuade someone to significantly lower the price of something.", 
+        meaningJP: "（人を説得して）値を切らせる、大幅に値下げさせる", 
+        example: "The seller wanted a fortune, but I managed to beat him down to a fair $1,800.", 
+        exampleJP: "売り手は大金を要求したが、私はどうにか彼を適正な1,800ドルまで大幅に値切らせることに成功した。",
+        vibes: ["Intense haggling at a market", "Winning a tough price battle", "Skilled business negotiation"], 
+        vibesJP: ["市場での激しい値切り交渉", "厳しい価格競争に勝つ", "熟練したビジネス交渉"],
+        storyline: "The sleazy car dealer smirked, demanding $2,000 for a rusty, beaten-up truck. But clever Hina crossed her arms, pointed out every single engine flaw, and ruthlessly beat him down to a mere $1,200 in cash.", 
+        storylineJP: "胡散臭い車のディーラーはニヤニヤ笑いながら、錆びてボロボロのトラックに2,000ドルを要求した。しかし賢いヒナは腕を組み、エンジンの欠陥を一つ一つ指摘して、容赦なく1,200ドルの現金払いまで大幅に値切らせた。", 
+        quiz: { question: "Using clever tactics, I successfully ___ the repair cost ___ by over 20%.", options: ["beat / down", "bash / up", "be / after"], correctIndex: 0, explanation: "to lower price." } 
+      },
+      { 
+        pv: "Beat up", trope: "The Bully's Victim", cefr: "B2", icon: Angry, 
+        meaning: "To hurt someone badly by repeatedly hitting or kicking them.", 
+        meaningJP: "（激しく）殴る、ボコボコにする", 
+        example: "Tragically, he got severely beaten up by a gang of ruthless bullies.", 
+        exampleJP: "悲劇的なことに、彼は冷酷な不良グループにひどくボコボコにされた。",
+        vibes: ["A brutal street fight", "Reporting a violent incident", "Sustaining a serious injury"], 
+        vibesJP: ["残酷なストリートファイト", "暴力事件の報告", "重傷を負う"],
+        storyline: "The lone hero bravely stepped into the dark alley to defend the weak civilian. Though he got badly beaten up in the brutal first round, he wiped the blood from his lip and slowly rose again for the epic finale.", 
+        storylineJP: "孤独なヒーローは弱い市民を守るため、勇敢にも暗い路地へと足を踏み入れた。彼は残酷な第一ラウンドでひどくボコボコにされたが、唇の血を拭い、壮大な決戦に向けてゆっくりと再び立ち上がった。", 
+        quiz: { question: "The ruthless gang viciously ___ the innocent shopkeeper during the robbery.", options: ["beat up", "belted out", "booked in"], correctIndex: 0, explanation: "to hit repeatedly." } 
+      },
+      { 
+        pv: "Beaver away", trope: "The Hyper-Focused Creator", cefr: "C1", icon: HardHat, 
+        meaning: "To work extremely hard and continuously at a specific task.", 
+        meaningJP: "（脇目も振らず）精を出して働く、黙々と取り組む", 
+        example: "She's been silently beavering away at her messy desk since dawn.", 
+        exampleJP: "彼女は夜明けから散らかった机で黙々と精を出して働いている。",
+        vibes: ["A quiet, focused office environment", "Intense, continuous diligence", "Deep concentration on a project"], 
+        vibesJP: ["静かで集中できるオフィス環境", "強烈で継続的な勤勉さ", "プロジェクトへの深い集中"],
+        storyline: "While her careless friends partied loud into the night, Mika was locked in her messy, paint-splattered studio. She had been beavering away on her masterpiece comic series for 14 straight hours, fueled only by black coffee.", 
+        storylineJP: "不注意な友人たちが夜遅くまで騒いでパーティをしている間、ミカは絵の具まみれの散らかったアトリエに閉じこもっていた。彼女はブラックコーヒーだけを頼りに、14時間ぶっ通しで最高傑作の漫画シリーズの制作に黙々と精を出していた。", 
+        quiz: { question: "Despite the distractions, he's been diligently ___ at the complex code.", options: ["beavering away", "backing away", "blowing up"], correctIndex: 0, explanation: "to work hard." } 
+      },
+      { 
+        pv: "Bed down", trope: "The Stranded Traveler", cefr: "C1", icon: Home, 
+        meaning: "To sleep in a place that is not your own regular bed, often out of necessity.", 
+        meaningJP: "（仮の場所で）寝る、寝る準備をする", 
+        example: "With all hotels booked, we had to miserably bed down on the cold airport floor.", 
+        exampleJP: "ホテルがすべて予約で埋まっていたため、私たちは冷たい空港の床で惨めに寝なければならなかった。",
+        vibes: ["Dealing with annoying travel trouble", "An emergency camping situation", "Making do with a temporary bed"], 
+        vibesJP: ["厄介な旅行トラブルへの対処", "緊急のキャンプ状況", "仮のベッドでしのぐ"],
+        storyline: "A sudden, massive avalanche completely blocked the only mountain road home. With no cell service and dropping temperatures, the freezing hikers had no choice but to bed down in a cramped, damp cave for the terrifying night.", 
+        storylineJP: "突然の巨大な雪崩が、家へ帰る唯一の山道を完全に塞いだ。携帯の電波もなく気温が下がる中、凍えるハイカーたちは、恐ろしい夜を過ごすために、狭くて湿った洞窟の中で寝る（仮寝する）しかなかった。", 
+        quiz: { question: "Exhausted from the hike, we finally ___ for the night in a dusty old barn.", options: ["bedded down", "broke in", "bashed out"], correctIndex: 0, explanation: "to sleep in an odd place." } 
+      },
+      { 
+        pv: "Beef up", trope: "The Security Upgrade", cefr: "C1", icon: Shield, 
+        meaning: "To make something substantially stronger, bigger, or more effective.", 
+        meaningJP: "（防備や計画を）強化する、補強する", 
+        example: "The tech company urgently needs to beef up its flimsy cybersecurity.", 
+        exampleJP: "そのテック企業は、脆弱なサイバーセキュリティを至急強化する必要がある。",
+        vibes: ["A major system upgrade", "Increasing physical safety measures", "Strengthening a team's roster"], 
+        vibesJP: ["大規模なシステムアップグレード", "物理的な安全対策の強化", "チームの戦力を補強する"],
+        storyline: "After the devastating hack that leaked thousands of private emails, the desperate CEO called an emergency meeting. 'We must absolutely beef up our firewall security immediately, no matter the massive cost!' he roared.", 
+        storylineJP: "何千通ものプライベートなメールが流出した壊滅的なハッキングの後、絶望したCEOは緊急会議を招集した。「莫大な費用がかかろうとも、我々は直ちにファイアウォールのセキュリティを絶対に強化しなければならない！」と彼は吠えた。", 
+        quiz: { question: "To prepare for the championship, the coach decided to strongly ___ the defensive line.", options: ["beef up", "bag out", "be after"], correctIndex: 0, explanation: "to make stronger." } 
+      },
+      { 
+        pv: "Belong to", trope: "The Lost and Found", cefr: "A2", icon: Users, 
+        meaning: "To be owned by someone or to be a member of a specific group.", 
+        meaningJP: "～に属する、～の所有物である", 
+        example: "Excuse me, does this expensive-looking umbrella belong to you?", 
+        exampleJP: "すみません、この高そうな傘はあなたのもの（あなたに属するもの）ですか？",
+        vibes: ["Finding a lost valuable", "Identifying true ownership", "Returning personal property"], 
+        vibesJP: ["失くした貴重品を見つける", "本当の所有者を特定する", "個人の所有物を返す"],
+        storyline: "While sweeping the empty school gym, honest Sato found a glittering, diamond-studded ring hidden under the bleachers. He spent his entire precious Saturday bravely asking around the wealthy neighborhoods to see who it belonged to.", 
+        storylineJP: "誰もいない学校の体育館を掃除している時、正直者の佐藤は観覧席の下に隠れていた、キラキラ光るダイヤをちりばめた指輪を見つけた。彼は誰の持ち物か（誰に属するか）を確認するため、大切な土曜日を丸一日費やして裕福な地域を勇敢に聞き込みして回った。", 
+        quiz: { question: "The majestic, ancient castle on the hill actually ___ the mysterious old duke.", options: ["belongs to", "be in on", "be along"], correctIndex: 0, explanation: "to be owned by." } 
+      },
+      { 
+        pv: "Belt out", trope: "The Shower Diva", cefr: "C1", icon: Music, 
+        meaning: "To sing a song or play an instrument extremely loudly and with great passion.", 
+        meaningJP: "（歌などを）大声で歌う、力いっぱい歌い上げる", 
+        example: "She joyfully belts out classic 80s pop songs in the shower every single morning.", 
+        exampleJP: "彼女は毎朝欠かさずシャワーを浴びながら、80年代のクラシックなポップソングを力いっぱい歌い上げている。",
+        vibes: ["A passionate karaoke performance", "Loud, enthusiastic music", "Singing with pure joy"], 
+        vibesJP: ["情熱的なカラオケのパフォーマンス", "大音量で熱狂的な音楽", "純粋な喜びとともに歌う"],
+        storyline: "The school talent show was deadly quiet until Hina grabbed the microphone. Closing her eyes, she confidently belted out a soaring, emotional power ballad that sent absolute shivers down everyone's spine and brought the house down.", 
+        storylineJP: "学校の特技披露大会は、ヒナがマイクを握るまで死んだように静かだった。目を閉じ、彼女は皆の背筋に絶対的なゾクゾク感を走らせ、会場を総立ちにさせるほどの、高らかで感情的なパワーバラードを自信に満ちて力強く歌い上げた。", 
+        quiz: { question: "Standing on the grand stage, the confident tenor proudly ___ the national anthem.", options: ["belted out", "bottomed out", "backed out"], correctIndex: 0, explanation: "to sing loudly." } 
+      },
+      { 
+        pv: "Belt up", trope: "The Angry Demand for Silence", cefr: "C1", icon: XCircle, 
+        meaning: "To stop talking immediately and be quiet (used in a rude or aggressive way).", 
+        meaningJP: "（乱暴に）黙る、静かにする", 
+        example: "I angrily told him to belt up because his constant whining was driving me crazy!", 
+        exampleJP: "彼の絶え間ない愚痴に気が狂いそうだったので、私は彼に黙れと怒って言った！",
+        vibes: ["A rude demand to shut up", "An aggressive call for silence", "Stopping an annoying argument"], 
+        vibesJP: ["黙れという無礼な要求", "静寂への攻撃的な呼びかけ", "鬱陶しい口論を止める"],
+        storyline: "The long family road trip had turned into a nightmare. The two younger brothers were screaming and fighting over a toy in the backseat. Finally, Grandpa slammed the steering wheel and roared, 'Belt up, both of you, right this instant!'", 
+        storylineJP: "家族の長いドライブは悪夢と化していた。後部座席で2人の弟がおもちゃを巡って金切り声を上げ、取っ組み合いの喧嘩をしていた。ついに、祖父はハンドルをバンと叩き、「二人とも、今すぐ黙れ（静かにしろ）！」と怒号を轟かせた。", 
+        quiz: { question: "I'm trying to concentrate on this complex puzzle, so just ___ and listen to the instructions!", options: ["belt up", "be up", "back off"], correctIndex: 0, explanation: "to be quiet." } 
+      },
+      { 
+        pv: "Belt up", trope: "The Safety Check", cefr: "B1", icon: AlertTriangle, 
+        meaning: "To fasten your seatbelt in a car or airplane for safety.", 
+        meaningJP: "シートベルトを締める", 
+        example: "Alright, everyone belt up! We're about to hit the busy highway.", 
+        exampleJP: "よし、みんなシートベルトを締めて！これから混雑した高速道路に乗るぞ。",
+        vibes: ["Enforcing vehicle safety", "Preparing for a long drive", "A responsible driver's command"], 
+        vibesJP: ["車両の安全を徹底する", "長距離ドライブの準備", "責任ある運転手の命令"],
+        storyline: "The engine of the sturdy family minivan roared to life. Before shifting out of park, Dad turned around with a stern look to check the chaotic backseat. 'Alright team, everyone belt up! We are officially ready to hit the road for the beach.'", 
+        storylineJP: "頑丈なファミリー向けミニバンのエンジンが轟音とともに目覚めた。パーキングからギアを入れる前、父は厳しい顔つきで振り返り、カオスな後部座席を確認した。「よしみんな、全員シートベルトを締めて！これで正式に海へ向けて出発するぞ。」", 
+        quiz: { question: "The strict driving instructor told me to firmly ___ before starting the engine.", options: ["belt up", "bash in", "be along"], correctIndex: 0, explanation: "to fasten seatbelt." } 
+      },
+      { 
+        pv: "Bend down", trope: "The Simple Motion", cefr: "A2", icon: Footprints, 
+        meaning: "To move the top part of your body forwards and downwards.", 
+        meaningJP: "（腰を）かがめる、しゃがむ", 
+        example: "I casually bent down to tie my loose shoelaces.", 
+        exampleJP: "私はほどけた靴ひもを結ぶために、何気なく腰をかがめた。",
+        vibes: ["A basic physical action", "Moving closer to the ground", "Picking something up"], 
+        vibesJP: ["基本的な身体動作", "地面に近づく", "何かを拾い上げる"],
+        storyline: "Walking along the windy, autumn path to school, Sora noticed a strange, glowing object half-buried in the colorful fallen leaves. He carefully bent down to pick it up, realizing it was a mysterious, ancient silver key.", 
+        storylineJP: "風の強い秋の通学路を歩いていると、ソラは色鮮やかな落ち葉の中に半分埋もれた、奇妙に光る物体に気づいた。彼はそれを拾うために慎重に腰をかがめ、それが謎めいた古代の銀の鍵であることに気づいた。", 
+        quiz: { question: "The tall, gentle giant slowly ___ to softly kiss the crying child on the forehead.", options: ["bent down", "ballsed up", "be in on"], correctIndex: 0, explanation: "to move body down." } 
+      },
+      { 
+        pv: "Bend over backwards", trope: "The Ultimate Dedication", cefr: "C1", icon: Heart, 
+        meaning: "To try extremely hard to help or please someone, often sacrificing one's own comfort.", 
+        meaningJP: "（人のために）必死に尽力する、最大限の努力をする", 
+        example: "My incredible teacher truly bent over backwards to help me finally graduate.", 
+        exampleJP: "私の素晴らしい先生は、私が最終的に卒業できるよう本当に必死に尽力してくれた。",
+        vibes: ["Offering extraordinary help", "Showing immense dedication", "Exceptional customer service"], 
+        vibesJP: ["並外れた助けを提供する", "多大な献身を示す", "並外れたカスタマーサービス"],
+        storyline: "Mika was struggling terribly with her advanced art portfolio. Seeing her despair, her strict but kind professor stayed late every single evening for a month. He truly bent over backwards to ensure she perfected her technique and passed the final review.", 
+        storylineJP: "ミカは上級アートのポートフォリオ制作でひどく苦戦していた。彼女の絶望を見て、厳しくも優しい教授は1ヶ月間、毎日夜遅くまで残ってくれた。彼女が技術を完成させ、最終審査に合格できるよう、彼は本当に必死に尽力して（最大限の努力をして）くれたのだ。", 
+        quiz: { question: "The dedicated hotel staff completely ___ to warmly welcome the demanding VIP guests.", options: ["bent over backwards", "beavered away", "bottomed out"], correctIndex: 0, explanation: "to try hard to help." } 
+      },
+      { 
+        pv: "Big up", trope: "The Self-Promoter", cefr: "C2", icon: Volume2, 
+        meaning: "To praise or highly advertise someone or something, often in an exaggerated way.", 
+        meaningJP: "大げさに褒めちぎる、大いに宣伝する", 
+        example: "It's so annoying how he is constantly bigging himself up in every meeting.", 
+        exampleJP: "彼が毎回会議で常に自分自身を大げさに宣伝しているのは本当に鬱陶しい。",
+        vibes: ["Aggressive self-marketing", "Exaggerated boasting", "Building an inflated ego"], 
+        vibesJP: ["攻撃的な自己マーケティング", "誇張された自慢", "肥大化したエゴを築く"],
+        storyline: "Leo was decent at coding, but his ego was massive. During the crucial investor pitch, instead of explaining the actual software, he spent twenty minutes arrogantly bigging up his own minor contributions, completely annoying the entire exhausted team.", 
+        storylineJP: "レオはコーディングはそこそこできたが、自己顕示欲が巨大だった。重要な投資家へのプレゼンの最中、彼は実際のソフトウェアについて説明する代わりに、自分自身の些細な貢献を20分間も傲慢に大げさに宣伝し続け、疲れ切ったチーム全体を完全に苛立たせた。", 
+        quiz: { question: "Please stop endlessly ___ that incredibly boring and predictable TV show.", options: ["bigging up", "bagging out", "bash about"], correctIndex: 0, explanation: "to praise highly." } 
+      },
+      { 
+        pv: "Black out", trope: "The Heat Collapse", cefr: "B2", icon: Thermometer, 
+        meaning: "To suddenly lose consciousness, often due to heat, pain, or shock.", 
+        meaningJP: "（貧血や暑さなどで）意識を失う、失神する", 
+        example: "It was so intensely hot in the crowded room that I nearly blacked out.", 
+        exampleJP: "混雑した部屋の中はとても強烈に暑かったので、私はもう少しで意識を失うところだった。",
+        vibes: ["A sudden health emergency", "Dangerous summer heat", "Losing all sensation"], 
+        vibesJP: ["突然の健康上の緊急事態", "危険な夏の暑さ", "すべての感覚を失う"],
+        storyline: "It was the final, brutal sprint of the summer marathon. The relentless 40-degree heat was suffocating. Just as Sora heroically crossed the white finish line, his vision blurred, his knees buckled, and he completely blacked out on the burning asphalt.", 
+        storylineJP: "それは夏の長距離マラソンの、過酷な最後のスプリントだった。容赦ない40度の暑さは息が詰まるほどだった。ソラが英雄的に白いゴールラインを越えた瞬間、彼の視界はぼやけ、膝が折れ、焼けつくアスファルトの上で完全に意識を失った（失神した）。", 
+        quiz: { question: "Overwhelmed by the shocking news, the fragile man ___ for a terrifying minute.", options: ["blacked out", "blew up", "backed away"], correctIndex: 0, explanation: "to lose consciousness." } 
+      },
+      { 
+        pv: "Black out", trope: "The Stormy Darkness", cefr: "B2", icon: Zap, 
+        meaning: "For lights to completely go out due to a sudden power failure.", 
+        meaningJP: "停電する、真っ暗になる", 
+        example: "The entire city grid blacked out during the massive winter storm.", 
+        exampleJP: "大規模な冬の嵐の間、都市の送電網全体が完全に停電した。",
+        vibes: ["A sudden loss of power", "Pitch-black stormy nights", "An electrical infrastructure failure"], 
+        vibesJP: ["突然の電力喪失", "真っ暗な嵐の夜", "電気インフラの故障"],
+        storyline: "The raging thunderstorm battered the isolated town. Suddenly, a massive bolt of purple lightning struck the main central power grid. In a split second, the screens died, the hum of machines stopped, and the entire frightened neighborhood blacked out instantly.", 
+        storylineJP: "猛威を振るう雷雨が孤立した町を打ち据えていた。突然、巨大な紫色の稲妻が中央の主要な送電網を直撃した。一瞬にして画面は消え、機械の唸り声は止み、怯える近隣一帯は即座に完全に停電し（真っ暗になり）静まり返った。", 
+        quiz: { question: "The vulnerable coastal city entirely ___ during the devastating hurricane.", options: ["blacked out", "bashed in", "be after"], correctIndex: 0, explanation: "to have a power failure." } 
+      }
     ],
 
     5: [
-
-      { pv: "Blank out", trope: "The Presentation Fog", cefr: "B2", icon: CloudOff, meaning: "To experience a sudden, temporary memory failure under pressure.", meaningJP: "度忘れする、頭が真っ白になる", example: "I lowkey blanked out during the big presentation.", vibes: ["Embarrassing brain fog", "High-stress stage fright", "Exam panic"], storyline: "Sora had memorized the entire speech perfectly. But the moment he looked at the 500 staring faces in the audience, his mind just stopped. He lowkey blanked out, stood in awkward silence for ten seconds, and literally forgot his own name.", storylineJP: "ソラはスピーチを完璧に暗記していた。しかし、観客の500の顔を見た瞬間、彼の思考は停止した。彼はちょっとした度忘れを起こし（頭が真っ白になり）、10秒間気まずい沈黙の中で立ち尽くし、文字通り自分の名前すら忘れてしまった。", quiz: { question: "I completely ___ during the final test and couldn't remember a single formula.", options: ["blanked out", "blissed out", "blared out"], correctIndex: 0, explanation: "memory loss." } },
-
-      { pv: "Blare out", trope: "The Main Character Noise", cefr: "B2", icon: Volume2, meaning: "To produce a continuous, incredibly loud, harsh sound or music.", meaningJP: "（大音量で音楽などが）鳴り響く", example: "My annoying neighbor was blaring out music at 2 AM.", vibes: ["Obnoxious loud music", "Late-night noise complaints", "Ignoring everyone else"], storyline: "It was 2 AM, and Hina had a massive final exam the next day. But the guy next door, acting like he was the main character in a movie, was blaring out heavy metal music so loud the apartment walls were actually shaking.", storylineJP: "深夜2時、ヒナは翌日に超重要な期末試験を控えていた。しかし隣の男は、まるで自分が映画の主人公であるかのように振る舞い、壁が実際に震えるほどの大音量でヘヴィメタルを鳴り響かせていた。", quiz: { question: "The broken car radio was obnoxiously ___ the breaking news across the street.", options: ["blaring out", "blocking out", "blurting out"], correctIndex: 0, explanation: "loud noise." } },
-
-      { pv: "Bliss out", trope: "The Ultimate Self-Care", cefr: "C1", icon: Smile, meaning: "To reach a state of extreme relaxation and complete happiness, ignoring all stress.", meaningJP: "至福に浸る、うっとりする、完全にリラックスする", example: "I'm spending my entire Sunday just blissing out.", vibes: ["A zero-stress weekend", "Peak self-care routines", "A state of pure relaxation"], storyline: "After a brutal 60-hour work week dealing with angry clients, Mika turned off her phone, put on a thick face mask, and sank into a mountain of soft pillows. She spent the entire Sunday just blissing out, absolutely ignoring the chaotic world outside.", storylineJP: "怒れる顧客の対応に追われた過酷な週60時間労働の後、ミカはスマホの電源を切り、分厚いフェイスマスクをつけて、ふかふかの枕の山に沈み込んだ。彼女は外のカオスな世界を完全に無視し、日曜日丸一日をただただ至福に浸って（完全にリラックスして）過ごした。", quiz: { question: "I just want to lay on the warm, sunny beach and completely ___.", options: ["bliss out", "blow off", "blank out"], correctIndex: 0, explanation: "extremely relaxed." } },
-
-      { pv: "Block out", trope: "The Toxic Shield", cefr: "B2", icon: Shield, meaning: "To intentionally try not to think about or hear something upsetting or negative.", meaningJP: "（不快な考えやノイズを）遮断する、締め出す", example: "I just try to block out the haters and focus intensely on my own goals.", vibes: ["Defending against toxic vibes", "Ignoring intense negativity", "Laser focus on a journey"], storyline: "The anonymous internet comments under his new artwork were getting incredibly mean and personal. Sora took a deep breath, put on his noise-canceling headphones, and decided to just block out the haters to protect his peace and focus on his craft.", storylineJP: "彼の新しいアートについたネットの匿名コメントは、信じられないほど意地悪で個人的な攻撃になってきていた。ソラは深呼吸をし、ノイズキャンセリングヘッドホンをつけ、自分の平穏を守り創作に集中するために、批判者たちを完全に遮断することに決めた。", quiz: { question: "I put on loud music and tried my best to ___ the terrifying noise of the storm.", options: ["block out", "blow out", "bliss out"], correctIndex: 0, explanation: "try not to think/hear." } },
-
-      { pv: "Blow away", trope: "The Next-Gen Masterpiece", cefr: "C1", icon: Sparkles, meaning: "To impress someone so greatly that it exceeds all their expectations.", meaningJP: "（人を）圧倒する、強く感動させる", example: "The crazy, hyper-realistic graphics in that game completely blew me away.", vibes: ["Obsessed with high quality", "Experiencing an amazing masterpiece", "Feeling absolute shock"], storyline: "Kaito had high expectations for the new VR RPG, but the moment he put the headset on, he was speechless. The insane level of detail, the perfect lighting, and the massive scale of the virtual world literally blew him away.", storylineJP: "海斗はその新作VR RPGに大きな期待を寄せていたが、ヘッドセットを被った瞬間、彼は言葉を失った。狂気的なレベルの細部、完璧な光の表現、そして仮想世界の巨大なスケールが、文字通り彼を圧倒した（感動させた）。", quiz: { question: "The young singer's incredibly powerful, emotional performance completely ___ the cynical judges ___.", options: ["blew / away", "back / away", "blank / out"], correctIndex: 0, explanation: "impress greatly." } },
-
-      { pv: "Blow off", trope: "The Flaky Ghosting", cefr: "B2", icon: Ghost, meaning: "To intentionally not keep an appointment or casually ignore someone you made plans with.", meaningJP: "（約束を）すっぽかす、無視する", example: "He totally blew me off last night to hang out with other people.", vibes: ["Getting rudely ghosted", "Being ditched for better plans", "Dealing with a flaky friend"], storyline: "Rin had been waiting at the fancy cafe for an hour, dressed in her absolute best outfit. Checking her phone, she saw a photo of him at a wild house party. He had totally blown her off without even sending a single apology text message.", storylineJP: "リンはとびきりのおしゃれをして、おしゃれなカフェで1時間も待っていた。スマホを見ると、彼が派手なホームパーティにいる写真が上がっていた。彼はたった一通の謝罪メッセージもなく、彼女を完全にすっぽかした（無視した）のだ。", quiz: { question: "I can't believe she rudely ___ her extremely important doctor's meeting just to sleep in.", options: ["blew off", "blew up", "blew over"], correctIndex: 0, explanation: "not keep appointment." } },
-
-      { pv: "Blow over", trope: "The Fast Cancel Culture", cefr: "B2", icon: Wind, meaning: "When a scandal, intense argument, or problem is eventually forgotten and passes without serious harm.", meaningJP: "（嵐や噂などが）収まる、忘れ去られる", example: "Don't stress about the social media drama; it will definitely blow over soon.", vibes: ["Waiting for people to move on", "Surviving online scandals", "The fast news cycle"], storyline: "Mika was absolutely terrified when a slightly embarrassing video of her went viral at school. Her wise older sister just laughed. 'Don't worry about this stupid drama. Give it three days, and it'll completely blow over when someone else messes up worse.'", storylineJP: "学校で少し恥ずかしい動画が拡散され、ミカは恐怖に怯えていた。賢い姉はただ笑った。「こんなくだらない騒動、心配しなくていいわ。3日もすれば、誰か別の人がもっとひどい失敗をして、この件は完全に忘れ去られる（収まる）から。」", quiz: { question: "The massive political scandal dominated the news for weeks, but finally ___ after a month.", options: ["blew over", "blew up", "blissed out"], correctIndex: 0, explanation: "problem forgotten." } },
-
-      { pv: "Blow up", trope: "The Furious Parent", cefr: "B1", icon: Flame, meaning: "To lose your temper and become suddenly, intensely angry at someone.", meaningJP: "激怒する、キレる", example: "My mom completely blew up at me because of my grades.", vibes: ["Sudden intense anger", "A severe parental scolding", "A dramatic yelling match"], storyline: "Leo swore he would clean the entire kitchen before mom got home from work. When she walked in to see towering piles of dirty plates and a sleeping Leo on the couch, she absolutely blew up at him, her furious voice echoing down the street.", storylineJP: "レオは母が仕事から帰る前にキッチン全体を掃除すると誓っていた。そびえ立つ汚れた皿の山と、ソファで眠るレオを見た瞬間、彼女は絶対的に彼に激怒し（キレて）、その猛烈な声は通りまで響き渡った。", quiz: { question: "The stressed manager suddenly ___ at his confused team over a tiny spelling error.", options: ["blew up", "blew off", "blared out"], correctIndex: 0, explanation: "lose temper." } },
-
-      { pv: "Blow up", trope: "The Viral Phenomenon", cefr: "B1", icon: Zap, meaning: "To get a massive amount of sudden attention, especially on social media.", meaningJP: "（SNSなどで）大炎上する、バズる", example: "My random 3 AM TikTok is totally blowing up!", vibes: ["Going viral overnight", "Endless notifications", "Sudden internet success"], storyline: "Sora posted a silly, ten-second clip of his cat trying to catch a laser pointer right before going to sleep. When he woke up, his phone was literally frozen from notifications. The video was blowing up, hitting two million views overnight.", storylineJP: "ソラは寝る前に、猫がレーザーポインターを捕まえようとするふざけた10秒の動画を投稿した。朝起きると、通知の嵐でスマホが文字通りフリーズしていた。その動画はバズりまくり（爆発的な人気になり）、一晩で200万再生を突破していた。", quiz: { question: "Her controversial fashion post totally ___ overnight, getting thousands of angry comments.", options: ["blew up", "blanked out", "blissed out"], correctIndex: 0, explanation: "get attention." } },
-
-      { pv: "Blurt out", trope: "The Accidental Tea Spill", cefr: "B2", icon: MessageCircle, meaning: "To say a secret or something sensitive suddenly and without thinking.", meaningJP: "（秘密などを）うっかり口走る", example: "I accidentally blurted out the big secret at dinner.", vibes: ["Spilling the tea by mistake", "Failing to keep a secret", "Instant, crushing embarrassment"], storyline: "Everyone had worked for weeks to keep the massive surprise party a total secret from Kaito. But as soon as Kaito walked into the quiet room, a nervous Hina panicked and blurted out, 'Happy Birthday!' ten whole minutes too early. The silence was agonizing.", storylineJP: "海斗に大規模なサプライズパーティを完全に内緒にするため、全員が何週間も苦心していた。しかし海斗が静かな部屋に入ってきた瞬間、緊張したヒナはパニックになり、丸10分も早く「誕生日おめでとう！」とうっかり口走ってしまった。その後の沈黙は耐え難いものだった。", quiz: { question: "Under pressure from the intense police, the nervous suspect accidentally ___ the terrifying truth!", options: ["blurted out", "blocked out", "blared out"], correctIndex: 0, explanation: "say without thinking." } }
-
+      { 
+        pv: "Blank out", trope: "The Presentation Fog", cefr: "B2", icon: CloudOff, 
+        meaning: "To experience a sudden, temporary memory failure under pressure.", 
+        meaningJP: "度忘れする、頭が真っ白になる", 
+        example: "I lowkey blanked out during the big presentation.", 
+        exampleJP: "大規模なプレゼンの最中に、ちょっと頭が真っ白になってしまった。",
+        vibes: ["Embarrassing brain fog", "High-stress stage fright", "Exam panic"], 
+        vibesJP: ["恥ずかしい脳の霧（ブレインフォグ）", "高ストレスな舞台恐怖症", "テスト中のパニック"],
+        storyline: "Sora had memorized the entire speech perfectly. But the moment he looked at the 500 staring faces in the audience, his mind just stopped. He lowkey blanked out, stood in awkward silence for ten seconds, and literally forgot his own name.", 
+        storylineJP: "ソラはスピーチを完璧に暗記していた。しかし、観客の500の顔を見た瞬間、彼の思考は停止した。彼はちょっとした度忘れを起こし（頭が真っ白になり）、10秒間気まずい沈黙の中で立ち尽くし、文字通り自分の名前すら忘れてしまった。", 
+        quiz: { question: "I completely ___ during the final test and couldn't remember a single formula.", options: ["blanked out", "blissed out", "blared out"], correctIndex: 0, explanation: "memory loss." } 
+      },
+      { 
+        pv: "Blare out", trope: "The Main Character Noise", cefr: "B2", icon: Volume2, 
+        meaning: "To produce a continuous, incredibly loud, harsh sound or music.", 
+        meaningJP: "（大音量で音楽などが）鳴り響く", 
+        example: "My annoying neighbor was blaring out music at 2 AM.", 
+        exampleJP: "厄介な隣人が深夜2時に音楽を大音量で鳴り響かせていた。",
+        vibes: ["Obnoxious loud music", "Late-night noise complaints", "Ignoring everyone else"], 
+        vibesJP: ["不快な大音量の音楽", "深夜の騒音苦情", "他の全員を無視する"],
+        storyline: "It was 2 AM, and Hina had a massive final exam the next day. But the guy next door, acting like he was the main character in a movie, was blaring out heavy metal music so loud the apartment walls were actually shaking.", 
+        storylineJP: "深夜2時、ヒナは翌日に超重要な期末試験を控えていた。しかし隣の男は、まるで自分が映画の主人公であるかのように振る舞い、壁が実際に震えるほどの大音量でヘヴィメタルを鳴り響かせていた。", 
+        quiz: { question: "The broken car radio was obnoxiously ___ the breaking news across the street.", options: ["blaring out", "blocking out", "blurting out"], correctIndex: 0, explanation: "loud noise." } 
+      },
+      { 
+        pv: "Bliss out", trope: "The Ultimate Self-Care", cefr: "C1", icon: Smile, 
+        meaning: "To reach a state of extreme relaxation and complete happiness, ignoring all stress.", 
+        meaningJP: "至福に浸る、うっとりする、完全にリラックスする", 
+        example: "I'm spending my entire Sunday just blissing out.", 
+        exampleJP: "私は日曜日丸一日をただ至福に浸って過ごしている。",
+        vibes: ["A zero-stress weekend", "Peak self-care routines", "A state of pure relaxation"], 
+        vibesJP: ["ストレスゼロの週末", "究極のセルフケアルーティン", "純粋なリラックス状態"],
+        storyline: "After a brutal 60-hour work week dealing with angry clients, Mika turned off her phone, put on a thick face mask, and sank into a mountain of soft pillows. She spent the entire Sunday just blissing out, absolutely ignoring the chaotic world outside.", 
+        storylineJP: "怒れる顧客の対応に追われた過酷な週60時間労働の後、ミカはスマホの電源を切り、分厚いフェイスマスクをつけて、ふかふかの枕の山に沈み込んだ。彼女は外のカオスな世界を完全に無視し、日曜日丸一日をただただ至福に浸って（完全にリラックスして）過ごした。", 
+        quiz: { question: "I just want to lay on the warm, sunny beach and completely ___.", options: ["bliss out", "blow off", "blank out"], correctIndex: 0, explanation: "extremely relaxed." } 
+      },
+      { 
+        pv: "Block out", trope: "The Toxic Shield", cefr: "B2", icon: Shield, 
+        meaning: "To intentionally try not to think about or hear something upsetting or negative.", 
+        meaningJP: "（不快な考えやノイズを）遮断する、締め出す", 
+        example: "I just try to block out the haters and focus intensely on my own goals.", 
+        exampleJP: "私はただアンチを遮断し、自分の目標に激しく集中しようとしている。",
+        vibes: ["Defending against toxic vibes", "Ignoring intense negativity", "Laser focus on a journey"], 
+        vibesJP: ["有毒なバイブスから身を守る", "強烈なネガティブさを無視する", "自分の旅へのレーザーのような集中"],
+        storyline: "The anonymous internet comments under his new artwork were getting incredibly mean and personal. Sora took a deep breath, put on his noise-canceling headphones, and decided to just block out the haters to protect his peace and focus on his craft.", 
+        storylineJP: "彼の新しいアートについたネットの匿名コメントは、信じられないほど意地悪で個人的な攻撃になってきていた。ソラは深呼吸をし、ノイズキャンセリングヘッドホンをつけ、自分の平穏を守り創作に集中するために、批判者たちを完全に遮断することに決めた。", 
+        quiz: { question: "I put on loud music and tried my best to ___ the terrifying noise of the storm.", options: ["block out", "blow out", "bliss out"], correctIndex: 0, explanation: "try not to think/hear." } 
+      },
+      { 
+        pv: "Blow away", trope: "The Next-Gen Masterpiece", cefr: "C1", icon: Sparkles, 
+        meaning: "To impress someone so greatly that it exceeds all their expectations.", 
+        meaningJP: "（人を）圧倒する、強く感動させる", 
+        example: "The crazy, hyper-realistic graphics in that game completely blew me away.", 
+        exampleJP: "そのゲームの狂気的なほど超リアルなグラフィックは、私を完全に圧倒した。",
+        vibes: ["Obsessed with high quality", "Experiencing an amazing masterpiece", "Feeling absolute shock"], 
+        vibesJP: ["高品質への執着", "素晴らしい傑作を体験する", "絶対的なショックを感じる"],
+        storyline: "Kaito had high expectations for the new VR RPG, but the moment he put the headset on, he was speechless. The insane level of detail, the perfect lighting, and the massive scale of the virtual world literally blew him away.", 
+        storylineJP: "海斗はその新作VR RPGに大きな期待を寄せていたが、ヘッドセットを被った瞬間、彼は言葉を失った。狂気的なレベルの細部、完璧な光の表現、そして仮想世界の巨大なスケールが、文字通り彼を圧倒した（感動させた）。", 
+        quiz: { question: "The young singer's incredibly powerful, emotional performance completely ___ the cynical judges ___.", options: ["blew / away", "back / away", "blank / out"], correctIndex: 0, explanation: "impress greatly." } 
+      },
+      { 
+        pv: "Blow off", trope: "The Flaky Ghosting", cefr: "B2", icon: Ghost, 
+        meaning: "To intentionally not keep an appointment or casually ignore someone you made plans with.", 
+        meaningJP: "（約束を）すっぽかす、無視する", 
+        example: "He totally blew me off last night to hang out with other people.", 
+        exampleJP: "彼は昨夜、他の人と遊ぶために完全に私の約束をすっぽかした。",
+        vibes: ["Getting rudely ghosted", "Being ditched for better plans", "Dealing with a flaky friend"], 
+        vibesJP: ["失礼にも音信不通にされる", "より良い予定のために見捨てられる", "当てにならない友人の対処"],
+        storyline: "Rin had been waiting at the fancy cafe for an hour, dressed in her absolute best outfit. Checking her phone, she saw a photo of him at a wild house party. He had totally blown her off without even sending a single apology text message.", 
+        storylineJP: "リンはとびきりのおしゃれをして、おしゃれなカフェで1時間も待っていた。スマホを見ると、彼が派手なホームパーティにいる写真が上がっていた。彼はたった一通の謝罪メッセージもなく、彼女を完全にすっぽかした（無視した）のだ。", 
+        quiz: { question: "I can't believe she rudely ___ her extremely important doctor's meeting just to sleep in.", options: ["blew off", "blew up", "blew over"], correctIndex: 0, explanation: "not keep appointment." } 
+      },
+      { 
+        pv: "Blow over", trope: "The Fast Cancel Culture", cefr: "B2", icon: Wind, 
+        meaning: "When a scandal, intense argument, or problem is eventually forgotten and passes without serious harm.", 
+        meaningJP: "（嵐や噂などが）収まる、忘れ去られる", 
+        example: "Don't stress about the social media drama; it will definitely blow over soon.", 
+        exampleJP: "SNSの騒動についてストレスを感じないで。間違いなくすぐに収まるから。",
+        vibes: ["Waiting for people to move on", "Surviving online scandals", "The fast news cycle"], 
+        vibesJP: ["人々が前に進む（忘れる）のを待つ", "ネットのスキャンダルを生き延びる", "速いニュースサイクル"],
+        storyline: "Mika was absolutely terrified when a slightly embarrassing video of her went viral at school. Her wise older sister just laughed. 'Don't worry about this stupid drama. Give it three days, and it'll completely blow over when someone else messes up worse.'", 
+        storylineJP: "学校で少し恥ずかしい動画が拡散され、ミカは恐怖に怯えていた。賢い姉はただ笑った。「こんなくだらない騒動、心配しなくていいわ。3日もすれば、誰か別の人がもっとひどい失敗をして、この件は完全に忘れ去られる（収まる）から。」", 
+        quiz: { question: "The massive political scandal dominated the news for weeks, but finally ___ after a month.", options: ["blew over", "blew up", "blissed out"], correctIndex: 0, explanation: "problem forgotten." } 
+      },
+      { 
+        pv: "Blow up", trope: "The Furious Parent", cefr: "B1", icon: Flame, 
+        meaning: "To lose your temper and become suddenly, intensely angry at someone.", 
+        meaningJP: "激怒する、キレる", 
+        example: "My mom completely blew up at me because of my grades.", 
+        exampleJP: "私の成績のせいで、お母さんは完全に私に激怒した（キレた）。",
+        vibes: ["Sudden intense anger", "A severe parental scolding", "A dramatic yelling match"], 
+        vibesJP: ["突然の激しい怒り", "親の厳しい説教", "ドラマチックな怒鳴り合い"],
+        storyline: "Leo swore he would clean the entire kitchen before mom got home from work. When she walked in to see towering piles of dirty plates and a sleeping Leo on the couch, she absolutely blew up at him, her furious voice echoing down the street.", 
+        storylineJP: "レオは母が仕事から帰る前にキッチン全体を掃除すると誓っていた。そびえ立つ汚れた皿の山と、ソファで眠るレオを見た瞬間、彼女は絶対的に彼に激怒し（キレて）、その猛烈な声は通りまで響き渡った。", 
+        quiz: { question: "The stressed manager suddenly ___ at his confused team over a tiny spelling error.", options: ["blew up", "blew off", "blared out"], correctIndex: 0, explanation: "lose temper." } 
+      },
+      { 
+        pv: "Blow up", trope: "The Viral Phenomenon", cefr: "B1", icon: Zap, 
+        meaning: "To get a massive amount of sudden attention, especially on social media.", 
+        meaningJP: "（SNSなどで）大炎上する、バズる", 
+        example: "My random 3 AM TikTok is totally blowing up!", 
+        exampleJP: "深夜3時の適当なTikTokが完全にバズってる！",
+        vibes: ["Going viral overnight", "Endless notifications", "Sudden internet success"], 
+        vibesJP: ["一夜にしてバズる", "終わりのない通知", "突然のネットでの成功"],
+        storyline: "Sora posted a silly, ten-second clip of his cat trying to catch a laser pointer right before going to sleep. When he woke up, his phone was literally frozen from notifications. The video was blowing up, hitting two million views overnight.", 
+        storylineJP: "ソラは寝る前に、猫がレーザーポインターを捕まえようとするふざけた10秒の動画を投稿した。朝起きると、通知の嵐でスマホが文字通りフリーズしていた。その動画はバズりまくり（爆発的な人気になり）、一晩で200万再生を突破していた。", 
+        quiz: { question: "Her controversial fashion post totally ___ overnight, getting thousands of angry comments.", options: ["blew up", "blanked out", "blissed out"], correctIndex: 0, explanation: "get attention." } 
+      },
+      { 
+        pv: "Blurt out", trope: "The Accidental Tea Spill", cefr: "B2", icon: MessageCircle, 
+        meaning: "To say a secret or something sensitive suddenly and without thinking.", 
+        meaningJP: "（秘密などを）うっかり口走る", 
+        example: "I accidentally blurted out the big secret at dinner.", 
+        exampleJP: "夕食の時に、うっかりその大きな秘密を口走ってしまった。",
+        vibes: ["Spilling the tea by mistake", "Failing to keep a secret", "Instant, crushing embarrassment"], 
+        vibesJP: ["間違えてゴシップを漏らす", "秘密を守れない", "即座の、打ちのめされるような恥ずかしさ"],
+        storyline: "Everyone had worked for weeks to keep the massive surprise party a total secret from Kaito. But as soon as Kaito walked into the quiet room, a nervous Hina panicked and blurted out, 'Happy Birthday!' ten whole minutes too early. The silence was agonizing.", 
+        storylineJP: "海斗に大規模なサプライズパーティを完全に内緒にするため、全員が何週間も苦心していた。しかし海斗が静かな部屋に入ってきた瞬間、緊張したヒナはパニックになり、丸10分も早く「誕生日おめでとう！」とうっかり口走ってしまった。その後の沈黙は耐え難いものだった。", 
+        quiz: { question: "Under pressure from the intense police, the nervous suspect accidentally ___ the terrifying truth!", options: ["blurted out", "blocked out", "blared out"], correctIndex: 0, explanation: "say without thinking." } 
+      }
     ],
-
     6: [
-
-      { pv: "Board out", trope: "The Pet Vacation Plan", cefr: "B2", icon: Home, meaning: "To arrange for a pet to stay somewhere else (like a kennel) while you are away.", meaningJP: "（旅行中などにペットを他の場所に）預ける", example: "We have a massive trip, so we had to board our energetic dog out for a week.", vibes: ["Planning expensive pet care", "Preparing for a long family trip", "Worrying about furry friends"], storyline: "The family was incredibly excited for their two-week dream vacation to Japan. However, the hardest part of the planning was finding a trustworthy, caring place to board out their beloved, highly anxious golden retriever so he wouldn't feel abandoned.", storylineJP: "家族は2週間にわたる夢の日本旅行に信じられないほど興奮していた。しかし、計画で一番大変だったのは、彼らが愛してやまない、ひどく神経質なゴールデンレトリバーが見捨てられたと感じないよう、預けるための信頼できる温かい場所を見つけることだった。", quiz: { question: "Before flying to Europe, we urgently need to safely ___ the old dog.", options: ["board out", "bog off", "book in"], correctIndex: 0, explanation: "pet stay elsewhere." } },
-
-      { pv: "Bog down", trope: "The Endless Research Trap", cefr: "B2", icon: Wind, meaning: "To slow progress significantly or to get completely stuck on minor, annoying details.", meaningJP: "行き詰まる、泥沼にはまる、進捗がひどく遅れる", example: "I got totally bogged down in minor formatting details.", vibes: ["Getting stuck on homework", "Slow, frustrating progress", "Losing sight of the main goal"], storyline: "Mika had a brilliant, overarching idea for her final thesis essay. But as started reading historical archives, she got so deeply bogged down in verifying tiny, irrelevant dates that she completely missed her midnight submission deadline.", storylineJP: "ミカの卒論エッセイの全体的なアイデアは素晴らしかった。しかし歴史的アーカイブを読み始めた途端、彼女は無関係な細かい日付の確認に深く行き詰まって（泥沼にはまって）しまい、深夜の提出期限を完全に見過ごしてしまった。", quiz: { question: "Try to focus on the big picture and don't get completely ___ by minor formatting errors.", options: ["bogged down", "bogged into", "bogged off"], correctIndex: 0, explanation: "slow progress." } },
-
-      { pv: "Bog into", trope: "The Savage Post-Workout Hunger", cefr: "B1", icon: ShoppingCart, meaning: "To begin eating a meal very enthusiastically, greedily, and without hesitation.", meaningJP: "ガツガツ食べる、むさぼり食う", example: "I was starving and bogged into that huge burger instantly.", vibes: ["Extreme post-workout hunger", "Devouring fast food", "A messy, highly satisfying meal"], storyline: "Sora had been playing intense, competitive basketball for six hours straight with zero breaks. The moment the steaming hot, greasy Uber Eats pizza arrived, he didn't even grab a plate; he just aggressively bogged into it like a starving wolf.", storylineJP: "ソラは休憩なしで6時間ぶっ通しで、激しい競技バスケをしていた。湯気を立てる脂っこいUber Eatsのピザが届いた瞬間、彼はお皿を取ることすらせず、まるで飢えた狼のようにアグレッシブにそれにガツガツと食らいついた。", quiz: { question: "Famished after the incredibly long mountain hike, he ruthlessly ___ the delicious steak.", options: ["bogged into", "bogged off", "booked up"], correctIndex: 0, explanation: "eat enthusiastically." } },
-
-      { pv: "Bog off!", trope: "The Ultimate Slang Shutdown", cefr: "C1", icon: XCircle, meaning: "A harsh, aggressive slang phrase telling someone to get lost or go away immediately.", meaningJP: "（失礼に）あっちへ行け！、うせろ！", example: "He wouldn't stop annoying me, so I finally turned and told him to bog off.", vibes: ["Harsh British-style slang", "Shutting down annoying people", "Rude, direct rejection"], storyline: "The persistent, fast-talking salesman followed Hina down three different streets, aggressively pushing his useless, expensive skincare products. Annoyed beyond belief, she finally stopped, glared at him with pure ice, and firmly told him to bog off.", storylineJP: "早口でしつこいセールスマンはヒナを3つの通りにわたって追いかけ、役に立たない高価なスキンケア用品を強引に勧めてきた。信じられないほど苛立った彼女はついに立ち止まり、氷のように冷たい視線で彼を睨みつけ、きっぱりと「うせろ（あっちへ行け）」と言い放った。", quiz: { question: "Tired of the constant, completely unhelpful advice from the stranger, I loudly told him to just ___.", options: ["bog off", "boil over", "boot up"], correctIndex: 0, explanation: "get lost/go away." } },
-
-      { pv: "Boil down to", trope: "The Ultimate Core Issue", cefr: "B2", icon: Calculator, meaning: "To basically amount to or be reduced to its main, most essential point.", meaningJP: "要するに～ということになる、～に帰着する", example: "It essentially boils down to a massive matter of money.", vibes: ["Summarizing messy drama", "Finding the simple, hard fact", "Cutting through the nonsense"], storyline: "The student council debated for four agonizing hours about the festival theme, bringing up a hundred different conflicting ideas and complaints. But as Leo pointed out, the whole complex argument basically boiled down to one brutal thing: they had absolutely zero budget.", storylineJP: "生徒会は文化祭のテーマについて4時間も苦痛な議論を交わし、100もの相反するアイデアや不満を出した。しかしレオが指摘したように、その複雑な議論のすべては、要するに「予算が完全にゼロである」という一つの残酷な事実に帰着したのだ。", quiz: { question: "Despite all the complex scientific theories, the mysterious problem simply ___ one obvious choice.", options: ["boils down to", "boils over", "bolsters up"], correctIndex: 0, explanation: "basically amount to." } },
-
-      { pv: "Boil over", trope: "The Nasty Group Chat Explosion", cefr: "C1", icon: Flame, meaning: "To completely lose one's temper, or for a tense situation to suddenly erupt.", meaningJP: "（怒りや不満が）限界を超えて爆発する", example: "The long-standing argument finally boiled over into actual violence.", vibes: ["A long-standing fight erupting", "Uncontrollable, nasty anger", "A group chat disaster"], storyline: "The petty, passive-aggressive arguments in the gaming group chat had been simmering for weeks over tiny misunderstandings. Last night, the toxic tension finally boiled over, resulting in screaming voicenotes, crying, and everyone blocking each other permanently.", storylineJP: "ゲームのグループチャットでの陰湿で些細な言い争いは、小さな誤解から何週間もくすぶり続けていた。昨夜、その有毒な緊張がついに限界を超えて爆発し、絶叫のボイスメッセージや号泣が飛び交い、全員が互いを永久にブロックする事態となった。", quiz: { question: "The simmering, unspoken anger between the two bitter business rivals suddenly ___.", options: ["boiled over", "boiled down", "booked up"], correctIndex: 0, explanation: "lose temper." } },
-
-      { pv: "Bolster up", trope: "The Ultimate Friend Hype", cefr: "C1", icon: Award, meaning: "To actively support, strengthen, or boost someone's confidence or a weak argument.", meaningJP: "（自信や主張などを）高める、テコ入れする、強化する", example: "I really need you to bolster up my confidence before this date.", vibes: ["Giving a massive pep talk", "Hyping up a nervous friend", "Adding strong proof to an essay"], storyline: "Kaito was absolutely terrified right before his big stage debut, his hands visibly shaking and sweat pouring down his face. His best friend grabbed his shoulders, looked him dead in the eye, and delivered a fiery speech to bolster up his shattered confidence.", storylineJP: "海斗は大舞台でのデビュー直前、絶対的な恐怖に怯え、手は目に見えて震え、顔には汗が流れていた。親友は彼の肩を掴み、その目をまっすぐに見つめ、粉々になった彼の自信を強烈に高める（テコ入れする）ための熱いスピーチをした。", quiz: { question: "The nervous speaker used impressive, colorful charts to aggressively ___ his weak argument.", options: ["bolster up", "botch up", "bounce back"], correctIndex: 0, explanation: "support/strengthen." } },
-
-      { pv: "Bone up on", trope: "The Desperate Energy-Drink Cram", cefr: "C1", icon: Book, meaning: "To study very hard and quickly for a specific goal, test, or event.", meaningJP: "（試験や面接の前に）猛勉強する、詰め込み勉強をする", example: "I need to urgently bone up on ancient history tonight.", vibes: ["Frantic exam focus", "Preparing for a scary interview", "Intense, quick study sessions"], storyline: "Sora had entirely ignored his Spanish classes all semester. With his family trip to Madrid only three days away, he panicked, bought five energy drinks, and stayed up 48 hours straight to desperately bone up on the local language and culture.", storylineJP: "ソラは一学期中、スペイン語の授業を完全に無視していた。マドリードへの家族旅行がわずか3日後に迫る中、彼はパニックになり、エナジードリンクを5本買い込み、現地の言葉と文化を必死に詰め込み勉強するために48時間ぶっ通しで徹夜した。", quiz: { question: "Before the vital job interview, I'm going to extensively ___ the company's strict rules.", options: ["bone up on", "book up", "boot up"], correctIndex: 0, explanation: "study hard." } },
-
-      { pv: "Book in", trope: "The Fancy Anniversary Check-in", cefr: "B1", icon: Calendar, meaning: "To make a reservation or officially register your arrival at a place like a hotel.", meaningJP: "（ホテルやレストランを）予約する、チェックインする", example: "I managed to book us in for an exclusive, highly-rated dinner.", vibes: ["Planning a perfect vacation", "Luxury travel vibes", "Securing a highly desired spot"], storyline: "It was Mika's highly anticipated 20th birthday. Kaito wanted everything to be absolutely flawless, so he made sure to book them in for the most exclusive, expensive private dining room in the city a full two months in advance.", storylineJP: "ミカの待ちに待った20歳の誕生日だった。海斗はすべてを絶対に完璧にしたかったので、2ヶ月も前から、市内で最もエクスクルーシブで高価な個室ダイニングを確実に予約しておいた。", quiz: { question: "Have you successfully ___ at the luxury seaside hotel yet?", options: ["booked in", "boarded up", "blown away"], correctIndex: 0, explanation: "reserve/check in." } },
-
-      { pv: "Book up", trope: "The Sold Out Tragedy", cefr: "B2", icon: Lock, meaning: "To be completely full, reserved, or sold out with no space left at all.", meaningJP: "予約でいっぱいになる、完全に満席になる", example: "The entire concert tour is already booked up for the year.", vibes: ["Crushing disappointment", "A sold-out, extremely busy event", "Zero availability anywhere"], storyline: "Rin had meticulously saved her allowance for a whole year to go to the legendary pop star's comeback concert. But the exact moment she logged onto the ticketing site, she saw the tragic red text: the entire stadium was completely booked up within two minutes.", storylineJP: "リンは、伝説的なポップスターの復帰ライブに行くために、丸1年間お小遣いを几帳面に貯めていた。しかし、チケットサイトにログインしたまさにその瞬間、彼女は悲劇的な赤い文字を目にした。スタジアム全体がわずか2分で完全に予約でいっぱいになっていたのだ。", quiz: { question: "I'm sorry, sir, but the scheduled flight is entirely ___ for the next three days.", options: ["booked up", "booked in", "booted up"], correctIndex: 0, explanation: "fully sold out." } },
-
-      { pv: "Boot up", trope: "The Ancient Tech Frustration", cefr: "B1", icon: Cpu, meaning: "To start a computer or electronic device and make it ready to use.", meaningJP: "（コンピュータなどを）起動する、立ち上げる", example: "This ancient PC takes absolutely ages just to boot up.", vibes: ["Frustration with extremely slow tech", "Waiting for a heavy game to start", "The loud sound of an old fan"], storyline: "The crucial, heavily-monitored online exam was starting in exactly one minute. Leo frantically mashed the power button on his dusty, eight-year-old laptop, praying to every god as the noisy machine took a terrifyingly slow ten minutes just to boot up.", storylineJP: "厳重に監視される極めて重要なオンライン試験が、きっかり1分後に始まろうとしていた。レオは埃をかぶった8年前のノートPCの電源ボタンを狂ったように連打し、騒々しい機械が単に起動するだけで恐ろしく遅い10分間を費やす間、あらゆる神に祈った。", quiz: { question: "Please wait quietly for a moment; the massive main system takes time to securely ___.", options: ["boot up", "bowl over", "bounce back"], correctIndex: 0, explanation: "start computer." } },
-
-      { pv: "Boss around", trope: "The Toxic Club Control", cefr: "B2", icon: UserPlus, meaning: "To tell people what to do continuously in an arrogant, rudely authoritative way.", meaningJP: "（人に対して）威張って指図する、こき使う", example: "Please stop endlessly bossing everyone around like you own the place!", vibes: ["A controlling, toxic friend", "An annoying workplace dynamic", "Intense sibling rivalry"], storyline: "The newly elected club president let the tiny bit of power go straight to his head. He walked around the room constantly bossing the senior members around like they were his personal servants, until they collectively decided to ignore him entirely.", storylineJP: "新しく選ばれた部長は、ほんの少しの権力に完全に酔いしれていた。彼は部屋を歩き回り、まるで先輩たちが自分の個人的な召使いであるかのように絶えず威張って指図し続け、ついに彼らは全員一致で彼を完全に無視することに決めた。", quiz: { question: "Nobody here likes being rudely ___ by someone who just joined the team yesterday.", options: ["bossed around", "botched up", "bottled up"], correctIndex: 0, explanation: "control excessively." } },
-
-      { pv: "Botch up", trope: "The Epic DIY Fail", cefr: "C1", icon: Trash2, meaning: "To ruin or spoil something completely by doing it very badly or clumsily.", meaningJP: "（不手際やヘマで）台無しにする、ひどくしくじる", example: "I disastrously botched up my hair trying to fade it.", vibes: ["A tragic, funny fail", "A DIY project gone horribly wrong", "Deep, embarrassing regret"], storyline: "Wanting to save money, Leo watched a three-minute tutorial and tried to cut his own hair with kitchen scissors. He botched it up so disastrously that he had to wear a thick beanie indoors for an entire month out of sheer, undeniable shame.", storylineJP: "お金を節約したかったレオは、3分間のチュートリアル動画を見て、キッチンばさみで自分の髪を切ろうとした。彼はそれをあまりにも悲惨なほど台無しにして（しくじって）しまい、純粋で否定できない羞恥心から丸1ヶ月間、屋内でも分厚いニット帽を被らなければならなかった。", quiz: { question: "He clumsily ___ the simple pipe repair job, making the water leak much worse.", options: ["botched up", "bolstered up", "booked up"], correctIndex: 0, explanation: "ruin/spoil." } },
-
-      { pv: "Bottle up", trope: "The Silent Sufferer", cefr: "B2", icon: Lock, meaning: "To forcefully hide and not express strong, often negative, emotions.", meaningJP: "（感情を）押し殺す、内に秘める", example: "Don't continuously bottle up your anger; it will destroy you.", vibes: ["Giving deep psychological advice", "A toxic mental state", "The urgent need to vent"], storyline: "For months, Hina smiled brightly while secretly struggling with massive family issues. Sora finally sat her down and said gently, 'It's incredibly toxic to bottle up all that pain. You need to let it out before you completely break.'", storylineJP: "何ヶ月もの間、ヒナは家族の大きな問題で密かに苦しみながらも明るく微笑んでいた。ソラはついに彼女を座らせ、優しく言った。「その痛みをすべて内に押し殺すのは信じられないほど有毒だよ。完全に壊れてしまう前に吐き出さなきゃ。」", quiz: { question: "It is unhealthy to consistently ___ intense anger instead of talking about it.", options: ["bottle up", "boot up", "bowl over"], correctIndex: 0, explanation: "suppress feelings." } },
-
-      { pv: "Bounce back", trope: "The Ultimate Glow-Up Era", cefr: "B2", icon: Sparkles, meaning: "To successfully and quickly recover from a severe setback, illness, or failure.", meaningJP: "（困難から）立ち直る、見事に回復する", example: "I will bounce back stronger from this terrible situation.", vibes: ["A powerful recovery phase", "Entering a new, positive era", "Overcoming severe illness"], storyline: "After a devastating public breakup that left her in tears for weeks, Mika hit the gym, completely changed her style, and started a successful business. She didn't just survive; she was rapidly bouncing back and entering her ultimate glow-up era.", storylineJP: "何週間も涙に暮れるほどの悲惨で公の失恋の後、ミカはジムに通い、スタイルを完全に変え、成功するビジネスを立ち上げた。彼女はただ生き延びただけではない。急速に立ち直り、究極の絶好調の時期（グロウアップ・エラ）に突入したのだ。", quiz: { question: "Despite the massive financial failure, the highly resilient CEO ___ astonishingly fast.", options: ["bounced back", "booked in", "blanked out"], correctIndex: 0, explanation: "recover from setback." } },
-
-      { pv: "Bowl over", trope: "The Shook Reaction", cefr: "C1", icon: AlertCircle, meaning: "To surprise, shock, or impress someone so greatly that they are left completely speechless.", meaningJP: "（人を）圧倒する、ひどく驚愕させる、腰を抜かさせる", example: "The insane, unexpected price literally bowled me over.", vibes: ["Utter, speechless shock", "Being absolutely 'shook'", "Reacting to sudden, massive news"], storyline: "Kaito knew the luxury boutique was expensive, but when the elegant waiter casually handed him a bill for a single cup of artisan coffee that cost fifty dollars, he was literally bowled over by the sheer, undeniable audacity of the price.", storylineJP: "海斗はその高級ブティックが高いことは知っていたが、優雅なウェイターが何気なく渡してきた職人手作りのコーヒー1杯50ドルという請求書を見た時、その価格のあまりの、否定できない図々しさに、文字通り圧倒され腰を抜かしそうになった。", quiz: { question: "He was entirely ___ by the surprisingly generous, completely unexpected news.", options: ["bowled over", "botched up", "booted up"], correctIndex: 0, explanation: "surprise greatly." } }
-
+      { 
+        pv: "Board out", trope: "The Pet Vacation Plan", cefr: "B2", icon: Home, 
+        meaning: "To arrange for a pet to stay somewhere else (like a kennel) while you are away.", 
+        meaningJP: "（旅行中などにペットを他の場所に）預ける", 
+        example: "We have a massive trip, so we had to board our energetic dog out for a week.", 
+        exampleJP: "大規模な旅行があるので、私たちは元気な犬を1週間預けなければならなかった。",
+        vibes: ["Planning expensive pet care", "Preparing for a long family trip", "Worrying about furry friends"], 
+        vibesJP: ["高額なペットケアを計画する", "長期の家族旅行の準備", "毛皮の友達（ペット）を心配する"],
+        storyline: "The family was incredibly excited for their two-week dream vacation to Japan. However, the hardest part of the planning was finding a trustworthy, caring place to board out their beloved, highly anxious golden retriever so he wouldn't feel abandoned.", 
+        storylineJP: "家族は2週間にわたる夢の日本旅行に信じられないほど興奮していた。しかし、計画で一番大変だったのは、彼らが愛してやまない、ひどく神経質なゴールデンレトリバーが見捨てられたと感じないよう、預けるための信頼できる温かい場所を見つけることだった。", 
+        quiz: { question: "Before flying to Europe, we urgently need to safely ___ the old dog.", options: ["board out", "bog off", "book in"], correctIndex: 0, explanation: "pet stay elsewhere." } 
+      },
+      { 
+        pv: "Bog down", trope: "The Endless Research Trap", cefr: "B2", icon: Wind, 
+        meaning: "To slow progress significantly or to get completely stuck on minor, annoying details.", 
+        meaningJP: "行き詰まる、泥沼にはまる、進捗がひどく遅れる", 
+        example: "I got totally bogged down in minor formatting details.", 
+        exampleJP: "私は細かいフォーマットの調整に完全に泥沼にはまってしまった。",
+        vibes: ["Getting stuck on homework", "Slow, frustrating progress", "Losing sight of the main goal"], 
+        vibesJP: ["宿題で行き詰まる", "遅くてイライラする進捗", "本来の目的を見失う"],
+        storyline: "Mika had a brilliant, overarching idea for her final thesis essay. But as started reading historical archives, she got so deeply bogged down in verifying tiny, irrelevant dates that she completely missed her midnight submission deadline.", 
+        storylineJP: "ミカの卒論エッセイの全体的なアイデアは素晴らしかった。しかし歴史的アーカイブを読み始めた途端、彼女は無関係な細かい日付の確認に深く行き詰まって（泥沼にはまって）しまい、深夜の提出期限を完全に見過ごしてしまった。", 
+        quiz: { question: "Try to focus on the big picture and don't get completely ___ by minor formatting errors.", options: ["bogged down", "bogged into", "bogged off"], correctIndex: 0, explanation: "slow progress." } 
+      },
+      { 
+        pv: "Bog into", trope: "The Savage Post-Workout Hunger", cefr: "B1", icon: ShoppingCart, 
+        meaning: "To begin eating a meal very enthusiastically, greedily, and without hesitation.", 
+        meaningJP: "ガツガツ食べる、むさぼり食う", 
+        example: "I was starving and bogged into that huge burger instantly.", 
+        exampleJP: "私はお腹がペコペコだったので、その巨大なハンバーガーに即座にガツガツと食らいついた。",
+        vibes: ["Extreme post-workout hunger", "Devouring fast food", "A messy, highly satisfying meal"], 
+        vibesJP: ["ワークアウト後の極度の空腹", "ファストフードをむさぼり食う", "汚いけど最高に満足な食事"],
+        storyline: "Sora had been playing intense, competitive basketball for six hours straight with zero breaks. The moment the steaming hot, greasy Uber Eats pizza arrived, he didn't even grab a plate; he just aggressively bogged into it like a starving wolf.", 
+        storylineJP: "ソラは休憩なしで6時間ぶっ通しで、激しい競技バスケをしていた。湯気を立てる脂っこいUber Eatsのピザが届いた瞬間、彼はお皿を取ることすらせず、まるで飢えた狼のようにアグレッシブにそれにガツガツと食らいついた。", 
+        quiz: { question: "Famished after the incredibly long mountain hike, he ruthlessly ___ the delicious steak.", options: ["bogged into", "bogged off", "booked up"], correctIndex: 0, explanation: "eat enthusiastically." } 
+      },
+      { 
+        pv: "Bog off!", trope: "The Ultimate Slang Shutdown", cefr: "C1", icon: XCircle, 
+        meaning: "A harsh, aggressive slang phrase telling someone to get lost or go away immediately.", 
+        meaningJP: "（失礼に）あっちへ行け！、うせろ！", 
+        example: "He wouldn't stop annoying me, so I finally turned and told him to bog off.", 
+        exampleJP: "彼が私を苛立たせるのをやめなかったので、ついに私は振り返って「うせろ」と言い放った。",
+        vibes: ["Harsh British-style slang", "Shutting down annoying people", "Rude, direct rejection"], 
+        vibesJP: ["厳しいイギリス風スラング", "鬱陶しい人をシャットダウンする", "無礼で直接的な拒絶"],
+        storyline: "The persistent, fast-talking salesman followed Hina down three different streets, aggressively pushing his useless, expensive skincare products. Annoyed beyond belief, she finally stopped, glared at him with pure ice, and firmly told him to bog off.", 
+        storylineJP: "早口でしつこいセールスマンはヒナを3つの通りにわたって追いかけ、役に立たない高価なスキンケア用品を強引に勧めてきた。信じられないほど苛立った彼女はついに立ち止まり、氷のように冷たい視線で彼を睨みつけ、きっぱりと「うせろ（あっちへ行け）」と言い放った。", 
+        quiz: { question: "Tired of the constant, completely unhelpful advice from the stranger, I loudly told him to just ___.", options: ["bog off", "boil over", "boot up"], correctIndex: 0, explanation: "get lost/go away." } 
+      },
+      { 
+        pv: "Boil down to", trope: "The Ultimate Core Issue", cefr: "B2", icon: Calculator, 
+        meaning: "To basically amount to or be reduced to its main, most essential point.", 
+        meaningJP: "要するに～ということになる、～に帰着する", 
+        example: "It essentially boils down to a massive matter of money.", 
+        exampleJP: "それは本質的に、お金という巨大な問題に帰着する。",
+        vibes: ["Summarizing messy drama", "Finding the simple, hard fact", "Cutting through the nonsense"], 
+        vibesJP: ["厄介なドラマを要約する", "シンプルで厳然たる事実を見つける", "無意味なことを切り捨てる"],
+        storyline: "The student council debated for four agonizing hours about the festival theme, bringing up a hundred different conflicting ideas and complaints. But as Leo pointed out, the whole complex argument basically boiled down to one brutal thing: they had absolutely zero budget.", 
+        storylineJP: "生徒会は文化祭のテーマについて4時間も苦痛な議論を交わし、100もの相反するアイデアや不満を出した。しかしレオが指摘したように、その複雑な議論のすべては、要するに「予算が完全にゼロである」という一つの残酷な事実に帰着したのだ。", 
+        quiz: { question: "Despite all the complex scientific theories, the mysterious problem simply ___ one obvious choice.", options: ["boils down to", "boils over", "bolsters up"], correctIndex: 0, explanation: "basically amount to." } 
+      },
+      { 
+        pv: "Boil over", trope: "The Nasty Group Chat Explosion", cefr: "C1", icon: Flame, 
+        meaning: "To completely lose one's temper, or for a tense situation to suddenly erupt.", 
+        meaningJP: "（怒りや不満が）限界を超えて爆発する", 
+        example: "The long-standing argument finally boiled over into actual violence.", 
+        exampleJP: "長年の言い争いが、ついに限界を超えて実際の暴力へと爆発した。",
+        vibes: ["A long-standing fight erupting", "Uncontrollable, nasty anger", "A group chat disaster"], 
+        vibesJP: ["長年の争いの勃発", "制御不能な嫌な怒り", "グループチャットの惨事"],
+        storyline: "The petty, passive-aggressive arguments in the gaming group chat had been simmering for weeks over tiny misunderstandings. Last night, the toxic tension finally boiled over, resulting in screaming voicenotes, crying, and everyone blocking each other permanently.", 
+        storylineJP: "ゲームのグループチャットでの陰湿で些細な言い争いは、小さな誤解から何週間もくすぶり続けていた。昨夜、その有毒な緊張がついに限界を超えて爆発し、絶叫のボイスメッセージや号泣が飛び交い、全員が互いを永久にブロックする事態となった。", 
+        quiz: { question: "The simmering, unspoken anger between the two bitter business rivals suddenly ___.", options: ["boiled over", "boiled down", "booked up"], correctIndex: 0, explanation: "lose temper." } 
+      },
+      { 
+        pv: "Bolster up", trope: "The Ultimate Friend Hype", cefr: "C1", icon: Award, 
+        meaning: "To actively support, strengthen, or boost someone's confidence or a weak argument.", 
+        meaningJP: "（自信や主張などを）高める、テコ入れする、強化する", 
+        example: "I really need you to bolster up my confidence before this date.", 
+        exampleJP: "このデートの前に、君に私の自信をテコ入れして（高めて）もらう必要があるんだ。",
+        vibes: ["Giving a massive pep talk", "Hyping up a nervous friend", "Adding strong proof to an essay"], 
+        vibesJP: ["大規模なペップトーク（激励）をする", "緊張している友人を盛り上げる", "エッセイに強力な証拠を追加する"],
+        storyline: "Kaito was absolutely terrified right before his big stage debut, his hands visibly shaking and sweat pouring down his face. His best friend grabbed his shoulders, looked him dead in the eye, and delivered a fiery speech to bolster up his shattered confidence.", 
+        storylineJP: "海斗は大舞台でのデビュー直前、絶対的な恐怖に怯え、手は目に見えて震え、顔には汗が流れていた。親友は彼の肩を掴み、その目をまっすぐに見つめ、粉々になった彼の自信を強烈に高める（テコ入れする）ための熱いスピーチをした。", 
+        quiz: { question: "The nervous speaker used impressive, colorful charts to aggressively ___ his weak argument.", options: ["bolster up", "botch up", "bounce back"], correctIndex: 0, explanation: "support/strengthen." } 
+      },
+      { 
+        pv: "Bone up on", trope: "The Desperate Energy-Drink Cram", cefr: "C1", icon: Book, 
+        meaning: "To study very hard and quickly for a specific goal, test, or event.", 
+        meaningJP: "（試験や面接の前に）猛勉強する、詰め込み勉強をする", 
+        example: "I need to urgently bone up on ancient history tonight.", 
+        exampleJP: "今夜、至急古代史の詰め込み勉強をする必要がある。",
+        vibes: ["Frantic exam focus", "Preparing for a scary interview", "Intense, quick study sessions"], 
+        vibesJP: ["半狂乱の試験への集中", "怖い面接の準備", "強烈で素早い勉強セッション"],
+        storyline: "Sora had entirely ignored his Spanish classes all semester. With his family trip to Madrid only three days away, he panicked, bought five energy drinks, and stayed up 48 hours straight to desperately bone up on the local language and culture.", 
+        storylineJP: "ソラは一学期中、スペイン語の授業を完全に無視していた。マドリードへの家族旅行がわずか3日後に迫る中、彼はパニックになり、エナジードリンクを5本買い込み、現地の言葉と文化を必死に詰め込み勉強するために48時間ぶっ通しで徹夜した。", 
+        quiz: { question: "Before the vital job interview, I'm going to extensively ___ the company's strict rules.", options: ["bone up on", "book up", "boot up"], correctIndex: 0, explanation: "study hard." } 
+      },
+      { 
+        pv: "Book in", trope: "The Fancy Anniversary Check-in", cefr: "B1", icon: Calendar, 
+        meaning: "To make a reservation or officially register your arrival at a place like a hotel.", 
+        meaningJP: "（ホテルやレストランを）予約する、チェックインする", 
+        example: "I managed to book us in for an exclusive, highly-rated dinner.", 
+        exampleJP: "限定の、高評価のディナーの予約を取ることに成功したよ。",
+        vibes: ["Planning a perfect vacation", "Luxury travel vibes", "Securing a highly desired spot"], 
+        vibesJP: ["完璧な休暇を計画する", "豪華な旅行のバイブス", "大人気のスポットを確保する"],
+        storyline: "It was Mika's highly anticipated 20th birthday. Kaito wanted everything to be absolutely flawless, so he made sure to book them in for the most exclusive, expensive private dining room in the city a full two months in advance.", 
+        storylineJP: "ミカの待ちに待った20歳の誕生日だった。海斗はすべてを絶対に完璧にしたかったので、2ヶ月も前から、市内で最もエクスクルーシブで高価な個室ダイニングを確実に予約しておいた。", 
+        quiz: { question: "Have you successfully ___ at the luxury seaside hotel yet?", options: ["booked in", "boarded up", "blown away"], correctIndex: 0, explanation: "reserve/check in." } 
+      },
+      { 
+        pv: "Book up", trope: "The Sold Out Tragedy", cefr: "B2", icon: Lock, 
+        meaning: "To be completely full, reserved, or sold out with no space left at all.", 
+        meaningJP: "予約でいっぱいになる、完全に満席になる", 
+        example: "The entire concert tour is already booked up for the year.", 
+        exampleJP: "そのコンサートツアーは、今年分はすでにすべて予約でいっぱいになっている。",
+        vibes: ["Crushing disappointment", "A sold-out, extremely busy event", "Zero availability anywhere"], 
+        vibesJP: ["打ちのめされるような失望", "完売した、非常に忙しいイベント", "どこも空きがない"],
+        storyline: "Rin had meticulously saved her allowance for a whole year to go to the legendary pop star's comeback concert. But the exact moment she logged onto the ticketing site, she saw the tragic red text: the entire stadium was completely booked up within two minutes.", 
+        storylineJP: "リンは、伝説的なポップスターの復帰ライブに行くために、丸1年間お小遣いを几帳面に貯めていた。しかし、チケットサイトにログインしたまさにその瞬間、彼女は悲劇的な赤い文字を目にした。スタジアム全体がわずか2分で完全に予約でいっぱいになっていたのだ。", 
+        quiz: { question: "I'm sorry, sir, but the scheduled flight is entirely ___ for the next three days.", options: ["booked up", "booked in", "booted up"], correctIndex: 0, explanation: "fully sold out." } 
+      },
+      { 
+        pv: "Boot up", trope: "The Ancient Tech Frustration", cefr: "B1", icon: Cpu, 
+        meaning: "To start a computer or electronic device and make it ready to use.", 
+        meaningJP: "（コンピュータなどを）起動する、立ち上げる", 
+        example: "This ancient PC takes absolutely ages just to boot up.", 
+        exampleJP: "この古代のPCは、ただ起動するだけで途方もない時間がかかる。",
+        vibes: ["Frustration with extremely slow tech", "Waiting for a heavy game to start", "The loud sound of an old fan"], 
+        vibesJP: ["極端に遅いテクノロジーへの苛立ち", "重いゲームの起動を待つ", "古いファンのうるさい音"],
+        storyline: "The crucial, heavily-monitored online exam was starting in exactly one minute. Leo frantically mashed the power button on his dusty, eight-year-old laptop, praying to every god as the noisy machine took a terrifyingly slow ten minutes just to boot up.", 
+        storylineJP: "厳重に監視される極めて重要なオンライン試験が、きっかり1分後に始まろうとしていた。レオは埃をかぶった8年前のノートPCの電源ボタンを狂ったように連打し、騒々しい機械が単に起動するだけで恐ろしく遅い10分間を費やす間、あらゆる神に祈った。", 
+        quiz: { question: "Please wait quietly for a moment; the massive main system takes time to securely ___.", options: ["boot up", "bowl over", "bounce back"], correctIndex: 0, explanation: "start computer." } 
+      },
+      { 
+        pv: "Boss around", trope: "The Toxic Club Control", cefr: "B2", icon: UserPlus, 
+        meaning: "To tell people what to do continuously in an arrogant, rudely authoritative way.", 
+        meaningJP: "（人に対して）威張って指図する、こき使う", 
+        example: "Please stop endlessly bossing everyone around like you own the place!", 
+        exampleJP: "自分がこの場所のボスであるかのように、果てしなく皆に威張って指図するのはやめて！",
+        vibes: ["A controlling, toxic friend", "An annoying workplace dynamic", "Intense sibling rivalry"], 
+        vibesJP: ["支配的で有毒な友人", "迷惑な職場の力学", "激しい兄弟の対立"],
+        storyline: "The newly elected club president let the tiny bit of power go straight to his head. He walked around the room constantly bossing the senior members around like they were his personal servants, until they collectively decided to ignore him entirely.", 
+        storylineJP: "新しく選ばれた部長は、ほんの少しの権力に完全に酔いしれていた。彼は部屋を歩き回り、まるで先輩たちが自分の個人的な召使いであるかのように絶えず威張って指図し続け、ついに彼らは全員一致で彼を完全に無視することに決めた。", 
+        quiz: { question: "Nobody here likes being rudely ___ by someone who just joined the team yesterday.", options: ["bossed around", "botched up", "bottled up"], correctIndex: 0, explanation: "control excessively." } 
+      },
+      { 
+        pv: "Botch up", trope: "The Epic DIY Fail", cefr: "C1", icon: Trash2, 
+        meaning: "To ruin or spoil something completely by doing it very badly or clumsily.", 
+        meaningJP: "（不手際やヘマで）台無しにする、ひどくしくじる", 
+        example: "I disastrously botched up my hair trying to fade it.", 
+        exampleJP: "髪をフェード（刈り上げ）にしようとして、悲惨なほどに台無しにしてしまった。",
+        vibes: ["A tragic, funny fail", "A DIY project gone horribly wrong", "Deep, embarrassing regret"], 
+        vibesJP: ["悲劇的で笑える失敗", "DIYプロジェクトがひどい方向に進む", "深くて恥ずかしい後悔"],
+        storyline: "Wanting to save money, Leo watched a three-minute tutorial and tried to cut his own hair with kitchen scissors. He botched it up so disastrously that he had to wear a thick beanie indoors for an entire month out of sheer, undeniable shame.", 
+        storylineJP: "お金を節約したかったレオは、3分間のチュートリアル動画を見て、キッチンばさみで自分の髪を切ろうとした。彼はそれをあまりにも悲惨なほど台無しにして（しくじって）しまい、純粋で否定できない羞恥心から丸1ヶ月間、屋内でも分厚いニット帽を被らなければならなかった。", 
+        quiz: { question: "He clumsily ___ the simple pipe repair job, making the water leak much worse.", options: ["botched up", "bolstered up", "booked up"], correctIndex: 0, explanation: "ruin/spoil." } 
+      },
+      { 
+        pv: "Bottle up", trope: "The Silent Sufferer", cefr: "B2", icon: Lock, 
+        meaning: "To forcefully hide and not express strong, often negative, emotions.", 
+        meaningJP: "（感情を）押し殺す、内に秘める", 
+        example: "Don't continuously bottle up your anger; it will destroy you.", 
+        exampleJP: "怒りを絶えず内に押し殺してはいけない。それがあなたを破壊してしまう。",
+        vibes: ["Giving deep psychological advice", "A toxic mental state", "The urgent need to vent"], 
+        vibesJP: ["深い心理的なアドバイスをする", "有毒な精神状態", "感情を吐き出す緊急の必要性"],
+        storyline: "For months, Hina smiled brightly while secretly struggling with massive family issues. Sora finally sat her down and said gently, 'It's incredibly toxic to bottle up all that pain. You need to let it out before you completely break.'", 
+        storylineJP: "何ヶ月もの間、ヒナは家族の大きな問題で密かに苦しみながらも明るく微笑んでいた。ソラはついに彼女を座らせ、優しく言った。「その痛みをすべて内に押し殺すのは信じられないほど有毒だよ。完全に壊れてしまう前に吐き出さなきゃ。」", 
+        quiz: { question: "It is unhealthy to consistently ___ intense anger instead of talking about it.", options: ["bottle up", "boot up", "bowl over"], correctIndex: 0, explanation: "suppress feelings." } 
+      },
+      { 
+        pv: "Bounce back", trope: "The Ultimate Glow-Up Era", cefr: "B2", icon: Sparkles, 
+        meaning: "To successfully and quickly recover from a severe setback, illness, or failure.", 
+        meaningJP: "（困難から）立ち直る、見事に回復する", 
+        example: "I will bounce back stronger from this terrible situation.", 
+        exampleJP: "このひどい状況から、私はより強くなって立ち直ってみせる。",
+        vibes: ["A powerful recovery phase", "Entering a new, positive era", "Overcoming severe illness"], 
+        vibesJP: ["力強い回復期", "新しくポジティブな時代に入る", "重病を克服する"],
+        storyline: "After a devastating public breakup that left her in tears for weeks, Mika hit the gym, completely changed her style, and started a successful business. She didn't just survive; she was rapidly bouncing back and entering her ultimate glow-up era.", 
+        storylineJP: "何週間も涙に暮れるほどの悲惨で公の失恋の後、ミカはジムに通い、スタイルを完全に変え、成功するビジネスを立ち上げた。彼女はただ生き延びただけではない。急速に立ち直り、究極の絶好調の時期（グロウアップ・エラ）に突入したのだ。", 
+        quiz: { question: "Despite the massive financial failure, the highly resilient CEO ___ astonishingly fast.", options: ["bounced back", "booked in", "blanked out"], correctIndex: 0, explanation: "recover from setback." } 
+      },
+      { 
+        pv: "Bowl over", trope: "The Shook Reaction", cefr: "C1", icon: AlertCircle, 
+        meaning: "To surprise, shock, or impress someone so greatly that they are left completely speechless.", 
+        meaningJP: "（人を）圧倒する、ひどく驚愕させる、腰を抜かさせる", 
+        example: "The insane, unexpected price literally bowled me over.", 
+        exampleJP: "その狂気じみた、予期せぬ価格に、私は文字通り腰を抜かした。",
+        vibes: ["Utter, speechless shock", "Being absolutely 'shook'", "Reacting to sudden, massive news"], 
+        vibesJP: ["完全に言葉を失うほどのショック", "絶対的に『打ちのめされる』", "突然の大ニュースに反応する"],
+        storyline: "Kaito knew the luxury boutique was expensive, but when the elegant waiter casually handed him a bill for a single cup of artisan coffee that cost fifty dollars, he was literally bowled over by the sheer, undeniable audacity of the price.", 
+        storylineJP: "海斗はその高級ブティックが高いことは知っていたが、優雅なウェイターが何気なく渡してきた職人手作りのコーヒー1杯50ドルという請求書を見た時、その価格のあまりの、否定できない図々しさに、文字通り圧倒され腰を抜かしそうになった。", 
+        quiz: { question: "He was entirely ___ by the surprisingly generous, completely unexpected news.", options: ["bowled over", "botched up", "booted up"], correctIndex: 0, explanation: "surprise greatly." } 
+      }
     ],
 
     7: [
-
-      { pv: "Box in", trope: "The Trapped Driver", cefr: "B2", icon: Lock, meaning: "To prevent someone or something from moving by entirely surrounding them.", meaningJP: "（身動きがとれないように）閉じ込める", example: "I was totally boxed in at the mall parking lot.", vibes: ["Being stuck in a terrible spot", "Frustrating traffic jams", "Aggressive, careless parking"], storyline: "Sato had a crucial job interview in thirty minutes. But when he rushed back to the crowded mall parking lot, he found his tiny car was totally, hopelessly boxed in by two massive, illegally parked SUVs. He couldn't move a single inch.", storylineJP: "佐藤は30分後に極めて重要な就職面接を控えていた。しかし、混雑したモールの駐車場に急いで戻ると、彼の小さな車は、違法駐車された2台の巨大なSUVによって完全に、絶望的に閉じ込められていた。彼は1インチも動けなかった。", quiz: { question: "The defensive police cars successfully ___ the heavily armed, fleeing suspect.", options: ["boxed in", "boxed up", "broken in"], correctIndex: 0, explanation: "prevent moving." } },
-
-      { pv: "Box up", trope: "The Big Moving Day", cefr: "B1", icon: Package, meaning: "To neatly pack things inside boxes, usually for storage or preparing for a move.", meaningJP: "（荷物を）箱に詰める", example: "I finally boxed up my old, bulky winter clothes.", vibes: ["Organizing a messy, overflowing closet", "The absolute chaos of moving house", "Storing away sentimental memories"], storyline: "Spring had finally arrived in full bloom, bringing warm sunshine. Hina spent her entire weekend ruthlessly organizing her overflowing closet, meticulously boxing up all her heavy winter coats to make precious room for her light, colorful summer fits.", storylineJP: "ついに春が満開となり、暖かい日差しをもたらした。ヒナは週末を丸ごと使って溢れかえるクローゼットを容赦なく整理し、軽やかでカラフルな夏服の貴重なスペースを作るために、重い冬のコートをすべて几帳面に箱に詰めた。", quiz: { question: "She carefully ___ the fragile, ancient antique books for the long, bumpy journey.", options: ["boxed up", "boxed in", "broke up"], correctIndex: 0, explanation: "pack in boxes." } },
-
-      { pv: "Brace up", trope: "The Pre-Game Hype", cefr: "C1", icon: Heart, meaning: "To force yourself to feel more courageous and confident in a scary or stressful situation.", meaningJP: "（気を引き締めて）自信を持つ、奮起する", example: "You need to brace up and face them directly.", vibes: ["Giving a friend an intense hype talk", "Building sudden, necessary confidence", "Overcoming deep social anxiety"], storyline: "Mika was trembling violently behind the heavy stage curtain, terrified of the massive audience waiting for her solo. Her friend grabbed her shoulders firmly. 'You need to brace up right now,' she ordered. 'You are a star. Stop worrying and just shine.'", storylineJP: "ミカは重いステージのカーテンの裏で、自分のソロを待つ巨大な観客に怯え、激しく震えていた。友人は彼女の肩をしっかりと掴んだ。「今すぐ気を引き締めて（奮起して）」と彼女は命じた。「あなたはスターよ。心配するのをやめてただ輝きなさい。」", quiz: { question: "You absolutely need to ___ before stepping into that extremely difficult negotiation room.", options: ["brace up", "branch out", "break in"], correctIndex: 0, explanation: "feel confident." } },
-
-      { pv: "Branch out", trope: "The Content Creator's New Era", cefr: "B2", icon: GitBranch, meaning: "To move into a different, new area of business or personal interest.", meaningJP: "（新しい分野へ）活動を広げる、手を広げる", example: "I’m actively trying to branch out into lifestyle vlogs.", vibes: ["Entering a 'new era' of content creation", "Expanding a personal, passionate hobby", "Growing a risky startup business"], storyline: "Sora had built a massive online following just by streaming racing games from his bedroom. But feeling creatively stifled, he announced to his loyal fans that he was trying to branch out into outdoor travel vlogs, eager to explore a totally different, vibrant world.", storylineJP: "ソラは自室からレースゲームを配信するだけで巨大なオンラインフォロワーを築き上げていた。しかし創造的な息苦しさを感じた彼は、全く違う活気ある世界を探求したいと熱望し、アウトドア旅行のVlogへ活動を広げる（手を広げる）と忠実なファンに発表した。", quiz: { question: "The highly successful tech firm is aggressively ___ into completely new overseas markets.", options: ["branching out", "breaking away", "breezing through"], correctIndex: 0, explanation: "move into new area." } },
-
-      { pv: "Break away", trope: "The Solo Debut", cefr: "B2", icon: LogOut, meaning: "To leave an organization, group, or strict situation to become independent.", meaningJP: "（集団や束縛から）脱退する、逃げ出す", example: "She decided to break away from the toxic group.", vibes: ["A musician shockingly going solo", "Leaving a highly restrictive circle", "A dramatic bid for true independence"], storyline: "For five long years, Hina had been the lead singer of a highly controlled, manufactured pop idol group. Suffocating under the impossibly strict rules, she shocked the entire industry by deciding to boldly break away from the agency and start her own independent solo project.", storylineJP: "長く苦しい5年間、ヒナは厳格に管理された作られたポップアイドルグループのボーカルだった。不可能なほど厳しいルールに息苦しさを感じていた彼女は、大胆にも事務所から脱退し、自分自身の独立したソロプロジェクトを始める決断を下して業界全体を震撼させた。", quiz: { question: "The frustrated rebel leader decided to finally ___ from the deeply corrupt empire.", options: ["break away", "break off", "break out"], correctIndex: 0, explanation: "leave organization." } },
-
-      { pv: "Break down", trope: "The Emotional Finale", cefr: "B1", icon: Droplets, meaning: "To lose control of your emotions and suddenly start crying uncontrollably.", meaningJP: "（感情を抑えきれずに）泣き崩れる", example: "I lowkey broke down in tears at the very end.", vibes: ["Crying over a devastatingly sad K-drama", "An overwhelming emotional reaction", "Releasing weeks of pent-up stress"], storyline: "Sora always acted tough and proudly claimed he never cried at movies. But when the heroic main character tragically sacrificed himself in the epic, heartbreaking finale of the show, Sora lowkey broke down in uncontrollable tears right in the middle of the living room.", storylineJP: "ソラはいつも強がり、映画で泣いたことなどないと誇らしげに主張していた。しかし、その番組の壮大で胸が張り裂けるような最終回で、英雄的な主人公が悲劇的な自己犠牲を払った時、ソラはリビングのど真ん中で密かに、抑えきれない涙に泣き崩れた。", quiz: { question: "Overwhelmed by the tragic, unexpected news, she suddenly ___ in bitter, heavy tears.", options: ["broke down", "broke up", "brought about"], correctIndex: 0, explanation: "start crying." } },
-
-      { pv: "Break in", trope: "The Abrupt Interruption", cefr: "B2", icon: MessageCircle, meaning: "To suddenly interrupt a conversation or an ongoing situation.", meaningJP: "（会話などに）割り込む、口を挟む", example: "I'm so sorry to break in, but you all need to look at this!", vibes: ["Jumping eagerly into a group chat", "Delivering shocking, sudden news", "An urgent, somewhat rude interruption"], storyline: "The study group was deeply focused, quietly and seriously debating a complex math problem. Suddenly, Leo slammed the door open, completely breathless. 'Sorry to break in on your boring convo,' he yelled, waving his phone, 'but did you guys see the insane new game trailer?!'", storylineJP: "勉強会は深く集中し、複雑な数学の問題を静かに真剣に議論していた。突然、レオが息を切らしてドアをバンと開けた。「つまんない会話に割り込んで悪いけど」と彼はスマホを振り回しながら叫んだ。「お前ら、あのヤバい新作ゲームの予告編見た？！」", quiz: { question: "He rudely ___ the highly sensitive meeting to loudly announce his personal achievement.", options: ["broke in", "broke out", "brought back"], correctIndex: 0, explanation: "interrupt." } },
-
-      { pv: "Break in", trope: "The Painful New Shoes", cefr: "B2", icon: Footprints, meaning: "To wear or use something new carefully until it becomes comfortable.", meaningJP: "（靴などを）履き慣らす、使い慣らす", example: "I badly need to break in these incredibly stiff sneakers.", vibes: ["Prepping for a massive music festival", "Dealing with painful, bleeding blisters", "Wearing shoes strictly around the house"], storyline: "Mika bought a stunning, but incredibly stiff, pair of leather boots for the upcoming three-day music festival. Knowing the sheer agony of foot blisters, she painfully spent a whole week wearing them around her small apartment just to thoroughly break them in.", storylineJP: "ミカは、迫り来る3日間の音楽フェスのために、素晴らしいが信じられないほど硬い革のブーツを買った。靴擦れの純粋な激痛を知っている彼女は、ただ徹底的にブーツを履き慣らすためだけに、狭いアパートの中で丸1週間、痛みに耐えながらそれを履き続けた。", quiz: { question: "Make absolutely sure you ___ the new leather hiking boots before the long mountain trek.", options: ["break in", "break off", "bring down"], correctIndex: 0, explanation: "use new item." } },
-
-      { pv: "Break off", trope: "The Sudden Split", cefr: "B2", icon: XCircle, meaning: "To suddenly end a relationship, agreement, or ongoing discussion.", meaningJP: "（関係や交渉を）絶つ、解消する", example: "They shockingly decided to break off their highly publicized engagement.", vibes: ["Spilling tea about a harsh breakup", "A dramatic, incredibly sudden split", "Ending a deeply toxic relationship"], storyline: "The famous celebrity couple seemed perfectly happy and were openly planning a massive, lavish summer wedding. But after a completely explosive argument in a crowded public restaurant, they shockingly decided to break off their engagement, sending the internet into an absolute frenzy.", storylineJP: "その有名なセレブカップルは完璧に幸せそうで、大規模で豪華な夏の結婚式を公に計画していた。しかし、混雑した公共のレストランでの完全に爆発的な大喧嘩の後、彼らは衝撃的にも婚約を解消する（関係を絶つ）ことを決断し、ネット上を絶対的な熱狂の渦に巻き込んだ。", quiz: { question: "Following the incredibly bitter dispute, the two allied countries entirely ___ the peace talks.", options: ["broke off", "broke out", "brought off"], correctIndex: 0, explanation: "end relationship." } },
-
-      { pv: "Break out", trope: "The Sensitive Skin Disaster", cefr: "B2", icon: AlertTriangle, meaning: "To suddenly develop skin sores, spots, or a painful irritation.", meaningJP: "（吹き出物や発疹が）突然出る", example: "I will instantly break out in a harsh, stinging rash.", vibes: ["Discussing severe skin sensitivity", "A terribly bad skin day before an event", "Allergic reactions to new products"], storyline: "Kaito's skin was notoriously sensitive. He carelessly borrowed a cheap, heavily perfumed laundry detergent from a friend, and the very next morning, his face and arms began to intensely break out in a harsh, painfully itchy red rash right before his big date.", storylineJP: "海斗の肌は敏感なことで有名だった。彼は不注意にも、友人から安くて香料の強い洗濯洗剤を借りたが、まさに次の日の朝、大事なデートの直前に、彼の顔と腕は激しく痛痒い真っ赤な発疹がひどく出始め（吹き出し）た。", quiz: { question: "If I eat fresh strawberries, I instantly ___ in incredibly itchy, painful red spots.", options: ["break out", "break up", "bring about"], correctIndex: 0, explanation: "develop sores." } },
-
-      { pv: "Break out of", trope: "The Routine Escape", cefr: "B2", icon: Wind, meaning: "To escape from a physical place or a boring, highly restrictive situation.", meaningJP: "（退屈な日常や牢獄から）抜け出す、脱走する", example: "I desperately need to break out of this dull, endless routine.", vibes: ["Escaping a boring, highly repetitive life", "A deep, burning desire for wild travel", "Intense prison break energy"], storyline: "Every single day was completely identical: wake up, study, eat, sleep. Staring blankly at his dull, gray bedroom wall, Sora felt like he was suffocating. 'I desperately need to break out of this mind-numbing routine and travel somewhere completely unknown,' he muttered.", storylineJP: "毎日が完全に同じだった。起きて、勉強して、食べて、寝る。退屈で灰色の自室の壁をぼんやり見つめながら、ソラは窒息しそうだった。「この思考を麻痺させるようなルーティンから死に物狂いで抜け出して、全く見知らぬどこかへ旅に出なきゃ」と彼は呟いた。", quiz: { question: "The clever, desperate prisoner managed to mysteriously ___ the maximum-security facility.", options: ["break out of", "break away", "bring along"], correctIndex: 0, explanation: "escape." } },
-
-      { pv: "Break up", trope: "The Tragic Misunderstanding", cefr: "A2", icon: XCircle, meaning: "To completely finish a romantic relationship.", meaningJP: "（恋人と）別れる、関係を完全に終わらせる", example: "I heard a crazy rumor that they brutally broke up.", vibes: ["Gossiping about exes in the group chat", "Intense, tearful relationship drama", "A sad, shocking ending to a romance"], storyline: "They had been the absolute, undeniable 'it couple' of the school for three perfect years. But Monday morning, the group chat was flooded with shocked messages. I heard they finally broke up because of a tiny, stupid misunderstanding that blew completely out of proportion.", storylineJP: "彼らは3年間、学校で絶対的かつ誰もが認める「憧れのカップル」だった。しかし月曜の朝、グループチャットはショックを受けたメッセージで溢れ返った。完全に尾ひれがついて大きくなった、ささいで馬鹿げた誤解のせいで、彼らはついに別れたらしい。", quiz: { question: "After a complex decade of marriage, the famous actors sadly decided to definitively ___.", options: ["break up", "break down", "bring around"], correctIndex: 0, explanation: "finish relationship." } },
-
-      { pv: "Break up", trope: "The Bad Signal Glitch", cefr: "B2", icon: CloudOff, meaning: "To become completely inaudible over a phone or radio due to a bad signal.", meaningJP: "（電話などの音声が）途切れる、ひどく乱れる", example: "Wait, stop, you're badly breaking up; I can't hear a thing you're saying.", vibes: ["A glitchy, horribly lagging Zoom call", "A terrible, disconnected cell phone signal", "Extremely frustrating tech issues"], storyline: "Hina was in the middle of emotionally pouring her heart out over the phone, confessing her true feelings. But Kaito was driving through a long, dark tunnel. 'Wait, wait, you're breaking up! I can't hear a single word! I'll call you back!' he yelled desperately.", storylineJP: "ヒナは電話越しに感情的に心を打ち明け、本当の気持ちを告白している最中だった。しかし海斗は長く暗いトンネルの中を運転していた。「待って、待って、声がひどく途切れてる！一言も聞こえない！後でかけ直す！」彼は必死に叫んだ。", quiz: { question: "The vital emergency radio transmission is severely ___ due to the heavy, interference-filled storm.", options: ["breaking up", "breaking in", "bringing up"], correctIndex: 0, explanation: "inaudible signal." } },
-
-      { pv: "Breeze through", trope: "The Academic Flex", cefr: "C1", icon: Wind, meaning: "To pass a test or complete a difficult task very easily and with extreme confidence.", meaningJP: "（難題を）涼しい顔で（楽々と）やり遂げる", example: "I literally breezed through the complex math test without breaking a sweat.", vibes: ["Bragging loudly about a high score", "A task feeling effortlessly, surprisingly easy", "The sweet reward of actual studying"], storyline: "Everyone else in the class was sweating and trembling over the impossibly difficult calculus final. But for once in his life, Leo had studied for two weeks straight. He smiled smugly, grabbed his pencil, and literally breezed through the entire test in half the allotted time.", storylineJP: "クラスの他の全員が、不可能なほど難しい微積分の期末試験に汗をかき、震えていた。しかしレオは人生で初めて、2週間ぶっ通しで勉強していた。彼は得意げに微笑み、鉛筆を握ると、文字通り半分の時間でテスト全体を涼しい顔で（楽々と）やり遂げた。", quiz: { question: "Because she practiced meticulously every single day, she completely ___ the intense final exam.", options: ["breezed through", "broke through", "brought through"], correctIndex: 0, explanation: "pass easily." } },
-
-      { pv: "Brighten up", trope: "The Golden Retriever Energy", cefr: "B1", icon: Sun, meaning: "To suddenly become much happier or to make a place significantly more cheerful.", meaningJP: "（表情や雰囲気が）パッと明るくなる", example: "The grim, depressing mood instantly brightened up.", vibes: ["Radiating happy, pure golden energy", "Changing the entire vibe of a dark room", "A sudden, incredibly warm smile"], storyline: "The hospital waiting room was filled with a heavy, deeply grim silence as everyone worried. But the very second little five-year-old Hina walked in carrying a bright yellow balloon and giggling loudly, the entire somber mood of the room instantly brightened up.", storylineJP: "皆が深く心配し、病院の待合室は重く沈鬱な沈黙に包まれていた。しかし、5歳の小さなヒナが鮮やかな黄色い風船を持ち、大声でくすくす笑いながら入ってきたまさにその瞬間、部屋全体の陰気な雰囲気がパッと明るくなった。", quiz: { question: "The dark, threatening gray sky miraculously ___ immediately after the fierce storm passed.", options: ["brightened up", "breezed through", "broke up"], correctIndex: 0, explanation: "become happier." } },
-
-      { pv: "Bring about", trope: "The Student Revolution", cefr: "B2", icon: Zap, meaning: "To make a significant change or major event happen.", meaningJP: "（大きな変化や結果を）もたらす、引き起こす", example: "We’re trying to urgently bring about real, tangible change.", vibes: ["Fierce, organized student activism", "Sparking a major, historical difference", "Loudly demanding new, better policies"], storyline: "The school cafeteria was notorious for its terrible, unhealthy food and massive plastic waste. A passionate group of students formed a committee, tirelessly protesting and petitioning the principal, desperately trying to bring about a real, lasting change in the strict school policy.", storylineJP: "学校の食堂は、ひどく不健康な食事と大量のプラスチックゴミで悪名高かった。情熱的な生徒たちのグループが委員会を結成し、校長に絶え間なく抗議と嘆願を行い、厳格な学校の方針に、真の永続的な変化をもたらそう（引き起こそう）と必死に努力した。", quiz: { question: "The brilliant new young leader hopes to clearly ___ a massive, unprecedented cultural revolution.", options: ["bring about", "bring along", "bring back"], correctIndex: 0, explanation: "make happen." } },
-
-      { pv: "Bring along", trope: "The Party Plus-One", cefr: "A2", icon: Users, meaning: "To bring someone or something with you to a specific place or social event.", meaningJP: "（人や物を）一緒に連れて行く、持ってくる", example: "Can I please bring my bestie along to the exclusive party?", vibes: ["Asking for a party 'plus one'", "Inviting nervous friends to an event", "Not wanting to go completely alone"], storyline: "Mika received a glittering gold invitation to the most exclusive, high-society party of the year. Terrified of walking into a room full of wealthy strangers by herself, she quickly texted the host, pleading, 'Can I please bring my socially-awkward bestie along?'", storylineJP: "ミカは、今年最もエクスクルーシブな上流階級のパーティへの、キラキラ輝く金の招待状を受け取った。裕福な見知らぬ人だらけの部屋に一人で入ることに怯えた彼女は、すぐに主催者にメッセージを送り、「どうか、コミュ障の親友を一緒に連れて行ってもいいですか？」と懇願した。", quiz: { question: "Whenever you go to the scorching beach, make absolutely sure to ___ enough sunscreen.", options: ["bring along", "bring down", "bring off"], correctIndex: 0, explanation: "bring someone." } },
-
-      { pv: "Bring around", trope: "The Ultimate Persuasion", cefr: "C1", icon: MessageCircle, meaning: "To successfully persuade or convince someone to agree with your controversial idea.", meaningJP: "（人を説得して）意見を変えさせる、完全に納得させる", example: "I finally brought my incredibly strict parents around.", vibes: ["Convincing intensely stubborn people", "Winning a difficult, long argument", "Successfully sharing your unique vision"], storyline: "Sora's parents were completely, fundamentally opposed to him dying his hair bright electric blue. But after weeks of making detailed PowerPoint presentations and promising perfect grades, he miraculously brought them around to letting him do it.", storylineJP: "ソラの両親は、彼が髪を鮮やかなエレクトリックブルーに染めることに、根本から完全に反対していた。しかし、何週間にもわたって詳細なPowerPointでプレゼンをし、完璧な成績を約束した後、彼は奇跡的にも彼らを説得して（意見を変えさせて）、髪を染める許可を得た。", quiz: { question: "It took hours of intense debate, but I will eventually ___ him ___ to my progressive side.", options: ["bring / around", "break / off", "box / in"], correctIndex: 0, explanation: "persuade." } },
-
-      { pv: "Bring back", trope: "The Core Memory Nostalgia", cefr: "B1", icon: Clock, meaning: "To cause someone to intensely remember something from the distant past.", meaningJP: "（記憶などを）思い出させる、鮮やかに呼び覚ます", example: "This old, familiar scent brings back so many core memories.", vibes: ["Deep, highly emotional nostalgia", "Listening to forgotten childhood music", "Looking at old, faded, happy photos"], storyline: "While cleaning out the dusty attic, Ken found his battered old acoustic guitar. Plucking a single, out-of-tune rusty string, the sound instantly brought back a massive flood of warm, bittersweet core memories from his chaotic middle school days.", storylineJP: "埃っぽい屋根裏部屋を掃除している時、ケンはボロボロになった古いアコースティックギターを見つけた。チューニングの狂った錆びた弦を一本弾くと、その音は瞬時に、彼のカオスだった中学時代の温かくもほろ苦い大切な記憶（コアメモリー）の巨大な洪水を呼び覚ました（思い出させた）。", quiz: { question: "Looking at this deeply faded photograph vividly ___ memories of my incredibly happy youth.", options: ["brings back", "brings down", "brings forward"], correctIndex: 0, explanation: "cause to remember." } },
-
-      { pv: "Bring down", trope: "The Black Friday Waiting Game", cefr: "B2", icon: TrendingDown, meaning: "To make the price or level of something significantly cheaper or lower.", meaningJP: "（価格やレベルを）下げる、大きく引き下げる", example: "I'm waiting for the big seasonal sales to bring the price down.", vibes: ["Waiting for massive shopping sales", "Hunting for extreme, rare discounts", "Planning a major, expensive purchase"], storyline: "Mika had been utterly obsessed with the shiny new iPad Pro for months, but it was heavily gatekept by its astronomical price tag. She refused to buy it, patiently waiting like a sniper for the Black Friday sales to finally bring the price down to reality.", storylineJP: "ミカは何ヶ月もピカピカの新しいiPad Proの完全な虜になっていたが、その天文学的な価格設定によって厳重に阻まれていた。彼女は決して買わず、まるでスナイパーのように忍耐強く、ブラックフライデーのセールがついにその価格を現実的なレベルまで引き下げるのを待っていた。", quiz: { question: "The government took highly drastic measures in an attempt to ___ the soaring cost of living.", options: ["bring down", "bring off", "bring about"], correctIndex: 0, explanation: "make cheaper." } },
-
-      { pv: "Bring forward", trope: "The Sudden Deadline Panic", cefr: "B2", icon: Calendar, meaning: "To change the schedule so that an event happens much earlier than originally planned.", meaningJP: "（予定や期日を）前倒しにする、急に早める", example: "The cruel professor mercilessly brought the deadline forward.", vibes: ["Extreme stress over schedule changes", "A sudden, unfair deadline shift", "Total, sleepless classroom panic"], storyline: "The massive, 50-page group project was initially due on a comfortable Monday. But without warning, the ruthless professor sent a midnight email, stating he had brought the deadline forward to Friday. The entire class erupted into a state of sheer, sleepless panic.", storylineJP: "巨大な50ページのグループプロジェクトは、当初は余裕のある月曜日が締め切りだった。しかし無慈悲な教授は予告なしに深夜にメールを送り、締め切りを金曜日に前倒ししたと宣言した。クラス全体が、純粋な、眠れないパニック状態に陥った。", quiz: { question: "Due to the impending, dangerous storm, the outdoor meeting was unexpectedly ___.", options: ["brought forward", "brought along", "brought back"], correctIndex: 0, explanation: "make happen earlier." } },
-
-      { pv: "Bring off", trope: "The Impossible Win", cefr: "C1", icon: Award, meaning: "To succeed in doing something extremely difficult or nearly impossible.", meaningJP: "（困難なことを）見事にやり遂げる、奇跡的に成し遂げる", example: "I didn't think I could bring off that dance, but I totally nailed it!", vibes: ["Celebrating a massive, hard-fought win", "Conquering a near-impossible challenge", "Absolute relief after intense pressure"], storyline: "The acrobatic dance routine was notoriously brutal, involving a blindfolded backflip. Everyone heavily doubted she could do it without injury. But under the blinding stage lights, Hina didn't just survive; she managed to flawlessly bring it off, leaving the audience screaming in awe.", storylineJP: "そのアクロバティックなダンスの振り付けは、目隠しでの後方宙返りを含む悪名高いほど過酷なものだった。誰もが彼女が怪我なくできるわけがないと強く疑っていた。しかし眩しいステージの照明の下、ヒナはただ生き延びただけでなく、それを見事に完璧にやり遂げ、観客を畏敬の念で絶叫させた。", quiz: { question: "Against all logical odds, the determined underdog team ___ a miraculous, historic victory.", options: ["brought off", "breezed through", "broke out"], correctIndex: 0, explanation: "succeed with difficulty." } }
-
+      { 
+        pv: "Box in", trope: "The Trapped Driver", cefr: "B2", icon: Lock, 
+        meaning: "To prevent someone or something from moving by entirely surrounding them.", 
+        meaningJP: "（身動きがとれないように）閉じ込める", 
+        example: "I was totally boxed in at the mall parking lot.", 
+        exampleJP: "モールの駐車場で完全に閉じ込められてしまった。",
+        vibes: ["Being stuck in a terrible spot", "Frustrating traffic jams", "Aggressive, careless parking"], 
+        vibesJP: ["最悪な場所で立ち往生する", "イライラする交通渋滞", "アグレッシブで不注意な駐車"],
+        storyline: "Sato had a crucial job interview in thirty minutes. But when he rushed back to the crowded mall parking lot, he found his tiny car was totally, hopelessly boxed in by two massive, illegally parked SUVs. He couldn't move a single inch.", 
+        storylineJP: "佐藤は30分後に極めて重要な就職面接を控えていた。しかし、混雑したモールの駐車場に急いで戻ると、彼の小さな車は、違法駐車された2台の巨大なSUVによって完全に、絶望的に閉じ込められていた。彼は1インチも動けなかった。", 
+        quiz: { question: "The defensive police cars successfully ___ the heavily armed, fleeing suspect.", options: ["boxed in", "boxed up", "broken in"], correctIndex: 0, explanation: "prevent moving." } 
+      },
+      { 
+        pv: "Box up", trope: "The Big Moving Day", cefr: "B1", icon: Package, 
+        meaning: "To neatly pack things inside boxes, usually for storage or preparing for a move.", 
+        meaningJP: "（荷物を）箱に詰める", 
+        example: "I finally boxed up my old, bulky winter clothes.", 
+        exampleJP: "ついに古くてかさばる冬服を箱に詰めた。",
+        vibes: ["Organizing a messy, overflowing closet", "The absolute chaos of moving house", "Storing away sentimental memories"], 
+        vibesJP: ["散らかって溢れかえったクローゼットを整理する", "引っ越しの絶対的なカオス", "感傷的な思い出を収納する"],
+        storyline: "Spring had finally arrived in full bloom, bringing warm sunshine. Hina spent her entire weekend ruthlessly organizing her overflowing closet, meticulously boxing up all her heavy winter coats to make precious room for her light, colorful summer fits.", 
+        storylineJP: "ついに春が満開となり、暖かい日差しをもたらした。ヒナは週末を丸ごと使って溢れかえるクローゼットを容赦なく整理し、軽やかでカラフルな夏服の貴重なスペースを作るために、重い冬のコートをすべて几帳面に箱に詰めた。", 
+        quiz: { question: "She carefully ___ the fragile, ancient antique books for the long, bumpy journey.", options: ["boxed up", "boxed in", "broke up"], correctIndex: 0, explanation: "pack in boxes." } 
+      },
+      { 
+        pv: "Brace up", trope: "The Pre-Game Hype", cefr: "C1", icon: Heart, 
+        meaning: "To force yourself to feel more courageous and confident in a scary or stressful situation.", 
+        meaningJP: "（気を引き締めて）自信を持つ、奮起する", 
+        example: "You need to brace up and face them directly.", 
+        exampleJP: "気を引き締めて、彼らに直接立ち向かう必要がある。",
+        vibes: ["Giving a friend an intense hype talk", "Building sudden, necessary confidence", "Overcoming deep social anxiety"], 
+        vibesJP: ["友人に強烈なハッパをかける", "突然必要な自信を築く", "深い社交不安を克服する"],
+        storyline: "Mika was trembling violently behind the heavy stage curtain, terrified of the massive audience waiting for her solo. Her friend grabbed her shoulders firmly. 'You need to brace up right now,' she ordered. 'You are a star. Stop worrying and just shine.'", 
+        storylineJP: "ミカは重いステージのカーテンの裏で、自分のソロを待つ巨大な観客に怯え、激しく震えていた。友人は彼女の肩をしっかりと掴んだ。「今すぐ気を引き締めて（奮起して）」と彼女は命じた。「あなたはスターよ。心配するのをやめてただ輝きなさい。」", 
+        quiz: { question: "You absolutely need to ___ before stepping into that extremely difficult negotiation room.", options: ["brace up", "branch out", "break in"], correctIndex: 0, explanation: "feel confident." } 
+      },
+      { 
+        pv: "Branch out", trope: "The Content Creator's New Era", cefr: "B2", icon: GitBranch, 
+        meaning: "To move into a different, new area of business or personal interest.", 
+        meaningJP: "（新しい分野へ）活動を広げる、手を広げる", 
+        example: "I’m actively trying to branch out into lifestyle vlogs.", 
+        exampleJP: "ライフスタイル系のVlogへと積極的に活動を広げようとしている。",
+        vibes: ["Entering a 'new era' of content creation", "Expanding a personal, passionate hobby", "Growing a risky startup business"], 
+        vibesJP: ["コンテンツ制作の『新時代』に突入する", "個人的で情熱的な趣味を広げる", "リスクの高いスタートアップビジネスを成長させる"],
+        storyline: "Sora had built a massive online following just by streaming racing games from his bedroom. But feeling creatively stifled, he announced to his loyal fans that he was trying to branch out into outdoor travel vlogs, eager to explore a totally different, vibrant world.", 
+        storylineJP: "ソラは自室からレースゲームを配信するだけで巨大なオンラインフォロワーを築き上げていた。しかし創造的な息苦しさを感じた彼は、全く違う活気ある世界を探求したいと熱望し、アウトドア旅行のVlogへ活動を広げる（手を広げる）と忠実なファンに発表した。", 
+        quiz: { question: "The highly successful tech firm is aggressively ___ into completely new overseas markets.", options: ["branching out", "breaking away", "breezing through"], correctIndex: 0, explanation: "move into new area." } 
+      },
+      { 
+        pv: "Break away", trope: "The Solo Debut", cefr: "B2", icon: LogOut, 
+        meaning: "To leave an organization, group, or strict situation to become independent.", 
+        meaningJP: "（集団や束縛から）脱退する、逃げ出す", 
+        example: "She decided to break away from the toxic group.", 
+        exampleJP: "彼女はその有毒なグループから脱退することを決意した。",
+        vibes: ["A musician shockingly going solo", "Leaving a highly restrictive circle", "A dramatic bid for true independence"], 
+        vibesJP: ["ミュージシャンが衝撃的にソロになる", "非常に制限の多いサークルを去る", "真の独立へのドラマチックな試み"],
+        storyline: "For five long years, Hina had been the lead singer of a highly controlled, manufactured pop idol group. Suffocating under the impossibly strict rules, she shocked the entire industry by deciding to boldly break away from the agency and start her own independent solo project.", 
+        storylineJP: "長く苦しい5年間、ヒナは厳格に管理された作られたポップアイドルグループのボーカルだった。不可能なほど厳しいルールに息苦しさを感じていた彼女は、大胆にも事務所から脱退し、自分自身の独立したソロプロジェクトを始める決断を下して業界全体を震撼させた。", 
+        quiz: { question: "The frustrated rebel leader decided to finally ___ from the deeply corrupt empire.", options: ["break away", "break off", "break out"], correctIndex: 0, explanation: "leave organization." } 
+      },
+      { 
+        pv: "Break down", trope: "The Emotional Finale", cefr: "B1", icon: Droplets, 
+        meaning: "To lose control of your emotions and suddenly start crying uncontrollably.", 
+        meaningJP: "（感情を抑えきれずに）泣き崩れる", 
+        example: "I lowkey broke down in tears at the very end.", 
+        exampleJP: "最後には、思わず感情を抑えきれずに泣き崩れてしまった。",
+        vibes: ["Crying over a devastatingly sad K-drama", "An overwhelming emotional reaction", "Releasing weeks of pent-up stress"], 
+        vibesJP: ["壊滅的に悲しい韓国ドラマで泣く", "圧倒的な感情的反応", "何週間も溜まったストレスを解放する"],
+        storyline: "Sora always acted tough and proudly claimed he never cried at movies. But when the heroic main character tragically sacrificed himself in the epic, heartbreaking finale of the show, Sora lowkey broke down in uncontrollable tears right in the middle of the living room.", 
+        storylineJP: "ソラはいつも強がり、映画で泣いたことなどないと誇らしげに主張していた。しかし、その番組の壮大で胸が張り裂けるような最終回で、英雄的な主人公が悲劇的な自己犠牲を払った時、ソラはリビングのど真ん中で密かに、抑えきれない涙に泣き崩れた。", 
+        quiz: { question: "Overwhelmed by the tragic, unexpected news, she suddenly ___ in bitter, heavy tears.", options: ["broke down", "broke up", "brought about"], correctIndex: 0, explanation: "start crying." } 
+      },
+      { 
+        pv: "Break in", trope: "The Abrupt Interruption", cefr: "B2", icon: MessageCircle, 
+        meaning: "To suddenly interrupt a conversation or an ongoing situation.", 
+        meaningJP: "（会話などに）割り込む、口を挟む", 
+        example: "I'm so sorry to break in, but you all need to look at this!", 
+        exampleJP: "話を遮って（割り込んで）本当に申し訳ないんだけど、みんなこれを見る必要があるよ！",
+        vibes: ["Jumping eagerly into a group chat", "Delivering shocking, sudden news", "An urgent, somewhat rude interruption"], 
+        vibesJP: ["グループチャットに熱心に飛び込む", "衝撃的で突然のニュースを伝える", "緊急の、いくらか無礼な割り込み"],
+        storyline: "The study group was deeply focused, quietly and seriously debating a complex math problem. Suddenly, Leo slammed the door open, completely breathless. 'Sorry to break in on your boring convo,' he yelled, waving his phone, 'but did you guys see the insane new game trailer?!'", 
+        storylineJP: "勉強会は深く集中し、複雑な数学の問題を静かに真剣に議論していた。突然、レオが息を切らしてドアをバンと開けた。「つまんない会話に割り込んで悪いけど」と彼はスマホを振り回しながら叫んだ。「お前ら、あのヤバい新作ゲームの予告編見た？！」", 
+        quiz: { question: "He rudely ___ the highly sensitive meeting to loudly announce his personal achievement.", options: ["broke in", "broke out", "brought back"], correctIndex: 0, explanation: "interrupt." } 
+      },
+      { 
+        pv: "Break in", trope: "The Painful New Shoes", cefr: "B2", icon: Footprints, 
+        meaning: "To wear or use something new carefully until it becomes comfortable.", 
+        meaningJP: "（靴などを）履き慣らす、使い慣らす", 
+        example: "I badly need to break in these incredibly stiff sneakers.", 
+        exampleJP: "この信じられないほど硬いスニーカーを、どうしても履き慣らす必要がある。",
+        vibes: ["Prepping for a massive music festival", "Dealing with painful, bleeding blisters", "Wearing shoes strictly around the house"], 
+        vibesJP: ["大規模な音楽フェスの準備", "痛くて血の出る靴擦れに対処する", "家の中だけで靴を履く"],
+        storyline: "Mika bought a stunning, but incredibly stiff, pair of leather boots for the upcoming three-day music festival. Knowing the sheer agony of foot blisters, she painfully spent a whole week wearing them around her small apartment just to thoroughly break them in.", 
+        storylineJP: "ミカは、迫り来る3日間の音楽フェスのために、素晴らしいが信じられないほど硬い革のブーツを買った。靴擦れの純粋な激痛を知っている彼女は、ただ徹底的にブーツを履き慣らすためだけに、狭いアパートの中で丸1週間、痛みに耐えながらそれを履き続けた。", 
+        quiz: { question: "Make absolutely sure you ___ the new leather hiking boots before the long mountain trek.", options: ["break in", "break off", "bring down"], correctIndex: 0, explanation: "use new item." } 
+      },
+      { 
+        pv: "Break off", trope: "The Sudden Split", cefr: "B2", icon: XCircle, 
+        meaning: "To suddenly end a relationship, agreement, or ongoing discussion.", 
+        meaningJP: "（関係や交渉を）絶つ、解消する", 
+        example: "They shockingly decided to break off their highly publicized engagement.", 
+        exampleJP: "彼らは衝撃的にも、大々的に報じられた婚約を解消する（関係を絶つ）ことを決断した。",
+        vibes: ["Spilling tea about a harsh breakup", "A dramatic, incredibly sudden split", "Ending a deeply toxic relationship"], 
+        vibesJP: ["ひどい破局についてのゴシップをこぼす", "ドラマチックで信じられないほど突然の別れ", "深く有毒な関係を終わらせる"],
+        storyline: "The famous celebrity couple seemed perfectly happy and were openly planning a massive, lavish summer wedding. But after a completely explosive argument in a crowded public restaurant, they shockingly decided to break off their engagement, sending the internet into an absolute frenzy.", 
+        storylineJP: "その有名なセレブカップルは完璧に幸せそうで、大規模で豪華な夏の結婚式を公に計画していた。しかし、混雑した公共のレストランでの完全に爆発的な大喧嘩の後、彼らは衝撃的にも婚約を解消する（関係を絶つ）ことを決断し、ネット上を絶対的な熱狂の渦に巻き込んだ。", 
+        quiz: { question: "Following the incredibly bitter dispute, the two allied countries entirely ___ the peace talks.", options: ["broke off", "broke out", "brought off"], correctIndex: 0, explanation: "end relationship." } 
+      },
+      { 
+        pv: "Break out", trope: "The Sensitive Skin Disaster", cefr: "B2", icon: AlertTriangle, 
+        meaning: "To suddenly develop skin sores, spots, or a painful irritation.", 
+        meaningJP: "（吹き出物や発疹が）突然出る", 
+        example: "I will instantly break out in a harsh, stinging rash.", 
+        exampleJP: "私はすぐに、ひどくヒリヒリする発疹が出てしまう。",
+        vibes: ["Discussing severe skin sensitivity", "A terribly bad skin day before an event", "Allergic reactions to new products"], 
+        vibesJP: ["ひどい敏感肌について話し合う", "イベント前の最悪な肌のコンディション", "新製品に対するアレルギー反応"],
+        storyline: "Kaito's skin was notoriously sensitive. He carelessly borrowed a cheap, heavily perfumed laundry detergent from a friend, and the very next morning, his face and arms began to intensely break out in a harsh, painfully itchy red rash right before his big date.", 
+        storylineJP: "海斗の肌は敏感なことで有名だった。彼は不注意にも、友人から安くて香料の強い洗濯洗剤を借りたが、まさに次の日の朝、大事なデートの直前に、彼の顔と腕は激しく痛痒い真っ赤な発疹がひどく出始め（吹き出し）た。", 
+        quiz: { question: "If I eat fresh strawberries, I instantly ___ in incredibly itchy, painful red spots.", options: ["break out", "break up", "bring about"], correctIndex: 0, explanation: "develop sores." } 
+      },
+      { 
+        pv: "Break out of", trope: "The Routine Escape", cefr: "B2", icon: Wind, 
+        meaning: "To escape from a physical place or a boring, highly restrictive situation.", 
+        meaningJP: "（退屈な日常や牢獄から）抜け出す、脱走する", 
+        example: "I desperately need to break out of this dull, endless routine.", 
+        exampleJP: "私はこの退屈で終わりのないルーティンから、死に物狂いで抜け出す必要がある。",
+        vibes: ["Escaping a boring, highly repetitive life", "A deep, burning desire for wild travel", "Intense prison break energy"], 
+        vibesJP: ["退屈で高度に反復的な生活から逃れる", "ワイルドな旅行への深く燃えるような欲望", "強烈な脱獄のエネルギー"],
+        storyline: "Every single day was completely identical: wake up, study, eat, sleep. Staring blankly at his dull, gray bedroom wall, Sora felt like he was suffocating. 'I desperately need to break out of this mind-numbing routine and travel somewhere completely unknown,' he muttered.", 
+        storylineJP: "毎日が完全に同じだった。起きて、勉強して、食べて、寝る。退屈で灰色の自室の壁をぼんやり見つめながら、ソラは窒息しそうだった。「この思考を麻痺させるようなルーティンから死に物狂いで抜け出して、全く見知らぬどこかへ旅に出なきゃ」と彼は呟いた。", 
+        quiz: { question: "The clever, desperate prisoner managed to mysteriously ___ the maximum-security facility.", options: ["break out of", "break away", "bring along"], correctIndex: 0, explanation: "escape." } 
+      },
+      { 
+        pv: "Break up", trope: "The Tragic Misunderstanding", cefr: "A2", icon: XCircle, 
+        meaning: "To completely finish a romantic relationship.", 
+        meaningJP: "（恋人と）別れる、関係を完全に終わらせる", 
+        example: "I heard a crazy rumor that they brutally broke up.", 
+        exampleJP: "彼らが残酷な別れ方をしたというクレイジーな噂を聞いたよ。",
+        vibes: ["Gossiping about exes in the group chat", "Intense, tearful relationship drama", "A sad, shocking ending to a romance"], 
+        vibesJP: ["グループチャットで元恋人の噂話をする", "強烈で涙を誘う恋愛ドラマ", "ロマンスの悲しくて衝撃的な結末"],
+        storyline: "They had been the absolute, undeniable 'it couple' of the school for three perfect years. But Monday morning, the group chat was flooded with shocked messages. I heard they finally broke up because of a tiny, stupid misunderstanding that blew completely out of proportion.", 
+        storylineJP: "彼らは3年間、学校で絶対的かつ誰もが認める「憧れのカップル」だった。しかし月曜の朝、グループチャットはショックを受けたメッセージで溢れ返った。完全に尾ひれがついて大きくなった、ささいで馬鹿げた誤解のせいで、彼らはついに別れたらしい。", 
+        quiz: { question: "After a complex decade of marriage, the famous actors sadly decided to definitively ___.", options: ["break up", "break down", "bring around"], correctIndex: 0, explanation: "finish relationship." } 
+      },
+      { 
+        pv: "Break up", trope: "The Bad Signal Glitch", cefr: "B2", icon: CloudOff, 
+        meaning: "To become completely inaudible over a phone or radio due to a bad signal.", 
+        meaningJP: "（電話などの音声が）途切れる、ひどく乱れる", 
+        example: "Wait, stop, you're badly breaking up; I can't hear a thing you're saying.", 
+        exampleJP: "待って、止まって、声がひどく途切れてるよ。あなたが言ってること、全く聞こえない。",
+        vibes: ["A glitchy, horribly lagging Zoom call", "A terrible, disconnected cell phone signal", "Extremely frustrating tech issues"], 
+        vibesJP: ["バグが多く、ひどく遅延するZoom通話", "ひどく切断される携帯の電波", "極度にイライラする技術的な問題"],
+        storyline: "Hina was in the middle of emotionally pouring her heart out over the phone, confessing her true feelings. But Kaito was driving through a long, dark tunnel. 'Wait, wait, you're breaking up! I can't hear a single word! I'll call you back!' he yelled desperately.", 
+        storylineJP: "ヒナは電話越しに感情的に心を打ち明け、本当の気持ちを告白している最中だった。しかし海斗は長く暗いトンネルの中を運転していた。「待って、待って、声がひどく途切れてる！一言も聞こえない！後でかけ直す！」彼は必死に叫んだ。", 
+        quiz: { question: "The vital emergency radio transmission is severely ___ due to the heavy, interference-filled storm.", options: ["breaking up", "breaking in", "bringing up"], correctIndex: 0, explanation: "inaudible signal." } 
+      },
+      { 
+        pv: "Breeze through", trope: "The Academic Flex", cefr: "C1", icon: Wind, 
+        meaning: "To pass a test or complete a difficult task very easily and with extreme confidence.", 
+        meaningJP: "（難題を）涼しい顔で（楽々と）やり遂げる", 
+        example: "I literally breezed through the complex math test without breaking a sweat.", 
+        exampleJP: "文字通り、全く汗をかくことなく、複雑な数学のテストを涼しい顔でやり遂げたよ。",
+        vibes: ["Bragging loudly about a high score", "A task feeling effortlessly, surprisingly easy", "The sweet reward of actual studying"], 
+        vibesJP: ["高得点を大声で自慢する", "驚くほど簡単に感じるタスク", "実際に勉強したことの甘い報酬"],
+        storyline: "Everyone else in the class was sweating and trembling over the impossibly difficult calculus final. But for once in his life, Leo had studied for two weeks straight. He smiled smugly, grabbed his pencil, and literally breezed through the entire test in half the allotted time.", 
+        storylineJP: "クラスの他の全員が、不可能なほど難しい微積分の期末試験に汗をかき、震えていた。しかしレオは人生で初めて、2週間ぶっ通しで勉強していた。彼は得意げに微笑み、鉛筆を握ると、文字通り半分の時間でテスト全体を涼しい顔で（楽々と）やり遂げた。", 
+        quiz: { question: "Because she practiced meticulously every single day, she completely ___ the intense final exam.", options: ["breezed through", "broke through", "brought through"], correctIndex: 0, explanation: "pass easily." } 
+      },
+      { 
+        pv: "Brighten up", trope: "The Golden Retriever Energy", cefr: "B1", icon: Sun, 
+        meaning: "To suddenly become much happier or to make a place significantly more cheerful.", 
+        meaningJP: "（表情や雰囲気が）パッと明るくなる", 
+        example: "The grim, depressing mood instantly brightened up.", 
+        exampleJP: "陰惨で憂鬱な雰囲気が、瞬時にパッと明るくなった。",
+        vibes: ["Radiating happy, pure golden energy", "Changing the entire vibe of a dark room", "A sudden, incredibly warm smile"], 
+        vibesJP: ["幸せで純粋な黄金のエネルギーを放つ", "暗い部屋の雰囲気を一変させる", "突然の、信じられないほど温かい笑顔"],
+        storyline: "The hospital waiting room was filled with a heavy, deeply grim silence as everyone worried. But the very second little five-year-old Hina walked in carrying a bright yellow balloon and giggling loudly, the entire somber mood of the room instantly brightened up.", 
+        storylineJP: "皆が深く心配し、病院の待合室は重く沈鬱な沈黙に包まれていた。しかし、5歳の小さなヒナが鮮やかな黄色い風船を持ち、大声でくすくす笑いながら入ってきたまさにその瞬間、部屋全体の陰気な雰囲気がパッと明るくなった。", 
+        quiz: { question: "The dark, threatening gray sky miraculously ___ immediately after the fierce storm passed.", options: ["brightened up", "breezed through", "broke up"], correctIndex: 0, explanation: "become happier." } 
+      },
+      { 
+        pv: "Bring about", trope: "The Student Revolution", cefr: "B2", icon: Zap, 
+        meaning: "To make a significant change or major event happen.", 
+        meaningJP: "（大きな変化や結果を）もたらす、引き起こす", 
+        example: "We’re trying to urgently bring about real, tangible change.", 
+        exampleJP: "私たちは至急、現実的で具体的な変化をもたらそうとしている。",
+        vibes: ["Fierce, organized student activism", "Sparking a major, historical difference", "Loudly demanding new, better policies"], 
+        vibesJP: ["激しく組織的な学生の活動", "大きな歴史的変化を引き起こす", "新しいより良い政策を大声で要求する"],
+        storyline: "The school cafeteria was notorious for its terrible, unhealthy food and massive plastic waste. A passionate group of students formed a committee, tirelessly protesting and petitioning the principal, desperately trying to bring about a real, lasting change in the strict school policy.", 
+        storylineJP: "学校の食堂は、ひどく不健康な食事と大量のプラスチックゴミで悪名高かった。情熱的な生徒たちのグループが委員会を結成し、校長に絶え間なく抗議と嘆願を行い、厳格な学校の方針に、真の永続的な変化をもたらそう（引き起こそう）と必死に努力した。", 
+        quiz: { question: "The brilliant new young leader hopes to clearly ___ a massive, unprecedented cultural revolution.", options: ["bring about", "bring along", "bring back"], correctIndex: 0, explanation: "make happen." } 
+      },
+      { 
+        pv: "Bring along", trope: "The Party Plus-One", cefr: "A2", icon: Users, 
+        meaning: "To bring someone or something with you to a specific place or social event.", 
+        meaningJP: "（人や物を）一緒に連れて行く、持ってくる", 
+        example: "Can I please bring my bestie along to the exclusive party?", 
+        exampleJP: "その限定のパーティーに、私の親友を一緒に連れて行ってもいいですか？",
+        vibes: ["Asking for a party 'plus one'", "Inviting nervous friends to an event", "Not wanting to go completely alone"], 
+        vibesJP: ["パーティーの同伴者を頼む", "緊張している友人をイベントに誘う", "絶対に一人では行きたくない"],
+        storyline: "Mika received a glittering gold invitation to the most exclusive, high-society party of the year. Terrified of walking into a room full of wealthy strangers by herself, she quickly texted the host, pleading, 'Can I please bring my socially-awkward bestie along?'", 
+        storylineJP: "ミカは、今年最もエクスクルーシブな上流階級のパーティへの、キラキラ輝く金の招待状を受け取った。裕福な見知らぬ人だらけの部屋に一人で入ることに怯えた彼女は、すぐに主催者にメッセージを送り、「どうか、コミュ障の親友を一緒に連れて行ってもいいですか？」と懇願した。", 
+        quiz: { question: "Whenever you go to the scorching beach, make absolutely sure to ___ enough sunscreen.", options: ["bring along", "bring down", "bring off"], correctIndex: 0, explanation: "bring someone." } 
+      },
+      { 
+        pv: "Bring around", trope: "The Ultimate Persuasion", cefr: "C1", icon: MessageCircle, 
+        meaning: "To successfully persuade or convince someone to agree with your controversial idea.", 
+        meaningJP: "（人を説得して）意見を変えさせる、完全に納得させる", 
+        example: "I finally brought my incredibly strict parents around.", 
+        exampleJP: "ついに信じられないほど厳格な両親を説得して意見を変えさせた。",
+        vibes: ["Convincing intensely stubborn people", "Winning a difficult, long argument", "Successfully sharing your unique vision"], 
+        vibesJP: ["極度に頑固な人を説得する", "困難で長い議論に勝つ", "独自のビジョンをうまく共有する"],
+        storyline: "Sora's parents were completely, fundamentally opposed to him dying his hair bright electric blue. But after weeks of making detailed PowerPoint presentations and promising perfect grades, he miraculously brought them around to letting him do it.", 
+        storylineJP: "ソラの両親は、彼が髪を鮮やかなエレクトリックブルーに染めることに、根本から完全に反対していた。しかし、何週間にもわたって詳細なPowerPointでプレゼンをし、完璧な成績を約束した後、彼は奇跡的にも彼らを説得して（意見を変えさせて）、髪を染める許可を得た。", 
+        quiz: { question: "It took hours of intense debate, but I will eventually ___ him ___ to my progressive side.", options: ["bring / around", "break / off", "box / in"], correctIndex: 0, explanation: "persuade." } 
+      },
+      { 
+        pv: "Bring back", trope: "The Core Memory Nostalgia", cefr: "B1", icon: Clock, 
+        meaning: "To cause someone to intensely remember something from the distant past.", 
+        meaningJP: "（記憶などを）思い出させる、鮮やかに呼び覚ます", 
+        example: "This old, familiar scent brings back so many core memories.", 
+        exampleJP: "この古くて馴染みのある香りは、たくさんの大切な記憶（コアメモリー）を鮮やかに呼び覚ます。",
+        vibes: ["Deep, highly emotional nostalgia", "Listening to forgotten childhood music", "Looking at old, faded, happy photos"], 
+        vibesJP: ["深く、非常に感情的なノスタルジア", "忘れられていた子供時代の音楽を聴く", "古く色あせた幸せな写真を見る"],
+        storyline: "While cleaning out the dusty attic, Ken found his battered old acoustic guitar. Plucking a single, out-of-tune rusty string, the sound instantly brought back a massive flood of warm, bittersweet core memories from his chaotic middle school days.", 
+        storylineJP: "埃っぽい屋根裏部屋を掃除している時、ケンはボロボロになった古いアコースティックギターを見つけた。チューニングの狂った錆びた弦を一本弾くと、その音は瞬時に、彼のカオスだった中学時代の温かくもほろ苦い大切な記憶（コアメモリー）の巨大な洪水を呼び覚ました（思い出させた）。", 
+        quiz: { question: "Looking at this deeply faded photograph vividly ___ memories of my incredibly happy youth.", options: ["brings back", "brings down", "brings forward"], correctIndex: 0, explanation: "cause to remember." } 
+      },
+      { 
+        pv: "Bring down", trope: "The Black Friday Waiting Game", cefr: "B2", icon: TrendingDown, 
+        meaning: "To make the price or level of something significantly cheaper or lower.", 
+        meaningJP: "（価格やレベルを）下げる、大きく引き下げる", 
+        example: "I'm waiting for the big seasonal sales to bring the price down.", 
+        exampleJP: "大規模な季節のセールで価格が下がるのを待っている。",
+        vibes: ["Waiting for massive shopping sales", "Hunting for extreme, rare discounts", "Planning a major, expensive purchase"], 
+        vibesJP: ["大規模なショッピングセールを待つ", "極端でレアな割引を狙う", "大規模で高価な買い物を計画する"],
+        storyline: "Mika had been utterly obsessed with the shiny new iPad Pro for months, but it was heavily gatekept by its astronomical price tag. She refused to buy it, patiently waiting like a sniper for the Black Friday sales to finally bring the price down to reality.", 
+        storylineJP: "ミカは何ヶ月もピカピカの新しいiPad Proの完全な虜になっていたが、その天文学的な価格設定によって厳重に阻まれていた。彼女は決して買わず、まるでスナイパーのように忍耐強く、ブラックフライデーのセールがついにその価格を現実的なレベルまで引き下げるのを待っていた。", 
+        quiz: { question: "The government took highly drastic measures in an attempt to ___ the soaring cost of living.", options: ["bring down", "bring off", "bring about"], correctIndex: 0, explanation: "make cheaper." } 
+      },
+      { 
+        pv: "Bring forward", trope: "The Sudden Deadline Panic", cefr: "B2", icon: Calendar, 
+        meaning: "To change the schedule so that an event happens much earlier than originally planned.", 
+        meaningJP: "（予定や期日を）前倒しにする、急に早める", 
+        example: "The cruel professor mercilessly brought the deadline forward.", 
+        exampleJP: "残酷な教授は無慈悲にも締め切りを前倒しした。",
+        vibes: ["Extreme stress over schedule changes", "A sudden, unfair deadline shift", "Total, sleepless classroom panic"], 
+        vibesJP: ["スケジュール変更に対する極度のストレス", "突然の不公平な締め切りの変更", "クラスの完全に眠れないパニック"],
+        storyline: "The massive, 50-page group project was initially due on a comfortable Monday. But without warning, the ruthless professor sent a midnight email, stating he had brought the deadline forward to Friday. The entire class erupted into a state of sheer, sleepless panic.", 
+        storylineJP: "巨大な50ページのグループプロジェクトは、当初は余裕のある月曜日が締め切りだった。しかし無慈悲な教授は予告なしに深夜にメールを送り、締め切りを金曜日に前倒ししたと宣言した。クラス全体が、純粋な、眠れないパニック状態に陥った。", 
+        quiz: { question: "Due to the impending, dangerous storm, the outdoor meeting was unexpectedly ___.", options: ["brought forward", "brought along", "brought back"], correctIndex: 0, explanation: "make happen earlier." } 
+      },
+      { 
+        pv: "Bring off", trope: "The Impossible Win", cefr: "C1", icon: Award, 
+        meaning: "To succeed in doing something extremely difficult or nearly impossible.", 
+        meaningJP: "（困難なことを）見事にやり遂げる、奇跡的に成し遂げる", 
+        example: "I didn't think I could bring off that dance, but I totally nailed it!", 
+        exampleJP: "あのダンスを見事にやり遂げられるとは思っていなかったけど、完全に成功させたよ！",
+        vibes: ["Celebrating a massive, hard-fought win", "Conquering a near-impossible challenge", "Absolute relief after intense pressure"], 
+        vibesJP: ["大規模な苦戦の勝利を祝う", "ほぼ不可能な挑戦を克服する", "強烈なプレッシャーの後の絶対的な安堵"],
+        storyline: "The acrobatic dance routine was notoriously brutal, involving a blindfolded backflip. Everyone heavily doubted she could do it without injury. But under the blinding stage lights, Hina didn't just survive; she managed to flawlessly bring it off, leaving the audience screaming in awe.", 
+        storylineJP: "そのアクロバティックなダンスの振り付けは、目隠しでの後方宙返りを含む悪名高いほど過酷なものだった。誰もが彼女が怪我なくできるわけがないと強く疑っていた。しかし眩しいステージの照明の下、ヒナはただ生き延びただけでなく、それを見事に完璧にやり遂げ、観客を畏敬の念で絶叫させた。", 
+        quiz: { question: "Against all logical odds, the determined underdog team ___ a miraculous, historic victory.", options: ["brought off", "breezed through", "broke out"], correctIndex: 0, explanation: "succeed with difficulty." } 
+      }
     ],
-
     8: [
-
-      { pv: "Bring on", trope: "The Catalyst", cefr: "B2", icon: Zap, meaning: "To cause something to happen or speed up the process.", meaningJP: "（病気や事態などを）引き起こす、もたらす", example: "Getting wet in the rain yesterday brought on my cold.", vibes: ["Triggering an event", "Sudden sickness", "Speeding things up"], storyline: "Sora refused to wear a warm jacket in the freezing snow. Unsurprisingly, the brutal weather brought on a terrible fever, leaving him completely stuck in bed for a week.", storylineJP: "ソラは凍えるような雪の中で暖かいジャケットを着るのを拒否した。当然のことながら、その過酷な天候はひどい熱を引き起こし、彼は1週間完全にベッドから動けなくなった。", quiz: { question: "The immense stress of the final exams unfortunately ___ a severe migraine.", options: ["brought on", "brought out", "brushed off"], correctIndex: 0, explanation: "to cause to happen." } },
-
-      { pv: "Bring out", trope: "The Release Drop", cefr: "B1", icon: Sparkles, meaning: "To release, publish, or make something available.", meaningJP: "（作品や製品を）世に出す、発売する", example: "The band are bringing out a new CD in the autumn.", vibes: ["Music drops", "Publishing content", "Making it public"], storyline: "After hiding in the studio for two years, the legendary indie band announced they are finally bringing out a brand new album this autumn, sending fans into an absolute frenzy.", storylineJP: "2年間スタジオに引きこもった後、その伝説のインディーズバンドは今秋ついに全く新しいアルバムを発売する（世に出す）と発表し、ファンを絶対的な熱狂の渦に巻き込んだ。", quiz: { question: "The famous author is planning to ___ a thrilling new mystery novel next month.", options: ["bring out", "bring up", "buck up"], correctIndex: 0, explanation: "to publish or release." } },
-
-      { pv: "Bring out in", trope: "The Allergy Panic", cefr: "B2", icon: AlertTriangle, meaning: "To cause a health problem or reaction, like a rash.", meaningJP: "（発疹などの症状を）引き起こす、出させる", example: "It was the lobster that brought me out in this rash all over my body.", vibes: ["Allergic reactions", "Skin sensitivity", "Sudden health issues"], storyline: "Kaito wanted to impress his date by ordering the most expensive seafood platter. But tragically, the rich lobster brought him out in a painfully itchy, bright red rash right in the middle of dinner.", storylineJP: "海斗は最も高価なシーフードプラッターを注文してデート相手を感心させたかった。しかし悲劇的なことに、その濃厚なロブスターは、ディナーの真っ只中に彼の全身に痛痒く真っ赤な発疹を引き起こした。", quiz: { question: "Touching that strange, poisonous plant immediately ___ her ___ in painful blisters.", options: ["brought / out in", "brought / round", "brushed / off"], correctIndex: 0, explanation: "to cause a skin reaction." } },
-
-      { pv: "Bring round / to", trope: "The Recovery", cefr: "C1", icon: Activity, meaning: "To make someone wake up from unconsciousness or an anaesthetic.", meaningJP: "意識を回復させる、目を覚まさせる", example: "The doctors brought him round a few hours after the operation.", vibes: ["Medical recovery", "Waking up", "Regaining senses"], storyline: "The surgery had been incredibly long and complex. The worried family paced the waiting room until the skilled doctors successfully brought him round and confirmed he was perfectly safe.", storylineJP: "手術は信じられないほど長く複雑だった。心配する家族が待合室をうろうろしていると、熟練した医師たちが無事に彼の意識を回復させ、彼が完全に無事であることを確認した。", quiz: { question: "After the boxer collapsed, the referee urgently called the medics to ___ him ___.", options: ["bring / round", "brush / up", "build / up"], correctIndex: 0, explanation: "to make conscious again." } },
-
-      { pv: "Bring up", trope: "The Taboo Topic / Raising Kids", cefr: "B1", icon: MessageCircle, meaning: "To mention a subject, OR to raise and educate a child.", meaningJP: "話題を持ち出す、または子供を育てる", example: "They didn't bring the subject up, even though she was brought up strictly.", vibes: ["Dodging awkward topics", "Childhood lore", "Parenting styles"], storyline: "Despite growing up in a chaotic city, Mika was incredibly polite. 'My parents brought me up to respect others,' she explained. However, nobody dared to bring up the recent scandal at dinner.", storylineJP: "カオスな都会で育ったにもかかわらず、ミカは礼儀正しかった。「両親は他人を尊重するように私を育ててくれたの」と彼女は説明した。しかし、夕食の席で最近のスキャンダルの話題を持ち出す勇気のある者は誰もいなかった。", quiz: { question: "Please do not ___ his recent embarrassing failure during the meeting.", options: ["bring up", "buckle down", "budge up"], correctIndex: 0, explanation: "to mention a topic." } },
-
-      { pv: "Brush off / aside", trope: "The Hater Blocker", cefr: "B2", icon: Shield, meaning: "To ignore, pay little attention to, or dismiss criticism.", meaningJP: "（批判などを）無視する、軽くあしらう", example: "The minister brushed off the criticism and brushed aside their concerns.", vibes: ["Ignoring the haters", "Dodging negativity", "Staying focused"], storyline: "The aggressive reporters shouted harsh questions, trying to ruin her reputation. But the confident idol just smiled, smoothly brushed off the unfair criticism, and walked gracefully to her waiting car.", storylineJP: "攻撃的な記者たちは厳しい質問を浴びせ、彼女の評判を落とそうとした。しかし自信に満ちたアイドルはただ微笑み、不当な批判をスマートに軽くあしらうと、待たせてある車へと優雅に歩いていった。", quiz: { question: "Instead of getting angry, he simply ___ the rude insult and continued working.", options: ["brushed off", "brought on", "bucked up"], correctIndex: 0, explanation: "to ignore criticism." } },
-
-      { pv: "Brush up", trope: "The Quick Study", cefr: "B1", icon: BookOpen, meaning: "To improve a skill quickly, especially one you haven't used for a while.", meaningJP: "（錆びついたスキルを）急いで磨き直す、復習する", example: "She took a course to brush up her Spanish before she went travelling.", vibes: ["Last-minute study", "Skill refreshing", "Travel prep"], storyline: "Sora hadn't spoken a word of French since high school. With his sudden business trip to Paris looming, he aggressively used language apps every night to desperately brush up his rusty skills.", storylineJP: "ソラは高校以来、フランス語を全く話していなかった。突然のパリへの出張が迫る中、彼は錆びついたスキルを必死に磨き直す（復習する）ため、毎晩アグレッシブに語学アプリを使った。", quiz: { question: "I urgently need to ___ my coding skills before the major tech interview.", options: ["brush up", "bundle off", "burn down"], correctIndex: 0, explanation: "to improve a skill." } },
-
-      { pv: "Bubble over", trope: "The Pure Joy", cefr: "C1", icon: Smile, meaning: "To become very excited and full of positive emotion.", meaningJP: "（興奮や喜びで）沸き返る、感情が溢れ出る", example: "She bubbled over with joy when she heard her exam results.", vibes: ["Golden retriever energy", "Overwhelming happiness", "Pure hype"], storyline: "When the strict teacher finally handed back the impossibly difficult test, Hina saw a perfect score. She literally bubbled over with absolute joy, hugging everyone in the front row.", storylineJP: "厳格な教師がついに不可能なほど難しいテストを返却した時、ヒナは満点のスコアを目にした。彼女は文字通り絶対的な喜びで沸き返り（感情が溢れ出し）、最前列の全員に抱きついた。", quiz: { question: "The enthusiastic children ___ with excitement when the clown appeared.", options: ["bubbled over", "buckled under", "buffed up"], correctIndex: 0, explanation: "to become very excited." } },
-
-      { pv: "Buck up", trope: "The Wake-Up Call", cefr: "B2", icon: Zap, meaning: "To hurry, or to smarten up and improve your behaviour.", meaningJP: "急ぐ、気を引き締める、態度を改める", example: "You had better buck your ideas up, or you'll fail the course.", vibes: ["Getting serious", "Harsh motivation", "Speeding up"], storyline: "Leo was lazily playing games instead of studying for finals. His older sister snatched the controller away. 'Buck up your ideas right now,' she warned coldly, 'or you are going to completely fail this year.'", storylineJP: "レオは期末試験の勉強をせずに怠惰にゲームをしていた。姉はコントローラーを奪い取った。「今すぐ気を引き締めなさい（態度を改めなさい）」と彼女は冷たく警告した。「さもないと、あんた今年完全に落第するわよ。」", quiz: { question: "The coach yelled at the lazy players to ___ and start running faster.", options: ["buck up", "bug off", "bulk out"], correctIndex: 0, explanation: "to improve or hurry." } },
-
-      { pv: "Bucket down", trope: "The Monsoon", cefr: "B1", icon: CloudOff, meaning: "To rain extremely heavily.", meaningJP: "（雨が）バケツをひっくり返したように降る、土砂降りになる", example: "Take an umbrella; it's bucketing down.", vibes: ["Terrible weather", "Staying indoors", "Heavy rain"], storyline: "The clear blue sky suddenly turned pitch black. Within seconds, it was violently bucketing down, completely flooding the school courtyard and forcing everyone to run screaming inside.", storylineJP: "澄み切った青空が突然真っ黒になった。数秒のうちに、暴力的にバケツをひっくり返したような土砂降りになり、学校の中庭は完全に水浸しになり、全員が悲鳴を上げながら屋内に逃げ込むことになった。", quiz: { question: "We can't play the football match today because it is absolutely ___ outside.", options: ["bucketing down", "burning off", "bursting into"], correctIndex: 0, explanation: "to rain heavily." } },
-
-      { pv: "Buckle down", trope: "The Academic Grind", cefr: "B2", icon: HardHat, meaning: "To start working hard and applying yourself seriously.", meaningJP: "本腰を入れる、真剣に取り組む", example: "We had to buckle down and study for the exam.", vibes: ["Library lock-in", "Deep focus", "Exam prep"], storyline: "After weeks of endlessly goofing around and ignoring assignments, the terrifying final deadline was only two days away. Sora finally turned off his phone, grabbed his coffee, and decided to seriously buckle down.", storylineJP: "何週間も果てしなくふざけて課題を無視した後、恐ろしい最終締め切りまでわずか2日となった。ソラはついにスマホの電源を切り、コーヒーを手に取り、真剣に本腰を入れる決心をした。", quiz: { question: "Stop wasting time on social media and ___ to finish your important project.", options: ["buckle down", "build up", "bump into"], correctIndex: 0, explanation: "to start working hard." } },
-
-      { pv: "Buckle under", trope: "The Surrender", cefr: "C1", icon: Undo2, meaning: "To accept something unwillingly under immense pressure.", meaningJP: "（重圧などに）屈する、負ける", example: "They didn't like the ideas, but had to buckle under or face the sack.", vibes: ["Giving in", "Corporate pressure", "Losing the battle"], storyline: "The independent bookstore owners fiercely fought against the massive corporate buyout for months. But with mounting debts and aggressive lawyers, they finally had to buckle under the immense financial pressure and sell.", storylineJP: "独立系書店のオーナーたちは、巨大企業による買収に対して何ヶ月も激しく戦った。しかし、膨れ上がる借金と攻撃的な弁護士を前に、彼らはついに計り知れない財政的重圧に屈し、売却せざるを得なかった。", quiz: { question: "Despite the intense, threatening interrogation, the brave spy refused to ___.", options: ["buckle under", "bump off", "buy out"], correctIndex: 0, explanation: "to yield under pressure." } },
-
-      { pv: "Buckle up", trope: "The Safety Check", cefr: "B1", icon: Lock, meaning: "To fasten a seatbelt.", meaningJP: "シートベルトを締める", example: "We were told to buckle up before take-off.", vibes: ["Pre-flight checks", "Car safety", "Getting ready"], storyline: "The massive roller coaster slowly clicked to the top of the terrifying drop. 'Alright everyone, buckle up tight and hold on!' the operator announced over the crackling loudspeaker.", storylineJP: "巨大なジェットコースターが、カチカチと音を立てて恐ろしい急降下の頂上へとゆっくり登っていった。「よしみんな、シートベルトをしっかり締めて、しっかり掴まれ！」と、係員がノイズ交じりのスピーカーでアナウンスした。", quiz: { question: "The strict flight attendant told all passengers to safely ___ immediately.", options: ["buckle up", "budge up", "burn down"], correctIndex: 0, explanation: "to fasten a seatbelt." } },
-
-      { pv: "Budge up", trope: "The Crowded Couch", cefr: "B2", icon: Users, meaning: "To move to make space for someone else.", meaningJP: "席を詰める、少し動く", example: "We had to budge up to let the fourth person in the back of the car.", vibes: ["Squeezing in", "Making room", "Crowded spaces"], storyline: "The tiny booth at the diner was already completely packed with three friends. When Kaito arrived with the pizza, Mika sighed and told the others to urgently budge up so he could sit.", storylineJP: "ダイナーの狭いボックス席は、すでに3人の友人で完全に満員だった。海斗がピザを持って到着すると、ミカはため息をつき、彼が座れるように至急席を詰めるよう他の皆に言った。", quiz: { question: "Could you please ___ a little bit so I can sit on this extremely crowded bench?", options: ["budge up", "buff up", "bunk off"], correctIndex: 0, explanation: "to make space." } },
-
-      { pv: "Buff up", trope: "The Polish", cefr: "C1", icon: Star, meaning: "To clear, clean, make shine, or improve your knowledge quickly.", meaningJP: "磨き上げる、（知識を）詰め込む", example: "I buffed up on my grammar before the test.", vibes: ["Shining things up", "Quick revision", "Looking polished"], storyline: "The silver antique sword was covered in centuries of thick dirt. Ken spent an entire Sunday carefully buffing it up until the majestic blade reflected the sunlight perfectly.", storylineJP: "銀のアンティークの剣は、何世紀分もの分厚い汚れに覆われていた。ケンは丸一日かけて慎重にそれを磨き上げ、その荘厳な刃が太陽の光を完璧に反射するまでにした。", quiz: { question: "He used a soft, expensive cloth to completely ___ the shiny vintage car.", options: ["buff up", "bust up", "buy in"], correctIndex: 0, explanation: "to make shine or improve." } },
-
-      { pv: "Bug off / out", trope: "The Slang Escape", cefr: "C1", icon: XCircle, meaning: "To rudely tell someone to go away, or to leave a place in a hurry.", meaningJP: "（失礼に）うせろ！、急いで逃げ出す", example: "I told him to bug off, and then we bugged out before the cops arrived.", vibes: ["Setting strict boundaries", "Fleeing the scene", "Rude dismissals"], storyline: "The scammer kept pushing fake watches into Sora's face. Sora firmly yelled, 'Bug off!' Just then, police sirens wailed, and the entire illegal street market panicked and bugged out in every direction.", storylineJP: "詐欺師は偽物の時計をソラの顔に押し付け続けた。ソラはきっぱりと「うせろ！」と怒鳴った。その時、警察のサイレンが鳴り響き、違法なストリートマーケット全体がパニックになり、四方八方へ急いで逃げ出した。", quiz: { question: "Annoyed by the persistent salesman, she angrily shouted for him to ___.", options: ["bug off", "buoy up", "butt in"], correctIndex: 0, explanation: "to tell someone to go away." } },
-
-      { pv: "Build up", trope: "The Rising Tension", cefr: "B1", icon: TrendingUp, meaning: "To increase, develop, or accumulate over time.", meaningJP: "（徐々に）増える、高まる、築き上げる", example: "Tension has been building up ever since the new law passed.", vibes: ["Growing stronger", "Accumulating wealth", "Mounting pressure"], storyline: "Sora started his streaming channel with zero viewers. By relentlessly posting quality content every single day, he slowly managed to build up an incredibly loyal, massive fanbase.", storylineJP: "ソラは視聴者ゼロで配信チャンネルを始めた。毎日欠かさず質の高いコンテンツを投稿し続けることで、彼はゆっくりと、信じられないほど忠実で巨大なファンベースを築き上げることに成功した。", quiz: { question: "Over the years, the successful company has ___ a legendary global reputation.", options: ["built up", "bumped off", "burned down"], correctIndex: 0, explanation: "to develop or increase." } },
-
-      { pv: "Bulk out / up", trope: "The Muscle & Fluff", cefr: "B2", icon: PlusSquare, meaning: "To gain weight/muscle, or to make something bigger/thicker (like an essay).", meaningJP: "筋肉をつける、（量を）水増しする", example: "He bulked up at the gym, while she bulked out her essay with quotes.", vibes: ["Hitting the gym", "Padding the word count", "Getting bigger"], storyline: "Ken bulked up by lifting weights daily. Meanwhile, Mika's history paper was hopelessly short, so she desperately bulked it out by adding massive, repetitive quotes.", storylineJP: "ケンは毎日ウェイトを上げて筋肉をつけた（体を大きくした）。一方、ミカの歴史のレポートは絶望的に短かったので、彼女は巨大で反復的な引用を追加して必死に量を水増しした。", quiz: { question: "The dedicated actor had to heavily ___ to play the superhero role.", options: ["bulk up", "buoy up", "buy into"], correctIndex: 0, explanation: "to gain muscle." } },
-
-      { pv: "Bump into", trope: "The Accidental Reunion", cefr: "B1", icon: Users, meaning: "To meet someone purely by chance.", meaningJP: "ばったり出会う、偶然出会う", example: "I bumped into Helen on the underground the other day.", vibes: ["Small world energy", "Unexpected faces", "Street encounters"], storyline: "Hina was traveling alone in completely crowded, chaotic New York City. While crossing Times Square, she amazingly bumped into her old childhood friend who moved away ten years ago.", storylineJP: "ヒナは完全に混雑しカオスなニューヨークを一人で旅していた。タイムズスクエアを横断している時、彼女は驚くべきことに、10年前に引っ越した昔の幼馴染にばったり出会った。", quiz: { question: "I couldn't believe it when I randomly ___ my strict boss at the rock concert.", options: ["bumped into", "burned out", "butted in"], correctIndex: 0, explanation: "to meet by chance." } },
-
-      { pv: "Bump off", trope: "The Hitman", cefr: "C1", icon: XOctagon, meaning: "To kill or murder someone.", meaningJP: "（俗語で）殺す、消す", example: "The drug dealer was bumped off by a rival gang.", vibes: ["Mafia movies", "Assassination plots", "Criminal underworld"], storyline: "The corrupt politician knew too many dangerous secrets about the criminal syndicate. Before he could testify in court, a mysterious sniper quietly bumped him off in the dead of night.", storylineJP: "腐敗した政治家は、犯罪組織に関する危険な秘密を知りすぎていた。彼が法廷で証言する前に、謎の狙撃手が真夜中に彼を静かに暗殺した（消した）。", quiz: { question: "The ruthless gangsters decided to brutally ___ the key witness.", options: ["bump off", "buy out", "buzz off"], correctIndex: 0, explanation: "to kill." } },
-
-      { pv: "Bump up", trope: "The Inflation", cefr: "B2", icon: TrendingUp, meaning: "To increase something, usually prices or amounts.", meaningJP: "（価格や量を）引き上げる", example: "They bump up the prices in the high season.", vibes: ["Tourist traps", "Rising costs", "Making extra profit"], storyline: "The small seaside town relied heavily on summer tourists. Knowing people had no other choice, the local restaurants maliciously bumped up the price of basic ice cream to ten dollars a scoop.", storylineJP: "その小さな海辺の町は夏の観光客に大きく依存していた。人々に他に選択肢がないことを知り、地元のレストランは悪意を持って、普通のアイスクリームの価格を1スクープ10ドルに引き上げた。", quiz: { question: "The greedy airline always manages to cleverly ___ the ticket prices during holidays.", options: ["bump up", "burn off", "butter up"], correctIndex: 0, explanation: "to increase." } },
-
-      { pv: "Bundle off / out", trope: "The Forced Eviction", cefr: "C1", icon: Package, meaning: "To send someone somewhere quickly, often without giving them a choice.", meaningJP: "（人を）急いで送り出す、追い払う", example: "He bundled the kids off to bed.", vibes: ["Strict parenting", "Rushing people away", "No time for arguments"], storyline: "The highly dangerous storm was approaching faster than expected. The worried mother immediately grabbed her screaming children and hastily bundled them off to the safe underground shelter.", storylineJP: "非常に危険な嵐が予想よりも早く接近していた。心配した母親は即座に叫ぶ子供たちを掴み、安全な地下シェルターへと慌ただしく急いで送り出した。", quiz: { question: "To avoid the massive scandal, the embarrassed royal was quietly ___ to a foreign country.", options: ["bundled off", "bunked off", "buyed up"], correctIndex: 0, explanation: "to send someone away." } },
-
-      { pv: "Bunk off", trope: "The Truant", cefr: "B2", icon: LogOut, meaning: "To not go to school or work when you should; to play truant.", meaningJP: "（学校や仕事を）サボる、ずる休みする", example: "I used to bunk off school and go into town.", vibes: ["Skipping class", "Teenage rebellion", "Avoiding responsibility"], storyline: "The math lecture was agonizingly boring, and the bright sunshine outside was calling to them. Leo and Ken decided to secretly bunk off, sneaking out the back gate to go to the arcade.", storylineJP: "数学の講義は苦痛なほど退屈で、外の明るい日差しが彼らを呼んでいた。レオとケンは密かにサボることを決め、ゲームセンターに行くために裏門から忍び出た。", quiz: { question: "If you constantly ___ work to go to the beach, you will get fired.", options: ["bunk off", "bust up", "buzz around"], correctIndex: 0, explanation: "to skip school or work." } }
-
+      { 
+        pv: "Bring on", trope: "The Catalyst", cefr: "B2", icon: Zap, 
+        meaning: "To cause something to happen or speed up the process.", 
+        meaningJP: "（病気や事態などを）引き起こす、もたらす", 
+        example: "Getting wet in the rain yesterday brought on my cold.", 
+        exampleJP: "昨日雨に濡れたことが、私の風邪を引き起こした。",
+        vibes: ["Triggering an event", "Sudden sickness", "Speeding things up"], 
+        vibesJP: ["出来事の引き金になる", "突然の病気", "物事を加速させる"],
+        storyline: "Sora refused to wear a warm jacket in the freezing snow. Unsurprisingly, the brutal weather brought on a terrible fever, leaving him completely stuck in bed for a week.", 
+        storylineJP: "ソラは凍えるような雪の中で暖かいジャケットを着るのを拒否した。当然のことながら、その過酷な天候はひどい熱を引き起こし、彼は1週間完全にベッドから動けなくなった。", 
+        quiz: { question: "The immense stress of the final exams unfortunately ___ a severe migraine.", options: ["brought on", "brought out", "brushed off"], correctIndex: 0, explanation: "to cause to happen." } 
+      },
+      { 
+        pv: "Bring out", trope: "The Release Drop", cefr: "B1", icon: Sparkles, 
+        meaning: "To release, publish, or make something available.", 
+        meaningJP: "（作品や製品を）世に出す、発売する", 
+        example: "The band are bringing out a new CD in the autumn.", 
+        exampleJP: "そのバンドは秋に新しいCDを発売する（世に出す）予定だ。",
+        vibes: ["Music drops", "Publishing content", "Making it public"], 
+        vibesJP: ["音楽のリリース", "コンテンツの出版", "公にする"],
+        storyline: "After hiding in the studio for two years, the legendary indie band announced they are finally bringing out a brand new album this autumn, sending fans into an absolute frenzy.", 
+        storylineJP: "2年間スタジオに引きこもった後、その伝説のインディーズバンドは今秋ついに全く新しいアルバムを発売する（世に出す）と発表し、ファンを絶対的な熱狂の渦に巻き込んだ。", 
+        quiz: { question: "The famous author is planning to ___ a thrilling new mystery novel next month.", options: ["bring out", "bring up", "buck up"], correctIndex: 0, explanation: "to publish or release." } 
+      },
+      { 
+        pv: "Bring out in", trope: "The Allergy Panic", cefr: "B2", icon: AlertTriangle, 
+        meaning: "To cause a health problem or reaction, like a rash.", 
+        meaningJP: "（発疹などの症状を）引き起こす、出させる", 
+        example: "It was the lobster that brought me out in this rash all over my body.", 
+        exampleJP: "私の全身にこの発疹を引き起こしたのは、あのロブスターだった。",
+        vibes: ["Allergic reactions", "Skin sensitivity", "Sudden health issues"], 
+        vibesJP: ["アレルギー反応", "肌の敏感さ", "突然の健康問題"],
+        storyline: "Kaito wanted to impress his date by ordering the most expensive seafood platter. But tragically, the rich lobster brought him out in a painfully itchy, bright red rash right in the middle of dinner.", 
+        storylineJP: "海斗は最も高価なシーフードプラッターを注文してデート相手を感心させたかった。しかし悲劇的なことに、その濃厚なロブスターは、ディナーの真っ只中に彼の全身に痛痒く真っ赤な発疹を引き起こした。", 
+        quiz: { question: "Touching that strange, poisonous plant immediately ___ her ___ in painful blisters.", options: ["brought / out in", "brought / round", "brushed / off"], correctIndex: 0, explanation: "to cause a skin reaction." } 
+      },
+      { 
+        pv: "Bring round / to", trope: "The Recovery", cefr: "C1", icon: Activity, 
+        meaning: "To make someone wake up from unconsciousness or an anaesthetic.", 
+        meaningJP: "意識を回復させる、目を覚まさせる", 
+        example: "The doctors brought him round a few hours after the operation.", 
+        exampleJP: "医師たちは手術の数時間後に彼の意識を回復させた。",
+        vibes: ["Medical recovery", "Waking up", "Regaining senses"], 
+        vibesJP: ["医学的な回復", "目を覚ます", "意識を取り戻す"],
+        storyline: "The surgery had been incredibly long and complex. The worried family paced the waiting room until the skilled doctors successfully brought him round and confirmed he was perfectly safe.", 
+        storylineJP: "手術は信じられないほど長く複雑だった。心配する家族が待合室をうろうろしていると、熟練した医師たちが無事に彼の意識を回復させ、彼が完全に無事であることを確認した。", 
+        quiz: { question: "After the boxer collapsed, the referee urgently called the medics to ___ him ___.", options: ["bring / round", "brush / up", "build / up"], correctIndex: 0, explanation: "to make conscious again." } 
+      },
+      { 
+        pv: "Bring up", trope: "The Taboo Topic / Raising Kids", cefr: "B1", icon: MessageCircle, 
+        meaning: "To mention a subject, OR to raise and educate a child.", 
+        meaningJP: "話題を持ち出す、または子供を育てる", 
+        example: "They didn't bring the subject up, even though she was brought up strictly.", 
+        exampleJP: "彼女が厳格に育てられたにもかかわらず、彼らはその話題を持ち出さなかった。",
+        vibes: ["Dodging awkward topics", "Childhood lore", "Parenting styles"], 
+        vibesJP: ["気まずい話題を避ける", "子供時代の言い伝え", "子育てのスタイル"],
+        storyline: "Despite growing up in a chaotic city, Mika was incredibly polite. 'My parents brought me up to respect others,' she explained. However, nobody dared to bring up the recent scandal at dinner.", 
+        storylineJP: "カオスな都会で育ったにもかかわらず、ミカは礼儀正しかった。「両親は他人を尊重するように私を育ててくれたの」と彼女は説明した。しかし、夕食の席で最近のスキャンダルの話題を持ち出す勇気のある者は誰もいなかった。", 
+        quiz: { question: "Please do not ___ his recent embarrassing failure during the meeting.", options: ["bring up", "buckle down", "budge up"], correctIndex: 0, explanation: "to mention a topic." } 
+      },
+      { 
+        pv: "Brush off / aside", trope: "The Hater Blocker", cefr: "B2", icon: Shield, 
+        meaning: "To ignore, pay little attention to, or dismiss criticism.", 
+        meaningJP: "（批判などを）無視する、軽くあしらう", 
+        example: "The minister brushed off the criticism and brushed aside their concerns.", 
+        exampleJP: "大臣はその批判を軽くあしらい、彼らの懸念を無視した。",
+        vibes: ["Ignoring the haters", "Dodging negativity", "Staying focused"], 
+        vibesJP: ["アンチを無視する", "ネガティビティを避ける", "集中を保つ"],
+        storyline: "The aggressive reporters shouted harsh questions, trying to ruin her reputation. But the confident idol just smiled, smoothly brushed off the unfair criticism, and walked gracefully to her waiting car.", 
+        storylineJP: "攻撃的な記者たちは厳しい質問を浴びせ、彼女の評判を落とそうとした。しかし自信に満ちたアイドルはただ微笑み、不当な批判をスマートに軽くあしらうと、待たせてある車へと優雅に歩いていった。", 
+        quiz: { question: "Instead of getting angry, he simply ___ the rude insult and continued working.", options: ["brushed off", "brought on", "bucked up"], correctIndex: 0, explanation: "to ignore criticism." } 
+      },
+      { 
+        pv: "Brush up", trope: "The Quick Study", cefr: "B1", icon: BookOpen, 
+        meaning: "To improve a skill quickly, especially one you haven't used for a while.", 
+        meaningJP: "（錆びついたスキルを）急いで磨き直す、復習する", 
+        example: "She took a course to brush up her Spanish before she went travelling.", 
+        exampleJP: "彼女は旅行に行く前に、スペイン語を磨き直す（復習する）ためのコースを受講した。",
+        vibes: ["Last-minute study", "Skill refreshing", "Travel prep"], 
+        vibesJP: ["直前の勉強", "スキルのリフレッシュ", "旅行の準備"],
+        storyline: "Sora hadn't spoken a word of French since high school. With his sudden business trip to Paris looming, he aggressively used language apps every night to desperately brush up his rusty skills.", 
+        storylineJP: "ソラは高校以来、フランス語を全く話していなかった。突然のパリへの出張が迫る中、彼は錆びついたスキルを必死に磨き直す（復習する）ため、毎晩アグレッシブに語学アプリを使った。", 
+        quiz: { question: "I urgently need to ___ my coding skills before the major tech interview.", options: ["brush up", "bundle off", "burn down"], correctIndex: 0, explanation: "to improve a skill." } 
+      },
+      { 
+        pv: "Bubble over", trope: "The Pure Joy", cefr: "C1", icon: Smile, 
+        meaning: "To become very excited and full of positive emotion.", 
+        meaningJP: "（興奮や喜びで）沸き返る、感情が溢れ出る", 
+        example: "She bubbled over with joy when she heard her exam results.", 
+        exampleJP: "試験の結果を聞いて、彼女は喜びで沸き返った（感情が溢れ出した）。",
+        vibes: ["Golden retriever energy", "Overwhelming happiness", "Pure hype"], 
+        vibesJP: ["ゴールデンレトリバーのようなエネルギー", "圧倒的な幸福感", "純粋な興奮"],
+        storyline: "When the strict teacher finally handed back the impossibly difficult test, Hina saw a perfect score. She literally bubbled over with absolute joy, hugging everyone in the front row.", 
+        storylineJP: "厳格な教師がついに不可能なほど難しいテストを返却した時、ヒナは満点のスコアを目にした。彼女は文字通り絶対的な喜びで沸き返り（感情が溢れ出し）、最前列の全員に抱きついた。", 
+        quiz: { question: "The enthusiastic children ___ with excitement when the clown appeared.", options: ["bubbled over", "buckled under", "buffed up"], correctIndex: 0, explanation: "to become very excited." } 
+      },
+      { 
+        pv: "Buck up", trope: "The Wake-Up Call", cefr: "B2", icon: Zap, 
+        meaning: "To hurry, or to smarten up and improve your behaviour.", 
+        meaningJP: "急ぐ、気を引き締める、態度を改める", 
+        example: "You had better buck your ideas up, or you'll fail the course.", 
+        exampleJP: "態度を改め（気を引き締め）た方がいい、さもないとこのコースを落第するぞ。",
+        vibes: ["Getting serious", "Harsh motivation", "Speeding up"], 
+        vibesJP: ["真剣になる", "厳しいモチベーション", "ペースを上げる"],
+        storyline: "Leo was lazily playing games instead of studying for finals. His older sister snatched the controller away. 'Buck up your ideas right now,' she warned coldly, 'or you are going to completely fail this year.'", 
+        storylineJP: "レオは期末試験の勉強をせずに怠惰にゲームをしていた。姉はコントローラーを奪い取った。「今すぐ気を引き締めなさい（態度を改めなさい）」と彼女は冷たく警告した。「さもないと、あんた今年完全に落第するわよ。」", 
+        quiz: { question: "The coach yelled at the lazy players to ___ and start running faster.", options: ["buck up", "bug off", "bulk out"], correctIndex: 0, explanation: "to improve or hurry." } 
+      },
+      { 
+        pv: "Bucket down", trope: "The Monsoon", cefr: "B1", icon: CloudOff, 
+        meaning: "To rain extremely heavily.", 
+        meaningJP: "（雨が）バケツをひっくり返したように降る、土砂降りになる", 
+        example: "Take an umbrella; it's bucketing down.", 
+        exampleJP: "傘を持っていきなさい。バケツをひっくり返したような土砂降りだよ。",
+        vibes: ["Terrible weather", "Staying indoors", "Heavy rain"], 
+        vibesJP: ["最悪の天気", "室内に留まる", "大雨"],
+        storyline: "The clear blue sky suddenly turned pitch black. Within seconds, it was violently bucketing down, completely flooding the school courtyard and forcing everyone to run screaming inside.", 
+        storylineJP: "澄み切った青空が突然真っ黒になった。数秒のうちに、暴力的にバケツをひっくり返したような土砂降りになり、学校の中庭は完全に水浸しになり、全員が悲鳴を上げながら屋内に逃げ込むことになった。", 
+        quiz: { question: "We can't play the football match today because it is absolutely ___ outside.", options: ["bucketing down", "burning off", "bursting into"], correctIndex: 0, explanation: "to rain heavily." } 
+      },
+      { 
+        pv: "Buckle down", trope: "The Academic Grind", cefr: "B2", icon: HardHat, 
+        meaning: "To start working hard and applying yourself seriously.", 
+        meaningJP: "本腰を入れる、真剣に取り組む", 
+        example: "We had to buckle down and study for the exam.", 
+        exampleJP: "私たちは本腰を入れて試験勉強をしなければならなかった。",
+        vibes: ["Library lock-in", "Deep focus", "Exam prep"], 
+        vibesJP: ["図書館にこもる", "深い集中", "試験準備"],
+        storyline: "After weeks of endlessly goofing around and ignoring assignments, the terrifying final deadline was only two days away. Sora finally turned off his phone, grabbed his coffee, and decided to seriously buckle down.", 
+        storylineJP: "何週間も果てしなくふざけて課題を無視した後、恐ろしい最終締め切りまでわずか2日となった。ソラはついにスマホの電源を切り、コーヒーを手に取り、真剣に本腰を入れる決心をした。", 
+        quiz: { question: "Stop wasting time on social media and ___ to finish your important project.", options: ["buckle down", "build up", "bump into"], correctIndex: 0, explanation: "to start working hard." } 
+      },
+      { 
+        pv: "Buckle under", trope: "The Surrender", cefr: "C1", icon: Undo2, 
+        meaning: "To accept something unwillingly under immense pressure.", 
+        meaningJP: "（重圧などに）屈する、負ける", 
+        example: "They didn't like the ideas, but had to buckle under or face the sack.", 
+        exampleJP: "彼らはそのアイデアを気に入らなかったが、圧力に屈するかクビになるかのどちらかだった。",
+        vibes: ["Giving in", "Corporate pressure", "Losing the battle"], 
+        vibesJP: ["降参する", "企業のプレッシャー", "戦いに負ける"],
+        storyline: "The independent bookstore owners fiercely fought against the massive corporate buyout for months. But with mounting debts and aggressive lawyers, they finally had to buckle under the immense financial pressure and sell.", 
+        storylineJP: "独立系書店のオーナーたちは、巨大企業による買収に対して何ヶ月も激しく戦った。しかし、膨れ上がる借金と攻撃的な弁護士を前に、彼らはついに計り知れない財政的重圧に屈し、売却せざるを得なかった。", 
+        quiz: { question: "Despite the intense, threatening interrogation, the brave spy refused to ___.", options: ["buckle under", "bump off", "buy out"], correctIndex: 0, explanation: "to yield under pressure." } 
+      },
+      { 
+        pv: "Buckle up", trope: "The Safety Check", cefr: "B1", icon: Lock, 
+        meaning: "To fasten a seatbelt.", 
+        meaningJP: "シートベルトを締める", 
+        example: "We were told to buckle up before take-off.", 
+        exampleJP: "離陸前にシートベルトを締めるように言われた。",
+        vibes: ["Pre-flight checks", "Car safety", "Getting ready"], 
+        vibesJP: ["飛行前のチェック", "車の安全性", "準備をする"],
+        storyline: "The massive roller coaster slowly clicked to the top of the terrifying drop. 'Alright everyone, buckle up tight and hold on!' the operator announced over the crackling loudspeaker.", 
+        storylineJP: "巨大なジェットコースターが、カチカチと音を立てて恐ろしい急降下の頂上へとゆっくり登っていった。「よしみんな、シートベルトをしっかり締めて、しっかり掴まれ！」と、係員がノイズ交じりのスピーカーでアナウンスした。", 
+        quiz: { question: "The strict flight attendant told all passengers to safely ___ immediately.", options: ["buckle up", "budge up", "burn down"], correctIndex: 0, explanation: "to fasten a seatbelt." } 
+      },
+      { 
+        pv: "Budge up", trope: "The Crowded Couch", cefr: "B2", icon: Users, 
+        meaning: "To move to make space for someone else.", 
+        meaningJP: "席を詰める、少し動く", 
+        example: "We had to budge up to let the fourth person in the back of the car.", 
+        exampleJP: "車の後部座席に4人目を入れるために、私たちは席を詰めなければならなかった。",
+        vibes: ["Squeezing in", "Making room", "Crowded spaces"], 
+        vibesJP: ["無理やり割り込む", "スペースを作る", "混雑した空間"],
+        storyline: "The tiny booth at the diner was already completely packed with three friends. When Kaito arrived with the pizza, Mika sighed and told the others to urgently budge up so he could sit.", 
+        storylineJP: "ダイナーの狭いボックス席は、すでに3人の友人で完全に満員だった。海斗がピザを持って到着すると、ミカはため息をつき、彼が座れるように至急席を詰めるよう他の皆に言った。", 
+        quiz: { question: "Could you please ___ a little bit so I can sit on this extremely crowded bench?", options: ["budge up", "buff up", "bunk off"], correctIndex: 0, explanation: "to make space." } 
+      },
+      { 
+        pv: "Buff up", trope: "The Polish", cefr: "C1", icon: Star, 
+        meaning: "To clear, clean, make shine, or improve your knowledge quickly.", 
+        meaningJP: "磨き上げる、（知識を）詰め込む", 
+        example: "I buffed up on my grammar before the test.", 
+        exampleJP: "テストの前に文法を磨き直した（詰め込んだ）。",
+        vibes: ["Shining things up", "Quick revision", "Looking polished"], 
+        vibesJP: ["ピカピカに磨く", "素早い復習", "洗練されて見える"],
+        storyline: "The silver antique sword was covered in centuries of thick dirt. Ken spent an entire Sunday carefully buffing it up until the majestic blade reflected the sunlight perfectly.", 
+        storylineJP: "銀のアンティークの剣は、何世紀分もの分厚い汚れに覆われていた。ケンは丸一日かけて慎重にそれを磨き上げ、その荘厳な刃が太陽の光を完璧に反射するまでにした。", 
+        quiz: { question: "He used a soft, expensive cloth to completely ___ the shiny vintage car.", options: ["buff up", "bust up", "buy in"], correctIndex: 0, explanation: "to make shine or improve." } 
+      },
+      { 
+        pv: "Bug off / out", trope: "The Slang Escape", cefr: "C1", icon: XCircle, 
+        meaning: "To rudely tell someone to go away, or to leave a place in a hurry.", 
+        meaningJP: "（失礼に）うせろ！、急いで逃げ出す", 
+        example: "I told him to bug off, and then we bugged out before the cops arrived.", 
+        exampleJP: "彼にうせろと言い放ち、警察が来る前に私たちは急いで逃げ出した。",
+        vibes: ["Setting strict boundaries", "Fleeing the scene", "Rude dismissals"], 
+        vibesJP: ["厳しい境界線を引く", "現場から逃走する", "無礼な拒絶"],
+        storyline: "The scammer kept pushing fake watches into Sora's face. Sora firmly yelled, 'Bug off!' Just then, police sirens wailed, and the entire illegal street market panicked and bugged out in every direction.", 
+        storylineJP: "詐欺師は偽物の時計をソラの顔に押し付け続けた。ソラはきっぱりと「うせろ！」と怒鳴った。その時、警察のサイレンが鳴り響き、違法なストリートマーケット全体がパニックになり、四方八方へ急いで逃げ出した。", 
+        quiz: { question: "Annoyed by the persistent salesman, she angrily shouted for him to ___.", options: ["bug off", "buoy up", "butt in"], correctIndex: 0, explanation: "to tell someone to go away." } 
+      }
     ],
 
     9: [
-
-      { pv: "Buoy up", trope: "The Morale Boost", cefr: "C1", icon: Heart, meaning: "To make someone feel more positive or keep them afloat.", meaningJP: "元気づける、希望を持たせる、浮かせる", example: "After so much criticism, the positive review buoyed him up.", vibes: ["Lifting spirits", "A wave of relief", "Floating on good news"], storyline: "Sora was utterly depressed after failing his first three college exams. But a surprisingly encouraging, supportive email from his strict professor truly buoyed him up, giving him the hope to try again.", storylineJP: "ソラは最初の3つの大学の試験に落ちて完全に落ち込んでいた。しかし、厳格な教授からの驚くほど励まされる、支援的なメールが彼を本当に元気づけ、再挑戦する希望を与えた。", quiz: { question: "The incredibly generous donation totally ___ the struggling charity ___.", options: ["buoyed / up", "burned / down", "called / off"], correctIndex: 0, explanation: "to make feel positive." } },
-
-      { pv: "Burn down", trope: "The Ashes", cefr: "B1", icon: Flame, meaning: "To destroy completely by fire.", meaningJP: "全焼する、焼き尽くす", example: "They had to completely rebuild the museum after the old one burned down.", vibes: ["Tragic destruction", "Raging infernos", "Starting from ashes"], storyline: "The ancient, beautiful wooden temple had stood proudly for four centuries. Tragically, a single lightning strike during the dry season caused it to completely burn down to the ground overnight.", storylineJP: "古代の美しい木造寺院は4世紀にわたって誇らしげに建っていた。悲劇的なことに、乾季の一度の落雷が原因で、それは一晩で跡形もなく完全に全焼してしまった。", quiz: { question: "The forgotten, abandoned warehouse mysteriously ___ in the middle of the night.", options: ["burned down", "bulked out", "bumped into"], correctIndex: 0, explanation: "to destroy by fire." } },
-
-      { pv: "Burn off", trope: "The Calorie Killer", cefr: "B2", icon: Activity, meaning: "To remove by burning or to expend energy/calories.", meaningJP: "（カロリーなどを）燃焼させる、焼き払う", example: "I burn off a lot of calories in the gym.", vibes: ["Cardio workouts", "Sweating it out", "Removing excess"], storyline: "Mika felt incredibly guilty after eating an entire family-sized pizza by herself. She immediately put on her running shoes and sprinted for ten miles, desperate to burn off the massive meal.", storylineJP: "ミカはファミリーサイズのピザを一人で丸ごと食べてしまい、信じられないほどの罪悪感を感じた。彼女はすぐにランニングシューズを履き、その大量の食事を必死に燃焼させるために10マイルを全速力で走った。", quiz: { question: "The intense, high-speed aerobics class will effectively help you ___ fat.", options: ["burn off", "butt out", "buy into"], correctIndex: 0, explanation: "to expend energy." } },
-
-      { pv: "Burn out", trope: "The Hustle Exhaustion", cefr: "B2", icon: CloudOff, meaning: "To lose enthusiasm and energy from overworking.", meaningJP: "燃え尽きる、過労でダウンする", example: "Jennie burnt out after ten years working as a futures broker and went to live in the country.", vibes: ["Toxic hustle culture", "Needing a break", "Mental exhaustion"], storyline: "Kaito worked eighty-hour weeks at the tech firm without a single holiday. After two years, his brilliant mind just stopped. He completely burned out, quit his job, and moved to a quiet farm.", storylineJP: "海斗はテック企業で休日なしで週80時間働いた。2年後、彼の優秀な頭脳はただ停止した。彼は完全に燃え尽き、仕事を辞め、静かな農場に引っ越した。", quiz: { question: "If you never, ever take a relaxing break, you will inevitably ___.", options: ["burn out", "burst into", "call out"], correctIndex: 0, explanation: "to exhaust from overwork." } },
-
-      { pv: "Burst into / out", trope: "The Sudden Emotion", cefr: "B2", icon: Zap, meaning: "To suddenly start doing something, like crying or laughing.", meaningJP: "突然（泣き・笑い）出す", example: "She burst into laughter when she heard the joke, and burst out crying later.", vibes: ["Unable to hold it in", "Explosive reactions", "Emotional swings"], storyline: "The tense, dramatic scene had everyone holding their breath. Suddenly, the main character tripped on a banana peel, and the entire audience unexpectedly burst into massive laughter. However, the tragic ending made them burst out crying.", storylineJP: "緊張感あるドラマチックなシーンで、全員が息を呑んでいた。突然主人公がバナナの皮でつまずき、観客全員が予想外に大爆笑し始めた（突然笑い出した）。しかし悲劇的な結末で彼らは突然泣き出した。", quiz: { question: "Overwhelmed by the tragic news, the fragile man suddenly ___ tears.", options: ["burst into", "bust up", "buzz off"], correctIndex: 0, explanation: "to start suddenly." } },
-
-      { pv: "Bust up", trope: "The Messy Split", cefr: "C1", icon: XCircle, meaning: "To end a relationship, usually angrily or after arguing.", meaningJP: "（激しく喧嘩して）別れる、破局する", example: "They bust up after a row last night.", vibes: ["Toxic breakups", "Shouting matches", "Ending it all"], storyline: "Kaito and Hina were the school's most famous, dramatic couple. After a terrifyingly loud argument in the cafeteria about a stolen phone charger, they finally completely bust up.", storylineJP: "海斗とヒナは学校で最も有名でドラマチックなカップルだった。盗まれたスマホの充電器を巡る、カフェテリアでの恐ろしいほど大声での口論の後、彼らはついに完全に破局した（喧嘩別れした）。", quiz: { question: "Following years of bitter resentment, the famous band finally ___ completely.", options: ["bust up", "butted in", "bought out"], correctIndex: 0, explanation: "to end a relationship angrily." } },
-
-      { pv: "Butt in / out", trope: "The Boundary Enforcer", cefr: "B2", icon: Shield, meaning: "To interrupt a conversation inappropriately (in), or to stop interfering (out).", meaningJP: "割り込む（in）、首を突っ込まない（out）", example: "She butted in on our chat, so I told her to butt out.", vibes: ["Rude interruptions", "Setting boundaries", "Telling someone off"], storyline: "Sora was confessing his feelings when an annoying classmate butted in to ask about homework. Hina glared with pure ice in her eyes. 'This doesn't concern you. Just butt out!'", storylineJP: "ソラが気持ちを告白していると、厄介なクラスメイトが宿題について聞くために完全に割り込んできた（butted in）。ヒナは純粋な氷のような目で睨みつけた。「これはあなたに関係ないわ。ただ干渉しないで（butt out）！」", quiz: { question: "It is considered extremely rude to constantly ___ when adults are speaking.", options: ["butt in", "butter up", "call back"], correctIndex: 0, explanation: "to interrupt." } },
-
-      { pv: "Butter up", trope: "The Flatterer", cefr: "B2", icon: Heart, meaning: "To praise or flatter someone excessively to get something you want.", meaningJP: "ごまをする、おだてる", example: "I tried buttering my tutor up but she still wouldn't let me hand it in late.", vibes: ["Fake compliments", "Sucking up to the boss", "Trying to get favors"], storyline: "Kaito desperately wanted the brand new, insanely expensive gaming console. He spent the entire week aggressively buttering up his parents, doing all the chores and complimenting his mother's cooking daily.", storylineJP: "海斗は信じられないほど高価な新品のゲーム機を死に物狂いで欲しがっていた。彼は丸一週間、すべての家事をこなし、毎日母親の料理を褒めちぎることで、両親にアグレッシブにごまをすった。", quiz: { question: "The sly employee is constantly ___ the manager ___ to get a promotion.", options: ["buttering / up", "buying / off", "calling / in"], correctIndex: 0, explanation: "to flatter excessively." } },
-
-      { pv: "Buy in / up", trope: "The Stockpile Scalper", cefr: "B2", icon: ShoppingCart, meaning: "To purchase in large quantities (in) or to buy all that is available (up).", meaningJP: "大量に買い込む（in）、買い占める（up）", example: "We bought in supplies, but the scalpers bought up all the rare tickets.", vibes: ["Hoarding supplies", "Ticket scalpers", "Clearing the shelves"], storyline: "Hearing rumors of a blizzard, the neighborhood bought in mountains of bread. Meanwhile, sophisticated bots mercilessly bought up the entire global stock of limited-edition sneakers within two seconds.", storylineJP: "猛吹雪の噂を聞き、近隣住民はパンの山を大量に買い込んだ（bought in）。一方、高度なボットは2秒以内に限定版スニーカーの全世界の在庫を容赦なくすべて買い占めた（bought up）。", quiz: { question: "Before the severe winter storm hit, the town completely ___ essential supplies.", options: ["bought in", "buzzed off", "carried on"], correctIndex: 0, explanation: "to purchase in quantity." } },
-
-      { pv: "Buy into", trope: "The Skeptic", cefr: "C1", icon: Eye, meaning: "To accept or believe an idea, claim, or theory.", meaningJP: "（考えなどを）信じる、受け入れる", example: "I never bought into the idea of a federalist European Union.", vibes: ["Questioning the hype", "Believing the vision", "Conspiracy theories"], storyline: "The flashy speaker promised that his new crypto scheme would make everyone instant millionaires. While the crowd cheered, cautious Ken crossed his arms. 'I'm absolutely not buying into this obvious scam,' he muttered.", storylineJP: "その派手な講演者は、彼の新しい仮想通貨スキームが全員を即座に億万長者にすると約束した。群衆が歓声を上げる中、慎重なケンは腕を組んだ。「こんな明らかな詐欺、絶対に信じない（受け入れない）ぞ」と彼は呟いた。", quiz: { question: "Despite the massive advertising, the smart consumers didn't ___ the fake claims.", options: ["buy into", "buzz around", "call off"], correctIndex: 0, explanation: "to accept an idea." } },
-
-      { pv: "Buy off", trope: "The Bribe", cefr: "C1", icon: DollarSign, meaning: "To pay someone to stop them causing trouble or exposing a secret.", meaningJP: "買収する、金で黙らせる", example: "He bought the newspaper off by placing a lot of adverts.", vibes: ["Corrupt politicians", "Hush money", "Shady business"], storyline: "The investigative journalist found undeniable proof of the massive corporate pollution. The desperate CEO invited her to a private dinner and offered her a million dollars to completely buy her off.", storylineJP: "その調査ジャーナリストは、巨大企業の大規模な汚染の否定できない証拠を見つけた。絶望したCEOは彼女をプライベートなディナーに招待し、彼女を完全に買収する（金で黙らせる）ために100万ドルを提示した。", quiz: { question: "The highly corrupt officials attempted to illegally ___ the honest judge.", options: ["buy off", "call out", "catch on"], correctIndex: 0, explanation: "to bribe someone." } },
-
-      { pv: "Buy out", trope: "The Takeover", cefr: "B2", icon: Database, meaning: "To buy somebody's share in a company to take full control.", meaningJP: "（権利などを）買い取る、買収して完全所有する", example: "His business partners bought him out to get rid of him.", vibes: ["Hostile takeovers", "Business strategy", "Securing total control"], storyline: "The two friends started the tiny app company together. But as it exploded in popularity, they argued constantly. Finally, the ruthless partner brutally bought out the other's share, taking total control of the empire.", storylineJP: "2人の友人は小さなアプリ会社を一緒に始めた。しかし人気が爆発するにつれ、彼らは絶えず口論になった。ついに、冷酷なパートナーがもう一方のシェアを容赦なく買い取り、帝国の完全な支配権を握った。", quiz: { question: "The giant global corporation aggressively decided to ___ the small rival startup.", options: ["buy out", "carry off", "cave in"], correctIndex: 0, explanation: "to purchase someone's share." } },
-
-      { pv: "Buzz around / off", trope: "The Busy Exit", cefr: "B1", icon: Activity, meaning: "To move quickly and busily around (around), or to leave quickly (off).", meaningJP: "忙しく飛び回る（around）、急いで立ち去る（off）", example: "Reporters were buzzing around, so the celebrity decided to buzz off.", vibes: ["Frantic energy", "Leaving quickly", "A swarm of people"], storyline: "Backstage was pure chaos, with frantic models and stressed makeup artists buzzing around like trapped bees. Finding the noise unbearable, Kaito grabbed his jacket and whispered, 'This is lame, I'm buzzing off right now.'", storylineJP: "舞台裏は純粋なカオスで、半狂乱のモデルやメイク担当者が閉じ込められた蜂のように忙しく飛び回っていた（buzzing around）。騒音に耐えきれなくなった海斗はジャケットを掴み、「ここつまんないから、俺はもう立ち去るよ（buzzing off）」と囁いた。", quiz: { question: "The nervous staff were rapidly ___ the kitchen trying to prepare the massive feast.", options: ["buzzing around", "buying into", "calling back"], correctIndex: 0, explanation: "to move busily." } },
-
-      { pv: "Call after", trope: "The Namesake", cefr: "B1", icon: User, meaning: "To give someone the same name as someone else.", meaningJP: "～にちなんで名付ける", example: "She was called Rose after her late grandmother.", vibes: ["Family legacies", "Honoring ancestors", "Meaningful names"], storyline: "The legendary warrior saved the kingdom from total destruction but perished in the battle. Years later, every firstborn child in the capital city was proudly called after the great hero.", storylineJP: "伝説の戦士は王国を完全な破壊から救ったが、その戦いで命を落とした。数年後、首都で最初に生まれた子供は皆、その偉大な英雄にちなんで誇らしげに名付けられた。", quiz: { question: "The beautiful new library was officially ___ the generous billionaire donor.", options: ["called after", "chalked up to", "checked in"], correctIndex: 0, explanation: "to name in honor of." } },
-
-      { pv: "Call back", trope: "The Missed Connection", cefr: "A1", icon: Smartphone, meaning: "To return a phone call.", meaningJP: "折り返し電話する", example: "I must call her back when we get to the office.", vibes: ["Leaving voicemails", "Phone tag", "Important messages"], storyline: "Sora was in the middle of a terrifying boss fight when his phone rang. He glanced at the screen, saw it was his angry mother, and panicked. 'I'll just politely call her back later,' he thought, ignoring it.", storylineJP: "ソラが恐ろしいボス戦の真っ最中だった時、彼の電話が鳴った。画面をちらりと見て、それが怒っている母親だとわかり、彼はパニックになった。「後で丁寧に折り返し電話しよう」と彼は考え、それを無視した。", quiz: { question: "I am completely busy right now, but I promise to ___ you ___ in an hour.", options: ["call / back", "care / for", "catch / on"], correctIndex: 0, explanation: "to return a call." } },
-
-      { pv: "Call for", trope: "The Demand", cefr: "B1", icon: AlertTriangle, meaning: "To demand, require, or go collect something/someone.", meaningJP: "～を要求する、必要とする、呼びに（取りに）行く", example: "An emergency like this calls for some pretty drastic action.", vibes: ["Strict requirements", "Protesting for change", "Severe situations"], storyline: "The massive, unprecedented economic crash devastated the country. The angry citizens flooded the streets, holding signs and relentlessly calling for the immediate resignation of the corrupt Prime Minister.", storylineJP: "かつてない大規模な経済崩壊が国を壊滅させた。怒れる市民たちは通りに溢れ出し、プラカードを掲げ、腐敗した首相の即時辞任を容赦なく要求した。", quiz: { question: "The extremely complex, delicate surgery definitely ___ highly specialized skills.", options: ["calls for", "carries off", "chases down"], correctIndex: 0, explanation: "to require." } },
-
-      { pv: "Call in", trope: "The Expert", cefr: "B1", icon: UserPlus, meaning: "To get someone to come and do a specific job or help.", meaningJP: "（専門家などを）呼ぶ、招く", example: "We had to call in a plumber because the sink was leaking.", vibes: ["Calling for backup", "Technical support", "Fixing a disaster"], storyline: "The ancient, haunted mansion's plumbing completely exploded, flooding the entire first floor with dark water. Panic-stricken, the owners had to urgently call in an elite team of engineers to stop the disaster.", storylineJP: "古代の幽霊屋敷の配管が完全に爆発し、1階全体が黒い水で水浸しになった。パニックに陥った所有者たちは、大惨事を止めるためにエリートエンジニアチームを至急呼ばなければならなかった。", quiz: { question: "When the complex computer system crashed entirely, they had to quickly ___ a pro.", options: ["call in", "carry on", "cave in"], correctIndex: 0, explanation: "to summon for help." } },
-
-      { pv: "Call off", trope: "The Cancellation", cefr: "B1", icon: XCircle, meaning: "To cancel an event or agreement.", meaningJP: "中止する、取り消す", example: "The concert had to be called off because the singer went down with a bad case of flu.", vibes: ["Rain checks", "Ruined plans", "Sudden stops"], storyline: "Hina had trained relentlessly for six months for the national marathon. But on the morning of the race, a devastating typhoon hit the coast, and the organizers tragically called off the entire massive event.", storylineJP: "ヒナは全国マラソンのために6ヶ月間容赦なくトレーニングしてきた。しかしレース当日の朝、壊滅的な台風が海岸を直撃し、主催者は悲劇的にもその巨大なイベント全体を中止した。", quiz: { question: "Due to the sudden, severe lack of necessary funding, they sadly ___ the project.", options: ["called off", "checked out", "cheated on"], correctIndex: 0, explanation: "to cancel." } },
-
-      { pv: "Call on", trope: "The Spotlight", cefr: "B2", icon: Mic2, meaning: "To ask someone to do something, especially to speak in public or to visit.", meaningJP: "（発言などを）求める、指名する、訪問する", example: "I now call on the other party to give their account of what happened.", vibes: ["Being put on the spot", "Formal speeches", "Classroom dread"], storyline: "Sora was secretly sleeping in the back row of the massive lecture hall. The strict professor noticed, smiled coldly, and suddenly called on him to deeply explain the most complex theory on the board.", storylineJP: "ソラは巨大な講堂の最後列で密かに眠っていた。厳格な教授はそれに気づき、冷たく微笑むと、突然彼を指名して、黒板の最も複雑な理論を深く説明するよう求めた。", quiz: { question: "The desperate charity firmly ___ the local community to kindly donate food.", options: ["called on", "carried out", "caught up"], correctIndex: 0, explanation: "to ask or appeal to." } },
-
-      { pv: "Call out", trope: "The Exposure", cefr: "B2", icon: Angry, meaning: "To expose or accuse someone of wrongdoing or incompetence.", meaningJP: "公に非難する、暴露する", example: "He called them out over awarding contracts to family members.", vibes: ["Cancel culture", "Exposing the truth", "Brave accusations"], storyline: "The famous influencer secretly edited all her fitness photos while claiming they were natural. A brave follower gathered undeniable proof and aggressively called her out on Twitter, destroying her fake empire.", storylineJP: "その有名なインフルエンサーは、自然だと主張しながら密かにフィットネス写真をすべて加工していた。ある勇敢なフォロワーが否定できない証拠を集め、Twitter上でアグレッシブに彼女を公に非難（暴露）し、彼女の偽りの帝国を破壊した。", quiz: { question: "The fearless investigative journalist publicly ___ the deeply corrupt politicians.", options: ["called out", "cashed in", "caved in"], correctIndex: 0, explanation: "to accuse publicly." } }
-
+      { 
+        pv: "Buoy up", trope: "The Morale Boost", cefr: "C1", icon: Heart, 
+        meaning: "To make someone feel more positive or keep them afloat.", 
+        meaningJP: "元気づける、希望を持たせる、浮かせる", 
+        example: "After so much criticism, the positive review buoyed him up.", 
+        exampleJP: "あれほどの批判の後、肯定的なレビューが彼を元気づけた。",
+        vibes: ["Lifting spirits", "A wave of relief", "Floating on good news"], 
+        vibesJP: ["気分を上げる", "安堵の波", "良いニュースで浮かび上がる"],
+        storyline: "Sora was utterly depressed after failing his first three college exams. But a surprisingly encouraging, supportive email from his strict professor truly buoyed him up, giving him the hope to try again.", 
+        storylineJP: "ソラは最初の3つの大学の試験に落ちて完全に落ち込んでいた。しかし、厳格な教授からの驚くほど励まされる、支援的なメールが彼を本当に元気づけ、再挑戦する希望を与えた。", 
+        quiz: { question: "The incredibly generous donation totally ___ the struggling charity ___.", options: ["buoyed / up", "burned / down", "called / off"], correctIndex: 0, explanation: "to make feel positive." } 
+      },
+      { 
+        pv: "Burn down", trope: "The Ashes", cefr: "B1", icon: Flame, 
+        meaning: "To destroy completely by fire.", 
+        meaningJP: "全焼する、焼き尽くす", 
+        example: "They had to completely rebuild the museum after the old one burned down.", 
+        exampleJP: "古い博物館が全焼した後、彼らはそれを完全に再建しなければならなかった。",
+        vibes: ["Tragic destruction", "Raging infernos", "Starting from ashes"], 
+        vibesJP: ["悲劇的な破壊", "猛威を振るう業火", "灰からの出発"],
+        storyline: "The ancient, beautiful wooden temple had stood proudly for four centuries. Tragically, a single lightning strike during the dry season caused it to completely burn down to the ground overnight.", 
+        storylineJP: "古代の美しい木造寺院は4世紀にわたって誇らしげに建っていた。悲劇的なことに、乾季の一度の落雷が原因で、それは一晩で跡形もなく完全に全焼してしまった。", 
+        quiz: { question: "The forgotten, abandoned warehouse mysteriously ___ in the middle of the night.", options: ["burned down", "bulked out", "bumped into"], correctIndex: 0, explanation: "to destroy by fire." } 
+      },
+      { 
+        pv: "Burn off", trope: "The Calorie Killer", cefr: "B2", icon: Activity, 
+        meaning: "To remove by burning or to expend energy/calories.", 
+        meaningJP: "（カロリーなどを）燃焼させる、焼き払う", 
+        example: "I burn off a lot of calories in the gym.", 
+        exampleJP: "私はジムでたくさんのカロリーを燃焼させている。",
+        vibes: ["Cardio workouts", "Sweating it out", "Removing excess"], 
+        vibesJP: ["有酸素運動", "汗をかいて絞り出す", "余分なものを取り除く"],
+        storyline: "Mika felt incredibly guilty after eating an entire family-sized pizza by herself. She immediately put on her running shoes and sprinted for ten miles, desperate to burn off the massive meal.", 
+        storylineJP: "ミカはファミリーサイズのピザを一人で丸ごと食べてしまい、信じられないほどの罪悪感を感じた。彼女はすぐにランニングシューズを履き、その大量の食事を必死に燃焼させるために10マイルを全速力で走った。", 
+        quiz: { question: "The intense, high-speed aerobics class will effectively help you ___ fat.", options: ["burn off", "butt out", "buy into"], correctIndex: 0, explanation: "to expend energy." } 
+      },
+      { 
+        pv: "Burn out", trope: "The Hustle Exhaustion", cefr: "B2", icon: CloudOff, 
+        meaning: "To lose enthusiasm and energy from overworking.", 
+        meaningJP: "燃え尽きる、過労でダウンする", 
+        example: "Jennie burnt out after ten years working as a futures broker and went to live in the country.", 
+        exampleJP: "ジェニーは先物ブローカーとして10年間働いた後、完全に燃え尽きて田舎に引っ越した。",
+        vibes: ["Toxic hustle culture", "Needing a break", "Mental exhaustion"], 
+        vibesJP: ["有毒なハッスルカルチャー", "休息が必要", "精神的な疲労"],
+        storyline: "Kaito worked eighty-hour weeks at the tech firm without a single holiday. After two years, his brilliant mind just stopped. He completely burned out, quit his job, and moved to a quiet farm.", 
+        storylineJP: "海斗はテック企業で休日なしで週80時間働いた。2年後、彼の優秀な頭脳はただ停止した。彼は完全に燃え尽き、仕事を辞め、静かな農場に引っ越した。", 
+        quiz: { question: "If you never, ever take a relaxing break, you will inevitably ___.", options: ["burn out", "burst into", "call out"], correctIndex: 0, explanation: "to exhaust from overwork." } 
+      },
+      { 
+        pv: "Burst into / out", trope: "The Sudden Emotion", cefr: "B2", icon: Zap, 
+        meaning: "To suddenly start doing something, like crying or laughing.", 
+        meaningJP: "突然（泣き・笑い）出す", 
+        example: "She burst into laughter when she heard the joke, and burst out crying later.", 
+        exampleJP: "彼女はそのジョークを聞いて突然笑い出し、後になって突然泣き出した。",
+        vibes: ["Unable to hold it in", "Explosive reactions", "Emotional swings"], 
+        vibesJP: ["こらえきれない", "爆発的な反応", "感情の揺れ"],
+        storyline: "The tense, dramatic scene had everyone holding their breath. Suddenly, the main character tripped on a banana peel, and the entire audience unexpectedly burst into massive laughter. However, the tragic ending made them burst out crying.", 
+        storylineJP: "緊張感あるドラマチックなシーンで、全員が息を呑んでいた。突然主人公がバナナの皮でつまずき、観客全員が予想外に大爆笑し始めた（突然笑い出した）。しかし悲劇的な結末で彼らは突然泣き出した。", 
+        quiz: { question: "Overwhelmed by the tragic news, the fragile man suddenly ___ tears.", options: ["burst into", "bust up", "buzz off"], correctIndex: 0, explanation: "to start suddenly." } 
+      },
+      { 
+        pv: "Bust up", trope: "The Messy Split", cefr: "C1", icon: XCircle, 
+        meaning: "To end a relationship, usually angrily or after arguing.", 
+        meaningJP: "（激しく喧嘩して）別れる、破局する", 
+        example: "They bust up after a row last night.", 
+        exampleJP: "彼らは昨夜の口論の末に破局した（喧嘩別れした）。",
+        vibes: ["Toxic breakups", "Shouting matches", "Ending it all"], 
+        vibesJP: ["有毒な破局", "怒鳴り合い", "すべてを終わらせる"],
+        storyline: "Kaito and Hina were the school's most famous, dramatic couple. After a terrifyingly loud argument in the cafeteria about a stolen phone charger, they finally completely bust up.", 
+        storylineJP: "海斗とヒナは学校で最も有名でドラマチックなカップルだった。盗まれたスマホの充電器を巡る、カフェテリアでの恐ろしいほど大声での口論の後、彼らはついに完全に破局した（喧嘩別れした）。", 
+        quiz: { question: "Following years of bitter resentment, the famous band finally ___ completely.", options: ["bust up", "butted in", "bought out"], correctIndex: 0, explanation: "to end a relationship angrily." } 
+      },
+      { 
+        pv: "Butt in / out", trope: "The Boundary Enforcer", cefr: "B2", icon: Shield, 
+        meaning: "To interrupt a conversation inappropriately (in), or to stop interfering (out).", 
+        meaningJP: "割り込む（in）、首を突っ込まない（out）", 
+        example: "She butted in on our chat, so I told her to butt out.", 
+        exampleJP: "彼女が私たちの会話に割り込んできたので、干渉しないよう（首を突っ込まないよう）に言った。",
+        vibes: ["Rude interruptions", "Setting boundaries", "Telling someone off"], 
+        vibesJP: ["失礼な割り込み", "境界線を引く", "人に文句を言う"],
+        storyline: "Sora was confessing his feelings when an annoying classmate butted in to ask about homework. Hina glared with pure ice in her eyes. 'This doesn't concern you. Just butt out!'", 
+        storylineJP: "ソラが気持ちを告白していると、厄介なクラスメイトが宿題について聞くために完全に割り込んできた（butted in）。ヒナは純粋な氷のような目で睨みつけた。「これはあなたに関係ないわ。ただ干渉しないで（butt out）！」", 
+        quiz: { question: "It is considered extremely rude to constantly ___ when adults are speaking.", options: ["butt in", "butter up", "call back"], correctIndex: 0, explanation: "to interrupt." } 
+      },
+      { 
+        pv: "Butter up", trope: "The Flatterer", cefr: "B2", icon: Heart, 
+        meaning: "To praise or flatter someone excessively to get something you want.", 
+        meaningJP: "ごまをする、おだてる", 
+        example: "I tried buttering my tutor up but she still wouldn't let me hand it in late.", 
+        exampleJP: "チューターにごまをすってみたが、それでも彼女は提出の遅れを許してくれなかった。",
+        vibes: ["Fake compliments", "Sucking up to the boss", "Trying to get favors"], 
+        vibesJP: ["偽の褒め言葉", "上司に媚びへつらう", "優遇されようとする"],
+        storyline: "Kaito desperately wanted the brand new, insanely expensive gaming console. He spent the entire week aggressively buttering up his parents, doing all the chores and complimenting his mother's cooking daily.", 
+        storylineJP: "海斗は信じられないほど高価な新品のゲーム機を死に物狂いで欲しがっていた。彼は丸一週間、すべての家事をこなし、毎日母親の料理を褒めちぎることで、両親にアグレッシブにごまをすった。", 
+        quiz: { question: "The sly employee is constantly ___ the manager ___ to get a promotion.", options: ["buttering / up", "buying / off", "calling / in"], correctIndex: 0, explanation: "to flatter excessively." } 
+      },
+      { 
+        pv: "Buy in / up", trope: "The Stockpile Scalper", cefr: "B2", icon: ShoppingCart, 
+        meaning: "To purchase in large quantities (in) or to buy all that is available (up).", 
+        meaningJP: "大量に買い込む（in）、買い占める（up）", 
+        example: "We bought in supplies, but the scalpers bought up all the rare tickets.", 
+        exampleJP: "私たちは物資を大量に買い込んだが、転売ヤーが希少なチケットをすべて買い占めた。",
+        vibes: ["Hoarding supplies", "Ticket scalpers", "Clearing the shelves"], 
+        vibesJP: ["物資の買いだめ", "チケットの転売ヤー", "棚を空にする（買い占める）"],
+        storyline: "Hearing rumors of a blizzard, the neighborhood bought in mountains of bread. Meanwhile, sophisticated bots mercilessly bought up the entire global stock of limited-edition sneakers within two seconds.", 
+        storylineJP: "猛吹雪の噂を聞き、近隣住民はパンの山を大量に買い込んだ（bought in）。一方、高度なボットは2秒以内に限定版スニーカーの全世界の在庫を容赦なくすべて買い占めた（bought up）。", 
+        quiz: { question: "Before the severe winter storm hit, the town completely ___ essential supplies.", options: ["bought in", "buzzed off", "carried on"], correctIndex: 0, explanation: "to purchase in quantity." } 
+      },
+      { 
+        pv: "Buy into", trope: "The Skeptic", cefr: "C1", icon: Eye, 
+        meaning: "To accept or believe an idea, claim, or theory.", 
+        meaningJP: "（考えなどを）信じる、受け入れる", 
+        example: "I never bought into the idea of a federalist European Union.", 
+        exampleJP: "私は連邦主義的な欧州連合というアイデアを信じた（受け入れた）ことは一度もない。",
+        vibes: ["Questioning the hype", "Believing the vision", "Conspiracy theories"], 
+        vibesJP: ["誇大広告を疑う", "ビジョンを信じる", "陰謀論"],
+        storyline: "The flashy speaker promised that his new crypto scheme would make everyone instant millionaires. While the crowd cheered, cautious Ken crossed his arms. 'I'm absolutely not buying into this obvious scam,' he muttered.", 
+        storylineJP: "その派手な講演者は、彼の新しい仮想通貨スキームが全員を即座に億万長者にすると約束した。群衆が歓声を上げる中、慎重なケンは腕を組んだ。「こんな明らかな詐欺、絶対に信じない（受け入れない）ぞ」と彼は呟いた。", 
+        quiz: { question: "Despite the massive advertising, the smart consumers didn't ___ the fake claims.", options: ["buy into", "buzz around", "call off"], correctIndex: 0, explanation: "to accept an idea." } 
+      },
+      { 
+        pv: "Buy off", trope: "The Bribe", cefr: "C1", icon: DollarSign, 
+        meaning: "To pay someone to stop them causing trouble or exposing a secret.", 
+        meaningJP: "買収する、金で黙らせる", 
+        example: "He bought the newspaper off by placing a lot of adverts.", 
+        exampleJP: "彼は大量の広告を出すことで、その新聞社を買収した（金で黙らせた）。",
+        vibes: ["Corrupt politicians", "Hush money", "Shady business"], 
+        vibesJP: ["腐敗した政治家", "口止め料", "胡散臭いビジネス"],
+        storyline: "The investigative journalist found undeniable proof of the massive corporate pollution. The desperate CEO invited her to a private dinner and offered her a million dollars to completely buy her off.", 
+        storylineJP: "その調査ジャーナリストは、巨大企業の大規模な汚染の否定できない証拠を見つけた。絶望したCEOは彼女をプライベートなディナーに招待し、彼女を完全に買収する（金で黙らせる）ために100万ドルを提示した。", 
+        quiz: { question: "The highly corrupt officials attempted to illegally ___ the honest judge.", options: ["buy off", "call out", "catch on"], correctIndex: 0, explanation: "to bribe someone." } 
+      },
+      { 
+        pv: "Buy out", trope: "The Takeover", cefr: "B2", icon: Database, 
+        meaning: "To buy somebody's share in a company to take full control.", 
+        meaningJP: "（権利などを）買い取る、買収して完全所有する", 
+        example: "His business partners bought him out to get rid of him.", 
+        exampleJP: "彼のビジネスパートナーたちは、彼を追い出すために彼の株を買い取った。",
+        vibes: ["Hostile takeovers", "Business strategy", "Securing total control"], 
+        vibesJP: ["敵対的買収", "ビジネス戦略", "完全な支配権の確保"],
+        storyline: "The two friends started the tiny app company together. But as it exploded in popularity, they argued constantly. Finally, the ruthless partner brutally bought out the other's share, taking total control of the empire.", 
+        storylineJP: "2人の友人は小さなアプリ会社を一緒に始めた。しかし人気が爆発するにつれ、彼らは絶えず口論になった。ついに、冷酷なパートナーがもう一方のシェアを容赦なく買い取り、帝国の完全な支配権を握った。", 
+        quiz: { question: "The giant global corporation aggressively decided to ___ the small rival startup.", options: ["buy out", "carry off", "cave in"], correctIndex: 0, explanation: "to purchase someone's share." } 
+      },
+      { 
+        pv: "Buzz around / off", trope: "The Busy Exit", cefr: "B1", icon: Activity, 
+        meaning: "To move quickly and busily around (around), or to leave quickly (off).", 
+        meaningJP: "忙しく飛び回る（around）、急いで立ち去る（off）", 
+        example: "Reporters were buzzing around, so the celebrity decided to buzz off.", 
+        exampleJP: "記者たちが忙しく飛び回っていたので、そのセレブは急いで立ち去ることに決めた。",
+        vibes: ["Frantic energy", "Leaving quickly", "A swarm of people"], 
+        vibesJP: ["半狂乱のエネルギー", "急いで立ち去る", "人の群れ"],
+        storyline: "Backstage was pure chaos, with frantic models and stressed makeup artists buzzing around like trapped bees. Finding the noise unbearable, Kaito grabbed his jacket and whispered, 'This is lame, I'm buzzing off right now.'", 
+        storylineJP: "舞台裏は純粋なカオスで、半狂乱のモデルやメイク担当者が閉じ込められた蜂のように忙しく飛び回っていた（buzzing around）。騒音に耐えきれなくなった海斗はジャケットを掴み、「ここつまんないから、俺はもう立ち去るよ（buzzing off）」と囁いた。", 
+        quiz: { question: "The nervous staff were rapidly ___ the kitchen trying to prepare the massive feast.", options: ["buzzing around", "buying into", "calling back"], correctIndex: 0, explanation: "to move busily." } 
+      },
+      { 
+        pv: "Call after", trope: "The Namesake", cefr: "B1", icon: User, 
+        meaning: "To give someone the same name as someone else.", 
+        meaningJP: "～にちなんで名付ける", 
+        example: "She was called Rose after her late grandmother.", 
+        exampleJP: "彼女は亡き祖母にちなんでローズと名付けられた。",
+        vibes: ["Family legacies", "Honoring ancestors", "Meaningful names"], 
+        vibesJP: ["家族の遺産", "先祖を敬う", "意味のある名前"],
+        storyline: "The legendary warrior saved the kingdom from total destruction but perished in the battle. Years later, every firstborn child in the capital city was proudly called after the great hero.", 
+        storylineJP: "伝説の戦士は王国を完全な破壊から救ったが、その戦いで命を落とした。数年後、首都で最初に生まれた子供は皆、その偉大な英雄にちなんで誇らしげに名付けられた。", 
+        quiz: { question: "The beautiful new library was officially ___ the generous billionaire donor.", options: ["called after", "chalked up to", "checked in"], correctIndex: 0, explanation: "to name in honor of." } 
+      },
+      { 
+        pv: "Call back", trope: "The Missed Connection", cefr: "A1", icon: Smartphone, 
+        meaning: "To return a phone call.", 
+        meaningJP: "折り返し電話する", 
+        example: "I must call her back when we get to the office.", 
+        exampleJP: "オフィスに着いたら彼女に折り返し電話しなきゃ。",
+        vibes: ["Leaving voicemails", "Phone tag", "Important messages"], 
+        vibesJP: ["留守電を残す", "電話のすれ違い", "重要なメッセージ"],
+        storyline: "Sora was in the middle of a terrifying boss fight when his phone rang. He glanced at the screen, saw it was his angry mother, and panicked. 'I'll just politely call her back later,' he thought, ignoring it.", 
+        storylineJP: "ソラが恐ろしいボス戦の真っ最中だった時、彼の電話が鳴った。画面をちらりと見て、それが怒っている母親だとわかり、彼はパニックになった。「後で丁寧に折り返し電話しよう」と彼は考え、それを無視した。", 
+        quiz: { question: "I am completely busy right now, but I promise to ___ you ___ in an hour.", options: ["call / back", "care / for", "catch / on"], correctIndex: 0, explanation: "to return a call." } 
+      },
+      { 
+        pv: "Call for", trope: "The Demand", cefr: "B1", icon: AlertTriangle, 
+        meaning: "To demand, require, or go collect something/someone.", 
+        meaningJP: "～を要求する、必要とする、呼びに（取りに）行く", 
+        example: "An emergency like this calls for some pretty drastic action.", 
+        exampleJP: "このような緊急事態は、かなり思い切った行動を要求する（必要とする）。",
+        vibes: ["Strict requirements", "Protesting for change", "Severe situations"], 
+        vibesJP: ["厳しい要求", "変化を求めて抗議する", "深刻な状況"],
+        storyline: "The massive, unprecedented economic crash devastated the country. The angry citizens flooded the streets, holding signs and relentlessly calling for the immediate resignation of the corrupt Prime Minister.", 
+        storylineJP: "かつてない大規模な経済崩壊が国を壊滅させた。怒れる市民たちは通りに溢れ出し、プラカードを掲げ、腐敗した首相の即時辞任を容赦なく要求した。", 
+        quiz: { question: "The extremely complex, delicate surgery definitely ___ highly specialized skills.", options: ["calls for", "carries off", "chases down"], correctIndex: 0, explanation: "to require." } 
+      }
     ],
 
     10: [
-
-      { pv: "Calm down", trope: "The Deep Breath", cefr: "A2", icon: Smile, meaning: "To stop being angry or emotionally excited.", meaningJP: "落ち着く、冷静になる", example: "When I lose my temper, it takes ages for me to calm down again.", vibes: ["Diffusing a bomb", "Finding zen", "Stopping a panic"], storyline: "Mika was absolutely hyperventilating because she thought she had permanently lost her passport at the crowded airport. Kaito grabbed her shoulders gently. 'Mika, look at me. Just calm down. It's in your side pocket.'", storylineJP: "ミカは混雑した空港でパスポートを永久に失ったと思い込み、完全に過呼吸になっていた。海斗は彼女の肩を優しく掴んだ。「ミカ、俺を見て。ただ落ち着いて。サイドポケットに入ってるよ。」", quiz: { question: "Please try to slowly ___ and completely rationally explain what just happened.", options: ["calm down", "catch on", "chalk up"], correctIndex: 0, explanation: "to become less agitated." } },
-
-      { pv: "Cancel out", trope: "The Equalizer", cefr: "B2", icon: X, meaning: "To have an opposite effect on something, neutralizing it.", meaningJP: "相殺する、帳消しにする", example: "The airport taxes cancelled out the savings we had made on the flight tickets.", vibes: ["Zero sum game", "Balancing the scales", "Wasted effort"], storyline: "Leo spent an agonizing three hours cleaning the entire kitchen until it sparkled. But ten minutes later, his chaotic dog ran in covered in thick, black mud, completely canceling out all his hard work instantly.", storylineJP: "レオはキッチン全体が輝くまで、苦痛な3時間をかけて掃除した。しかし10分後、カオスな飼い犬が分厚い黒い泥まみれで走り込んできて、彼の懸命な努力を瞬時に完全に帳消しにした（相殺した）。", quiz: { question: "The horrible, severe side effects entirely ___ the benefits of the new medicine.", options: ["cancelled out", "carried off", "chased down"], correctIndex: 0, explanation: "to neutralize." } },
-
-      { pv: "Care for", trope: "The Polite Dislike", cefr: "B1", icon: Heart, meaning: "To like something (usually used in the negative to express dislike).", meaningJP: "（主に否定文で）好む、好ましく思う", example: "I don't care for fizzy drinks; I prefer water.", vibes: ["Polite rejection", "Having strict tastes", "Fancy preferences"], storyline: "The wealthy, arrogant noble was offered a humble plate of traditional village stew. He wrinkled his nose in absolute disgust. 'Take this away immediately. I honestly do not care for peasant food,' he sneered.", storylineJP: "裕福で傲慢な貴族は、伝統的な村のシチューの質素な皿を勧められた。彼は絶対的な嫌悪感で鼻にシワを寄せた。「今すぐこれを下げろ。私は正直、農民の食べ物など好まない」と彼は嘲笑した。", quiz: { question: "To be completely honest, I really don't ___ his loud, aggressive modern art.", options: ["care for", "catch out", "cater for"], correctIndex: 0, explanation: "to like (often negative)." } },
-
-      { pv: "Carried away", trope: "The Overreaction", cefr: "B2", icon: Zap, meaning: "To get so emotional or excited that you lose control.", meaningJP: "調子に乗る、我を忘れる", example: "The team got carried away when they won the championship and started shouting.", vibes: ["Losing control", "Going overboard", "Caught in the hype"], storyline: "It was supposed to be a simple, quiet birthday dinner. But surrounded by his friends and free drinks, Kaito got completely carried away, ending up singing karaoke on a table at three in the morning.", storylineJP: "それはシンプルで静かな誕生日ディナーのはずだった。しかし友人たちと無料の飲み物に囲まれ、海斗は完全に我を忘れ（調子に乗り）、深夜3時にテーブルの上でカラオケを歌う羽目になった。", quiz: { question: "Please don't get highly ___ and dangerously spend all your savings in one day.", options: ["carried away", "checked out", "cheered up"], correctIndex: 0, explanation: "to lose control from emotion." } },
-
-      { pv: "Carry off", trope: "The Impossible Flex", cefr: "C1", icon: Award, meaning: "To succeed in doing or winning something difficult.", meaningJP: "（困難なことを）見事にやってのける、勝ち取る", example: "She carried off the first prize in the competition.", vibes: ["Securing the win", "Pulling it off", "A massive flex"], storyline: "Wearing a bright neon pink suit to a highly formal, strict corporate event seemed like professional suicide. But Hina walked with such incredible, undeniable confidence that she actually carried it off perfectly, impressing the CEO.", storylineJP: "非常にフォーマルで厳格な企業のイベントに鮮やかなネオンピンクのスーツを着ていくのは、職業的自殺のように思えた。しかしヒナは信じられないほど否定できない自信を持って歩き、実に見事にそれを着こなし（やってのけ）、CEOを感心させた。", quiz: { question: "Despite the extreme pressure, the young, brave actor flawlessly ___ the complex role.", options: ["carried off", "cashed in", "chased up"], correctIndex: 0, explanation: "to succeed." } },
-
-      { pv: "Carry on", trope: "The Stubborn March", cefr: "B1", icon: Play, meaning: "To continue doing something despite difficulties or interruptions.", meaningJP: "続ける、続行する", example: "Carry on quietly with your work until the substitute teacher arrives.", vibes: ["Keep calm", "Never giving up", "Endless grind"], storyline: "The power completely failed, plunging the massive concert hall into total darkness. But the brave acoustic guitarist simply smiled, strummed the strings, and boldly decided to carry on playing entirely unplugged.", storylineJP: "電源が完全に落ち、巨大なコンサートホールは完全な暗闇に包まれた。しかし勇敢なアコースティックギタリストは単に微笑み、弦を弾き、完全にアンプなしで演奏を続ける（続行する）ことを大胆に決意した。", quiz: { question: "Despite the harsh, freezing wind, the determined hikers stubbornly ___ walking.", options: ["carried on", "caught on", "checked in"], correctIndex: 0, explanation: "to continue." } },
-
-      { pv: "Carry out", trope: "The Mission", cefr: "B1", icon: Target, meaning: "To perform a task, order, or experiment.", meaningJP: "実行する、遂行する", example: "The government is carrying out tests on growing genetically modified crops.", vibes: ["Executing orders", "Scientific research", "Getting it done"], storyline: "The secret agent received an encrypted, self-destructing message. His face turned completely pale as he realized the incredibly dangerous mission he was strictly ordered to carry out before midnight.", storylineJP: "秘密工作員は暗号化された自動消滅メッセージを受け取った。真夜中までに実行（遂行）するよう厳命された、信じられないほど危険な任務を悟り、彼の顔は完全に青ざめた。", quiz: { question: "The brilliant scientists successfully ___ a highly complex biological experiment.", options: ["carried out", "cast aside", "caved in"], correctIndex: 0, explanation: "to perform." } },
-
-      { pv: "Cash in / out", trope: "The Payout", cefr: "B2", icon: DollarSign, meaning: "To exchange something for money (in), or collect winnings to leave (out).", meaningJP: "換金する（in）、精算して手を引く（out）", example: "They cashed in their bonds, and he cashed out his poker chips.", vibes: ["Cashing out", "Taking the profit", "Securing the bag"], storyline: "Sora gladly cashed in his rare, vintage comic books for a fortune. Meanwhile at the casino, Ken realized he had doubled his savings and wisely decided to cash out before his luck ran completely dry.", storylineJP: "ソラは希少なビンテージコミックを喜んで大金に換金した（cashed in）。一方カジノでは、ケンが貯金を倍にしたことに気づき、運が完全に尽きる前に賢明にも精算して手を引く（cashed out）決断をした。", quiz: { question: "He decided to ___ his poker chips and safely go home with the profit.", options: ["cash out", "call off", "carry on"], correctIndex: 0, explanation: "to exchange for money." } },
-
-      { pv: "Cash in on", trope: "The Opportunist", cefr: "C1", icon: DollarSign, meaning: "To benefit or make money on something, especially if done unfairly.", meaningJP: "～に乗じて（不正に）儲ける、つけこむ", example: "The opposition party is cashing in on the government's unpopularity.", vibes: ["Taking advantage", "Making a quick buck", "Political strategy"], storyline: "After the famous pop star was seen wearing a bizarre hat, countless cheap online stores immediately tried to cash in on the viral trend by selling terrible fakes.", storylineJP: "有名なポップスターが奇妙な帽子を被っているのを目撃された後、無数の安っぽいオンラインショップがひどい偽物を売って、そのバズったトレンドに乗じて儲けようと即座に動いた。", quiz: { question: "They are aggressively ___ the sudden hype surrounding the new movie.", options: ["cashing in on", "catching up on", "chasing down"], correctIndex: 0, explanation: "to benefit financially from a situation." } },
-
-      { pv: "Cash up", trope: "The Closing Shift", cefr: "B1", icon: Calculator, meaning: "To count all the money taken in a shop or business at the end of the day.", meaningJP: "（閉店後に）レジの売上金を計算する", example: "After the shop closed, they had to cash up before they could go home.", vibes: ["Closing time", "Retail struggles", "Counting the register"], storyline: "It had been a chaotic, endlessly busy Saturday at the cafe. At 10 PM, the exhausted manager locked the front doors and sat down to silently cash up the mountain of coins and crumpled bills.", storylineJP: "カフェでのカオスで果てしなく忙しい土曜日だった。午後10時、疲れ切った店長は正面のドアに鍵をかけ、山のような硬貨とくしゃくしゃの紙幣の売上金を黙々と計算するために座り込んだ。", quiz: { question: "The last duty of the store manager every night is to efficiently ___.", options: ["cash up", "check over", "clear out"], correctIndex: 0, explanation: "to count the day's takings." } },
-
-      { pv: "Cast around for", trope: "The Desperate Search", cefr: "C1", icon: Search, meaning: "To try to find something by looking in many places.", meaningJP: "（解決策などを）あちこち探し回る", example: "She was casting around for people to help her.", vibes: ["Seeking a lifeline", "Running out of options", "Brainstorming solutions"], storyline: "The massive project was entirely behind schedule, and the budget was depleted. The panicked director began frantically casting around for any possible excuse to tell the furious investors.", storylineJP: "巨大なプロジェクトは完全に予定から遅れ、予算は枯渇していた。パニックに陥ったディレクターは、激怒する投資家たちに伝えるための可能な言い訳を狂ったようにあちこち探し回り始めた。", quiz: { question: "Feeling totally lost, the team is desperately ___ a new, innovative idea.", options: ["casting around for", "catching up with", "catering to"], correctIndex: 0, explanation: "to try to find something." } },
-
-      { pv: "Cast aside / off", trope: "The Cold Discard", cefr: "C2", icon: Trash2, meaning: "To dispose of, get rid of, or ignore because you no longer want or need it.", meaningJP: "投げ捨てる、見捨てる、脱ぎ捨てる", example: "He cruelly cast her aside when he became famous.", vibes: ["Ruthless ambition", "Leaving the past behind", "Cold rejections"], storyline: "For years, his loyal friends supported him through extreme poverty. But the absolute second he won the massive acting award, he cast them aside, pretending he didn't even know their names anymore.", storylineJP: "何年もの間、彼の忠実な友人たちは極貧の中で彼を支えた。しかし、彼が大きな演技賞を獲得したまさにその瞬間、彼は彼らを見捨て（投げ捨て）、もはや名前すら知らないふりをした。", quiz: { question: "She dramatically ___ her heavy winter coat the moment she stepped inside.", options: ["cast off", "caught out", "chewed up"], correctIndex: 0, explanation: "to get rid of or remove." } },
-
-      { pv: "Catch on", trope: "The Viral Trend", cefr: "B2", icon: TrendingUp, meaning: "To become popular, or to finally understand what is going on.", meaningJP: "流行する、理解する", example: "It took him ages to catch on to what they were planning.", vibes: ["Going viral", "The 'Aha!' moment", "Being slow to realize"], storyline: "At first, Mika's asymmetrical, neon hairstyle was heavily mocked by everyone at the academy. But surprisingly, within three weeks, the strange aesthetic caught on, and half the school copied her exact look.", storylineJP: "最初、ミカの非対称なネオンカラーの髪型はアカデミーの全員からひどく嘲笑された。しかし驚いたことに、3週間以内にその奇妙な美学は流行し、学校の半数が彼女と全く同じスタイルを真似した。", quiz: { question: "I wonder if this incredibly bizarre new fashion trend will actually ___ globally.", options: ["catch on", "chime in", "cave in"], correctIndex: 0, explanation: "to become popular or understand." } },
-
-      { pv: "Catch out", trope: "The Clever Trap", cefr: "C1", icon: AlertCircle, meaning: "To trick someone, discover they are lying, or put them in a difficult situation.", meaningJP: "罠にかける、嘘を見破る、不意打ちする", example: "He caught me out when he checked my story with my previous employer.", vibes: ["Exposing a liar", "Unexpected pop quizzes", "Being caught in the rain"], storyline: "The arrogant suspect thought his fake alibi was completely flawless. But the veteran detective had secretly checked the security cameras, perfectly catching him out in a massive, undeniable lie.", storylineJP: "傲慢な容疑者は自分の偽のアリバイが完全に完璧だと思い込んでいた。しかしベテラン刑事は密かに防犯カメラを確認しており、彼の巨大で否定できない嘘を見事に見破った（罠にかけた）。", quiz: { question: "The extremely difficult exam question was deliberately designed to ___ you ___.", options: ["catch / out", "cast / off", "cheer / up"], correctIndex: 0, explanation: "to trick or discover a lie." } },
-
-      { pv: "Catch up / on", trope: "The Sprint & Gossip", cefr: "B1", icon: Coffee, meaning: "To reach someone ahead (up), do missed work (on), or talk about recent news.", meaningJP: "追いつく、遅れを取り戻す、近況を話し合う", example: "I caught up to the leader, then caught up on my sleep.", vibes: ["Academic grinding", "Spilling the tea", "Making up for lost time"], storyline: "After a two-week vacation, Sora desperately caught up on a mountain of fifty unread assignments. Later, he met Ken at a sunny cafe to finally catch up on all the relationship drama he missed.", storylineJP: "2週間の休暇後、ソラは50個の未読課題の山に必死で遅れを取り戻した（caught up on）。その後、彼は日当たりの良いカフェでケンに会い、見逃していたあらゆる恋愛ドラマの近況をようやく話し合った。", quiz: { question: "I'm incredibly exhausted, so I'm going home early to ___ my sleep.", options: ["catch up on", "chance upon", "check out"], correctIndex: 0, explanation: "to do something you missed." } },
-
-      { pv: "Cater to", trope: "The Spoiled VIP", cefr: "C1", icon: Heart, meaning: "To provide what is needed or wanted, often in a way that is seen negatively or exclusively.", meaningJP: "（特定の要求に）応じる、迎合する", example: "The film caters to the audience's worst instincts.", vibes: ["Exclusive VIP treatment", "Targeted algorithms", "Giving the people what they want"], storyline: "The brand new, ultra-luxury resort didn't bother trying to appeal to normal families. Instead, it was exclusively designed to uniquely cater to the bizarre, expensive demands of billionaire influencers.", storylineJP: "その真新しい超高級リゾートは、一般の家族連れにアピールしようとはしなかった。代わりに、それは億万長者のインフルエンサーたちの奇妙で高価な要求に特化して応える（迎合する）ために、排他的にデザインされていた。", quiz: { question: "The highly successful TV network specifically ___ a younger, teenage demographic.", options: ["caters to", "chimes in", "clams up"], correctIndex: 0, explanation: "to provide what is desired." } },
-
-      { pv: "Cave in", trope: "The Pressure Drop", cefr: "C1", icon: ArrowDown, meaning: "To collapse, or to stop resisting and agree under pressure.", meaningJP: "崩れ落ちる、（圧力に）屈する、折れる", example: "The government has refused to cave in despite the massive protests.", vibes: ["Surrendering to demands", "Structural collapse", "Losing a fierce argument"], storyline: "The students staged a massive, highly organized sit-in outside the strict principal's office for a week. Facing intense media coverage and angry parents, the principal finally caved in and abolished the terrible rule.", storylineJP: "生徒たちは厳格な校長室の外で、1週間にわたる大規模で組織的な座り込みを行った。激しいメディアの報道と怒れる親たちを前に、校長はついに屈し（折れ）、そのひどいルールを廃止した。", quiz: { question: "Under incredibly intense interrogation, the weak suspect finally ___ and confessed.", options: ["caved in", "checked off", "chucked away"], correctIndex: 0, explanation: "to yield under pressure." } },
-
-      { pv: "Chalk up / to", trope: "The High Score Excuse", cefr: "C1", icon: Award, meaning: "To achieve something good (up), or to attribute a failure to a cause (to).", meaningJP: "達成する（up）、～のせいにする（to）", example: "We chalked up a win, and chalked the previous loss up to bad luck.", vibes: ["Winning streaks", "Making analytical excuses", "Setting new records"], storyline: "The underdog team surprisingly chalked up twenty consecutive wins. When they finally lost a single game, the wise coach didn't yell; he just chalked the chaos up to first-game nerves and lack of experience.", storylineJP: "その無名チームは驚くべきことに20連勝を記録した（chalked up）。ついに1試合負けた時、賢明なコーチは怒鳴らず、そのカオスを初戦の緊張と経験不足のせいだと考えた（chalked up to）。", quiz: { question: "We can safely ___ the bizarre system failure ___ the unexpected power surge.", options: ["chalk / up to", "cheat / out of", "cast / around for"], correctIndex: 0, explanation: "to attribute to a cause." } },
-
-      { pv: "Chance upon", trope: "The Lucky Find", cefr: "C1", icon: Sparkles, meaning: "To find something or someone purely by accident.", meaningJP: "偶然見つける、たまたま出くわす", example: "I chanced upon a very rare book in a car boot sale and bought it for almost nothing.", vibes: ["Thrifting treasures", "Unexpected encounters", "Serendipity"], storyline: "While wandering mindlessly through the rainy, narrow streets of Kyoto, Rin ducked into a tiny, unmarked shop. There, hidden on a dusty shelf, she chanced upon the exact vintage camera she had wanted for years.", storylineJP: "京都の雨の降る狭い通りを何も考えずにさまよっていた時、リンは看板のない小さな店に飛び込んだ。そこで、埃をかぶった棚に隠れていた、彼女が何年も欲しがっていたまさにそのビンテージカメラを偶然見つけた。", quiz: { question: "I was completely shocked when I randomly ___ a brilliant solution to the problem.", options: ["chanced upon", "churned out", "chewed out"], correctIndex: 0, explanation: "to find by accident." } },
-
-      { pv: "Charge up / with", trope: "The Energized Indictment", cefr: "B2", icon: Zap, meaning: "To put electricity in a device (up), or to accuse someone of a crime officially (with).", meaningJP: "充電する（up）、（罪で）起訴する（with）", example: "I charged up my phone to film the corrupt mayor being charged with fraud.", vibes: ["Red battery icons", "Courtroom drama", "Police investigations"], storyline: "Sora had to quickly charge up his dead phone to capture the breaking news. The corrupt mayor, who thought his offshore accounts were hidden, was officially arrested and charged with massive fraud.", storylineJP: "ソラは速報を撮影するために、バッテリー切れのスマホを急いで充電（charge up）しなければならなかった。オフショア口座が隠されていると思っていた腐敗した市長は、正式に逮捕され、大規模な詐欺罪で起訴された（charged with）。", quiz: { question: "The aggressive prosecutors decided to officially ___ him ___ grand theft auto.", options: ["charge / with", "catch / out", "clamp / down on"], correctIndex: 0, explanation: "to accuse of a crime." } },
-
-      { pv: "Chase down / off / up", trope: "The Relentless Pursuit", cefr: "C1", icon: Search, meaning: "To try hard to find (down), force to leave (off), or ensure someone does something (up).", meaningJP: "探し出す（down）、追い払う（off）、催促する（up）", example: "I chased down the missing files, chased off the intruders, and chased up the late payment.", vibes: ["Frustrating detective work", "Defending property", "Office micro-managing"], storyline: "Leo spent months trying to chase down a rare comic. He chased off annoying scalpers, and spent all morning sending passive-aggressive emails to chase up the late delivery from the international courier.", storylineJP: "レオは希少なコミックを探し出す（chase down）ために何ヶ月も費やした。彼は厄介な転売ヤーを追い払い（chased off）、国際宅急便からの遅れている配達を催促する（chase up）ために、午前中を丸ごと受動的攻撃なメールを送ることに費やした。", quiz: { question: "The strict librarian is ___ me ___ about returning those extremely overdue books.", options: ["chasing / up", "cheating / on", "chuck / away"], correctIndex: 0, explanation: "to ensure someone does something." } }
-
+      { 
+        pv: "Calm down", trope: "The Deep Breath", cefr: "A2", icon: Smile, 
+        meaning: "To stop being angry or emotionally excited.", 
+        meaningJP: "落ち着く、冷静になる", 
+        example: "When I lose my temper, it takes ages for me to calm down again.", 
+        exampleJP: "一度キレてしまうと、再び落ち着くまでに途方もない時間がかかる。",
+        vibes: ["Diffusing a bomb", "Finding zen", "Stopping a panic"], 
+        vibesJP: ["爆弾の信管を抜く", "禅の心を見つける", "パニックを止める"],
+        storyline: "Mika was absolutely hyperventilating because she thought she had permanently lost her passport at the crowded airport. Kaito grabbed her shoulders gently. 'Mika, look at me. Just calm down. It's in your side pocket.'", 
+        storylineJP: "ミカは混雑した空港でパスポートを永久に失ったと思い込み、完全に過呼吸になっていた。海斗は彼女の肩を優しく掴んだ。「ミカ、俺を見て。ただ落ち着いて。サイドポケットに入ってるよ。」", 
+        quiz: { question: "Please try to slowly ___ and completely rationally explain what just happened.", options: ["calm down", "catch on", "chalk up"], correctIndex: 0, explanation: "to become less agitated." } 
+      },
+      { 
+        pv: "Cancel out", trope: "The Equalizer", cefr: "B2", icon: X, 
+        meaning: "To have an opposite effect on something, neutralizing it.", 
+        meaningJP: "相殺する、帳消しにする", 
+        example: "The airport taxes cancelled out the savings we had made on the flight tickets.", 
+        exampleJP: "空港税が、私たちが航空券で節約した分を相殺してしまった。",
+        vibes: ["Zero sum game", "Balancing the scales", "Wasted effort"], 
+        vibesJP: ["ゼロサムゲーム", "天秤を釣り合わせる", "無駄な努力"],
+        storyline: "Leo spent an agonizing three hours cleaning the entire kitchen until it sparkled. But ten minutes later, his chaotic dog ran in covered in thick, black mud, completely canceling out all his hard work instantly.", 
+        storylineJP: "レオはキッチン全体が輝くまで、苦痛な3時間をかけて掃除した。しかし10分後、カオスな飼い犬が分厚い黒い泥まみれで走り込んできて、彼の懸命な努力を瞬時に完全に帳消しにした（相殺した）。", 
+        quiz: { question: "The horrible, severe side effects entirely ___ the benefits of the new medicine.", options: ["cancelled out", "carried off", "chased down"], correctIndex: 0, explanation: "to neutralize." } 
+      },
+      { 
+        pv: "Care for", trope: "The Polite Dislike", cefr: "B1", icon: Heart, 
+        meaning: "To like something (usually used in the negative to express dislike).", 
+        meaningJP: "（主に否定文で）好む、好ましく思う", 
+        example: "I don't care for fizzy drinks; I prefer water.", 
+        exampleJP: "炭酸飲料はあまり好まない。水の方が好きだ。",
+        vibes: ["Polite rejection", "Having strict tastes", "Fancy preferences"], 
+        vibesJP: ["礼儀正しい拒絶", "厳格な好みを持つ", "高級な好み"],
+        storyline: "The wealthy, arrogant noble was offered a humble plate of traditional village stew. He wrinkled his nose in absolute disgust. 'Take this away immediately. I honestly do not care for peasant food,' he sneered.", 
+        storylineJP: "裕福で傲慢な貴族は、伝統的な村のシチューの質素な皿を勧められた。彼は絶対的な嫌悪感で鼻にシワを寄せた。「今すぐこれを下げろ。私は正直、農民の食べ物など好まない」と彼は嘲笑した。", 
+        quiz: { question: "To be completely honest, I really don't ___ his loud, aggressive modern art.", options: ["care for", "catch out", "cater for"], correctIndex: 0, explanation: "to like (often negative)." } 
+      },
+      { 
+        pv: "Carried away", trope: "The Overreaction", cefr: "B2", icon: Zap, 
+        meaning: "To get so emotional or excited that you lose control.", 
+        meaningJP: "調子に乗る、我を忘れる", 
+        example: "The team got carried away when they won the championship and started shouting.", 
+        exampleJP: "チームは優勝した時に調子に乗り、大声で叫び始めた。",
+        vibes: ["Losing control", "Going overboard", "Caught in the hype"], 
+        vibesJP: ["コントロールを失う", "やりすぎる", "熱狂に巻き込まれる"],
+        storyline: "It was supposed to be a simple, quiet birthday dinner. But surrounded by his friends and free drinks, Kaito got completely carried away, ending up singing karaoke on a table at three in the morning.", 
+        storylineJP: "それはシンプルで静かな誕生日ディナーのはずだった。しかし友人たちと無料の飲み物に囲まれ、海斗は完全に我を忘れ（調子に乗り）、深夜3時にテーブルの上でカラオケを歌う羽目になった。", 
+        quiz: { question: "Please don't get highly ___ and dangerously spend all your savings in one day.", options: ["carried away", "checked out", "cheered up"], correctIndex: 0, explanation: "to lose control from emotion." } 
+      },
+      { 
+        pv: "Carry off", trope: "The Impossible Flex", cefr: "C1", icon: Award, 
+        meaning: "To succeed in doing or winning something difficult.", 
+        meaningJP: "（困難なことを）見事にやってのける、勝ち取る", 
+        example: "She carried off the first prize in the competition.", 
+        exampleJP: "彼女はそのコンテストで見事に一等賞を勝ち取った。",
+        vibes: ["Securing the win", "Pulling it off", "A massive flex"], 
+        vibesJP: ["勝利を確実にする", "やってのける", "とてつもない自慢（フレックス）"],
+        storyline: "Wearing a bright neon pink suit to a highly formal, strict corporate event seemed like professional suicide. But Hina walked with such incredible, undeniable confidence that she actually carried it off perfectly, impressing the CEO.", 
+        storylineJP: "非常にフォーマルで厳格な企業のイベントに鮮やかなネオンピンクのスーツを着ていくのは、職業的自殺のように思えた。しかしヒナは信じられないほど否定できない自信を持って歩き、実に見事にそれを着こなし（やってのけ）、CEOを感心させた。", 
+        quiz: { question: "Despite the extreme pressure, the young, brave actor flawlessly ___ the complex role.", options: ["carried off", "cashed in", "chased up"], correctIndex: 0, explanation: "to succeed." } 
+      },
+      { 
+        pv: "Carry on", trope: "The Stubborn March", cefr: "B1", icon: Play, 
+        meaning: "To continue doing something despite difficulties or interruptions.", 
+        meaningJP: "続ける、続行する", 
+        example: "Carry on quietly with your work until the substitute teacher arrives.", 
+        exampleJP: "代理の先生が来るまで、静かに自分の作業を続けなさい。",
+        vibes: ["Keep calm", "Never giving up", "Endless grind"], 
+        vibesJP: ["冷静を保つ", "決して諦めない", "終わりのない苦労"],
+        storyline: "The power completely failed, plunging the massive concert hall into total darkness. But the brave acoustic guitarist simply smiled, strummed the strings, and boldly decided to carry on playing entirely unplugged.", 
+        storylineJP: "電源が完全に落ち、巨大なコンサートホールは完全な暗闇に包まれた。しかし勇敢なアコースティックギタリストは単に微笑み、弦を弾き、完全にアンプなしで演奏を続ける（続行する）ことを大胆に決意した。", 
+        quiz: { question: "Despite the harsh, freezing wind, the determined hikers stubbornly ___ walking.", options: ["carried on", "caught on", "checked in"], correctIndex: 0, explanation: "to continue." } 
+      },
+      { 
+        pv: "Carry out", trope: "The Mission", cefr: "B1", icon: Target, 
+        meaning: "To perform a task, order, or experiment.", 
+        meaningJP: "実行する、遂行する", 
+        example: "The government is carrying out tests on growing genetically modified crops.", 
+        exampleJP: "政府は遺伝子組み換え作物の栽培に関するテストを実行している。",
+        vibes: ["Executing orders", "Scientific research", "Getting it done"], 
+        vibesJP: ["命令を実行する", "科学的研究", "やり遂げる"],
+        storyline: "The secret agent received an encrypted, self-destructing message. His face turned completely pale as he realized the incredibly dangerous mission he was strictly ordered to carry out before midnight.", 
+        storylineJP: "秘密工作員は暗号化された自動消滅メッセージを受け取った。真夜中までに実行（遂行）するよう厳命された、信じられないほど危険な任務を悟り、彼の顔は完全に青ざめた。", 
+        quiz: { question: "The brilliant scientists successfully ___ a highly complex biological experiment.", options: ["carried out", "cast aside", "caved in"], correctIndex: 0, explanation: "to perform." } 
+      },
+      { 
+        pv: "Cash in / out", trope: "The Payout", cefr: "B2", icon: DollarSign, 
+        meaning: "To exchange something for money (in), or collect winnings to leave (out).", 
+        meaningJP: "換金する（in）、精算して手を引く（out）", 
+        example: "They cashed in their bonds, and he cashed out his poker chips.", 
+        exampleJP: "彼らは債券を換金し、彼はポーカーのチップを精算して手を引いた。",
+        vibes: ["Cashing out", "Taking the profit", "Securing the bag"], 
+        vibesJP: ["現金化する", "利益を確定する", "大金を手にする"],
+        storyline: "Sora gladly cashed in his rare, vintage comic books for a fortune. Meanwhile at the casino, Ken realized he had doubled his savings and wisely decided to cash out before his luck ran completely dry.", 
+        storylineJP: "ソラは希少なビンテージコミックを喜んで大金に換金した（cashed in）。一方カジノでは、ケンが貯金を倍にしたことに気づき、運が完全に尽きる前に賢明にも精算して手を引く（cashed out）決断をした。", 
+        quiz: { question: "He decided to ___ his poker chips and safely go home with the profit.", options: ["cash out", "call off", "carry on"], correctIndex: 0, explanation: "to exchange for money." } 
+      },
+      { 
+        pv: "Cash in on", trope: "The Opportunist", cefr: "C1", icon: DollarSign, 
+        meaning: "To benefit or make money on something, especially if done unfairly.", 
+        meaningJP: "～に乗じて（不正に）儲ける、つけこむ", 
+        example: "The opposition party is cashing in on the government's unpopularity.", 
+        exampleJP: "野党は政府の不人気に乗じて利益を得ている（つけこんでいる）。",
+        vibes: ["Taking advantage", "Making a quick buck", "Political strategy"], 
+        vibesJP: ["つけこむ", "手っ取り早く稼ぐ", "政治的戦略"],
+        storyline: "After the famous pop star was seen wearing a bizarre hat, countless cheap online stores immediately tried to cash in on the viral trend by selling terrible fakes.", 
+        storylineJP: "有名なポップスターが奇妙な帽子を被っているのを目撃された後、無数の安っぽいオンラインショップがひどい偽物を売って、そのバズったトレンドに乗じて儲けようと即座に動いた。", 
+        quiz: { question: "They are aggressively ___ the sudden hype surrounding the new movie.", options: ["cashing in on", "catching up on", "chasing down"], correctIndex: 0, explanation: "to benefit financially from a situation." } 
+      },
+      { 
+        pv: "Cash up", trope: "The Closing Shift", cefr: "B1", icon: Calculator, 
+        meaning: "To count all the money taken in a shop or business at the end of the day.", 
+        meaningJP: "（閉店後に）レジの売上金を計算する", 
+        example: "After the shop closed, they had to cash up before they could go home.", 
+        exampleJP: "店が閉まった後、彼らは家に帰る前に売上金を計算しなければならなかった。",
+        vibes: ["Closing time", "Retail struggles", "Counting the register"], 
+        vibesJP: ["閉店時間", "小売業の苦労", "レジを計算する"],
+        storyline: "It had been a chaotic, endlessly busy Saturday at the cafe. At 10 PM, the exhausted manager locked the front doors and sat down to silently cash up the mountain of coins and crumpled bills.", 
+        storylineJP: "カフェでのカオスで果てしなく忙しい土曜日だった。午後10時、疲れ切った店長は正面のドアに鍵をかけ、山のような硬貨とくしゃくしゃの紙幣の売上金を黙々と計算するために座り込んだ。", 
+        quiz: { question: "The last duty of the store manager every night is to efficiently ___.", options: ["cash up", "check over", "clear out"], correctIndex: 0, explanation: "to count the day's takings." } 
+      },
+      { 
+        pv: "Cast around for", trope: "The Desperate Search", cefr: "C1", icon: Search, 
+        meaning: "To try to find something by looking in many places.", 
+        meaningJP: "（解決策などを）あちこち探し回る", 
+        example: "She was casting around for people to help her.", 
+        exampleJP: "彼女は助けてくれる人をあちこち探し回っていた。",
+        vibes: ["Seeking a lifeline", "Running out of options", "Brainstorming solutions"], 
+        vibesJP: ["命綱を求める", "選択肢が尽きる", "解決策を出し合う"],
+        storyline: "The massive project was entirely behind schedule, and the budget was depleted. The panicked director began frantically casting around for any possible excuse to tell the furious investors.", 
+        storylineJP: "巨大なプロジェクトは完全に予定から遅れ、予算は枯渇していた。パニックに陥ったディレクターは、激怒する投資家たちに伝えるための可能な言い訳を狂ったようにあちこち探し回り始めた。", 
+        quiz: { question: "Feeling totally lost, the team is desperately ___ a new, innovative idea.", options: ["casting around for", "catching up with", "catering to"], correctIndex: 0, explanation: "to try to find something." } 
+      },
+      { 
+        pv: "Cast aside / off", trope: "The Cold Discard", cefr: "C2", icon: Trash2, 
+        meaning: "To dispose of, get rid of, or ignore because you no longer want or need it.", 
+        meaningJP: "投げ捨てる、見捨てる、脱ぎ捨てる", 
+        example: "He cruelly cast her aside when he became famous.", 
+        exampleJP: "有名になると、彼は残酷にも彼女を見捨てた。",
+        vibes: ["Ruthless ambition", "Leaving the past behind", "Cold rejections"], 
+        vibesJP: ["冷酷な野望", "過去を置き去りにする", "冷たい拒絶"],
+        storyline: "For years, his loyal friends supported him through extreme poverty. But the absolute second he won the massive acting award, he cast them aside, pretending he didn't even know their names anymore.", 
+        storylineJP: "何年もの間、彼の忠実な友人たちは極貧の中で彼を支えた。しかし、彼が大きな演技賞を獲得したまさにその瞬間、彼は彼らを見捨て（投げ捨て）、もはや名前すら知らないふりをした。", 
+        quiz: { question: "She dramatically ___ her heavy winter coat the moment she stepped inside.", options: ["cast off", "caught out", "chewed up"], correctIndex: 0, explanation: "to get rid of or remove." } 
+      },
+      { 
+        pv: "Catch on", trope: "The Viral Trend", cefr: "B2", icon: TrendingUp, 
+        meaning: "To become popular, or to finally understand what is going on.", 
+        meaningJP: "流行する、理解する", 
+        example: "It took him ages to catch on to what they were planning.", 
+        exampleJP: "彼らが何を計画しているのか、彼が理解するのには途方もない時間がかかった。",
+        vibes: ["Going viral", "The 'Aha!' moment", "Being slow to realize"], 
+        vibesJP: ["バイラルになる", "「アハ！」体験", "気づくのが遅い"],
+        storyline: "At first, Mika's asymmetrical, neon hairstyle was heavily mocked by everyone at the academy. But surprisingly, within three weeks, the strange aesthetic caught on, and half the school copied her exact look.", 
+        storylineJP: "最初、ミカの非対称なネオンカラーの髪型はアカデミーの全員からひどく嘲笑された。しかし驚いたことに、3週間以内にその奇妙な美学は流行し、学校の半数が彼女と全く同じスタイルを真似した。", 
+        quiz: { question: "I wonder if this incredibly bizarre new fashion trend will actually ___ globally.", options: ["catch on", "chime in", "cave in"], correctIndex: 0, explanation: "to become popular or understand." } 
+      },
+      { 
+        pv: "Catch out", trope: "The Clever Trap", cefr: "C1", icon: AlertCircle, 
+        meaning: "To trick someone, discover they are lying, or put them in a difficult situation.", 
+        meaningJP: "罠にかける、嘘を見破る、不意打ちする", 
+        example: "He caught me out when he checked my story with my previous employer.", 
+        exampleJP: "彼が以前の雇用主に私の話を確認した時、私の嘘は見破られた（罠にかかった）。",
+        vibes: ["Exposing a liar", "Unexpected pop quizzes", "Being caught in the rain"], 
+        vibesJP: ["嘘つきを暴露する", "予期せぬ小テスト", "雨に降られる（不意打ち）"],
+        storyline: "The arrogant suspect thought his fake alibi was completely flawless. But the veteran detective had secretly checked the security cameras, perfectly catching him out in a massive, undeniable lie.", 
+        storylineJP: "傲慢な容疑者は自分の偽のアリバイが完全に完璧だと思い込んでいた。しかしベテラン刑事は密かに防犯カメラを確認しており、彼の巨大で否定できない嘘を見事に見破った（罠にかけた）。", 
+        quiz: { question: "The extremely difficult exam question was deliberately designed to ___ you ___.", options: ["catch / out", "cast / off", "cheer / up"], correctIndex: 0, explanation: "to trick or discover a lie." } 
+      },
+      { 
+        pv: "Catch up / on", trope: "The Sprint & Gossip", cefr: "B1", icon: Coffee, 
+        meaning: "To reach someone ahead (up), do missed work (on), or talk about recent news.", 
+        meaningJP: "追いつく、遅れを取り戻す、近況を話し合う", 
+        example: "I caught up to the leader, then caught up on my sleep.", 
+        exampleJP: "私はリーダーに追いつき、その後、睡眠不足を取り戻した。",
+        vibes: ["Academic grinding", "Spilling the tea", "Making up for lost time"], 
+        vibesJP: ["学業のガリ勉", "ゴシップをこぼす", "失われた時間を取り戻す"],
+        storyline: "After a two-week vacation, Sora desperately caught up on a mountain of fifty unread assignments. Later, he met Ken at a sunny cafe to finally catch up on all the relationship drama he missed.", 
+        storylineJP: "2週間の休暇後、ソラは50個の未読課題の山に必死で遅れを取り戻した（caught up on）。その後、彼は日当たりの良いカフェでケンに会い、見逃していたあらゆる恋愛ドラマの近況をようやく話し合った。", 
+        quiz: { question: "I'm incredibly exhausted, so I'm going home early to ___ my sleep.", options: ["catch up on", "chance upon", "check out"], correctIndex: 0, explanation: "to do something you missed." } 
+      }
     ],
-
     11: [
 
       { pv: "Chat up", trope: "The Smooth Talker", cefr: "B2", icon: MessageCircle, meaning: "To talk to someone you are sexually or romantically interested in.", meaningJP: "ナンパする、口説く", example: "He spent the whole night chatting her up at the bar.", vibes: ["Clubbing with friends", "Using terrible pickup lines", "Flirting intensely"], storyline: "Kaito thought he was the ultimate master of romance. At the neon-lit party, he approached the most beautiful girl in the room and tried chatting her up with a cheesy line, but she just laughed and walked away.", storylineJP: "海斗は自分がロマンスの究極のマスターだと思っていた。ネオンが輝くパーティで、彼は部屋で一番美しい女の子に近づき、安っぽいセリフで彼女を口説こう（ナンパしよう）としたが、彼女はただ笑って立ち去ってしまった。", quiz: { question: "It was incredibly obvious that he was actively trying to ___ the new student ___.", options: ["chat / up", "chew / out", "clam / up"], correctIndex: 0, explanation: "to flirt with someone." } },
