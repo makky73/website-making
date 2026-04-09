@@ -6355,8 +6355,6 @@ useEffect(() => {
     setIsExampleFlipped(false);
   }, [promptLang]);
 
-  const EPISODES = Array.from({ length: 25 }, (_, i) => i + 1);
-
   const allDataWithEp = Object.entries(batches).flatMap(([ep, items]) => 
     items.map(item => ({ ...item, epNum: ep }))
   );
