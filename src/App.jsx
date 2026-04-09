@@ -1,9 +1,9 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   Shield, Search, Heart, Zap, Play, Angry, Cpu, PlusSquare, Calculator, 
   Coffee, Target, Map, XOctagon, Fish, ChevronRight, ChevronLeft, X, 
   BookOpen, RefreshCw, Languages, ArrowDown, Eye, HelpCircle, Info, 
-  Shuffle, Lightbulb, EyeOff, Lock, CheckCircle2, AlertCircle, Award,
+  Shuffle, Lightbulb, EyeOff, Lock, CheckCircle2, CheckCircle, AlertCircle, Award,
   User, MessageCircle, DollarSign, Database, Cloud, Trash2, Home,
   Undo2, Volume2, ShoppingCart, LogOut, Gavel, Filter, ChevronDown,
   AlertTriangle, Flame, Activity, Wind, Music, Camera, Sparkles,
@@ -15,12 +15,16 @@ import {
 
 const AnimeFrame = ({ pv, trope, storyline, storylineJP, primaryLang }) => {
   const [showStory, setShowStory] = useState(false);
-  const jpSectionRef = useRef(null);
-  const enSectionRef = useRef(null);
+  const [isStoryFlipped, setIsStoryFlipped] = useState(false);
 
-  const scrollToOther = () => {
-    const target = primaryLang === 'EN' ? jpSectionRef.current : enSectionRef.current;
-    target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  // 言語が変わる、またはモーダルを開き直した時に表面にリセット
+  useEffect(() => {
+    setIsStoryFlipped(false);
+  }, [primaryLang, showStory]);
+
+  const toggleFlip = (e) => {
+    e.stopPropagation();
+    setIsStoryFlipped(!isStoryFlipped);
   };
 
   return (
@@ -49,23 +53,59 @@ const AnimeFrame = ({ pv, trope, storyline, storylineJP, primaryLang }) => {
                 <h3 className="text-yellow-300 text-xs md:text-base font-black italic uppercase tracking-tighter text-left truncate max-w-[150px] md:max-w-[300px]">Scenario: {pv}</h3>
               </div>
               <div className="flex gap-2 md:gap-3">
-                <button onClick={scrollToOther} className="bg-blue-600 text-white px-3 py-1.5 rounded-full text-[9px] md:text-[10px] font-black uppercase hover:bg-blue-500 transition-all border border-white/20">Translation</button>
-                <button onClick={() => setShowStory(false)} className="text-white hover:text-red-500 transition-colors bg-white/10 rounded-full p-1"><X size={20} /></button>
+                <button onClick={toggleFlip} className="flex items-center gap-1 bg-blue-600 text-white px-4 py-2 rounded-full text-[10px] md:text-xs font-black uppercase hover:bg-blue-500 transition-all border-2 border-white/20">
+                  <RefreshCw size={14} /> Flip
+                </button>
+                <button onClick={() => setShowStory(false)} className="text-white hover:text-red-500 transition-colors bg-white/10 rounded-full p-2"><X size={24} /></button>
               </div>
            </div>
+           
            <div 
-             className="flex-1 overflow-y-auto px-6 md:px-12 pb-8 space-y-6 md:space-y-8 scroll-smooth text-white"
+             className="flex-1 flex items-center justify-center p-6 md:p-12 overflow-hidden"
              onClick={(e) => { if(e.target === e.currentTarget) setShowStory(false); }}
            >
-              <div ref={primaryLang === 'EN' ? enSectionRef : jpSectionRef} className="flex flex-col justify-center text-left" onClick={(e) => e.stopPropagation()}>
-                <div className="flex items-center gap-2 mb-2"><span className="bg-white text-black px-2 py-0.5 text-[9px] font-black uppercase rounded-sm">{primaryLang}</span></div>
-                <p className="text-white text-lg md:text-xl lg:text-3xl leading-relaxed italic border-l-4 border-white/20 pl-4 font-medium">{primaryLang === 'EN' ? storyline : storylineJP}</p>
-                <div className="mt-4 flex flex-col items-center animate-bounce text-white/30"><ArrowDown size={18} /></div>
-              </div>
-              <div ref={primaryLang === 'EN' ? jpSectionRef : enSectionRef} className="flex flex-col justify-center border-t border-white/10 pt-6 text-left" onClick={(e) => e.stopPropagation()}>
-                <div className="flex items-center gap-2 mb-2"><span className="bg-blue-600 text-white px-2 py-0.5 text-[9px] font-black uppercase rounded-sm">{primaryLang === 'EN' ? 'JP' : 'EN'}</span></div>
-                <p className="text-white text-lg md:text-xl lg:text-3xl font-bold leading-relaxed pl-4">{primaryLang === 'EN' ? storylineJP : storyline}</p>
-              </div>
+             {/* Story Flip Card */}
+             <div onClick={toggleFlip} className="relative w-full max-w-4xl h-[60vh] cursor-pointer group" style={{ perspective: '1200px' }}>
+                <div 
+                  className="relative w-full h-full transition-transform duration-700 ease-in-out" 
+                  style={{ transformStyle: 'preserve-3d', transform: isStoryFlipped ? 'rotateX(180deg)' : 'rotateX(0deg)' }}
+                >
+                  {/* 表面 (Surface) */}
+                  <div 
+                    className="absolute inset-0 bg-slate-900 border-4 border-white/20 rounded-3xl p-6 md:p-12 flex flex-col justify-center shadow-2xl overflow-y-auto" 
+                    style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
+                  >
+                    <div className="flex items-center justify-between mb-6">
+                      <span className="bg-white text-black px-3 py-1 text-xs md:text-sm font-black uppercase rounded-md tracking-widest">{primaryLang}</span>
+                      <RefreshCw size={24} className="text-white/30 group-hover:rotate-180 transition-transform duration-500" />
+                    </div>
+                    <p className="text-white text-xl md:text-3xl lg:text-4xl leading-relaxed italic font-medium">
+                      {primaryLang === 'EN' ? storyline : storylineJP}
+                    </p>
+                    <div className="mt-8 text-white/30 text-xs md:text-sm font-bold text-center uppercase tracking-widest flex items-center justify-center gap-2">
+                       <RefreshCw size={14} /> Tap to flip translation
+                    </div>
+                  </div>
+
+                  {/* 裏面 (Back) */}
+                  <div 
+                    className="absolute inset-0 bg-blue-900 border-4 border-blue-400 rounded-3xl p-6 md:p-12 flex flex-col justify-center shadow-2xl overflow-y-auto" 
+                    style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', transform: 'rotateX(180deg)' }}
+                  >
+                    <div className="flex items-center justify-between mb-6">
+                      <span className="bg-blue-400 text-black px-3 py-1 text-xs md:text-sm font-black uppercase rounded-md tracking-widest">{primaryLang === 'EN' ? 'JP' : 'EN'}</span>
+                      <RefreshCw size={24} className="text-blue-300 group-hover:rotate-180 transition-transform duration-500" />
+                    </div>
+                    <p className="text-white text-xl md:text-3xl lg:text-4xl font-bold leading-relaxed">
+                      {primaryLang === 'EN' ? storylineJP : storyline}
+                    </p>
+                    <div className="mt-8 text-blue-300/50 text-xs md:text-sm font-bold text-center uppercase tracking-widest flex items-center justify-center gap-2">
+                       <RefreshCw size={14} /> Tap to flip back
+                    </div>
+                  </div>
+                  
+                </div>
+             </div>
            </div>
         </div>
       )}
