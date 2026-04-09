@@ -6616,7 +6616,7 @@ const EPISODE_LIST = Array.from({ length: 26 }, (_, i) => i + 1);
     setCefrFilter('ALL'); 
     setIsRevealed(false); 
     setIsEpOpen(false); 
-  };
+  }
   
   const handleFilterChange = (level) => { setCefrFilter(level); setIndex(0); setIsRevealed(false); setIsCefrOpen(false); };
   const markAsCorrect = () => { if(current) setCorrectlyAnswered(prev => new Set(prev).add(`${current.pv}-${current.trope}`)); };
