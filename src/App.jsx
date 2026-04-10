@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { 
   Shield, Search, Heart, Zap, Play, Angry, Cpu, PlusSquare, Calculator, 
   Coffee, Target, Map, XOctagon, Fish, ChevronRight, ChevronLeft, X, 
@@ -13,19 +13,34 @@ import {
   Settings, PenTool, MessageSquare
 } from 'lucide-react';
 
-const AnimeFrame = ({ pv, trope, storyline, storylineJP, primaryLang }) => {
+const AnimeFrame = ({ pv, trope, storyline, storylineJP, primaryLang, customBgUrl, onUpdateBgUrl, isAdmin }) => {
   const [showStory, setShowStory] = useState(false);
   const [isStoryFlipped, setIsStoryFlipped] = useState(false);
+  const [showBgInput, setShowBgInput] = useState(false);
+  const [bgInputUrl, setBgInputUrl] = useState(customBgUrl || '');
 
-  // 言語が変わる、またはモーダルを開き直した時に表面にリセット
   useEffect(() => {
     setIsStoryFlipped(false);
+    setShowBgInput(false);
   }, [primaryLang, showStory]);
+
+  useEffect(() => {
+    setBgInputUrl(customBgUrl || '');
+  }, [customBgUrl]);
 
   const toggleFlip = (e) => {
     e.stopPropagation();
     setIsStoryFlipped(!isStoryFlipped);
   };
+
+  const handleSaveBg = (e) => {
+    e.stopPropagation();
+    onUpdateBgUrl(pv, bgInputUrl);
+    setShowBgInput(false);
+  };
+
+  const defaultBg = `https://picsum.photos/seed/${pv.replace(/\s/g, '')}/1200/800`;
+  const bgImage = customBgUrl || defaultBg;
 
   return (
     <div className="group relative w-full aspect-video md:aspect-[21/9] rounded-2xl md:rounded-3xl overflow-hidden border-4 border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] md:shadow-[6px_6px_0_0_rgba(0,0,0,1)] transition-all bg-slate-900 flex flex-col">
@@ -53,18 +68,41 @@ const AnimeFrame = ({ pv, trope, storyline, storylineJP, primaryLang }) => {
                 <h3 className="text-yellow-300 text-xs md:text-base font-black italic uppercase tracking-tighter text-left truncate max-w-[150px] md:max-w-[300px]">Scenario: {pv}</h3>
               </div>
               <div className="flex gap-2 md:gap-3">
+                {isAdmin && (
+                  <button onClick={(e) => { e.stopPropagation(); setShowBgInput(!showBgInput); }} className="text-white hover:text-blue-300 transition-colors bg-white/10 rounded-full p-2" title="Change Background Image (Admin)">
+                    <Camera size={20} />
+                  </button>
+                )}
                 <button onClick={toggleFlip} className="flex items-center gap-1 bg-blue-600 text-white px-4 py-2 rounded-full text-[10px] md:text-xs font-black uppercase hover:bg-blue-500 transition-all border-2 border-white/20">
                   <RefreshCw size={14} /> Flip
                 </button>
                 <button onClick={() => setShowStory(false)} className="text-white hover:text-red-500 transition-colors bg-white/10 rounded-full p-2"><X size={24} /></button>
               </div>
            </div>
+
+           {showBgInput && isAdmin && (
+             <div className="absolute top-20 md:top-24 left-1/2 -translate-x-1/2 z-[200] bg-white border-4 border-black p-4 md:p-5 rounded-2xl shadow-[8px_8px_0_0_rgba(0,0,0,1)] flex flex-col md:flex-row gap-3 items-center text-black w-[90%] max-w-xl animate-in slide-in-from-top-4" onClick={(e) => e.stopPropagation()}>
+               <div className="flex-1 w-full">
+                 <p className="text-[10px] font-black uppercase tracking-widest text-gray-500 mb-1 text-left flex items-center gap-1"><Camera size={12}/> Custom Background URL (Admin)</p>
+                 <input
+                   type="text"
+                   placeholder="https://example.com/image.jpg (空白でリセット)"
+                   value={bgInputUrl}
+                   onChange={(e) => setBgInputUrl(e.target.value)}
+                   className="w-full border-2 border-gray-300 rounded-lg p-2 text-sm font-bold focus:outline-none focus:border-blue-500 transition-colors"
+                 />
+               </div>
+               <div className="flex gap-2 w-full md:w-auto mt-2 md:mt-0 self-end">
+                 <button onClick={handleSaveBg} className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg font-black text-xs uppercase hover:bg-blue-500 transition-colors">Save</button>
+                 <button onClick={(e) => { e.stopPropagation(); setShowBgInput(false); setBgInputUrl(customBgUrl || ''); }} className="flex-1 bg-gray-200 text-black px-4 py-2 rounded-lg font-black text-xs uppercase hover:bg-gray-300 transition-colors">Cancel</button>
+               </div>
+             </div>
+           )}
            
            <div 
              className="flex-1 flex items-center justify-center p-6 md:p-12 overflow-hidden"
              onClick={(e) => { if(e.target === e.currentTarget) setShowStory(false); }}
            >
-             {/* Story Flip Card */}
              <div onClick={toggleFlip} className="relative w-full max-w-4xl h-[60vh] cursor-pointer group" style={{ perspective: '1200px' }}>
                 <div 
                   className="relative w-full h-full transition-transform duration-700 ease-in-out" 
@@ -72,35 +110,47 @@ const AnimeFrame = ({ pv, trope, storyline, storylineJP, primaryLang }) => {
                 >
                   {/* 表面 (Surface) */}
                   <div 
-                    className="absolute inset-0 bg-slate-900 border-4 border-white/20 rounded-3xl p-6 md:p-12 flex flex-col justify-center shadow-2xl overflow-y-auto" 
+                    className="absolute inset-0 bg-slate-900 border-4 border-white/20 rounded-3xl overflow-hidden shadow-2xl" 
                     style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
                   >
-                    <div className="flex items-center justify-between mb-6">
-                      <span className="bg-white text-black px-3 py-1 text-xs md:text-sm font-black uppercase rounded-md tracking-widest">{primaryLang}</span>
-                      <RefreshCw size={24} className="text-white/30 group-hover:rotate-180 transition-transform duration-500" />
-                    </div>
-                    <p className="text-white text-xl md:text-3xl lg:text-4xl leading-relaxed italic font-medium">
-                      {primaryLang === 'EN' ? storyline : storylineJP}
-                    </p>
-                    <div className="mt-8 text-white/30 text-xs md:text-sm font-bold text-center uppercase tracking-widest flex items-center justify-center gap-2">
-                       <RefreshCw size={14} /> Tap to flip translation
+                    <div 
+                      className="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-luminosity grayscale transition-all duration-500"
+                      style={{ backgroundImage: `url(${bgImage})` }}
+                    />
+                    <div className="relative w-full h-full p-6 md:p-12 flex flex-col justify-center overflow-y-auto">
+                      <div className="flex items-center justify-between mb-6">
+                        <span className="bg-white text-black px-3 py-1 text-xs md:text-sm font-black uppercase rounded-md tracking-widest shadow-sm">{primaryLang}</span>
+                        <RefreshCw size={24} className="text-white/50 group-hover:rotate-180 transition-transform duration-500 drop-shadow-md" />
+                      </div>
+                      <p className="text-white text-xl md:text-3xl lg:text-4xl leading-relaxed italic font-medium drop-shadow-lg">
+                        {primaryLang === 'EN' ? storyline : storylineJP}
+                      </p>
+                      <div className="mt-8 text-white/50 text-xs md:text-sm font-bold text-center uppercase tracking-widest flex items-center justify-center gap-2 drop-shadow-md">
+                         <RefreshCw size={14} /> Tap to flip translation
+                      </div>
                     </div>
                   </div>
 
                   {/* 裏面 (Back) */}
                   <div 
-                    className="absolute inset-0 bg-blue-900 border-4 border-blue-400 rounded-3xl p-6 md:p-12 flex flex-col justify-center shadow-2xl overflow-y-auto" 
+                    className="absolute inset-0 bg-blue-900 border-4 border-blue-400 rounded-3xl overflow-hidden shadow-2xl" 
                     style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', transform: 'rotateX(180deg)' }}
                   >
-                    <div className="flex items-center justify-between mb-6">
-                      <span className="bg-blue-400 text-black px-3 py-1 text-xs md:text-sm font-black uppercase rounded-md tracking-widest">{primaryLang === 'EN' ? 'JP' : 'EN'}</span>
-                      <RefreshCw size={24} className="text-blue-300 group-hover:rotate-180 transition-transform duration-500" />
-                    </div>
-                    <p className="text-white text-xl md:text-3xl lg:text-4xl font-bold leading-relaxed">
-                      {primaryLang === 'EN' ? storylineJP : storyline}
-                    </p>
-                    <div className="mt-8 text-blue-300/50 text-xs md:text-sm font-bold text-center uppercase tracking-widest flex items-center justify-center gap-2">
-                       <RefreshCw size={14} /> Tap to flip back
+                    <div 
+                      className="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-luminosity grayscale transition-all duration-500"
+                      style={{ backgroundImage: `url(${bgImage})` }}
+                    />
+                    <div className="relative w-full h-full p-6 md:p-12 flex flex-col justify-center overflow-y-auto">
+                      <div className="flex items-center justify-between mb-6">
+                        <span className="bg-blue-400 text-black px-3 py-1 text-xs md:text-sm font-black uppercase rounded-md tracking-widest shadow-sm">{primaryLang === 'EN' ? 'JP' : 'EN'}</span>
+                        <RefreshCw size={24} className="text-blue-300 group-hover:rotate-180 transition-transform duration-500 drop-shadow-md" />
+                      </div>
+                      <p className="text-white text-xl md:text-3xl lg:text-4xl font-bold leading-relaxed drop-shadow-lg">
+                        {primaryLang === 'EN' ? storylineJP : storyline}
+                      </p>
+                      <div className="mt-8 text-blue-300 text-xs md:text-sm font-bold text-center uppercase tracking-widest flex items-center justify-center gap-2 drop-shadow-md">
+                         <RefreshCw size={14} /> Tap to flip back
+                      </div>
                     </div>
                   </div>
                   
@@ -118,6 +168,7 @@ const AnimeFrame = ({ pv, trope, storyline, storylineJP, primaryLang }) => {
 };
 
 const PVQuiz = ({ isOpen, onClose, pv, quiz, onCorrectAnswer }) => {
+  // ... (内容変更なし) ...
   const [selectedOption, setSelectedOption] = useState(null);
   const [isCorrect, setIsCorrect] = useState(null);
   const [shuffledOptions, setShuffledOptions] = useState([]);
@@ -172,6 +223,7 @@ const PVQuiz = ({ isOpen, onClose, pv, quiz, onCorrectAnswer }) => {
 };
 
 const PVExplanation = ({ isOpen, onClose }) => {
+  // ... (内容変更なし) ...
   if (!isOpen) return null;
   return (
     <div className="fixed inset-0 z-[200] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 animate-in fade-in duration-200 text-black" onClick={onClose}>
@@ -185,6 +237,87 @@ const PVExplanation = ({ isOpen, onClose }) => {
           </section>
           <button onClick={onClose} className="w-full bg-black text-white font-black py-3 md:py-4 rounded-xl text-[10px] md:text-xs uppercase tracking-widest hover:bg-yellow-300 hover:text-black transition-all">学習をスタート！</button>
         </div>
+      </div>
+    </div>
+  );
+};
+
+// 🔐 パスワード入力用モーダルコンポーネント (New)
+const AdminLoginModal = ({ isOpen, onClose, onLoginSuccess }) => {
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState(false);
+  const [notified, setNotified] = useState(false);
+
+  // 管理者パスワード設定 (必要に応じて変更してください)
+  const CORRECT_PASSWORD = "maki";
+
+  const notifyAdmin = async (wrongPassword) => {
+    console.warn(`[SECURITY ALERT] Unauthorized login attempt with password: ${wrongPassword}`);
+    setNotified(true);
+    
+    // 💡 [管理者への通知機能]
+    // 実際に通知を送る場合は、Discord等のWebhook URLを以下に設定し、コメントアウトを解除してください。
+    /*
+    const webhookUrl = "YOUR_DISCORD_OR_SLACK_WEBHOOK_URL_HERE";
+    if (webhookUrl) {
+      try {
+        await fetch(webhookUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ 
+            content: `🚨 **Security Alert**\nFailed admin login attempt detected in PV Guide App.\nAttempted Password: \`${wrongPassword}\`` 
+          })
+        });
+      } catch (err) {
+        console.error("Failed to send notification", err);
+      }
+    }
+    */
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (password === CORRECT_PASSWORD) {
+      setError(false);
+      setNotified(false);
+      setPassword('');
+      onLoginSuccess();
+    } else {
+      setError(true);
+      notifyAdmin(password);
+      setPassword('');
+    }
+  };
+
+  if (!isOpen) return null;
+
+  return (
+    <div className="fixed inset-0 z-[300] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 animate-in fade-in duration-200">
+      <div className="bg-white border-4 border-black w-full max-w-sm rounded-3xl shadow-[8px_8px_0_0_rgba(0,0,0,1)] p-6 md:p-8" onClick={(e) => e.stopPropagation()}>
+        <div className="flex justify-between items-center mb-6">
+          <h2 className="text-xl md:text-2xl font-black italic uppercase tracking-tighter flex items-center gap-2 text-black"><Lock size={24}/> Admin Login</h2>
+          <button onClick={() => { onClose(); setError(false); setNotified(false); setPassword(''); }} className="text-gray-400 hover:text-red-500 transition-colors"><X size={24}/></button>
+        </div>
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+          <div>
+            <label className="block text-[10px] font-black uppercase text-gray-500 mb-1 tracking-widest">Password</label>
+            <input 
+              type="password" 
+              value={password} 
+              onChange={(e) => setPassword(e.target.value)} 
+              placeholder="Enter Password" 
+              className="w-full border-4 border-black rounded-xl p-3 font-bold text-black focus:outline-none focus:bg-yellow-50 transition-colors"
+              autoFocus
+            />
+          </div>
+          {error && (
+            <div className="text-red-600 text-xs font-bold bg-red-50 p-3 rounded-xl border-2 border-red-500 animate-in slide-in-from-top-2">
+              <p className="flex items-center gap-1.5"><AlertTriangle size={16} /> Incorrect password.</p>
+              {notified && <p className="mt-2 text-[10px] opacity-80 border-t border-red-200 pt-2 text-left leading-tight">⚠️ The administrator has been automatically notified of this unauthorized attempt.</p>}
+            </div>
+          )}
+          <button type="submit" className="w-full bg-black text-white font-black py-3 md:py-4 rounded-xl uppercase tracking-widest hover:bg-yellow-300 hover:text-black transition-all shadow-[4px_4px_0_0_rgba(0,0,0,1)] active:translate-y-1 active:shadow-none mt-2 text-xs">Verify & Login</button>
+        </form>
       </div>
     </div>
   );
@@ -205,6 +338,13 @@ const App = () => {
   const [isEpOpen, setIsEpOpen] = useState(false);
   const [isCefrOpen, setIsCefrOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const [customBgUrls, setCustomBgUrls] = useState({});
+  const [isAdminMode, setIsAdminMode] = useState(false); 
+  const [showAdminLogin, setShowAdminLogin] = useState(false); // パスワード画面表示用のステート
+
+  const handleUpdateBgUrl = (pv, url) => {
+    setCustomBgUrls(prev => ({ ...prev, [pv]: url }));
+  };
   
   const batches = {
     1: [
@@ -6602,9 +6742,8 @@ const App = () => {
     ]
   };
 
-const EPISODE_LIST = Array.from({ length: 26 }, (_, i) => i + 1);
+ const EPISODE_LIST = Array.from({ length: 26 }, (_, i) => i + 1);
 
-  // 言語設定が変わった時にカードをリセット
   useEffect(() => {
     setIsFlipped(false);
     setIsVibesFlipped(false);
@@ -6631,7 +6770,7 @@ const EPISODE_LIST = Array.from({ length: 26 }, (_, i) => i + 1);
   } else {
     const currentBatchRaw = batches[episode] || batches[1] || [];
     displayData = cefrFilter === 'ALL' ? currentBatchRaw : currentBatchRaw.filter(item => item?.cefr === cefrFilter);
-  };
+  }
 
   const current = displayData[index] || displayData[0] || null;
   const availableLevelsInBatch = ['ALL', ...new Set((searchQuery ? allDataWithEp : (batches[episode] || [])).map(item => item?.cefr).filter(Boolean))].sort();
@@ -6656,7 +6795,7 @@ const EPISODE_LIST = Array.from({ length: 26 }, (_, i) => i + 1);
     setCefrFilter('ALL'); 
     setIsRevealed(false); 
     setIsEpOpen(false); 
-  }
+  };
   
   const handleFilterChange = (level) => { setCefrFilter(level); setIndex(0); setIsRevealed(false); setIsCefrOpen(false); };
   const markAsCorrect = () => { if(current) setCorrectlyAnswered(prev => new Set(prev).add(`${current.pv}-${current.trope}`)); };
@@ -6691,7 +6830,26 @@ const EPISODE_LIST = Array.from({ length: 26 }, (_, i) => i + 1);
             
             <div className="flex flex-wrap items-center gap-2 md:gap-4">
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-black italic tracking-tighter uppercase leading-none text-black">Story <span className="text-blue-600">PV</span> Guide</h1>
-              <button onClick={() => setShowExplanation(true)} className="flex items-center gap-2 bg-white border-2 border-black px-2 py-1 rounded-full shadow-[2px_2px_0_0_rgba(0,0,0,1)] transition-all active:shadow-none active:translate-x-[1px] active:translate-y-[1px]"><HelpCircle size={14} className="text-blue-600" /><span className="text-[8px] md:text-[10px] font-black uppercase tracking-widest leading-none">PV?</span></button>
+              <div className="flex items-center gap-2">
+                <button onClick={() => setShowExplanation(true)} className="flex items-center gap-2 bg-white border-2 border-black px-2 py-1 rounded-full shadow-[2px_2px_0_0_rgba(0,0,0,1)] transition-all active:shadow-none active:translate-x-[1px] active:translate-y-[1px]">
+                  <HelpCircle size={14} className="text-blue-600" />
+                  <span className="text-[8px] md:text-[10px] font-black uppercase tracking-widest leading-none">PV?</span>
+                </button>
+                {/* ⚙️ システム設定（管理者モード切り替え）ボタン */}
+                <button 
+                  onClick={() => {
+                    if (isAdminMode) {
+                      setIsAdminMode(false); // ログアウト
+                    } else {
+                      setShowAdminLogin(true); // パスワード画面表示
+                    }
+                  }} 
+                  className={`p-1.5 rounded-full border-2 border-black shadow-[2px_2px_0_0_rgba(0,0,0,1)] transition-all active:shadow-none active:translate-x-[1px] active:translate-y-[1px] ${isAdminMode ? 'bg-red-500 text-white hover:bg-red-600' : 'bg-gray-200 text-gray-500 hover:bg-gray-300'}`}
+                  title={isAdminMode ? "Exit Admin Mode" : "System Settings"}
+                >
+                  <Settings size={14} className={`${isAdminMode ? 'animate-spin-slow' : ''}`} />
+                </button>
+              </div>
             </div>
           </div>
 
@@ -6740,7 +6898,16 @@ const EPISODE_LIST = Array.from({ length: 26 }, (_, i) => i + 1);
             <>
               <div className="lg:col-span-8 flex flex-col gap-6 md:gap-8 order-1">
                 <div className="w-full max-w-2xl mx-auto shrink-0">
-                   <AnimeFrame pv={current.pv} trope={current.trope} storyline={current.storyline} storylineJP={current.storylineJP} primaryLang={promptLang} />
+                   <AnimeFrame 
+                     pv={current.pv} 
+                     trope={current.trope} 
+                     storyline={current.storyline} 
+                     storylineJP={current.storylineJP} 
+                     primaryLang={promptLang} 
+                     customBgUrl={customBgUrls[current.pv]} 
+                     onUpdateBgUrl={handleUpdateBgUrl} 
+                     isAdmin={isAdminMode}
+                   />
                 </div>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
@@ -6847,6 +7014,15 @@ const EPISODE_LIST = Array.from({ length: 26 }, (_, i) => i + 1);
       <PVExplanation isOpen={showExplanation} onClose={() => setShowExplanation(false)} />
       {current && <PVQuiz isOpen={showQuiz} onClose={() => setShowQuiz(false)} pv={current.pv} quiz={current.quiz} onCorrectAnswer={markAsCorrect} />}
       
+      {/* 管理者ログイン用モーダル */}
+      <AdminLoginModal 
+        isOpen={showAdminLogin} 
+        onClose={() => setShowAdminLogin(false)} 
+        onLoginSuccess={() => {
+          setIsAdminMode(true);
+          setShowAdminLogin(false);
+        }} 
+      />
     </div>
   );
 };
