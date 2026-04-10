@@ -33,9 +33,28 @@ const AnimeFrame = ({ pv, trope, storyline, storylineJP, primaryLang, customBgUr
     setIsStoryFlipped(!isStoryFlipped);
   };
 
+  // ファイルを読み込んでBase64形式のURLに変換する処理
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setBgInputUrl(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
   const handleSaveBg = (e) => {
     e.stopPropagation();
     onUpdateBgUrl(pv, bgInputUrl);
+    setShowBgInput(false);
+  };
+
+  const handleResetBg = (e) => {
+    e.stopPropagation();
+    setBgInputUrl('');
+    onUpdateBgUrl(pv, '');
     setShowBgInput(false);
   };
 
@@ -80,21 +99,29 @@ const AnimeFrame = ({ pv, trope, storyline, storylineJP, primaryLang, customBgUr
               </div>
            </div>
 
+           {/* 画像アップロードフォーム (管理者のみ操作可能) */}
            {showBgInput && isAdmin && (
-             <div className="absolute top-20 md:top-24 left-1/2 -translate-x-1/2 z-[200] bg-white border-4 border-black p-4 md:p-5 rounded-2xl shadow-[8px_8px_0_0_rgba(0,0,0,1)] flex flex-col md:flex-row gap-3 items-center text-black w-[90%] max-w-xl animate-in slide-in-from-top-4" onClick={(e) => e.stopPropagation()}>
+             <div className="absolute top-20 md:top-24 left-1/2 -translate-x-1/2 z-[200] bg-white border-4 border-black p-4 md:p-5 rounded-2xl shadow-[8px_8px_0_0_rgba(0,0,0,1)] flex flex-col md:flex-row gap-4 items-start md:items-center text-black w-[90%] max-w-xl animate-in slide-in-from-top-4" onClick={(e) => e.stopPropagation()}>
                <div className="flex-1 w-full">
-                 <p className="text-[10px] font-black uppercase tracking-widest text-gray-500 mb-1 text-left flex items-center gap-1"><Camera size={12}/> Custom Background URL (Admin)</p>
+                 <p className="text-[10px] font-black uppercase tracking-widest text-gray-500 mb-2 text-left flex items-center gap-1"><Camera size={12}/> Upload Custom Background (Admin)</p>
                  <input
-                   type="text"
-                   placeholder="https://example.com/image.jpg (空白でリセット)"
-                   value={bgInputUrl}
-                   onChange={(e) => setBgInputUrl(e.target.value)}
-                   className="w-full border-2 border-gray-300 rounded-lg p-2 text-sm font-bold focus:outline-none focus:border-blue-500 transition-colors"
+                   type="file"
+                   accept="image/*"
+                   onChange={handleFileChange}
+                   className="w-full text-sm font-bold file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-xs file:font-black file:bg-blue-100 file:text-blue-700 hover:file:bg-blue-200 transition-colors cursor-pointer"
                  />
+                 {bgInputUrl && customBgUrl && (
+                   <p className="text-[10px] text-green-600 font-bold mt-2 text-left">✓ Custom image applied</p>
+                 )}
                </div>
-               <div className="flex gap-2 w-full md:w-auto mt-2 md:mt-0 self-end">
-                 <button onClick={handleSaveBg} className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg font-black text-xs uppercase hover:bg-blue-500 transition-colors">Save</button>
-                 <button onClick={(e) => { e.stopPropagation(); setShowBgInput(false); setBgInputUrl(customBgUrl || ''); }} className="flex-1 bg-gray-200 text-black px-4 py-2 rounded-lg font-black text-xs uppercase hover:bg-gray-300 transition-colors">Cancel</button>
+               <div className="flex flex-col gap-2 w-full md:w-auto mt-2 md:mt-0 self-end md:self-center">
+                 <div className="flex gap-2 w-full">
+                   <button onClick={handleSaveBg} className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg font-black text-xs uppercase hover:bg-blue-500 transition-colors">Save</button>
+                   <button onClick={(e) => { e.stopPropagation(); setShowBgInput(false); setBgInputUrl(customBgUrl || ''); }} className="flex-1 bg-gray-200 text-black px-4 py-2 rounded-lg font-black text-xs uppercase hover:bg-gray-300 transition-colors">Cancel</button>
+                 </div>
+                 {customBgUrl && (
+                   <button onClick={handleResetBg} className="text-[10px] text-red-500 font-bold underline hover:text-red-600 text-right mt-1">Reset to Default</button>
+                 )}
                </div>
              </div>
            )}
@@ -168,7 +195,6 @@ const AnimeFrame = ({ pv, trope, storyline, storylineJP, primaryLang, customBgUr
 };
 
 const PVQuiz = ({ isOpen, onClose, pv, quiz, onCorrectAnswer }) => {
-  // ... (内容変更なし) ...
   const [selectedOption, setSelectedOption] = useState(null);
   const [isCorrect, setIsCorrect] = useState(null);
   const [shuffledOptions, setShuffledOptions] = useState([]);
@@ -223,7 +249,6 @@ const PVQuiz = ({ isOpen, onClose, pv, quiz, onCorrectAnswer }) => {
 };
 
 const PVExplanation = ({ isOpen, onClose }) => {
-  // ... (内容変更なし) ...
   if (!isOpen) return null;
   return (
     <div className="fixed inset-0 z-[200] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 animate-in fade-in duration-200 text-black" onClick={onClose}>
@@ -248,15 +273,11 @@ const AdminLoginModal = ({ isOpen, onClose, onLoginSuccess }) => {
   const [error, setError] = useState(false);
   const [notified, setNotified] = useState(false);
 
-  // 管理者パスワード設定 (必要に応じて変更してください)
   const CORRECT_PASSWORD = "maki";
 
   const notifyAdmin = async (wrongPassword) => {
     console.warn(`[SECURITY ALERT] Unauthorized login attempt with password: ${wrongPassword}`);
     setNotified(true);
-    
-    // 💡 [管理者への通知機能]
-    // 実際に通知を送る場合は、Discord等のWebhook URLを以下に設定し、コメントアウトを解除してください。
     /*
     const webhookUrl = "YOUR_DISCORD_OR_SLACK_WEBHOOK_URL_HERE";
     if (webhookUrl) {
