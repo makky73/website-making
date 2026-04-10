@@ -12,6 +12,28 @@ import {
   Radio, Mic2, CloudOff, Smile, Ghost, Smartphone, Star, Package, TrendingUp, 
   Settings, PenTool, MessageSquare
 } from 'lucide-react';
+import { initializeApp } from 'firebase/app';
+import { getAuth, signInWithCustomToken, signInAnonymously, onAuthStateChanged } from 'firebase/auth';
+import { getFirestore, doc, setDoc, collection, onSnapshot } from 'firebase/firestore';
+
+// --- Firebase Initialization ---
+let app, auth, db, appId;
+try {
+  const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : null;
+  if (firebaseConfig) {
+    app = initializeApp(firebaseConfig);
+    auth = getAuth(app);
+    db = getFirestore(app);
+    appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+  }
+} catch (error) {
+  console.error("Firebase init error:", error);
+}
+
+const getDocId = (pvName) => {
+  if (!pvName) return 'default';
+  return pvName.replace(/[^a-zA-Z0-9_]/g, '_');
+};
 
 const AnimeFrame = ({ pv, trope, storyline, storylineJP, primaryLang, customBgUrl, onUpdateBgUrl, isAdmin }) => {
   const [showStory, setShowStory] = useState(false);
@@ -33,13 +55,27 @@ const AnimeFrame = ({ pv, trope, storyline, storylineJP, primaryLang, customBgUr
     setIsStoryFlipped(!isStoryFlipped);
   };
 
-  // ファイルを読み込んでBase64形式のURLに変換する処理
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
-        setBgInputUrl(reader.result);
+        const img = new Image();
+        img.src = reader.result;
+        img.onload = () => {
+          const canvas = document.createElement('canvas');
+          const MAX_WIDTH = 1200;
+          let scaleSize = 1;
+          if (img.width > MAX_WIDTH) {
+            scaleSize = MAX_WIDTH / img.width;
+          }
+          canvas.width = img.width * scaleSize;
+          canvas.height = img.height * scaleSize;
+          const ctx = canvas.getContext('2d');
+          ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+          const compressedUrl = canvas.toDataURL('image/jpeg', 0.7); // データを最適化（圧縮）
+          setBgInputUrl(compressedUrl);
+        };
       };
       reader.readAsDataURL(file);
     }
@@ -147,12 +183,10 @@ const AnimeFrame = ({ pv, trope, storyline, storylineJP, primaryLang, customBgUr
                     className="absolute inset-0 bg-slate-900 border-4 border-white/20 rounded-3xl overflow-hidden shadow-2xl" 
                     style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
                   >
-                    {/* 画像をフルカラーで鮮明に表示 */}
                     <div 
                       className="absolute inset-0 bg-cover bg-center transition-all duration-500"
                       style={{ backgroundImage: `url(${bgImage})` }}
                     />
-                    {/* 文字の視認性を保つためのダークオーバーレイ */}
                     <div className="absolute inset-0 bg-black/60" />
                     
                     <div className="relative w-full h-full p-6 md:p-12 flex flex-col justify-center overflow-y-auto">
@@ -174,12 +208,10 @@ const AnimeFrame = ({ pv, trope, storyline, storylineJP, primaryLang, customBgUr
                     className="absolute inset-0 bg-blue-900 border-4 border-blue-400 rounded-3xl overflow-hidden shadow-2xl" 
                     style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', transform: 'rotateX(180deg)' }}
                   >
-                    {/* 画像をフルカラーで鮮明に表示 */}
                     <div 
                       className="absolute inset-0 bg-cover bg-center transition-all duration-500"
                       style={{ backgroundImage: `url(${bgImage})` }}
                     />
-                    {/* 文字の視認性を保つためのブルーダークオーバーレイ */}
                     <div className="absolute inset-0 bg-blue-900/70" />
                     
                     <div className="relative w-full h-full p-6 md:p-12 flex flex-col justify-center overflow-y-auto">
@@ -282,7 +314,7 @@ const PVExplanation = ({ isOpen, onClose }) => {
   );
 };
 
-// 🔐 パスワード入力用モーダルコンポーネント (New)
+// 🔐 パスワード入力用モーダルコンポーネント
 const AdminLoginModal = ({ isOpen, onClose, onLoginSuccess }) => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState(false);
@@ -376,11 +408,58 @@ const App = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [customBgUrls, setCustomBgUrls] = useState({});
   const [isAdminMode, setIsAdminMode] = useState(false); 
-  const [showAdminLogin, setShowAdminLogin] = useState(false); // パスワード画面表示用のステート
+  const [showAdminLogin, setShowAdminLogin] = useState(false);
+  const [user, setUser] = useState(null);
 
-  const handleUpdateBgUrl = (pv, url) => {
-    setCustomBgUrls(prev => ({ ...prev, [pv]: url }));
+  // --- Firebase Auth & Data Sync ---
+  useEffect(() => {
+    if (!auth) return;
+    const initAuth = async () => {
+      try {
+        if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
+          await signInWithCustomToken(auth, __initial_auth_token);
+        } else {
+          await signInAnonymously(auth);
+        }
+      } catch (error) {
+        console.error("Auth error:", error);
+      }
+    };
+    initAuth();
+    const unsubscribe = onAuthStateChanged(auth, setUser);
+    return () => unsubscribe();
+  }, []);
+
+  useEffect(() => {
+    if (!user || !db) return;
+    const bgCollection = collection(db, 'artifacts', appId, 'public', 'data', 'pv_backgrounds');
+    const unsubscribe = onSnapshot(bgCollection, (snapshot) => {
+      const newBgs = {};
+      snapshot.forEach(document => {
+        if(document.data().url) {
+          newBgs[document.id] = document.data().url;
+        }
+      });
+      setCustomBgUrls(newBgs);
+    }, (error) => {
+      console.error("Snapshot error:", error);
+    });
+    return () => unsubscribe();
+  }, [user]);
+
+  const handleUpdateBgUrl = async (pv, url) => {
+    const docId = getDocId(pv);
+    setCustomBgUrls(prev => ({ ...prev, [docId]: url })); // Optimistic UI update
+
+    if (!user || !db) return;
+    try {
+      const docRef = doc(db, 'artifacts', appId, 'public', 'data', 'pv_backgrounds', docId);
+      await setDoc(docRef, { url: url || '' });
+    } catch (error) {
+      console.error("Save error:", error);
+    }
   };
+
   
   const batches = {
     1: [
@@ -6778,7 +6857,7 @@ const App = () => {
     ]
   };
 
- const EPISODE_LIST = Array.from({ length: 26 }, (_, i) => i + 1);
+const EPISODE_LIST = Array.from({ length: 26 }, (_, i) => i + 1);
 
   useEffect(() => {
     setIsFlipped(false);
@@ -6866,25 +6945,42 @@ const App = () => {
             
             <div className="flex flex-wrap items-center gap-2 md:gap-4">
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-black italic tracking-tighter uppercase leading-none text-black">Story <span className="text-blue-600">PV</span> Guide</h1>
-              <div className="flex items-center gap-2">
+              
+              <div className="flex items-center gap-2 mt-2 md:mt-0">
+                {/* PV? ボタン を左にする */}
                 <button onClick={() => setShowExplanation(true)} className="flex items-center gap-2 bg-white border-2 border-black px-2 py-1 rounded-full shadow-[2px_2px_0_0_rgba(0,0,0,1)] transition-all active:shadow-none active:translate-x-[1px] active:translate-y-[1px]">
                   <HelpCircle size={14} className="text-blue-600" />
                   <span className="text-[8px] md:text-[10px] font-black uppercase tracking-widest leading-none">PV?</span>
                 </button>
-                {/* ⚙️ システム設定（管理者モード切り替え）ボタン */}
-                <button 
-                  onClick={() => {
-                    if (isAdminMode) {
-                      setIsAdminMode(false); // ログアウト
-                    } else {
-                      setShowAdminLogin(true); // パスワード画面表示
-                    }
-                  }} 
-                  className={`p-1.5 rounded-full border-2 border-black shadow-[2px_2px_0_0_rgba(0,0,0,1)] transition-all active:shadow-none active:translate-x-[1px] active:translate-y-[1px] ${isAdminMode ? 'bg-red-500 text-white hover:bg-red-600' : 'bg-gray-200 text-gray-500 hover:bg-gray-300'}`}
-                  title={isAdminMode ? "Exit Admin Mode" : "System Settings"}
-                >
-                  <Settings size={14} className={`${isAdminMode ? 'animate-spin-slow' : ''}`} />
-                </button>
+
+                {/* CEFR Level Filter を右にする */}
+                <div className="relative">
+                  <button 
+                    onClick={() => setIsCefrOpen(!isCefrOpen)} 
+                    disabled={!!searchQuery} 
+                    className={`flex items-center gap-1 md:gap-2 border-2 border-black px-2 md:px-3 py-1 rounded-full shadow-[2px_2px_0_0_rgba(0,0,0,1)] transition-all active:shadow-none active:translate-x-[1px] active:translate-y-[1px] ${searchQuery ? 'bg-gray-200 text-gray-400 cursor-not-allowed' : (cefrFilter !== 'ALL' ? 'bg-blue-600 text-white' : 'bg-white text-black hover:bg-yellow-300')}`}
+                    title="Filter by CEFR Level"
+                  >
+                    <Filter size={14} className={searchQuery ? 'text-gray-400' : (cefrFilter !== 'ALL' ? 'text-white' : 'text-blue-600')} />
+                    <span className="text-[8px] md:text-[10px] font-black uppercase tracking-widest leading-none hidden sm:inline-block">
+                      {cefrFilter === 'ALL' ? 'CEFR' : `Lvl ${cefrFilter}`}
+                    </span>
+                    <ChevronDown size={12} className={`transition-transform ${isCefrOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                  {isCefrOpen && !searchQuery && (
+                    <div className="absolute top-full left-0 mt-2 z-[120] bg-white border-4 border-black rounded-xl shadow-[4px_4px_0_0_rgba(0,0,0,1)] p-1 min-w-[120px] animate-in slide-in-from-top-2 text-black text-left">
+                      {availableLevelsInBatch.map((level) => (
+                        <button 
+                          key={level} 
+                          onClick={() => handleFilterChange(level)} 
+                          className={`w-full text-left px-3 py-2 text-[9px] md:text-[10px] font-black uppercase hover:bg-yellow-300 rounded-lg transition-colors border-b last:border-b-0 border-black/5 ${cefrFilter === level ? 'bg-yellow-100' : ''}`}
+                        >
+                          {level === 'ALL' ? 'ALL LEVELS' : `Level ${level}`}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           </div>
@@ -6910,12 +7006,31 @@ const App = () => {
           </div>
 
           <div className="flex flex-row lg:flex-col items-center lg:items-end justify-between lg:justify-start gap-4 shrink-0">
-             <div className="flex items-center gap-1 bg-black p-1 rounded-full border-2 border-black">
-                <button onClick={() => setPromptLang('EN')} className={`px-3 md:px-5 py-1.5 rounded-full text-[9px] md:text-[10px] font-black uppercase transition-all ${promptLang === 'EN' ? 'bg-white text-black' : 'text-gray-500 hover:text-white'}`}>EN</button>
-                <button onClick={() => setPromptLang('JP')} className={`px-3 md:px-5 py-1.5 rounded-full text-[9px] md:text-[10px] font-black uppercase transition-all ${promptLang === 'JP' ? 'bg-blue-600 text-white' : 'text-gray-500 hover:text-white'}`}>JP</button>
+             <div className="flex flex-col items-end gap-2">
+                 {/* ⚙️ システム設定（管理者モード切り替え）ボタン */}
+                 <button 
+                   onClick={() => {
+                     if (isAdminMode) {
+                       setIsAdminMode(false); // ログアウト
+                     } else {
+                       setShowAdminLogin(true); // パスワード画面表示
+                     }
+                   }} 
+                   className={`p-1.5 rounded-full border-2 border-black shadow-[2px_2px_0_0_rgba(0,0,0,1)] transition-all active:shadow-none active:translate-x-[1px] active:translate-y-[1px] ${isAdminMode ? 'bg-red-500 text-white hover:bg-red-600' : 'bg-gray-200 text-gray-500 hover:bg-gray-300'}`}
+                   title={isAdminMode ? "Exit Admin Mode" : "System Settings"}
+                 >
+                   <Settings size={14} className={`${isAdminMode ? 'animate-spin-slow' : ''}`} />
+                 </button>
+                 
+                 {/* EN / JP ボタン */}
+                 <div className="flex items-center gap-1 bg-black p-1 rounded-full border-2 border-black">
+                    <button onClick={() => setPromptLang('EN')} className={`px-3 md:px-5 py-1.5 rounded-full text-[9px] md:text-[10px] font-black uppercase transition-all ${promptLang === 'EN' ? 'bg-white text-black' : 'text-gray-500 hover:text-white'}`}>EN</button>
+                    <button onClick={() => setPromptLang('JP')} className={`px-3 md:px-5 py-1.5 rounded-full text-[9px] md:text-[10px] font-black uppercase transition-all ${promptLang === 'JP' ? 'bg-blue-600 text-white' : 'text-gray-500 hover:text-white'}`}>JP</button>
+                 </div>
              </div>
+             
              {current && (
-               <div className="flex gap-2">
+               <div className="flex gap-2 mt-auto">
                   <button onClick={handlePrev} className="w-10 h-10 md:w-12 md:h-12 border-2 border-black rounded-full flex items-center justify-center bg-white shadow-[3px_3px_0_0_rgba(0,0,0,1)] hover:bg-black hover:text-white active:translate-y-0.5 active:shadow-none transition-all"><ChevronLeft size={20} /></button>
                   <button onClick={handleNext} className="w-10 h-10 md:w-12 md:h-12 border-2 border-black rounded-full flex items-center justify-center bg-white shadow-[3px_3px_0_0_rgba(0,0,0,1)] hover:bg-black hover:text-white active:translate-y-0.5 active:shadow-none transition-all"><ChevronRight size={20} /></button>
                </div>
@@ -6940,7 +7055,7 @@ const App = () => {
                      storyline={current.storyline} 
                      storylineJP={current.storylineJP} 
                      primaryLang={promptLang} 
-                     customBgUrl={customBgUrls[current.pv]} 
+                     customBgUrl={customBgUrls[getDocId(current.pv)]} 
                      onUpdateBgUrl={handleUpdateBgUrl} 
                      isAdmin={isAdminMode}
                    />
