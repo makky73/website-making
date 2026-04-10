@@ -63,8 +63,15 @@ const AnimeFrame = ({ pv, trope, storyline, storylineJP, primaryLang, customBgUr
 
   return (
     <div className="group relative w-full aspect-video md:aspect-[21/9] rounded-2xl md:rounded-3xl overflow-hidden border-4 border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] md:shadow-[6px_6px_0_0_rgba(0,0,0,1)] transition-all bg-slate-900 flex flex-col">
+      {/* 初期ステータスの背景画像（そのまま鮮明に表示） */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center transition-all duration-500"
+        style={{ backgroundImage: `url(${bgImage})` }}
+      />
+      {/* 中央の白いカードを少しだけ際立たせるための薄いオーバーレイ */}
+      <div className="absolute inset-0 bg-black/20"></div>
+      
       <div className="relative w-full h-full flex flex-col items-center justify-center p-4">
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-400 via-transparent to-transparent"></div>
         <div className="z-10 bg-white p-4 md:p-5 border-4 border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] -rotate-2 max-w-[90%] md:max-w-[80%] text-black text-left">
           <h4 className="font-black text-[10px] md:text-sm border-b-2 border-black mb-1 md:mb-2 uppercase tracking-tighter">{trope}</h4>
           <div className="flex items-center justify-center py-2 md:py-3 text-black text-center">
@@ -140,10 +147,14 @@ const AnimeFrame = ({ pv, trope, storyline, storylineJP, primaryLang, customBgUr
                     className="absolute inset-0 bg-slate-900 border-4 border-white/20 rounded-3xl overflow-hidden shadow-2xl" 
                     style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
                   >
+                    {/* 画像をフルカラーで鮮明に表示 */}
                     <div 
-                      className="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-luminosity grayscale transition-all duration-500"
+                      className="absolute inset-0 bg-cover bg-center transition-all duration-500"
                       style={{ backgroundImage: `url(${bgImage})` }}
                     />
+                    {/* 文字の視認性を保つためのダークオーバーレイ */}
+                    <div className="absolute inset-0 bg-black/60" />
+                    
                     <div className="relative w-full h-full p-6 md:p-12 flex flex-col justify-center overflow-y-auto">
                       <div className="flex items-center justify-between mb-6">
                         <span className="bg-white text-black px-3 py-1 text-xs md:text-sm font-black uppercase rounded-md tracking-widest shadow-sm">{primaryLang}</span>
@@ -163,10 +174,14 @@ const AnimeFrame = ({ pv, trope, storyline, storylineJP, primaryLang, customBgUr
                     className="absolute inset-0 bg-blue-900 border-4 border-blue-400 rounded-3xl overflow-hidden shadow-2xl" 
                     style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', transform: 'rotateX(180deg)' }}
                   >
+                    {/* 画像をフルカラーで鮮明に表示 */}
                     <div 
-                      className="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-luminosity grayscale transition-all duration-500"
+                      className="absolute inset-0 bg-cover bg-center transition-all duration-500"
                       style={{ backgroundImage: `url(${bgImage})` }}
                     />
+                    {/* 文字の視認性を保つためのブルーダークオーバーレイ */}
+                    <div className="absolute inset-0 bg-blue-900/70" />
+                    
                     <div className="relative w-full h-full p-6 md:p-12 flex flex-col justify-center overflow-y-auto">
                       <div className="flex items-center justify-between mb-6">
                         <span className="bg-blue-400 text-black px-3 py-1 text-xs md:text-sm font-black uppercase rounded-md tracking-widest shadow-sm">{primaryLang === 'EN' ? 'JP' : 'EN'}</span>
