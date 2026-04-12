@@ -325,22 +325,6 @@ const AdminLoginModal = ({ isOpen, onClose, onLoginSuccess }) => {
   const notifyAdmin = async (wrongPassword) => {
     console.warn(`[SECURITY ALERT] Unauthorized login attempt with password: ${wrongPassword}`);
     setNotified(true);
-    /*
-    const webhookUrl = "YOUR_DISCORD_OR_SLACK_WEBHOOK_URL_HERE";
-    if (webhookUrl) {
-      try {
-        await fetch(webhookUrl, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ 
-            content: `🚨 **Security Alert**\nFailed admin login attempt detected in PV Guide App.\nAttempted Password: \`${wrongPassword}\`` 
-          })
-        });
-      } catch (err) {
-        console.error("Failed to send notification", err);
-      }
-    }
-    */
   };
 
   const handleSubmit = (e) => {
