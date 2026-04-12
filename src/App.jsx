@@ -325,6 +325,10 @@ const AdminLoginModal = ({ isOpen, onClose, onLoginSuccess }) => {
   const notifyAdmin = async (wrongPassword) => {
     console.warn(`[SECURITY ALERT] Unauthorized login attempt with password: ${wrongPassword}`);
     setNotified(true);
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 7b51fe983c718d3931226aaca42f5a3f620df2c9
   };
 
   const handleSubmit = (e) => {
