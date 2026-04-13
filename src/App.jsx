@@ -68,7 +68,7 @@ const AnimeFrame = ({ pv, trope, storyline, storylineJP, primaryLang, customBgUr
         img.src = reader.result;
         img.onload = () => {
           const canvas = document.createElement('canvas');
-          
+          // 💡 データベースの保存制限(1MB)を超えないように、サイズと画質を最適化します
           const MAX_WIDTH = 800; 
           let scaleSize = 1;
           if (img.width > MAX_WIDTH) {
@@ -80,8 +80,9 @@ const AnimeFrame = ({ pv, trope, storyline, storylineJP, primaryLang, customBgUr
           ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
           const compressedUrl = canvas.toDataURL('image/jpeg', 0.5); // 品質を調整
           
+          // サイズ制限の最終チェック（約900KBを超えていないか）
           const sizeInBytes = compressedUrl.length * (3/4);
-          if (sizeInBytes > 98000) { 
+          if (sizeInBytes > 900000) { 
               setBgUploadError('Image is too large to save. Please choose a smaller photo.');
               setBgInputUrl('');
           } else {
@@ -92,17 +93,22 @@ const AnimeFrame = ({ pv, trope, storyline, storylineJP, primaryLang, customBgUr
       reader.readAsDataURL(file);
     }
   };
-  
-  const handleSaveBg = (e) => {
+
+  const handleSaveBg = async (e) => {
     e.stopPropagation();
-    onUpdateBgUrl(pv, bgInputUrl);
+    if (!bgInputUrl) return;
+    setIsSaving(true);
+    await onUpdateBgUrl(pv, bgInputUrl);
+    setIsSaving(false);
     setShowBgInput(false);
   };
 
-  const handleResetBg = (e) => {
+  const handleResetBg = async (e) => {
     e.stopPropagation();
     setBgInputUrl('');
-    onUpdateBgUrl(pv, '');
+    setIsSaving(true);
+    await onUpdateBgUrl(pv, '');
+    setIsSaving(false);
     setShowBgInput(false);
   };
 
@@ -156,8 +162,8 @@ const AnimeFrame = ({ pv, trope, storyline, storylineJP, primaryLang, customBgUr
 
            {/* 画像アップロードフォーム (管理者のみ操作可能) */}
            {showBgInput && isAdmin && (
-             <div className="absolute top-20 md:top-24 left-1/2 -translate-x-1/2 z-[200] bg-white border-4 border-black p-4 md:p-5 rounded-2xl shadow-[8px_8px_0_0_rgba(0,0,0,1)] flex flex-col md:flex-row gap-4 items-start md:items-center text-black w-[90%] max-w-xl animate-in slide-in-from-top-4" onClick={(e) => e.stopPropagation()}>
-               <div className="flex-1 w-full">
+             <div className="absolute top-20 md:top-24 left-1/2 -translate-x-1/2 z-[200] bg-white border-4 border-black p-4 md:p-5 rounded-2xl shadow-[8px_8px_0_0_rgba(0,0,0,1)] flex flex-col gap-4 items-start md:items-center text-black w-[90%] max-w-xl animate-in slide-in-from-top-4" onClick={(e) => e.stopPropagation()}>
+               <div className="w-full">
                  <p className="text-[10px] font-black uppercase tracking-widest text-gray-500 mb-2 text-left flex items-center gap-1"><Camera size={12}/> Upload Custom Background (Admin)</p>
                  <input
                    type="file"
@@ -165,19 +171,22 @@ const AnimeFrame = ({ pv, trope, storyline, storylineJP, primaryLang, customBgUr
                    onChange={handleFileChange}
                    className="w-full text-sm font-bold file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-xs file:font-black file:bg-blue-100 file:text-blue-700 hover:file:bg-blue-200 transition-colors cursor-pointer"
                  />
-                 {bgInputUrl && customBgUrl && (
-                   <p className="text-[10px] text-green-600 font-bold mt-2 text-left">✓ Custom image applied</p>
+                 {bgUploadError && (
+                   <p className="text-[10px] text-red-500 font-bold mt-2 text-left bg-red-50 p-2 rounded">{bgUploadError}</p>
+                 )}
+                 {bgInputUrl && !bgUploadError && customBgUrl !== bgInputUrl && (
+                   <p className="text-[10px] text-green-600 font-bold mt-2 text-left">✓ Image ready to save</p>
                  )}
                </div>
-               <div className="flex flex-col gap-2 w-full md:w-auto mt-2 md:mt-0 self-end md:self-center">
-                 <div className="flex gap-2 w-full">
-                   <button onClick={handleSaveBg} className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg font-black text-xs uppercase hover:bg-blue-500 transition-colors">Save</button>
-                   <button onClick={(e) => { e.stopPropagation(); setShowBgInput(false); setBgInputUrl(customBgUrl || ''); }} className="flex-1 bg-gray-200 text-black px-4 py-2 rounded-lg font-black text-xs uppercase hover:bg-gray-300 transition-colors">Cancel</button>
-                 </div>
-                 {customBgUrl && (
-                   <button onClick={handleResetBg} className="text-[10px] text-red-500 font-bold underline hover:text-red-600 text-right mt-1">Reset to Default</button>
-                 )}
+               <div className="flex flex-col gap-2 w-full md:flex-row md:self-end">
+                   <button onClick={handleSaveBg} disabled={isSaving || !bgInputUrl || !!bgUploadError} className={`flex-1 text-white px-4 py-2 rounded-lg font-black text-xs uppercase transition-colors ${isSaving || !bgInputUrl || bgUploadError ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-500'}`}>
+                     {isSaving ? 'Saving...' : 'Save Image'}
+                   </button>
+                   <button onClick={(e) => { e.stopPropagation(); setShowBgInput(false); setBgInputUrl(customBgUrl || ''); setBgUploadError(''); }} className="flex-1 bg-gray-200 text-black px-4 py-2 rounded-lg font-black text-xs uppercase hover:bg-gray-300 transition-colors">Cancel</button>
                </div>
+               {customBgUrl && (
+                 <button onClick={handleResetBg} disabled={isSaving} className="text-[10px] text-red-500 font-bold underline hover:text-red-600 text-right mt-1 w-full md:w-auto">Reset to Default</button>
+               )}
              </div>
            )}
            
@@ -337,7 +346,6 @@ const AdminLoginModal = ({ isOpen, onClose, onLoginSuccess }) => {
   const notifyAdmin = async (wrongPassword) => {
     console.warn(`[SECURITY ALERT] Unauthorized login attempt with password: ${wrongPassword}`);
     setNotified(true);
-    
   };
 
   const handleSubmit = (e) => {
@@ -456,7 +464,6 @@ const App = () => {
       console.error("Save error:", error);
     }
   };
-
   
   const batches = {
     1: [
