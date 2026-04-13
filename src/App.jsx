@@ -40,10 +40,13 @@ const AnimeFrame = ({ pv, trope, storyline, storylineJP, primaryLang, customBgUr
   const [isStoryFlipped, setIsStoryFlipped] = useState(false);
   const [showBgInput, setShowBgInput] = useState(false);
   const [bgInputUrl, setBgInputUrl] = useState(customBgUrl || '');
+  const [bgUploadError, setBgUploadError] = useState('');
+  const [isSaving, setIsSaving] = useState(false);
 
   useEffect(() => {
     setIsStoryFlipped(false);
     setShowBgInput(false);
+    setBgUploadError('');
   }, [primaryLang, showStory]);
 
   useEffect(() => {
@@ -56,6 +59,7 @@ const AnimeFrame = ({ pv, trope, storyline, storylineJP, primaryLang, customBgUr
   };
 
   const handleFileChange = (e) => {
+    setBgUploadError('');
     const file = e.target.files[0];
     if (file) {
       const reader = new FileReader();
@@ -64,7 +68,8 @@ const AnimeFrame = ({ pv, trope, storyline, storylineJP, primaryLang, customBgUr
         img.src = reader.result;
         img.onload = () => {
           const canvas = document.createElement('canvas');
-          const MAX_WIDTH = 1200;
+          
+          const MAX_WIDTH = 800; 
           let scaleSize = 1;
           if (img.width > MAX_WIDTH) {
             scaleSize = MAX_WIDTH / img.width;
@@ -73,14 +78,21 @@ const AnimeFrame = ({ pv, trope, storyline, storylineJP, primaryLang, customBgUr
           canvas.height = img.height * scaleSize;
           const ctx = canvas.getContext('2d');
           ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-          const compressedUrl = canvas.toDataURL('image/jpeg', 0.7); // データを最適化（圧縮）
-          setBgInputUrl(compressedUrl);
+          const compressedUrl = canvas.toDataURL('image/jpeg', 0.5); // 品質を調整
+          
+          const sizeInBytes = compressedUrl.length * (3/4);
+          if (sizeInBytes > 98000) { 
+              setBgUploadError('Image is too large to save. Please choose a smaller photo.');
+              setBgInputUrl('');
+          } else {
+              setBgInputUrl(compressedUrl);
+          }
         };
       };
       reader.readAsDataURL(file);
     }
   };
-
+  
   const handleSaveBg = (e) => {
     e.stopPropagation();
     onUpdateBgUrl(pv, bgInputUrl);
