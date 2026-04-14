@@ -474,7 +474,7 @@ const App = () => {
   const [showAdminLogin, setShowAdminLogin] = useState(false);
   const [user, setUser] = useState(null);
 
-  // --- Firebase Auth & Data Sync ---
+ // --- Firebase Auth & Data Sync ---
   useEffect(() => {
     if (!auth) return;
     const initAuth = async () => {
@@ -493,9 +493,10 @@ const App = () => {
     return () => unsubscribe();
   }, []);
 
+  // 💡 変更点：データの読み込み先を一番シンプルな「pv_backgrounds」に変更
   useEffect(() => {
     if (!user || !db) return;
-    const bgCollection = collection(db, 'artifacts', appId, 'public', 'data', 'pv_backgrounds');
+    const bgCollection = collection(db, 'pv_backgrounds');
     const unsubscribe = onSnapshot(bgCollection, (snapshot) => {
       const newBgs = {};
       snapshot.forEach(document => {
@@ -510,20 +511,20 @@ const App = () => {
     return () => unsubscribe();
   }, [user]);
 
+  // 💡 変更点：データの保存先を一番シンプルな「pv_backgrounds」に変更し、エラー時にアラートを出すようにしました
   const handleUpdateBgUrl = async (pv, url) => {
     const docId = getDocId(pv);
-    setCustomBgUrls(prev => ({ ...prev, [docId]: url }));
+    setCustomBgUrls(prev => ({ ...prev, [docId]: url })); // 画面上はすぐに反映
 
     if (!user || !db) return;
     try {
-      const docRef = doc(db, 'artifacts', appId, 'public', 'data', 'pv_backgrounds', docId);
+      const docRef = doc(db, 'pv_backgrounds', docId);
       await setDoc(docRef, { url: url || '' });
     } catch (error) {
       console.error("Save error:", error);
-      alert("Error saving to database. Please make sure your Firebase config is correct.");
+      alert("⚠️ 保存エラー: Firebaseのルールが true になっているか確認してください！\n" + error.message);
     }
   };
-
   
   const batches = {
     1: [
