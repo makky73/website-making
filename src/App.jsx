@@ -28,22 +28,25 @@ const firebaseConfig = {
 
 
 let app, auth, db, appId;
+let isCanvasEnv = false;
 try {
   // Canvas環境(プレビュー)か、Vercel本番かを自動判定
-  const isCanvas = typeof __firebase_config !== 'undefined';
-  const configToUse = isCanvas ? JSON.parse(__firebase_config) : myFirebaseConfig;
+  isCanvasEnv = typeof __firebase_config !== 'undefined';
+  // 💡 修正箇所：firebaseConfig に統一しました！
+  const configToUse = isCanvasEnv ? JSON.parse(__firebase_config) : firebaseConfig;
   
-  if (!isCanvas && configToUse.apiKey === "YOUR_API_KEY") {
-     console.warn("⚠️ Firebase configuration is missing! Please update myFirebaseConfig in App.jsx to save files on Vercel.");
+  if (!isCanvasEnv && configToUse.apiKey === "YOUR_API_KEY") {
+     console.warn("⚠️ Firebase configuration is missing! Please update firebaseConfig in App.jsx to save files on Vercel.");
   } else if (configToUse) {
      app = initializeApp(configToUse);
      auth = getAuth(app);
      db = getFirestore(app);
-     appId = isCanvas ? __app_id : 'story-pv-guide-app';
+     appId = isCanvasEnv ? __app_id : 'story-pv-guide-app';
   }
 } catch (error) {
   console.error("Firebase init error:", error);
 }
+
 
 const getDocId = (pvName) => {
   if (!pvName) return 'default';
