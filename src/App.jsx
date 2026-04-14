@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   Shield, Search, Heart, Zap, Play, Angry, Cpu, PlusSquare, Calculator, 
   Coffee, Target, Map, XOctagon, Fish, ChevronRight, ChevronLeft, X, 
   BookOpen, RefreshCw, Languages, ArrowDown, Eye, HelpCircle, Info, 
-  Shuffle, Lightbulb, EyeOff, Lock, CheckCircle2, CheckCircle, AlertCircle, Award,
+  Shuffle, Lightbulb, EyeOff, Lock, CheckCircle2, AlertCircle, Award,
   User, MessageCircle, DollarSign, Database, Cloud, Trash2, Home,
   Undo2, Volume2, ShoppingCart, LogOut, Gavel, Filter, ChevronDown,
   AlertTriangle, Flame, Activity, Wind, Music, Camera, Sparkles,
@@ -16,15 +16,30 @@ import { initializeApp } from 'firebase/app';
 import { getAuth, signInWithCustomToken, signInAnonymously, onAuthStateChanged } from 'firebase/auth';
 import { getFirestore, doc, setDoc, collection, onSnapshot } from 'firebase/firestore';
 
-// --- Firebase Initialization ---
+const firebaseConfig = {
+  apiKey: "AIzaSyCjNTu8rRdU4CmwnQ2f_Qu11H1OJCNm3EE",
+  authDomain: "pv-dictionary.firebaseapp.com",
+  projectId: "pv-dictionary",
+  storageBucket: "pv-dictionary.firebasestorage.app",
+  messagingSenderId: "285458009506",
+  appId: "1:285458009506:web:e786fbd0a49d8c2893f6fb",
+  measurementId: "G-86S51PXQGK"
+};
+
+
 let app, auth, db, appId;
 try {
-  const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : null;
-  if (firebaseConfig) {
-    app = initializeApp(firebaseConfig);
-    auth = getAuth(app);
-    db = getFirestore(app);
-    appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+  // Canvas環境(プレビュー)か、Vercel本番かを自動判定
+  const isCanvas = typeof __firebase_config !== 'undefined';
+  const configToUse = isCanvas ? JSON.parse(__firebase_config) : myFirebaseConfig;
+  
+  if (!isCanvas && configToUse.apiKey === "YOUR_API_KEY") {
+     console.warn("⚠️ Firebase configuration is missing! Please update myFirebaseConfig in App.jsx to save files on Vercel.");
+  } else if (configToUse) {
+     app = initializeApp(configToUse);
+     auth = getAuth(app);
+     db = getFirestore(app);
+     appId = isCanvas ? __app_id : 'story-pv-guide-app';
   }
 } catch (error) {
   console.error("Firebase init error:", error);
@@ -35,29 +50,52 @@ const getDocId = (pvName) => {
   return pvName.replace(/[^a-zA-Z0-9_]/g, '_');
 };
 
-const AnimeFrame = ({ pv, trope, storyline, storylineJP, primaryLang, customBgUrl, onUpdateBgUrl, isAdmin }) => {
+const AnimeFrame = ({ pv, trope, storyline, storylineJP, primaryLang, bgUrl, onUpdateBgUrl, isAdmin }) => {
   const [showStory, setShowStory] = useState(false);
   const [isStoryFlipped, setIsStoryFlipped] = useState(false);
   const [showBgInput, setShowBgInput] = useState(false);
-  const [bgInputUrl, setBgInputUrl] = useState(customBgUrl || '');
+  const [bgInputUrl, setBgInputUrl] = useState(bgUrl || '');
+  const [bgUploadError, setBgUploadError] = useState('');
+  const [isSaving, setIsSaving] = useState(false);
 
   useEffect(() => {
     setIsStoryFlipped(false);
     setShowBgInput(false);
+    setBgUploadError('');
   }, [primaryLang, showStory]);
 
   useEffect(() => {
-    setBgInputUrl(customBgUrl || '');
-  }, [customBgUrl]);
+    setBgInputUrl(bgUrl || '');
+  }, [bgUrl]);
 
   const toggleFlip = (e) => {
     e.stopPropagation();
     setIsStoryFlipped(!isStoryFlipped);
   };
 
+  // 画像とPDFの両方に対応したアップロード処理
   const handleFileChange = (e) => {
+    setBgUploadError('');
     const file = e.target.files[0];
-    if (file) {
+    if (!file) return;
+
+    const maxSizeInBytes = 900000; // Firebaseの1ドキュメント制限(1MB)に配慮した余裕を持ったサイズ
+
+    if (file.type === 'application/pdf') {
+      // PDFの処理
+      if (file.size > maxSizeInBytes) {
+        setBgUploadError('PDF is too large to save (max 1MB). Please compress it first.');
+        setBgInputUrl('');
+        return;
+      }
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setBgInputUrl(reader.result);
+      };
+      reader.readAsDataURL(file);
+
+    } else if (file.type.startsWith('image/')) {
+      // 画像の処理（自動で圧縮・リサイズして制限に収める）
       const reader = new FileReader();
       reader.onloadend = () => {
         const img = new Image();
@@ -73,39 +111,64 @@ const AnimeFrame = ({ pv, trope, storyline, storylineJP, primaryLang, customBgUr
           canvas.height = img.height * scaleSize;
           const ctx = canvas.getContext('2d');
           ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-          const compressedUrl = canvas.toDataURL('image/jpeg', 0.7); // データを最適化（圧縮）
-          setBgInputUrl(compressedUrl);
+          
+          // JPEG形式で圧縮
+          const compressedUrl = canvas.toDataURL('image/jpeg', 0.6);
+          const sizeInBytes = compressedUrl.length * (3/4);
+          
+          if (sizeInBytes > maxSizeInBytes) { 
+              setBgUploadError('Image is still too large after compression. Please choose a smaller photo.');
+              setBgInputUrl('');
+          } else {
+              setBgInputUrl(compressedUrl);
+          }
         };
       };
       reader.readAsDataURL(file);
+    } else {
+       setBgUploadError('Please select a valid image or PDF file.');
     }
   };
 
-  const handleSaveBg = (e) => {
+  const handleSaveBg = async (e) => {
     e.stopPropagation();
-    onUpdateBgUrl(pv, bgInputUrl);
+    if (!bgInputUrl) return;
+    setIsSaving(true);
+    await onUpdateBgUrl(pv, bgInputUrl);
+    setIsSaving(false);
     setShowBgInput(false);
   };
 
-  const handleResetBg = (e) => {
+  const handleResetBg = async (e) => {
     e.stopPropagation();
     setBgInputUrl('');
-    onUpdateBgUrl(pv, '');
+    setIsSaving(true);
+    await onUpdateBgUrl(pv, '');
+    setIsSaving(false);
     setShowBgInput(false);
   };
 
   const defaultBg = `https://picsum.photos/seed/${pv.replace(/\s/g, '')}/1200/800`;
-  const bgImage = customBgUrl || defaultBg;
+  const displayBg = bgUrl || defaultBg;
+  const isPdf = displayBg.startsWith('data:application/pdf');
 
   return (
     <div className="group relative w-full aspect-video md:aspect-[21/9] rounded-2xl md:rounded-3xl overflow-hidden border-4 border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] md:shadow-[6px_6px_0_0_rgba(0,0,0,1)] transition-all bg-slate-900 flex flex-col">
-      {/* 初期ステータスの背景画像（そのまま鮮明に表示） */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center transition-all duration-500"
-        style={{ backgroundImage: `url(${bgImage})` }}
-      />
+      {/* 初期ステータスの背景画像 または PDF（鮮明に表示） */}
+      <div className="absolute inset-0 transition-all duration-500 overflow-hidden pointer-events-none">
+        {isPdf ? (
+          <object data={displayBg} type="application/pdf" className="w-full h-full object-cover">
+             <p className="text-white text-center mt-10">PDF preview not supported</p>
+          </object>
+        ) : (
+          <div 
+            className="absolute inset-0 bg-cover bg-center transition-all duration-500"
+            style={{ backgroundImage: `url(${displayBg})` }}
+          />
+        )}
+      </div>
       {/* 中央の白いカードを少しだけ際立たせるための薄いオーバーレイ */}
-      <div className="absolute inset-0 bg-black/20"></div>
+      <div className="absolute inset-0 bg-black/20 pointer-events-none"></div>
       
       <div className="relative w-full h-full flex flex-col items-center justify-center p-4">
         <div className="z-10 bg-white p-4 md:p-5 border-4 border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] -rotate-2 max-w-[90%] md:max-w-[80%] text-black text-left">
@@ -131,7 +194,7 @@ const AnimeFrame = ({ pv, trope, storyline, storylineJP, primaryLang, customBgUr
               </div>
               <div className="flex gap-2 md:gap-3">
                 {isAdmin && (
-                  <button onClick={(e) => { e.stopPropagation(); setShowBgInput(!showBgInput); }} className="text-white hover:text-blue-300 transition-colors bg-white/10 rounded-full p-2" title="Change Background Image (Admin)">
+                  <button onClick={(e) => { e.stopPropagation(); setShowBgInput(!showBgInput); }} className="text-white hover:text-blue-300 transition-colors bg-white/10 rounded-full p-2" title="Change Background File (Admin)">
                     <Camera size={20} />
                   </button>
                 )}
@@ -142,30 +205,33 @@ const AnimeFrame = ({ pv, trope, storyline, storylineJP, primaryLang, customBgUr
               </div>
            </div>
 
-           {/* 画像アップロードフォーム (管理者のみ操作可能) */}
+           {/* 画像・PDFアップロードフォーム (管理者のみ操作可能) */}
            {showBgInput && isAdmin && (
-             <div className="absolute top-20 md:top-24 left-1/2 -translate-x-1/2 z-[200] bg-white border-4 border-black p-4 md:p-5 rounded-2xl shadow-[8px_8px_0_0_rgba(0,0,0,1)] flex flex-col md:flex-row gap-4 items-start md:items-center text-black w-[90%] max-w-xl animate-in slide-in-from-top-4" onClick={(e) => e.stopPropagation()}>
-               <div className="flex-1 w-full">
-                 <p className="text-[10px] font-black uppercase tracking-widest text-gray-500 mb-2 text-left flex items-center gap-1"><Camera size={12}/> Upload Custom Background (Admin)</p>
+             <div className="absolute top-20 md:top-24 left-1/2 -translate-x-1/2 z-[200] bg-white border-4 border-black p-4 md:p-5 rounded-2xl shadow-[8px_8px_0_0_rgba(0,0,0,1)] flex flex-col gap-4 items-start md:items-center text-black w-[90%] max-w-xl animate-in slide-in-from-top-4" onClick={(e) => e.stopPropagation()}>
+               <div className="w-full">
+                 <p className="text-[10px] font-black uppercase tracking-widest text-gray-500 mb-2 text-left flex items-center gap-1"><Camera size={12}/> Upload Custom Photo or PDF (Admin)</p>
                  <input
                    type="file"
-                   accept="image/*"
+                   accept="image/*,application/pdf"
                    onChange={handleFileChange}
                    className="w-full text-sm font-bold file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-xs file:font-black file:bg-blue-100 file:text-blue-700 hover:file:bg-blue-200 transition-colors cursor-pointer"
                  />
-                 {bgInputUrl && customBgUrl && (
-                   <p className="text-[10px] text-green-600 font-bold mt-2 text-left">✓ Custom image applied</p>
+                 {bgUploadError && (
+                   <p className="text-[10px] text-red-500 font-bold mt-2 text-left bg-red-50 p-2 rounded border border-red-200">{bgUploadError}</p>
+                 )}
+                 {bgInputUrl && !bgUploadError && bgUrl !== bgInputUrl && (
+                   <p className="text-[10px] text-green-600 font-bold mt-2 text-left">✓ File ready to save to database</p>
                  )}
                </div>
-               <div className="flex flex-col gap-2 w-full md:w-auto mt-2 md:mt-0 self-end md:self-center">
-                 <div className="flex gap-2 w-full">
-                   <button onClick={handleSaveBg} className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg font-black text-xs uppercase hover:bg-blue-500 transition-colors">Save</button>
-                   <button onClick={(e) => { e.stopPropagation(); setShowBgInput(false); setBgInputUrl(customBgUrl || ''); }} className="flex-1 bg-gray-200 text-black px-4 py-2 rounded-lg font-black text-xs uppercase hover:bg-gray-300 transition-colors">Cancel</button>
-                 </div>
-                 {customBgUrl && (
-                   <button onClick={handleResetBg} className="text-[10px] text-red-500 font-bold underline hover:text-red-600 text-right mt-1">Reset to Default</button>
-                 )}
+               <div className="flex flex-col gap-2 w-full md:flex-row md:self-end">
+                   <button onClick={handleSaveBg} disabled={isSaving || !bgInputUrl || !!bgUploadError} className={`flex-1 text-white px-4 py-2 rounded-lg font-black text-xs uppercase transition-colors ${isSaving || !bgInputUrl || bgUploadError ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-500 shadow-[2px_2px_0_0_rgba(0,0,0,1)] active:translate-y-0.5 active:shadow-none'}`}>
+                     {isSaving ? 'Saving...' : 'Save to Cloud'}
+                   </button>
+                   <button onClick={(e) => { e.stopPropagation(); setShowBgInput(false); setBgInputUrl(bgUrl || ''); setBgUploadError(''); }} className="flex-1 bg-gray-200 text-black px-4 py-2 rounded-lg font-black text-xs uppercase hover:bg-gray-300 transition-colors shadow-[2px_2px_0_0_rgba(0,0,0,1)] active:translate-y-0.5 active:shadow-none">Cancel</button>
                </div>
+               {bgUrl && (
+                 <button onClick={handleResetBg} disabled={isSaving} className="text-[10px] text-red-500 font-bold underline hover:text-red-600 text-right mt-1 w-full md:w-auto">Remove custom file & Reset</button>
+               )}
              </div>
            )}
            
@@ -183,11 +249,18 @@ const AnimeFrame = ({ pv, trope, storyline, storylineJP, primaryLang, customBgUr
                     className="absolute inset-0 bg-slate-900 border-4 border-white/20 rounded-3xl overflow-hidden shadow-2xl" 
                     style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
                   >
-                    <div 
-                      className="absolute inset-0 bg-cover bg-center transition-all duration-500"
-                      style={{ backgroundImage: `url(${bgImage})` }}
-                    />
-                    <div className="absolute inset-0 bg-black/60" />
+                    <div className="absolute inset-0 transition-all duration-500 overflow-hidden pointer-events-none">
+                      {isPdf ? (
+                        <object data={displayBg} type="application/pdf" className="w-full h-full object-cover">
+                        </object>
+                      ) : (
+                        <div 
+                          className="absolute inset-0 bg-cover bg-center transition-all duration-500"
+                          style={{ backgroundImage: `url(${displayBg})` }}
+                        />
+                      )}
+                    </div>
+                    <div className="absolute inset-0 bg-black/60 pointer-events-none" />
                     
                     <div className="relative w-full h-full p-6 md:p-12 flex flex-col justify-center overflow-y-auto">
                       <div className="flex items-center justify-between mb-6">
@@ -208,11 +281,18 @@ const AnimeFrame = ({ pv, trope, storyline, storylineJP, primaryLang, customBgUr
                     className="absolute inset-0 bg-blue-900 border-4 border-blue-400 rounded-3xl overflow-hidden shadow-2xl" 
                     style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', transform: 'rotateX(180deg)' }}
                   >
-                    <div 
-                      className="absolute inset-0 bg-cover bg-center transition-all duration-500"
-                      style={{ backgroundImage: `url(${bgImage})` }}
-                    />
-                    <div className="absolute inset-0 bg-blue-900/70" />
+                    <div className="absolute inset-0 transition-all duration-500 overflow-hidden pointer-events-none">
+                      {isPdf ? (
+                        <object data={displayBg} type="application/pdf" className="w-full h-full object-cover">
+                        </object>
+                      ) : (
+                        <div 
+                          className="absolute inset-0 bg-cover bg-center transition-all duration-500"
+                          style={{ backgroundImage: `url(${displayBg})` }}
+                        />
+                      )}
+                    </div>
+                    <div className="absolute inset-0 bg-blue-900/70 pointer-events-none" />
                     
                     <div className="relative w-full h-full p-6 md:p-12 flex flex-col justify-center overflow-y-auto">
                       <div className="flex items-center justify-between mb-6">
@@ -314,7 +394,6 @@ const PVExplanation = ({ isOpen, onClose }) => {
   );
 };
 
-// 🔐 パスワード入力用モーダルコンポーネント
 const AdminLoginModal = ({ isOpen, onClose, onLoginSuccess }) => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState(false);
@@ -325,7 +404,6 @@ const AdminLoginModal = ({ isOpen, onClose, onLoginSuccess }) => {
   const notifyAdmin = async (wrongPassword) => {
     console.warn(`[SECURITY ALERT] Unauthorized login attempt with password: ${wrongPassword}`);
     setNotified(true);
-    
   };
 
   const handleSubmit = (e) => {
@@ -434,7 +512,7 @@ const App = () => {
 
   const handleUpdateBgUrl = async (pv, url) => {
     const docId = getDocId(pv);
-    setCustomBgUrls(prev => ({ ...prev, [docId]: url })); // Optimistic UI update
+    setCustomBgUrls(prev => ({ ...prev, [docId]: url }));
 
     if (!user || !db) return;
     try {
@@ -442,6 +520,7 @@ const App = () => {
       await setDoc(docRef, { url: url || '' });
     } catch (error) {
       console.error("Save error:", error);
+      alert("Error saving to database. Please make sure your Firebase config is correct.");
     }
   };
 
@@ -7040,7 +7119,7 @@ const EPISODE_LIST = Array.from({ length: 26 }, (_, i) => i + 1);
                      storyline={current.storyline} 
                      storylineJP={current.storylineJP} 
                      primaryLang={promptLang} 
-                     customBgUrl={customBgUrls[getDocId(current.pv)]} 
+                     bgUrl={customBgUrls[getDocId(current.pv)]} 
                      onUpdateBgUrl={handleUpdateBgUrl} 
                      isAdmin={isAdminMode}
                    />
