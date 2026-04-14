@@ -16,16 +16,16 @@ import { initializeApp } from 'firebase/app';
 import { getAuth, signInWithCustomToken, signInAnonymously, onAuthStateChanged } from 'firebase/auth';
 import { getFirestore, doc, setDoc, collection, onSnapshot } from 'firebase/firestore';
 
-// --- ⚠️ Vercel本番環境用 Firebase 初期化設定 ⚠️ ---
-// ご自身の Firebase プロジェクトの設定値に書き換えてください！
-const myFirebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_STORAGE_BUCKET",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID"
+const firebaseConfig = {
+  apiKey: "AIzaSyCjNTu8rRdU4CmwnQ2f_Qu11H1OJCNm3EE",
+  authDomain: "pv-dictionary.firebaseapp.com",
+  projectId: "pv-dictionary",
+  storageBucket: "pv-dictionary.firebasestorage.app",
+  messagingSenderId: "285458009506",
+  appId: "1:285458009506:web:e786fbd0a49d8c2893f6fb",
+  measurementId: "G-86S51PXQGK"
 };
+
 
 let app, auth, db, appId;
 try {
